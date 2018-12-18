@@ -18,6 +18,7 @@ There are three basic steps to transform clinical data using CAMP FHIR, along wi
 3. You have cloned this repo to an environment with the ability to connect to/read from that database.
 
 ### High-level steps:
-1. Run our script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in either the i2b2 or PCORnet 4.1 Common Data Models. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
-2. Alter CAMP FHIR's configuration file to point at your database.
-3. Run CAMP FHIR to transform the desired domain(s), e.g. `java -jar CAMPFHIR.jar Condition "/opt/Condition"`
+1. Run our mapping table creation script (or your own script, based off of ours) to map your local codes to FHIR codes. The mapping table creation script in this repo will already map codesets in the PCORnet 4.1 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script.)
+2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in either the i2b2 or PCORnet 4.1 Common Data Models. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
+3. Alter CAMP FHIR's configuration file to point at your database.
+4. Run CAMP FHIR to transform the desired domain(s), e.g. `java -jar CAMPFHIR.jar Condition "/opt/Condition"`
