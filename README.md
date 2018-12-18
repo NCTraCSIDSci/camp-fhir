@@ -10,7 +10,7 @@ CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the N
 >The project described was supported by the National Center for Advancing Translational Sciences (NCATS), National Institutes of Health, through Grant Award Number UL1TR002489. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
 
 ## How do I use CAMP FHIR?
-There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities.
+There are four basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities.
 
 ### Prerequisites:
 1. Your clinical data is stored in an RDBMS. (Our SQL scripts assume you're using Oracle, but you can translate our scripts to work with whatever RDBMS you're using.)
