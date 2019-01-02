@@ -10,7 +10,7 @@ CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the N
 >The project described was supported by the National Center for Advancing Translational Sciences (NCATS), National Institutes of Health, through Grant Award Number UL1TR002489. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
 
 ## How do I use CAMP FHIR?
-There are four basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities.
+There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities. (More detailed documentation is available in the docs directory--this is just an overview.)
 
 ### Prerequisites:
 1. Your clinical data is stored in an RDBMS. (Our SQL scripts assume you're using Oracle, but you can translate our scripts to work with whatever RDBMS you're using.)
@@ -20,5 +20,4 @@ There are four basic steps to transform clinical data using CAMP FHIR, along wit
 ### High-level steps:
 1. Run our mapping table creation script (or your own script, based off of ours) to map your local codes to FHIR codes. The mapping table creation script in this repo will already map codesets in the PCORnet 4.1 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script.)
 2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in either the i2b2 or PCORnet 4.1 Common Data Models. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
-3. Alter CAMP FHIR's configuration file to point at your database.
-4. Run CAMP FHIR to transform the desired domain(s), e.g. `java -jar CAMPFHIR.jar Condition "/opt/Condition"`
+3. Run the CAMP FHIR GUI to transform the desired domain(s).
