@@ -25,7 +25,6 @@ FROM
     left join PCORNET_FHIR_MAPPING tcc3 on tcc3.column_cd='RACE' and dem.RACE=tcc3.local_in_cd
     left join PCORNET_FHIR_MAPPING tcc4 on tcc4.column_cd='HISPANIC' and dem.HISPANIC=tcc4.local_in_cd
 )
-GO
 
 --ENCOUNTER
 --ENC_IDENTIFIER maps to Encounter / identifier
@@ -81,7 +80,6 @@ from
         left join pcornet_fhir_mapping tcc2 on tcc2.column_cd='DISCHARGE_STATUS' and enc.discharge_status=tcc2.local_in_cd
         left join pcornet_fhir_mapping tcc3 on tcc3.column_cd='ADMITTING_SOURCE' and enc.admitting_source=tcc3.local_in_cd
 )
-GO
 
 --CONDITION
 --CON_IDENTIFIER maps to Condition / identifier
@@ -96,7 +94,7 @@ GO
 --CON_CLINSTATUS maps to Condition / clinicalStatus
 --CON_ABATEDATE maps to Condition / abatementDateTime
 --CON_ONSETDATE maps to Condition / onsetDateTime
-create or replace view PCORNET_DXS_2FHIR as (
+create or replace view PCORNET_CONDITION_2FHIR as (
 select distinct
 	dx.DIAGNOSISID as CON_IDENTIFIER,
 	'Patient/' || dx.PATID as CON_SUBJECT_REFERENCE,
@@ -150,7 +148,6 @@ from
 where
     cond.CONDITION_SOURCE = 'HC' --limit to problem list items only
 )
-GO
 
 
 --PROCEDURE
@@ -161,7 +158,7 @@ GO
 --PCD_CODE_CODING_SYST maps to Procedure / code / coding / system
 --PCD_CODE_CODING_CODE maps to Procedure / code / coding / code
 --PCD_PERFORMED_PDT maps to Procedure / performed / performedDateTime
-create or replace view PCORNET_PXS_2FHIR as (
+create or replace view PCORNET_PROCEDURE_2FHIR as (
 select distinct
 	px.PROCEDURESID as PCD_IDENTIFIER,
 	'Patient/' || px.PATID as PCD_SUBJECT_REFERENCE,
@@ -183,7 +180,6 @@ select distinct
 from
 	procedures px
 )
-GO
 
 --OBSERVATION (VITALS AND SMOKING)
 --OBS_IDENTIFIER maps to Observation / identifier
@@ -196,11 +192,11 @@ GO
 --OBS_CODE_CODING_CODE maps to Observation / code / coding / code
 --OBS_CODE_CODING_DISPLAY maps to Observation / code / coding / display
 --OBS_VALUEQUANTITY_VALUE maps to Observation / valueQuantity / value
---OBS_VALUEQUANTITY_CODE maps to Observation / valueQuantity / code
 --OBS_VALUEQUANTITY_COMPARATOR maps to Observation / valueQuantity / comparator
+--OBS_VALUEQUANTITY_CODE maps to Observation / valueQuantity / code
 --OBS_VALUESTRING maps to Observation / valueString
 --OBS_EFFECTIVEDATETIME maps to Observation / effectiveDateTime
-create or replace view PCORNET_VITALS_2FHIR as (
+create or replace view PCORNET_OBSVITALS_2FHIR as (
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
@@ -229,15 +225,20 @@ select distinct
         when vit.SYSTOLIC is not null then vit.SYSTOLIC
         when vit.ORIGINAL_BMI is not null then vit.ORIGINAL_BMI
      end as OBS_VALUEQUANTITY_VALUE,
+     null as OBS_VALUEQUANTITY_COMPARATOR,
      case when vit.HT is not null then '[in_i]'
         when vit.WT is not null then '[lb_av]'
         when vit.DIASTOLIC is not null then 'mm[Hg]'
         when vit.SYSTOLIC is not null then 'mm[Hg]'
         when vit.ORIGINAL_BMI is not null then 'kg/m2'
      end as OBS_VALUEQUANTITY_CODE,
-     null as OBS_VALUEQUANTITY_COMPARATOR,
 	 null as OBS_VALUESTRING,
-    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME 
+	 null as OBS_ISSUED,
+    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+    null as OBS_REFRANGE_LOW,
+    null as OBS_REFRANGE_HIGH,
+    null as OBS_INTERPRETATION_CODE,
+    null as OBS_INTERPRETATION_SYST
 from
     vital vit
 where
@@ -257,17 +258,21 @@ select distinct
      nvl(tcc1.fhir_out_cd, null) as OBS_CODE_CODING_CODE,
      nvl(tcc1.fhir_out_char, null) as OBS_CODE_CODING_DISPLAY,
      null as OBS_VALUEQUANTITY_VALUE,
-     null as OBS_VALUEQUANTITY_CODE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
+     null as OBS_VALUEQUANTITY_CODE,
 	 null as OBS_VALUESTRING,
-     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME 
+	 null as OBS_ISSUED,
+     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+     null as OBS_REFRANGE_LOW,
+     null as OBS_REFRANGE_HIGH,
+     null as OBS_INTERPRETATION_CODE,
+     null as OBS_INTERPRETATION_SYST
 from
     vital vit
     left join pcornet_fhir_mapping tcc1 on tcc1.column_cd='SMOKING' and vit.SMOKING=tcc1.local_in_cd
 where
     vit.SMOKING is not null
 )
-GO
 
 --OBSERVATION (LABS)
 --OBS_IDENTIFIER maps to Observation / identifier 
@@ -289,7 +294,7 @@ GO
 --OBS_REFRANGE_HIGH maps to Observation / referenceRange / high
 --OBS_INTERPRETATION  maps to Observation / interpretation / coding / code
 --OBS_INTERPRETATION_SYST maps to Observation / interpretation / coding / system
-create or replace view PCORNET_LABS_2FHIR as (
+create or replace view PCORNET_OBSLABS_2FHIR as (
 select distinct
     labs.LAB_RESULT_CM_ID as OBS_IDENTIFIER, 
     'Patient/'||labs.PATID as OBS_SUBJECT_REFERENCE, 
@@ -327,12 +332,12 @@ from
     left join PCORNET_FHIR_MAPPING tcc1 on tcc1.column_cd='RESULT_MODIFIER' and labs.RESULT_MODIFIER=tcc1.local_in_cd
     left join PCORNET_FHIR_MAPPING tcc2 on tcc2.column_cd='ABN_IND' and labs.ABN_IND=tcc2.local_in_cd
 )
-GO
 
 
 --MEDICATION REQUEST
 --MED_IDENTIFIER maps to MedicationRequest / identifier
 --MED_SUBJECT_REFERENCE maps to MedicationRequest / subject / reference
+--MED_CONTEXT_REFERENCE maps to MedicationRequest / context / reference
 --MED_MEDREF_REFERENCE maps to MedicationRequest / medicationReference / reference
 --MED_AUTHORED_ON maps to MedicationRequest / authoredOn
 --MED_DISPREQ_PERIOD_START maps to MedicationRequest / dispenseRequest / validityPeriod / start
@@ -382,13 +387,12 @@ from
     left join PCORNET_FHIR_MAPPING tcc2 on tcc2.column_cd='RX_PRN_FLAG' and med.RX_PRN_FLAG=tcc2.local_in_cd
     left join PCORNET_FHIR_MAPPING tcc3 on tcc3.column_cd='RX_DISPENSE_AS_WRITTEN' and med.RX_DISPENSE_AS_WRITTEN=tcc3.local_in_cd
 )
-GO
 
 
 --PRACTITIONER 
 --PRACT_IDENTIFIER maps to Practitioner / identifier
 --PRACT_GENDER maps to Practitioner / gender
-create or replace view PCORNET_PRACT_2FHIR as (
+create or replace view PCORNET_PRACTITIONER_2FHIR as (
 select 
     prov.PROVIDERID as PRACT_IDENTIFIER,
     nvl(tcc1.FHIR_OUT_CD,null) as PRACT_GENDER
@@ -396,4 +400,3 @@ from
     provider prov
     left join PCORNET_FHIR_MAPPING tcc1 on tcc1.column_cd='PROVIDER_SEX' and prov.PROVIDER_SEX=tcc1.local_in_cd
 )
-GO
