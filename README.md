@@ -6,8 +6,7 @@ CAMP FHIR is a lightweight application inteded to transform clinical data stored
 
 CAMP FHIR reads input data from custom views that we've built to align relational clinical data to the FHIR 3.0 specification. So long as you can put your data in these views, you can use CAMP FHIR to transform those data to FHIR. If your source data is in the PCORnet 4.1 Common Data Model, you're in luck: you should be able to use the view creation scripts in this repo with few or no changes. 
 
-CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the NIH CTSA at University of North Carolina at Chapel Hill. CAMP FHIR is open source, but if you use it for a project, please cite us in your publication:
->The project described was supported by the National Center for Advancing Translational Sciences (NCATS), National Institutes of Health, through Grant Award Number UL1TR002489. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
+CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the NIH CTSA at University of North Carolina at Chapel Hill. CAMP FHIR is open source, but if you use it for a project, we kindly request that users of this service provide proper attribution for any products (e.g., manuscripts, podium presentations, software) derived from work related to CAMP FHIR. Attribution should include acknowledgement of the funder (National Institutes of Health, National Center for Advancing Translational Sciences, Biomedical Data Translator Program [awards OT3TR002020 and OT2TR002514] and Center for Translational Science Program [award UL1TR002489]), UNC Hospitals and Health Care System, and all team members who contributed to the work.
 
 ## How do I use CAMP FHIR?
 There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities. (More detailed documentation is available in the docs directory--this is just an overview.)
@@ -20,4 +19,4 @@ There are three basic steps to transform clinical data using CAMP FHIR, along wi
 ### High-level steps:
 1. Run our mapping table creation script (or your own script, based off of ours) to map your local codes to FHIR codes. The mapping table creation script in this repo will already map codesets in the PCORnet 4.1 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script.
 2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in the PCORnet 4.1 Common Data Model. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
-3. Run the CAMP FHIR GUI (or use the command line) to transform the desired domain(s).
+3. Run the CAMP FHIR from the command line to transform the desired domain(s).
