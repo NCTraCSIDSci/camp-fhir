@@ -205,33 +205,11 @@ select distinct
     'vital-signs' as OBS_CATEGORY_CODE,
     'Vital Signs' as OBS_CATEGORY_DISPLAY,
      'http://loinc.org/' as OBS_CODE_CODING_SYST,
-     case
-        when vit.HT is not null then '8302-2'
-        when vit.WT is not null then '29463-7'
-        when vit.DIASTOLIC is not null then '8462-4'
-        when vit.SYSTOLIC is not null then '8480-6'
-        when vit.ORIGINAL_BMI is not null then '36156-5'
-     end as OBS_CODE_CODING_CODE,
-     case
-        when vit.HT is not null then 'Body height'
-        when vit.WT is not null then 'Body weight'
-        when vit.DIASTOLIC is not null then 'Diastolic blood pressure'
-        when vit.SYSTOLIC is not null then 'Systolic blood pressure'
-        when vit.ORIGINAL_BMI is not null then 'Body mass index' 
-     end as OBS_CODE_CODING_DISPLAY,
-     case when vit.HT is not null then vit.HT
-        when vit.WT is not null then vit.WT
-        when vit.DIASTOLIC is not null then vit.DIASTOLIC
-        when vit.SYSTOLIC is not null then vit.SYSTOLIC
-        when vit.ORIGINAL_BMI is not null then vit.ORIGINAL_BMI
-     end as OBS_VALUEQUANTITY_VALUE,
+    '8302-2' as OBS_CODE_CODING_CODE,
+     'Body height' as OBS_CODE_CODING_DISPLAY,
+     vit.HT as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
-     case when vit.HT is not null then '[in_i]'
-        when vit.WT is not null then '[lb_av]'
-        when vit.DIASTOLIC is not null then 'mm[Hg]'
-        when vit.SYSTOLIC is not null then 'mm[Hg]'
-        when vit.ORIGINAL_BMI is not null then 'kg/m2'
-     end as OBS_VALUEQUANTITY_CODE,
+     '[in_i]' as OBS_VALUEQUANTITY_CODE,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -240,10 +218,127 @@ select distinct
     null as OBS_INTERPRETATION_CODE,
     null as OBS_INTERPRETATION_SYST
 from
-    vital vit
+    vital vit 
 where
     vit.SMOKING is null
     and vit.TOBACCO is null
+    and vit.HT is not null
+    
+UNION
+
+select distinct
+    vit.VITALID as OBS_IDENTIFIER, 
+    'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
+    'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
+    'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
+    'vital-signs' as OBS_CATEGORY_CODE,
+    'Vital Signs' as OBS_CATEGORY_DISPLAY,
+     'http://loinc.org/' as OBS_CODE_CODING_SYST,
+    '29463-7' as OBS_CODE_CODING_CODE,
+     'Body weight' as OBS_CODE_CODING_DISPLAY,
+     vit.WT as OBS_VALUEQUANTITY_VALUE,
+     null as OBS_VALUEQUANTITY_COMPARATOR,
+     '[lb_av]' as OBS_VALUEQUANTITY_CODE,
+	 null as OBS_VALUESTRING,
+	 null as OBS_ISSUED,
+    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+    null as OBS_REFRANGE_LOW,
+    null as OBS_REFRANGE_HIGH,
+    null as OBS_INTERPRETATION_CODE,
+    null as OBS_INTERPRETATION_SYST
+from
+    vital vit 
+where
+    vit.SMOKING is null
+    and vit.TOBACCO is null
+    and vit.WT is not null
+
+UNION
+
+select distinct
+    vit.VITALID as OBS_IDENTIFIER, 
+    'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
+    'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
+    'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
+    'vital-signs' as OBS_CATEGORY_CODE,
+    'Vital Signs' as OBS_CATEGORY_DISPLAY,
+     'http://loinc.org/' as OBS_CODE_CODING_SYST,
+    '8462-4' as OBS_CODE_CODING_CODE,
+     'Diastolic blood pressure' as OBS_CODE_CODING_DISPLAY,
+     vit.DIASTOLIC as OBS_VALUEQUANTITY_VALUE,
+     null as OBS_VALUEQUANTITY_COMPARATOR,
+     'mm[Hg]' as OBS_VALUEQUANTITY_CODE,
+	 null as OBS_VALUESTRING,
+	 null as OBS_ISSUED,
+    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+    null as OBS_REFRANGE_LOW,
+    null as OBS_REFRANGE_HIGH,
+    null as OBS_INTERPRETATION_CODE,
+    null as OBS_INTERPRETATION_SYST
+from
+    vital vit 
+where
+    vit.SMOKING is null
+    and vit.TOBACCO is null
+    and vit.DIASTOLIC is not null
+
+UNION
+
+select distinct
+    vit.VITALID as OBS_IDENTIFIER, 
+    'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
+    'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
+    'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
+    'vital-signs' as OBS_CATEGORY_CODE,
+    'Vital Signs' as OBS_CATEGORY_DISPLAY,
+     'http://loinc.org/' as OBS_CODE_CODING_SYST,
+    '8480-6' as OBS_CODE_CODING_CODE,
+     'Systolic blood pressure' as OBS_CODE_CODING_DISPLAY,
+     vit.SYSTOLIC as OBS_VALUEQUANTITY_VALUE,
+     null as OBS_VALUEQUANTITY_COMPARATOR,
+     'mm[Hg]' as OBS_VALUEQUANTITY_CODE,
+	 null as OBS_VALUESTRING,
+	 null as OBS_ISSUED,
+    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+    null as OBS_REFRANGE_LOW,
+    null as OBS_REFRANGE_HIGH,
+    null as OBS_INTERPRETATION_CODE,
+    null as OBS_INTERPRETATION_SYST
+from
+    vital vit 
+where
+    vit.SMOKING is null
+    and vit.TOBACCO is null
+    and vit.SYSTOLIC is not null
+
+UNION
+
+select distinct
+    vit.VITALID as OBS_IDENTIFIER, 
+    'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
+    'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
+    'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
+    'vital-signs' as OBS_CATEGORY_CODE,
+    'Vital Signs' as OBS_CATEGORY_DISPLAY,
+     'http://loinc.org/' as OBS_CODE_CODING_SYST,
+    '36156-5' as OBS_CODE_CODING_CODE,
+     'Body mass index' as OBS_CODE_CODING_DISPLAY,
+     vit.ORIGINAL_BMI as OBS_VALUEQUANTITY_VALUE,
+     null as OBS_VALUEQUANTITY_COMPARATOR,
+     'kg/m2' as OBS_VALUEQUANTITY_CODE,
+	 null as OBS_VALUESTRING,
+	 null as OBS_ISSUED,
+    vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
+    null as OBS_REFRANGE_LOW,
+    null as OBS_REFRANGE_HIGH,
+    null as OBS_INTERPRETATION_CODE,
+    null as OBS_INTERPRETATION_SYST
+from
+    vital vit 
+where
+    vit.SMOKING is null
+    and vit.TOBACCO is null
+    and vit.ORIGINAL_BMI is not null
     
 UNION
 
@@ -268,7 +363,7 @@ select distinct
      null as OBS_INTERPRETATION_CODE,
      null as OBS_INTERPRETATION_SYST
 from
-    vital vit
+    vital vit 
     left join pcornet_fhir_mapping tcc1 on tcc1.column_cd='SMOKING' and vit.SMOKING=tcc1.local_in_cd
 where
     vit.SMOKING is not null
