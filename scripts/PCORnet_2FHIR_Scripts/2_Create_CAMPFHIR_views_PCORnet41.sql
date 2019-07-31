@@ -3,7 +3,6 @@
 --PNT_GENDER maps to Patient / gender
 --PNT_BIRTHDATE maps to Patient / birthDate
 --PNT_MARITAL_STATUS_CODE  maps to Patient / maritalStatus / coding / code
---PNT_MARITAL_STATUS_SYSTEM maps to Patient / maritalStatus / coding / system
 --PNT_RACE maps to Patient / extension / race / coding / code
 --PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
 --PNT_ADDRESS_EXT_LAT_VALUE maps to Patient / address / extension / latitude / value
@@ -13,8 +12,7 @@ SELECT
     dem.PATID as PNT_IDENTIFIER, 
     nvl(tcc1.fhir_out_cd, null) as PNT_GENDER,
     BIRTH_DATE as PNT_BIRTHDATE,
-    null as PNT_MARITAL_STATUS_CODE , 
-    null as PNT_MARITAL_STATUS_SYSTEM,
+    null as PNT_MARITAL_STATUS_CODE, 
     nvl(tcc3.fhir_out_cd, null) as PNT_RACE,
     nvl(tcc4.fhir_out_cd, null) as PNT_ETHNICITY,
     null as PNT_ADDRESS_EXT_LAT_VALUE,
@@ -28,6 +26,7 @@ FROM
 
 --ENCOUNTER
 --ENC_IDENTIFIER maps to Encounter / identifier
+--ENC_STATUS maps to Encounter / status
 --ENC_SUBJECT_REFERENCE maps to Encounter / subject / reference
 --ENC_PARTICIPANT_INDIV_REF maps to Encountner / participant / individual / reference
 --ENC_CLASS_SYST maps to Encounter / class / coding / system
@@ -35,18 +34,17 @@ FROM
 --ENC_CLASS_DISPLAY maps to Encounter / class / coding / display
 --ENC_PERIOD_START maps to Encounter / period / start
 --ENC_PERIOD_END maps to Encounter / period / end
---ENC_HOSP_DISDISP_CODING_SYST maps to Encounter / hospitalization / dischargeDisposition / coding / system
 --ENC_HOSP_DISDISP_CODING_CODE maps to Encounter / hospitalization / dischargeDisposition / coding / code
 --ENC_HOSP_DISDISP_TEXT maps to Encounter / hospitalization / dischargeDisposition / text
 --ENC_HOSP_ADMSRC_CODING_CODE maps to Encounter / hospitalization / admitSource / coding / code
 --ENC_HOSP_ADMSRC_TEXT maps to Encounter / hospitalization / admitSource / text
 --ENC_DIAGN_CON_REF maps to Encounter / diagnosis / condition / reference
 --ENC_DIAGN_ROLE_CODING_CODE maps to Encounter / diagnosis / role / coding / code
---ENC_DIAGN_ROLE_SYST maps to Encounter / diagnosis / role / coding / system
 --ENC_DIAGN_RANK  maps to Encounter / diagnosis / rank
 create or replace view PCORNET_ENCOUNTER_2FHIR as (
 select
         enc.ENCOUNTERID as ENC_IDENTIFIER,
+	'unknown' as ENC_STATUS,
         'Patient/'||enc.PATID as ENC_SUBJECT_REFERENCE,
 	    case 
 	        when enc.PROVIDERID is null then null else 'Practitioner/'||enc.PROVIDERID 
@@ -56,7 +54,6 @@ select
         nvl(tcc1.fhir_out_char, null) as ENC_CLASS_DISPLAY,
         enc.ADMIT_DATE as ENC_PERIOD_START,
         enc.DISCHARGE_DATE as ENC_PERIOD_END,
-        'http://hl7.org/fhir/ValueSet/encounter-discharge-disposition' as ENC_HOSP_DISDISP_CODING_SYST,
         nvl(tcc2.fhir_out_cd, null) as ENC_HOSP_DISDISP_CODING_CODE,
         nvl(tcc2.fhir_out_char, null) as ENC_HOSP_DISDISP_TEXT,
         nvl(tcc3.fhir_out_cd, null) as ENC_HOSP_ADMSRC_CODING_CODE, 
@@ -67,9 +64,6 @@ select
         case
             when dx.DIAGNOSISID is null then null else 'DD' 
         end as ENC_DIAGN_ROLE_CODING_CODE, 
-        case
-            when dx.DIAGNOSISID is null then null else 'https://www.hl7.org/fhir/valueset-diagnosis-role.html' 
-        end as ENC_DIAGN_ROLE_SYST, 
         case
             when dx.DIAGNOSISID is null then null else 1 
         end as ENC_DIAGN_RANK 
@@ -99,7 +93,7 @@ select distinct
 	dx.DIAGNOSISID as CON_IDENTIFIER,
 	'Patient/' || dx.PATID as CON_SUBJECT_REFERENCE,
 	'Encounter/' || dx.ENCOUNTERID as CON_CONTEXT_REFERENCE,
-	case when dx.PROVIDERID is null then null else 'Practitioner/'||dx.PROVIDERID end as CON_ASSERTER_REFERENCE, 
+	case when dx.PROVIDERID is null OR dx.PROVIDERID = '----' then null else 'Practitioner/'||dx.PROVIDERID end as CON_ASSERTER_REFERENCE, 
 	case
 		when dx.DX_TYPE = '09' then	'http://hl7.org/fhir/sid/icd-9-cm'
 		when dx.DX_TYPE = '10' then 'http://hl7.org/fhir/sid/icd-10-cm'
@@ -111,7 +105,7 @@ select distinct
 	'https://www.hl7.org/fhir/valueset-condition-category' as CON_CATEGORY_CODING_SYST,
 	'encounter-diagnosis' as CON_CATEGORY_CODING_CODE,
 	to_char(dx.admit_date, 'YYYY-MM-DD') as CON_ASSERT_DATE,
-	null as CON_CLINSTATUS, 
+	'active' as CON_CLINSTATUS, 
 	null as CON_ABATEDATE, 
 	null as CON_ONSETDATE 
 from
@@ -139,7 +133,7 @@ select distinct
 	'https://www.hl7.org/fhir/valueset-condition-category' as CON_CATEGORY_CODING_SYST,
 	'problem-list-item' as CON_CATEGORY_CODING_CODE,
 	to_char(cond.REPORT_DATE, 'YYYY-MM-DD') as CON_ASSERT_DATE,
-	nvl(tcc1.FHIR_OUT_CD,null) as CON_CLINSTATUS, 
+	nvl(tcc1.FHIR_OUT_CD,'active') as CON_CLINSTATUS, 
 	to_char(cond.RESOLVE_DATE, 'YYYY-MM-DD') as CON_ABATEDATE, 
 	to_char(cond.ONSET_DATE, 'YYYY-MM-DD') as CON_ONSETDATE 
 from
@@ -152,6 +146,7 @@ where
 
 --PROCEDURE
 --PCD_IDENTIFIER maps to Procedure / identifier
+--PCD_STATUS maps to Procedure / status
 --PCD_SUBJECT_REFERENCE maps to Procedure / subject / reference
 --PCD_CONTEXT_REFERENCE maps to Procedure / context / reference
 --PCD_PERF_ACTOR_REF maps to Procedure / performer / actor / reference
@@ -161,13 +156,14 @@ where
 create or replace view PCORNET_PROCEDURE_2FHIR as (
 select distinct
 	px.PROCEDURESID as PCD_IDENTIFIER,
+	'unknown' as PCD_STATUS,
 	'Patient/' || px.PATID as PCD_SUBJECT_REFERENCE,
 	'Encounter/' || px.ENCOUNTERID as PCD_CONTEXT_REFERENCE,
 	case 
 	    when px.PROVIDERID is null then null else 'Practitioner/'||px.PROVIDERID 
 	end as PCD_PERF_ACTOR_REF, 
 	case
-		when px.PX_TYPE = '09' then	'http://hl7.org/fhir/sid/icd-9-cm/'
+		when px.PX_TYPE = '09' then 'http://hl7.org/fhir/sid/icd-9-cm/'
 		when px.PX_TYPE = '10' then 'http://hl7.org/fhir/sid/icd-10-cm/'
 		when px.PX_TYPE = '11' then 'http://hl7.org/fhir/sid/icd-11-cm/'
 		when px.PX_TYPE = 'CH' then 'http://www.ama-assn.org/go/cpt/'
@@ -183,6 +179,7 @@ from
 
 --OBSERVATION (VITALS AND SMOKING)
 --OBS_IDENTIFIER maps to Observation / identifier
+--OBS_STATUS maps to Observation / status
 --OBS_SUBJECT_REFERENCE maps to Observation / subject / reference
 --OBS_CONTEXT_REFERENCE maps to Observation / context / reference
 --OBS_CATEGORY_SYST maps to Observation / category / coding / system
@@ -194,11 +191,13 @@ from
 --OBS_VALUEQUANTITY_VALUE maps to Observation / valueQuantity / value
 --OBS_VALUEQUANTITY_COMPARATOR maps to Observation / valueQuantity / comparator
 --OBS_VALUEQUANTITY_CODE maps to Observation / valueQuantity / code
+--OBS_VALUEQUANTITY_SYST maps to Observation / valueQuantity / system
 --OBS_VALUESTRING maps to Observation / valueString
 --OBS_EFFECTIVEDATETIME maps to Observation / effectiveDateTime
 create or replace view PCORNET_OBSVITALS_2FHIR as (
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -210,6 +209,7 @@ select distinct
      vit.HT as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      '[in_i]' as OBS_VALUEQUANTITY_CODE,
+     'https://unitsofmeasure.org' as OBS_VALUEQUANTITY_SYST,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -228,6 +228,7 @@ UNION
 
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -239,6 +240,7 @@ select distinct
      vit.WT as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      '[lb_av]' as OBS_VALUEQUANTITY_CODE,
+     'https://unitsofmeasure.org' as OBS_VALUEQUANTITY_SYST,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -257,6 +259,7 @@ UNION
 
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -268,6 +271,7 @@ select distinct
      vit.DIASTOLIC as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      'mm[Hg]' as OBS_VALUEQUANTITY_CODE,
+     'https://unitsofmeasure.org' as OBS_VALUEQUANTITY_SYST,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -286,6 +290,7 @@ UNION
 
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -297,6 +302,7 @@ select distinct
      vit.SYSTOLIC as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      'mm[Hg]' as OBS_VALUEQUANTITY_CODE,
+     'https://unitsofmeasure.org' as OBS_VALUEQUANTITY_SYST,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -315,6 +321,7 @@ UNION
 
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -326,6 +333,7 @@ select distinct
      vit.ORIGINAL_BMI as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      'kg/m2' as OBS_VALUEQUANTITY_CODE,
+     'https://unitsofmeasure.org' as OBS_VALUEQUANTITY_SYST,
 	 null as OBS_VALUESTRING,
 	 null as OBS_ISSUED,
     vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
@@ -344,6 +352,7 @@ UNION
 
 select distinct
     vit.VITALID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||vit.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||vit.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -355,8 +364,9 @@ select distinct
      null as OBS_VALUEQUANTITY_VALUE,
      null as OBS_VALUEQUANTITY_COMPARATOR,
      null as OBS_VALUEQUANTITY_CODE,
-	 null as OBS_VALUESTRING,
-	 null as OBS_ISSUED,
+     null as OBS_VALUEQUANTITY_SYST,
+     null as OBS_VALUESTRING,
+     null as OBS_ISSUED,
      vit.MEASURE_DATE as OBS_EFFECTIVEDATETIME,
      null as OBS_REFRANGE_LOW,
      null as OBS_REFRANGE_HIGH,
@@ -371,6 +381,7 @@ where
 
 --OBSERVATION (LABS)
 --OBS_IDENTIFIER maps to Observation / identifier 
+--OBS_STATUS maps to Observation / status
 --OBS_SUBJECT_REFERENCE maps to Observation / subject / reference
 --OBS_CONTEXT_REFERENCE maps to Observation / context / reference
 --OBS_CATEGORY_SYST maps to Observation / category / coding / system
@@ -392,6 +403,7 @@ where
 create or replace view PCORNET_OBSLABS_2FHIR as (
 select distinct
     labs.LAB_RESULT_CM_ID as OBS_IDENTIFIER, 
+    'final' as OBS_STATUS,
     'Patient/'||labs.PATID as OBS_SUBJECT_REFERENCE, 
     'Encounter/'||labs.ENCOUNTERID as OBS_CONTEXT_REFERENCE,
     'http://hl7.org/fhir/ValueSet/observation-category' as OBS_CATEGORY_SYST,
@@ -412,14 +424,8 @@ select distinct
     end as OBS_VALUESTRING,
     labs.RESULT_DATE as OBS_ISSUED, 
     nvl(labs.SPECIMEN_DATE,labs.LAB_ORDER_DATE) as OBS_EFFECTIVEDATETIME,
-    case 
-        when labs.NORM_MODIFIER_LOW IN ('EQ','GE','GT','NO') then labs.NORM_MODIFIER_LOW||' '||labs.NORM_RANGE_LOW
-        else labs.NORM_RANGE_LOW
-    end as OBS_REFRANGE_LOW, 
-    case 
-        when labs.NORM_MODIFIER_HIGH IN ('EQ','GE','GT','NO') then labs.NORM_MODIFIER_HIGH||' '||labs.NORM_RANGE_HIGH
-        else labs.NORM_RANGE_HIGH
-    end as OBS_REFRANGE_HIGH, 
+    labs.NORM_RANGE_LOW as OBS_REFRANGE_LOW, 
+    labs.NORM_RANGE_HIGH as OBS_REFRANGE_HIGH, 
     nvl(tcc2.FHIR_OUT_CD,null) as OBS_INTERPRETATION_CODE, 
     'http://hl7.org/fhir/ValueSet/observation-interpretation' as OBS_INTERPRETATION_SYST 
 from
