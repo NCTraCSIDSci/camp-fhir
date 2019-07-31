@@ -1,0 +1,127 @@
+TABLE_CD,COLUMN_CD,LOCAL_IN_CD,FHIR_OUT_CD,FHIR_OUT_CHAR,COMMENTS,FHIR_OUT_COLUMN,FHIR_SYSTEM
+CONDITION,CONDITION_STATUS,AC,active,Active,(null),CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+CONDITION,CONDITION_STATUS,RS,resolved,Resolved,(null),CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+CONDITION,CONDITION_STATUS,OT,(null),(null),No mapping for other,CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+CONDITION,CONDITION_STATUS,NI,(null),(null),No mapping for unknown,CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+CONDITION,CONDITION_STATUS,UN,(null),(null),No mapping for unknown,CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+CONDITION,CONDITION_STATUS,IN,inactive,Inactive,(null),CON_CLINICALSTAT,https://www.hl7.org/fhir/valueset-condition-clinical.html
+DEMOGRAPHIC,SEX,M,male,Male,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+DEMOGRAPHIC,HISPANIC,OT,(null),(null),No mapping for unknown,PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,SEX,UN,unknown,Unknown,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+DEMOGRAPHIC,SEX,A,other,Other,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+DEMOGRAPHIC,SEX,NI,unknown,Unknown,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+DEMOGRAPHIC,SEX,OT,other,Other,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+DEMOGRAPHIC,RACE,1,1002-5,American Indian or Alaska Native,(null),PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,2,2028-9,Asian,(null),PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,3,2054-5,Black or African American,(null),PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,4,2076-8,Native Hawaiian or Other Pacific Islander,(null),PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,5,2106-3,White,(null),PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,6,2131-1,Other,Have to map multiple race to Other ,PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,7,(null),(null),No mapping for unknown,PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,NI,(null),(null),No mapping for unknown,PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,UN,(null),(null),No mapping for unknown,PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,RACE,OT,2131-1,Other,Other is valid but deprecated in FHIR,PNT_RACE,http://hl7.org/fhir/v3/Race
+DEMOGRAPHIC,HISPANIC,Y,2135-2,Hispanic or Latino,(null),PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,HISPANIC,N,2186-5,Not Hispanic or Latino,(null),PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,HISPANIC,R,(null),(null),No mapping for unknown,PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,HISPANIC,NI,(null),(null),No mapping for unknown,PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,HISPANIC,UN,(null),(null),No mapping for unknown,PNT_ETHNICITY,http://hl7.org/fhir/v3/Ethnicity
+DEMOGRAPHIC,SEX,F,female,Female,(null),PNT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender
+ENCOUNTER,ENC_TYPE,AV,AMB,ambulatory,(null),ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ADMITTING_SOURCE,OT,oth,Other,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ENC_TYPE,EI,IMP,inpatient encounter,imperfect match,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,IP,IMP,inpatient encounter,(null),ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,IS,NONAC,inpatient non-acute,(null),ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,OS,SS,short stay,imperfect match,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,IC,IMP,inpatient encounter,imperfect match,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,OA,AMB,ambulatory,(null),ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,NI,(null),(null),No mapping for unknown,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,UN,(null),(null),No mapping for unknown,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,ENC_TYPE,OT,(null),(null),No mapping for other,ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+ENCOUNTER,DISCHARGE_STATUS,AF,oth,Other,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,AL,oth,Other,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,AM,aadvice,Left against advice,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,AW,oth,Other,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,EX,exp,Expired,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,HH,oth,Other,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,HO,home,Home,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,HS,hosp,Hospice,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,IP,other-hcf,Other healthcare facility,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,NH,long,Long-term care,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,RH,rehab,Rehabilitation,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,RS,long,Long-term care,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,SH,oth,Other,imperfect match,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,SN,snf,Skilled nursing facility,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,NI,(null),(null),No mapping for unknown,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,UN,(null),(null),No mapping for unknown,ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,DISCHARGE_STATUS,OT,oth,Other,(null),ENC_HOSP_DISDISP_CODING_CODE,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+ENCOUNTER,ADMITTING_SOURCE,AF,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,AL,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,AV,outp,From outpatient department,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,ED,emd,From accident/emergency department,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,HH,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,HO,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,HS,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,IP,hosp-trans,Transferred from other hospital,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,NH,nursing,From nursing home,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,RH,rehab,From rehabilitation facility,(null),ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,RS,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,SN,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,IH,oth,Other,imperfect match,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,NI,(null),(null),No mapping for unknown,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ADMITTING_SOURCE,UN,(null),(null),No mapping for unknown,ENC_HOSP_ADMSRC_CODING_CODE,https://www.hl7.org/fhir/valueset-encounter-admit-source.html
+ENCOUNTER,ENC_TYPE,ED,EMER,emergency,(null),ENC_CLASS_CODE,http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+LAB_RESULT_CM,RESULT_MODIFIER,EQ,(null),(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,ABN_IND,OT,(null),(null),No mapping for other,OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,RESULT_MODIFIER,GT,>,(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,LE,<=,(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,LT,<,(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,TX,(null),(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,NI,(null),(null),No mapping for unknown,OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,UN,(null),(null),No mapping for unknown,OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,RESULT_MODIFIER,OT,(null),(null),No mapping for other,OBS_VALUEQUANTITY_COMPARATOR,(null)
+LAB_RESULT_CM,ABN_IND,AB,A,Abnormal,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,AH,H,High,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,AL,L,Low,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,CH,HH,Critically high,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,CL,LL,Critically low,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,CR,AA,Critical,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,IN,IND,Indeterminate,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,NL,N,Normal,(null),OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,NI,(null),(null),No mapping for unknown,OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,ABN_IND,UN,(null),(null),No mapping for unknown,OBS_INTERPRETATION,https://www.hl7.org/fhir/valueset-observation-interpretation.html
+LAB_RESULT_CM,RESULT_MODIFIER,GE,>=,(null),(null),OBS_VALUEQUANTITY_COMPARATOR,(null)
+PRESCRIBING,RX_PRN_FLAG,Y,TRUE,TRUE,(null),MED_DOSINSTX_ASNDBOOL,https://www.hl7.org/fhir/dosage.html
+PRESCRIBING,RX_FREQUENCY,OT,(null),(null),No mapping for other,MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_DISPENSE_AS_WRITTEN,Y,TRUE,TRUE,(null),MED_SUBSTITU_ALLOWED,https://www.hl7.org/fhir/medicationrequest.html
+PRESCRIBING,RX_DISPENSE_AS_WRITTEN,N,FALSE,FALSE,(null),MED_SUBSTITU_ALLOWED,https://www.hl7.org/fhir/medicationrequest.html
+PRESCRIBING,RX_FREQUENCY,1,Every day,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,2,Two times a day (BID),(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,3,Three times a day (TID),(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,4,Four times a day (QID),(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,5,Every morning,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,6,Every afternoon,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,7,Before meals,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,8,After meals,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,10,Every evening,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,11,Once,(null),(null),MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,NI,(null),(null),No mapping for unknown,MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_FREQUENCY,UN,(null),(null),No mapping for unknown,MED_DOSINSTX_TEXT,(null)
+PRESCRIBING,RX_PRN_FLAG,N,FALSE,FALSE,(null),MED_DOSINSTX_ASNDBOOL,https://www.hl7.org/fhir/dosage.html
+PROVIDER,PROVIDER_SEX,OT,other,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+PROVIDER,PROVIDER_SEX,A,other,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+PROVIDER,PROVIDER_SEX,F,female,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+PROVIDER,PROVIDER_SEX,M,male,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+PROVIDER,PROVIDER_SEX,NI,unknown,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+PROVIDER,PROVIDER_SEX,UN,unknown,(null),(null),PRACT_GENDER,https://www.hl7.org/fhir/valueset-administrative-gender.html
+VITALS,SMOKING,1,449868002,Current every day smoker,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,2,4.28041E+14,Current some day smoke,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,3,8517006,Former smoker,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,4,266919005,Never smoker,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,5,77176002,"Smoker, current status unknown",(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,OT,(null),(null),No mapping for other,OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,7,4.28071E+14,Current Heavy tobacco smoker,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,8,4.28061E+14,Current Light tobacco smoker,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,NI,(null),(null),No mapping for null,OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,UN,266927001,Unknown if ever smoked,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
+VITALS,SMOKING,6,266927001,Unknown if ever smoked,(null),OBS_CODE_CODING_CODE,http://snomed.info/sct
