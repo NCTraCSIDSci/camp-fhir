@@ -440,6 +440,9 @@ from
 --MED_SUBJECT_REFERENCE maps to MedicationRequest / subject / reference
 --MED_CONTEXT_REFERENCE maps to MedicationRequest / context / reference
 --MED_MEDREF_REFERENCE maps to MedicationRequest / medicationReference / reference
+--MED_MEDCODCON_CODING_CODE maps to MedicationRequest / medicationCodeableConcept / coding / code
+--MED_MEDCODCON_CODING_SYS maps to MedicationRequest / medicationCodeableConcept / coding / system
+--MED_MEDCODCON_CODING_DISPLAY maps to MedicationRequest / medicationCodeableConcept / coding / display
 --MED_AUTHORED_ON maps to MedicationRequest / authoredOn
 --MED_DISPREQ_PERIOD_START maps to MedicationRequest / dispenseRequest / validityPeriod / start
 --MED_DISPREQ_PERIOD_END maps to MedicationRequest / dispenseRequest / validityPeriod / end
@@ -463,6 +466,9 @@ select distinct
     'Patient/'||med.PATID as MED_SUBJECT_REFERENCE, 
     'Encounter/'||med.ENCOUNTERID as MED_CONTEXT_REFERENCE, 
     'Medication/'||med.RXNORM_CUI as MED_MEDREF_REFERENCE, 
+    med.RXNORM_CUI as MED_MEDCODCON_CODING_CODE,
+    'http://www.nlm.nih.gov/research/umls/rxnorm' as MED_MEDCODCON_CODING_SYS,
+    med.RAW_RX_MED_NAME as MED_MEDCODCON_CODING_DISPLAY,
     med.RX_ORDER_DATE as MED_AUTHORED_ON, 
     med.RX_START_DATE as MED_DISPREQ_PERIOD_START,
     med.RX_END_DATE as MED_DISPREQ_PERIOD_END, 
