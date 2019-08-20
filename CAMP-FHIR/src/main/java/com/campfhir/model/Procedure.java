@@ -6,22 +6,21 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20
 */
 @Entity
 public class Procedure 
 {
 	String PCD_IDENTIFIER;
+	String PCD_STATUS;
 	String PCD_SUBJECT_REFERENCE;
 	String PCD_CONTEXT_REFERENCE;
 	String PCD_CODE_CODING_SYST;
 	String PCD_CODE_CODING_CODE;
 	String PCD_PERFORMED_PDT;
 	String PCD_PERF_ACTOR_REF;
-
 	
 	public Procedure() {}
-
 
 	public String getPCD_IDENTIFIER() 
 	{
@@ -31,6 +30,16 @@ public class Procedure
 	public void setPCD_IDENTIFIER(String pCD_IDENTIFIER) 
 	{
 		PCD_IDENTIFIER = pCD_IDENTIFIER;
+	}
+	
+	public String getPCD_STATUS() 
+	{
+		return PCD_STATUS;
+	}
+
+	public void setPCD_STATUS(String pCD_STATUS) 
+	{
+		PCD_STATUS = pCD_STATUS;
 	}
 
 	public String getPCD_SUBJECT_REFERENCE() 

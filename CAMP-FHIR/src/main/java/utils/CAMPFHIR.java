@@ -4,10 +4,17 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.hibernate.ScrollableResults;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import org.hl7.fhir.dstu3.model.Bundle;
 import org.hl7.fhir.exceptions.FHIRException;
 import org.xml.sax.SAXException;
@@ -31,6 +38,7 @@ import com.campfhir.service.conversion.ConditionConversion;
 import com.campfhir.service.conversion.EncounterConversion;
 import com.campfhir.service.conversion.LabConversion;
 import com.campfhir.service.conversion.MedicationRequestConversion;
+import com.campfhir.service.conversion.PatientAllConversion;
 import com.campfhir.service.conversion.PatientConversion;
 import com.campfhir.service.conversion.PractitionerConversion;
 import com.campfhir.service.conversion.ProcedureConversion;
@@ -38,17 +46,18 @@ import com.campfhir.service.conversion.VitalConversion;
 import com.google.common.collect.Lists;
 
 import ca.uhn.fhir.context.FhirContext;
+import ca.uhn.fhir.model.dstu2.resource.Person;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20
 */
 public class CAMPFHIR 
 {
 	public static void main(String[] args) 
-			throws ParseException, FHIRException, IOException, ParserConfigurationException, SAXException 
+			throws ParseException, FHIRException, IOException, ParserConfigurationException, SAXException, InterruptedException 
 	{
 		String domain = args[0];		
 		String path = args[1];
@@ -57,91 +66,76 @@ public class CAMPFHIR
 		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 
 		System.out.println("Processing...");	
-
+		
 		if(domain.equals("Condition"))
 		{
-		    List<List<Condition>> conditions = Lists.partition(new ConditionService().findAll(), partition);
-		    
-			for (List<Condition> c : conditions) 
-			{
-				Bundle bundle = new ConditionConversion().Conditions(c);
-				writeFile(path, domain + conditions.indexOf(c), bundle);
-			}
+		     new ConditionService().findAll(partition, path);			
 		}
+		
 		else if(domain.equals("Encounter"))
-		{
-		    List<List<Encounter>> encounters = Lists.partition(new EncounterService().findAll(), partition);
-		    
-			for (List<Encounter> e : encounters) 
-			{
-				Bundle bundle = new EncounterConversion().Encounters(e);
-				writeFile(path, domain + encounters.indexOf(e), bundle);
-			}		
+		{			
+		    new EncounterService().findAll(partition, path);			
 		}	
+		
 		else if(domain.equals("Observation_Labs"))
 		{
-			List<List<Lab>> labs = Lists.partition(new ObservationService().findAllLab(), partition);
-			
-			for (List<Lab> l : labs) 
-			{
-				Bundle bundle = new LabConversion().Labs(l);
-				writeFile(path, domain + labs.indexOf(l), bundle);	
-			}
+			new ObservationService().findAllLab(partition, path);
 		}	
 
 		else if(domain.equals("MedicationRequest"))
 		{
-		    List<List<MedicationRequest>> medicationRequests = Lists.partition(
-		    		new MedicationRequestService().findAll(), partition);
-		    
-			for (List<MedicationRequest> m : medicationRequests) 
-			{
-				Bundle bundle = new MedicationRequestConversion().MedicationRequests(m);
-				writeFile(path, domain + medicationRequests.indexOf(m), bundle);		
-			}
+		    new MedicationRequestService().findAll(partition, path);
 		}	
+		
 		else if(domain.equals("Patient"))
 		{
-		    List<List<Patient>> patients = Lists.partition(new PatientService().findAll(), partition);
-		    
-			for (List<Patient> p : patients) 
-			{
-				Bundle bundle = new PatientConversion().Patients(p);
-				writeFile(path, domain + patients.indexOf(p), bundle);
-			}
+		    new PatientService().findAll(partition, path);
+		}
+		
+		else if(domain.equals("PatientAll"))
+		{
+		    //List<List<Patient>> patients = Lists.partition(new PatientService().patientRecordViewAll(), 1);
+//		    System.out.println("Patients Loaded...");
+//		    List<Encounter> elist = new EncounterService().findAll();
+//		    System.out.println("Encounters Loaded...");
+//		    List<Condition> clist = null;//new ConditionService().findAll();
+//		    System.out.println("Conditions Loaded...");
+//		    List<MedicationRequest> mlist = new MedicationRequestService().findAll();
+//		    System.out.println("Medication Requests Loaded...");
+//		    List<Procedure> plist = new ProcedureService().findAll();
+//		    System.out.println("Procedures Loaded...");
+//		    List<Lab> llist = new ObservationService().findAllLab();
+//		    System.out.println("Labs Loaded...");
+//		    List<Vital> vlist = new ObservationService().findAllVital();
+//		    System.out.println("Vitals Loaded...");
+//		    
+//		    int count = 0;
+//			for (List<Patient> p : patients) 
+//			{
+//				count++;
+//				System.out.println(count);
+//				
+//				Bundle bundle = new PatientAllConversion().Patients(p, 
+//						elist, 
+//						clist, 
+//						mlist, 
+//						plist, 
+//						llist, 
+//						vlist);
+//				writeFile(path, p.get(0).getPNT_IDENTIFIER(), bundle);
+//			}
 		}
 		else if(domain.equals("Practitioner"))
 		{
-		    List<List<Practitioner>> practitioners = Lists.partition(
-		    		new PractitionerService().findAll(), partition);
-		    
-			for (List<Practitioner> p : practitioners) 
-			{
-				Bundle bundle = new PractitionerConversion().Practitioners(p);
-				writeFile(path, domain + practitioners.indexOf(p), bundle);
-			}
+			new PractitionerService().findAll(partition, path);
 		}
 		else if(domain.equals("Procedure"))
 		{
-		    List<List<Procedure>> procedures = Lists.partition(
-		    		new ProcedureService().findAll(), partition);
-		    
-			for (List<Procedure> p : procedures) 
-			{
-				Bundle bundle = new ProcedureConversion().Procedures(p);
-				writeFile(path, domain + procedures.indexOf(p), bundle);	
-			}
+		    new ProcedureService().findAll(partition, path);
 		}	
 		else if(domain.equals("Observation_VitalsSmoking"))
 		{
-		    List<List<Vital>> vitals = Lists.partition(
-		    		new ObservationService().findAllVital(), partition);
-		    
-			for (List<Vital> v : vitals) 
-			{
-				Bundle bundle = new VitalConversion().Vitals(v);
-				writeFile(path, domain + vitals.indexOf(v), bundle);	
-			}
+		    new ObservationService().findAllVital(partition, path);
 		}
 		
 		System.out.println("Finished...");
@@ -152,10 +146,11 @@ public class CAMPFHIR
 		FhirContext ctx = FhirContext.forDstu3();
 		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
 		
-	    BufferedWriter writer;
+
 		
 		try 
 		{
+		    BufferedWriter writer;
 			writer = new BufferedWriter(new FileWriter(path+"/"+domain+".json"));
 		    writer.write(file);
 		    writer.close();

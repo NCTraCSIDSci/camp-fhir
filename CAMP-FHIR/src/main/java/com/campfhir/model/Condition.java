@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 
 @Entity
@@ -25,6 +25,7 @@ public class Condition
 	String CON_ABATEDATE;
 	String CON_ONSETDATE;
 	
+
 	public String getCON_IDENTIFIER() 
 	{
 		return CON_IDENTIFIER;

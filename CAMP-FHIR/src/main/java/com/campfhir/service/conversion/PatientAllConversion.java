@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -20,8 +21,13 @@ import org.hl7.fhir.dstu3.model.Enumerations.AdministrativeGender;
 import org.hl7.fhir.exceptions.FHIRException;
 import org.xml.sax.SAXException;
 
+import com.campfhir.model.Condition;
+import com.campfhir.model.Encounter;
+import com.campfhir.model.Lab;
+import com.campfhir.model.MedicationRequest;
 import com.campfhir.model.Patient;
-
+import com.campfhir.model.Procedure;
+import com.campfhir.model.Vital;
 
 /**
 *
@@ -29,14 +35,21 @@ import com.campfhir.model.Patient;
 * @version 1.0
 * @since   2019-08-20 
 */
-public class PatientConversion 
+public class PatientAllConversion 
 {
     
-	public org.hl7.fhir.dstu3.model.Patient Patients(Patient patient) throws ParseException, IOException, ParserConfigurationException, SAXException
+	public Bundle Patients(Patient patient, 
+			List<Encounter> elist, 
+			List<Condition> clist, 
+			List<MedicationRequest> mlist, 
+			List<Procedure> plist, 
+			List<Lab> llist, 
+			List<Vital> vlist) throws ParseException, IOException, FHIRException, ParserConfigurationException, SAXException
 	{
+		Bundle bundle = new Bundle();
+
+
 			org.hl7.fhir.dstu3.model.Patient n = new org.hl7.fhir.dstu3.model.Patient(); 
-			
-			
 			
 			/******************** PNT_IDENTIFIER ******************************************************************************** 
 			 * PNT_IDENTIFIER maps to Patient / identifier
@@ -84,11 +97,6 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			c.setCode(patient.getPNT_MARITAL_STATUS_CODE());
 			
-			/******************** PNT_MARITAL_STATUS_SYSTEM *********************************************************************
-			 * PNT_MARITAL_STATUS_SYSTEM maps to Patient / maritalStatus / coding / system
-			 ********************************************************************************************************************/
-			c.setSystem("http://terminology.hl7.org/CodeSystem/v3-MaritalStatus");//patient.getPNT_MARITAL_STATUS_SYSTEM());
-			
 			List<Coding> theCoding = new ArrayList<Coding>();
 			
 			theCoding.add(c);
@@ -99,7 +107,7 @@ public class PatientConversion
 			/******************** PNT_RACE **************************************************************************************
 			 * PNT_RACE maps to Patient / extension / race / coding / code
 			 ********************************************************************************************************************/
-			Extension race = new Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Race").setValue(new StringType(patient.getPNT_RACE())); 
+			Extension race = new Extension().setUrl("http://hl7.org/fhir/v3/Race").setValue(new StringType(patient.getPNT_RACE())); 
 			n.addExtension(race);
 			
 			/******************** PNT_ETHNICITY *********************************************************************************
@@ -107,7 +115,6 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			Extension ethnicity = new Extension().setUrl("http://hl7.org/fhir/v3/Ethnicity").setValue(new StringType(patient.getPNT_ETHNICITY())); 
 			n.addExtension(ethnicity);
-
 			
 			Address addrResource = n.addAddress();
 			if(patient.getPNT_ADDRESS_EXT_LAT_VALUE()!=null && patient.getPNT_ADDRESS_EXT_LONG_VALUE() != null)
@@ -124,7 +131,54 @@ public class PatientConversion
 				 ***************************************************************************************************************/
 			    geolocation.addExtension("Longitude", new DecimalType(patient.getPNT_ADDRESS_EXT_LONG_VALUE()));
 			}
+			
+			bundle.addEntry()
+			   .setFullUrl("https://www.hl7.org/fhir/patient.html")
+			   .setResource(n);
+			
+			List<Encounter> encounters = elist.stream()
+					.filter(p -> p.getENC_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+			List<Condition> conditions = clist.stream()
+					.filter(p -> p.getCON_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+			List<MedicationRequest> medicationRequests = mlist.stream()
+					.filter(p -> p.getMED_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+			List<Procedure> procedures = plist.stream()
+					.filter(p -> p.getPCD_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+			List<Lab> labs = llist.stream()
+					.filter(p -> p.getOBS_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+			List<Vital> vitals = vlist.stream()
+					.filter(p -> p.getOBS_SUBJECT_REFERENCE()
+							.equals("Patient/"+patient.getPNT_IDENTIFIER())).collect(Collectors.toList());
+			
+//			bundle.addEntry()
+//			   .setResource(new EncounterConversion().Encounters(encounters));
+//			
+//			bundle.addEntry()
+//			   .setResource(new ConditionConversion().Conditions(conditions));
+//			
+//			bundle.addEntry()
+//			   .setResource(new MedicationRequestConversion().MedicationRequests(medicationRequests));
+//			
+//			bundle.addEntry()
+//			   .setResource(new ProcedureConversion().Procedures(procedures));
+//			
+//			bundle.addEntry()
+//			   .setResource(new LabConversion().Labs(labs));
+//			
+//			bundle.addEntry()
+//			   .setResource(new VitalConversion().Vitals(vitals));
+			
 
-		  return n;
+		  return bundle;
 	}
 }

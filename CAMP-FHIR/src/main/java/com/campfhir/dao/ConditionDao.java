@@ -1,13 +1,17 @@
 package com.campfhir.dao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.hibernate.Query;
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -21,7 +25,7 @@ import utils.HibernateBaseDB;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20
 */
 public class ConditionDao implements ConditionDaoInterface<Condition, String> 
 {
@@ -106,7 +110,7 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 	@SuppressWarnings("unchecked")
 	public List<Condition> findByPatientId(String id)
 	{
-		Query query = getCurrentSession().createQuery("FROM Condition WHERE con_subject_reference = '"+id+"'");
+		Query query = getCurrentSession().createQuery("FROM Condition WHERE CON_IDENTIFIER = '"+id+"'");
 		
 		List<Condition> condition = (List<Condition>) query.list();
 		
@@ -119,16 +123,13 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Condition> findAll() 
+	public ScrollableResults findAll() 
 	{
-		Query query = getCurrentSession().createQuery("FROM Condition");
-//		
-//		query.setFirstResult(start);
-//		query.setMaxResults(max);
-		
-		List<Condition> condition = (List<Condition>) query.list();
-		
-		return condition;
+		return getCurrentSession().createQuery("FROM Condition")
+				.setReadOnly(true)
+
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
 
 	public void deleteAll() 

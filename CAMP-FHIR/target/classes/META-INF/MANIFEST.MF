@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Built-By: emerse
-Build-Jdk: 1.8.0_121
-Created-By: Maven Integration for Eclipse
-Main-Class: utils.CAMPFHIR
-

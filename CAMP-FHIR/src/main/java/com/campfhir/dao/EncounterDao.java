@@ -6,6 +6,8 @@ import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.hibernate.Query;
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,7 +23,7 @@ import utils.HibernateBaseDB;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20
 */
 public class EncounterDao implements EncounterDaoInterface<Encounter, String> 
 {
@@ -103,26 +105,36 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		return encounter; 
 	}
 
+	public List<Encounter> findByPatientId(String id) 
+	{
+		Query query = getCurrentSession().createQuery("FROM Encounter where ENC_SUBJECT_REFERENCE = 'Patient/"+id+"'");
+		
+		List<Encounter> encounters = (List<Encounter>) query.list();
+		
+		return encounters; 
+	}
+
 	public void delete(Encounter entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Encounter> findAll() 
+	public ScrollableResults findAll() 
 	{
-		Query query = getCurrentSession().createQuery("FROM Encounter");
+		ScrollableResults encounters = getCurrentSession().createQuery("FROM Encounter")
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
 		
-		List<Encounter> encounter = (List<Encounter>) query.list();
-		
-		return encounter;
+		return encounters;
 	}
 
 	public void deleteAll() 
 	{
-		List<Encounter> entityList = findAll();
-		for (Encounter entity : entityList) {
-			delete(entity);
-		}
+//		List<Encounter> entityList = findAll();
+//		for (Encounter entity : entityList) {
+//			delete(entity);
+//		}
 	}
 }

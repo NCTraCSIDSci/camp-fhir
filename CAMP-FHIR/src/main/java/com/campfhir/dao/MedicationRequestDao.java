@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,7 +22,7 @@ import utils.HibernateBaseDB;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 public class MedicationRequestDao implements MedicationRequestDaoInterface<MedicationRequest, String> 
 {
@@ -108,17 +110,21 @@ public class MedicationRequestDao implements MedicationRequestDaoInterface<Medic
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<MedicationRequest> findAll() 
+	public ScrollableResults findAll() 
 	{
-		List<MedicationRequest> medication = (List<MedicationRequest>) getCurrentSession().createQuery("FROM MedicationRequest").list();
+		ScrollableResults medication = getCurrentSession().createQuery("FROM MedicationRequest")
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		
 		return medication;
 	}
 
 	public void deleteAll() 
 	{
-		List<MedicationRequest> entityList = findAll();
-		for (MedicationRequest entity : entityList) {
-			delete(entity);
-		}
+//		List<MedicationRequest> entityList = findAll();
+//		for (MedicationRequest entity : entityList) {
+//			delete(entity);
+//		}
 	}
 }

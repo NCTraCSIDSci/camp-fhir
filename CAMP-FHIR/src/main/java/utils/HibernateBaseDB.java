@@ -23,17 +23,20 @@ import org.xml.sax.SAXException;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 public class HibernateBaseDB 
 {
-	    public static SessionFactory getSessionFactory() 
+	    private static FileInputStream fileInputStream;
+
+		public static SessionFactory getSessionFactory() 
 	    		throws ParserConfigurationException, SAXException, IOException 
 	    {
 	    	java.util.Properties properties = new Properties();
 	    	try 
 	    	{
-				properties.load(new FileInputStream("/opt/config.properties"));
+				fileInputStream = new FileInputStream("/opt/config.properties");
+				properties.load(fileInputStream);
 			} 
 	    	catch (FileNotFoundException e) 
 	    	{

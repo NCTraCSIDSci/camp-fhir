@@ -1,12 +1,15 @@
 package com.campfhir.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 @Entity
 public class Patient  implements java.io.Serializable 
@@ -17,11 +20,12 @@ public class Patient  implements java.io.Serializable
 	String PNT_GENDER;	
 	String PNT_BIRTHDATE;	
 	String PNT_MARITAL_STATUS_CODE;	
-	String PNT_MARITAL_STATUS_SYSTEM;
 	String PNT_RACE;
 	String PNT_ETHNICITY;
 	String PNT_ADDRESS_EXT_LAT_VALUE;
 	String PNT_ADDRESS_EXT_LONG_VALUE;
+	
+	List<Encounter> encounterList = new ArrayList<Encounter>();
 
 	public String getPNT_IDENTIFIER() 
 	{
@@ -63,16 +67,6 @@ public class Patient  implements java.io.Serializable
 		this.PNT_MARITAL_STATUS_CODE = pNT_MARITAL_STATUS_CODE;
 	}
 
-	public String getPNT_MARITAL_STATUS_SYSTEM() 
-	{
-		return this.PNT_MARITAL_STATUS_SYSTEM;
-	}
-
-	public void setPNT_MARITAL_STATUS_SYSTEM(String pNT_MARITAL_STATUS_SYSTEM) 
-	{
-		this.PNT_MARITAL_STATUS_SYSTEM = pNT_MARITAL_STATUS_SYSTEM;
-	}
-	
 	public String getPNT_RACE() 
 	{
 		return this.PNT_RACE;
@@ -111,6 +105,16 @@ public class Patient  implements java.io.Serializable
 	public void setPNT_ADDRESS_EXT_LONG_VALUE(String pNT_ADDRESS_EXT_LONG_VALUE) 
 	{
 		this.PNT_ADDRESS_EXT_LONG_VALUE = pNT_ADDRESS_EXT_LONG_VALUE;
+	}
+	
+	public List<Encounter> getEncounterList() 
+	{
+		return encounterList;
+	}
+
+	public void setEncounterList(List<Encounter> encounterList) 
+	{
+		this.encounterList = encounterList;
 	}
 
 	@Override

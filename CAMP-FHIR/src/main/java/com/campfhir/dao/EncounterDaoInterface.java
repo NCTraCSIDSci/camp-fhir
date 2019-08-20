@@ -3,11 +3,15 @@ package com.campfhir.dao;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.ScrollableResults;
+
+import com.campfhir.model.Encounter;
+
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 public interface EncounterDaoInterface<T, Id extends Serializable> {
 
@@ -19,8 +23,10 @@ public interface EncounterDaoInterface<T, Id extends Serializable> {
 	
 	public void delete(T entity);
 	
-	public List<T> findAll();
+	public ScrollableResults findAll();
 	
 	public void deleteAll();
+	
+	public List<Encounter> findByPatientId(String id);
 	
 }

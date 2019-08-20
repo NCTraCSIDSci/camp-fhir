@@ -15,16 +15,13 @@ import com.campfhir.model.Practitioner;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 public class PractitionerConversion 
 {
-	public Bundle Practitioners(List<Practitioner> practitioners) throws ParseException, IOException
+	public org.hl7.fhir.dstu3.model.Practitioner Practitioners(Practitioner practitioner) throws ParseException, IOException
 	{
-		Bundle bundle = new Bundle();
 
-		for (Practitioner practitioner : practitioners) 
-		{
             org.hl7.fhir.dstu3.model.Practitioner p = new org.hl7.fhir.dstu3.model.Practitioner();   
         
 			/******************** PRACT_IDENTIFIER ******************************************************************************
@@ -45,12 +42,7 @@ public class PractitionerConversion
             	p.setGender(AdministrativeGender.valueOf(practitioner.getPRACT_GENDER()));
             }
             
-			bundle.addEntry()
-			   .setFullUrl("https://www.hl7.org/fhir/practitioner.html")
-			   .setResource(p);
-            
-		}
-		
-		return bundle;
+
+		return p;
 	}
 }

@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -22,7 +24,7 @@ import utils.HibernateBaseDB;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2019-08-20 
 */
 public class ObservationDao implements ObservationDaoInterface<Observation, String> 
 {
@@ -110,24 +112,31 @@ public class ObservationDao implements ObservationDaoInterface<Observation, Stri
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Observation> findAll() 
+	public ScrollableResults findAll() 
 	{		
-		List<Observation> lab = (List<Observation>) getCurrentSession().createQuery("FROM Observation").list();
-		return lab;
+		ScrollableResults o = getCurrentSession().createQuery("FROM Observation")
+			    .scroll(ScrollMode.FORWARD_ONLY);
+		return o;
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Lab> findAllLab() 
+	public ScrollableResults findAllLab() 
 	{		
-		List<Lab> lab = (List<Lab>) getCurrentSession().createQuery("FROM Lab").list();
-		return lab;
+		ScrollableResults labs = getCurrentSession().createQuery("FROM Lab")
+				.setReadOnly(true)
+		        .setCacheable(true)
+			    .scroll(ScrollMode.FORWARD_ONLY);
+		return labs;
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Vital> findAllVital() 
+	public ScrollableResults findAllVital() 
 	{		
-		List<Vital> lab = (List<Vital>) getCurrentSession().createQuery("FROM Vital").list();
-		return lab;
+		ScrollableResults vitals = getCurrentSession().createQuery("FROM Vital")
+				.setReadOnly(true)
+		        .setCacheable(true)
+			    .scroll(ScrollMode.FORWARD_ONLY);
+		return vitals;
 	}
 	
 	public void deleteAll() {
