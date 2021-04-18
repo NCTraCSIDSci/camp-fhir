@@ -1,4 +1,4 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import javax.persistence.Entity;
 
@@ -6,13 +6,13 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 @Entity
 public class Encounter 
 {
 	String ENC_IDENTIFIER;
-	String ENC_STATUS;
+	//String ENC_STATUS;
 	String ENC_SUBJECT_REFERENCE;
 	String ENC_PARTICIPANT_INDIV_REF;
 	String ENC_CLASS_SYST;
@@ -40,15 +40,15 @@ public class Encounter
 		ENC_IDENTIFIER = eNC_IDENTIFIER;
 	}
 	
-	public String getENC_STATUS() 
-	{
-		return ENC_STATUS;
-	}
-
-	public void setENC_STATUS(String eNC_STATUS) 
-	{
-		ENC_STATUS = eNC_STATUS;
-	}
+//	public String getENC_STATUS() 
+//	{
+//		return ENC_STATUS;
+//	}
+//
+//	public void setENC_STATUS(String eNC_STATUS) 
+//	{
+//		ENC_STATUS = eNC_STATUS;
+//	}
 
 	public String getENC_SUBJECT_REFERENCE() 
 	{

@@ -1,27 +1,43 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.Entity;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 @Entity
 public class Patient  implements java.io.Serializable 
 {
 	private static final long serialVersionUID = 1L;
+	
+	/*
+	PNT_IDENTIFIER maps to Patient / identifier
+	PNT_GENDER maps to Patient / gender
+	PNT_BIRTHDATE maps to Patient / birthDate
+	PNT_MARITAL_STATUS_CODE  maps to Patient / maritalStatus / coding / code
+	PNT_RACE maps to Patient / extension / race / coding / code
+	PNT_RACE_DISP maps to Patient / extension / race / coding / display                             --FHIR v4 mapping update
+	PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
+	PNT_ETHNICITY_DISP maps to Patient / extension / ethnicity / coding / display                   --FHIR v4 mapping update
+	PNT_ADDRESS_EXT_LAT_VALUE maps to Patient / address / extension / latitude / value
+	PNT_ADDRESS_EXT_LONG_VALUE maps to Patient / address / extension / longitude / value
+	*/
 
 	String PNT_IDENTIFIER;
-	String PNT_GENDER;	
+	String PNT_GENDER;
+	
+
 	String PNT_BIRTHDATE;	
 	String PNT_MARITAL_STATUS_CODE;	
 	String PNT_RACE;
+	String PNT_RACE_DISP;
 	String PNT_ETHNICITY;
+	String PNT_ETHNICITY_DISP;
 	String PNT_ADDRESS_EXT_LAT_VALUE;
 	String PNT_ADDRESS_EXT_LONG_VALUE;
 	
@@ -115,6 +131,26 @@ public class Patient  implements java.io.Serializable
 	public void setEncounterList(List<Encounter> encounterList) 
 	{
 		this.encounterList = encounterList;
+	}
+	
+	public String getPNT_RACE_DISP() 
+	{
+		return PNT_RACE_DISP;
+	}
+
+	public void setPNT_RACE_DISP(String pNT_RACE_DISP) 
+	{
+		PNT_RACE_DISP = pNT_RACE_DISP;
+	}
+
+	public String getPNT_ETHNICITY_DISP() 
+	{
+		return PNT_ETHNICITY_DISP;
+	}
+
+	public void setPNT_ETHNICITY_DISP(String pNT_ETHNICITY_DISP) 
+	{
+		PNT_ETHNICITY_DISP = pNT_ETHNICITY_DISP;
 	}
 
 	@Override

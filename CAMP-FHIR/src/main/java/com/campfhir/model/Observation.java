@@ -1,4 +1,4 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import javax.persistence.MappedSuperclass;
 
@@ -6,13 +6,13 @@ import javax.persistence.MappedSuperclass;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 @MappedSuperclass
 public class Observation 
 {
 	String OBS_IDENTIFIER;
-	String OBS_STATUS;
+	//String OBS_STATUS;
 	String OBS_SUBJECT_REFERENCE;
 	String OBS_CONTEXT_REFERENCE;
 	String OBS_CATEGORY_SYST;
@@ -44,15 +44,15 @@ public class Observation
 		OBS_IDENTIFIER = oBS_IDENTIFIER;
 	}
 	
-	public String getOBS_STATUS()  
-	{
-		return OBS_STATUS;
-	}
-
-	public void setOBS_STATUS(String oBS_STATUS) 
-	{
-		OBS_STATUS = oBS_STATUS;
-	}
+//	public String getOBS_STATUS()  
+//	{
+//		return OBS_STATUS;
+//	}
+//
+//	public void setOBS_STATUS(String oBS_STATUS) 
+//	{
+//		OBS_STATUS = oBS_STATUS;
+//	}
 
 	public String getOBS_SUBJECT_REFERENCE() 
 	{

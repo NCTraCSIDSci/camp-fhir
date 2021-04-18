@@ -1,10 +1,9 @@
-package com.campfhir.service;
+package main.java.com.campfhir.service;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,17 +11,13 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.Bundle.BundleType;
+import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.xml.sax.SAXException;
 
-import com.campfhir.dao.PractitionerDao;
-import com.campfhir.model.Lab;
-import com.campfhir.model.Practitioner;
-import com.campfhir.model.Procedure;
-import com.campfhir.service.conversion.EncounterConversion;
-import com.campfhir.service.conversion.LabConversion;
-import com.campfhir.service.conversion.PractitionerConversion;
+import main.java.com.campfhir.dao.PractitionerDao;
+import main.java.com.campfhir.model.Practitioner;
+import main.java.com.campfhir.service.conversion.PractitionerConversion;
 
 import ca.uhn.fhir.context.FhirContext;
 
@@ -30,7 +25,7 @@ import ca.uhn.fhir.context.FhirContext;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class PractitionerService 
 {
