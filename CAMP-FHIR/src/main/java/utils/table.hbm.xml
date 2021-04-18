@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="main.java.com.campfhir.model">
-    <class name="Condition" table="CFCondition">
+<hibernate-mapping package="main.java.com.campfhir.model"> 
+    <class name="Condition" table="ICEES_COVID_CONDITION">
 	 	<id name="CON_IDENTIFIER" column="CON_IDENTIFIER" />
 		<property name="CON_SUBJECT_REFERENCE" column="CON_SUBJECT_REFERENCE" />
 		<property name="CON_CONTEXT_REFERENCE" column="CON_CONTEXT_REFERENCE" />
@@ -17,7 +17,7 @@
 		<property name="CON_ABATEDATE" column="CON_ABATEDATE" />
 		<property name="CON_ONSETDATE" column="CON_ONSETDATE" />
     </class>
-    
+<!--     
     <class name="Encounter" table="CFEncounter">
 	 	<id name="ENC_IDENTIFIER" column="ENC_IDENTIFIER" />
 		<property name="ENC_SUBJECT_REFERENCE" column="ENC_SUBJECT_REFERENCE" />
@@ -136,7 +136,7 @@
 		<property name="OBS_INTERPRETATION_CODE" column="OBS_INTERPRETATION_CODE" />
 		<property name="OBS_INTERPRETATION_SYST" column="OBS_INTERPRETATION_SYST" />
     </class> 
-<!--
+
     <class name="DocumentReference" table="u92311.V_CLARITY_FHIR_DOC_REFERENCE_TESTING">
 		<id name="DOC_ID" column="DOC_ID" />
 		<property name="DOC_SUBJECT_REFERENCE" column="DOC_SUBJECT_REFERENCE" />
