@@ -5,11 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.text.ParseException;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,14 +16,12 @@ import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hl7.fhir.exceptions.FHIRException;
 import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.dao.MedicationRequestDao;
 import main.java.com.campfhir.dao.PatientDao;
 import main.java.com.campfhir.model.MedicationRequest;
-import main.java.com.campfhir.model.Patient;
 import main.java.com.campfhir.service.conversion.MedicationRequestConversion;
 
 import ca.uhn.fhir.context.FhirContext;
@@ -41,15 +35,10 @@ import ca.uhn.fhir.context.FhirContext;
 public class MedicationRequestService 
 {
 
-	private static final String Patient = null;
 	private static MedicationRequestDao medicationRequestDao;
-	private static PatientDao patientDao;
-	private Iterator<MedicationRequest> medicationRequests;
-	private Connection con;
-
 	public MedicationRequestService() 
 	{
-		patientDao = new PatientDao();
+		new PatientDao();
 		medicationRequestDao = new MedicationRequestDao();
 	}
 
@@ -102,8 +91,6 @@ public class MedicationRequestService
 		Session session = medicationRequestDao.openCurrentSession();
 		
 		ScrollableResults medicationRequests = medicationRequestDao.findAll();
-		
-		BundleEntryComponent b = new BundleEntryComponent();
 		
 		int i = 0;
 		System.out.println("start");

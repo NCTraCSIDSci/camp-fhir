@@ -87,7 +87,7 @@ public class PatientService
 		Session session = patientDao.openCurrentSession();
 		ScrollableResults patients = patientDao.findAll();
 		
-		ScrollableResults patientsTemp = patients;
+		//ScrollableResults patientsTemp = patients;
 		
 //		HashMap<String, HashMap<String, String>> latLong = new HashMap<String, HashMap<String, String>>();
 //		try {
