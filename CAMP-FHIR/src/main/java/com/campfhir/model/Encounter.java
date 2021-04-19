@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 public class Encounter 
 {
 	String ENC_IDENTIFIER;
+	
 	String ENC_SUBJECT_REFERENCE;
 	String ENC_PARTICIPANT_INDIV_REF;
 	String ENC_CLASS_SYST;
@@ -25,6 +26,9 @@ public class Encounter
 	String ENC_HOSP_ADMSRC_CODING_CODE;
 	String ENC_HOSP_ADMSRC_TEXT;
 	String ENC_DIAGN_CON_REF;
+	String ENC_DIAGN_ROLE_SYST;
+
+
 	String ENC_DIAGN_ROLE_CODING_CODE;
 	String ENC_DIAGN_RANK;
 	
@@ -188,6 +192,16 @@ public class Encounter
 	public void setENC_HOSP_DISDISP_CODING_SYST(String eNC_HOSP_DISDISP_CODING_SYST) 
 	{
 		ENC_HOSP_DISDISP_CODING_SYST = eNC_HOSP_DISDISP_CODING_SYST;
+	}
+	
+	public String getENC_DIAGN_ROLE_SYST() 
+	{
+		return ENC_DIAGN_ROLE_SYST;
+	}
+
+	public void setENC_DIAGN_ROLE_SYST(String eNC_DIAGN_ROLE_SYST) 
+	{
+		ENC_DIAGN_ROLE_SYST = eNC_DIAGN_ROLE_SYST;
 	}
 
 	@Override

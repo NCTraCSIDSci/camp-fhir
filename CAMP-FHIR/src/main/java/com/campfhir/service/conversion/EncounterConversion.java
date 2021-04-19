@@ -140,6 +140,7 @@ public class EncounterConversion
 		if(encounter.getENC_DIAGN_ROLE_CODING_CODE() != null)
 		{
 			cd.setCode(encounter.getENC_DIAGN_ROLE_CODING_CODE());
+			cd.setCode(encounter.getENC_DIAGN_ROLE_SYST());
 		}
 		
 
