@@ -3,6 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
+<!--<mapping-file>file:///C:/tmp/hbm/model.hbm.xml</mapping-file>-->
 
 	<session-factory>
 
@@ -13,6 +14,7 @@
 		<property name="hibernate.connection.password"></property>
 		<property name="show_sql"></property>
 		<property name="hibernate.current_session_context_class">thread</property>
-
+		<mapping resource="file:///C:/tmp/hbm/model.hbm.xml"></mapping>
 	</session-factory>
+	
 </hibernate-configuration>

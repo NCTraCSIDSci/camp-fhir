@@ -2,7 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
 <hibernate-mapping package="main.java.com.campfhir.model"> 
+
     <class name="Condition" table="ICEES_COVID_CONDITION">
 	 	<id name="CON_IDENTIFIER" column="CON_IDENTIFIER" />
 		<property name="CON_SUBJECT_REFERENCE" column="CON_SUBJECT_REFERENCE" />
@@ -17,7 +19,7 @@
 		<property name="CON_ABATEDATE" column="CON_ABATEDATE" />
 		<property name="CON_ONSETDATE" column="CON_ONSETDATE" />
     </class>
-<!--     
+ 
     <class name="Encounter" table="CFEncounter">
 	 	<id name="ENC_IDENTIFIER" column="ENC_IDENTIFIER" />
 		<property name="ENC_SUBJECT_REFERENCE" column="ENC_SUBJECT_REFERENCE" />
@@ -152,5 +154,5 @@
 		<property name="DOC_CONTENT_TYPE" column="DOC_CONTENT_TYPE" />
 		<property name="DOC_CONTENT_DATA" column="DOC_CONTENT_DATA" />
     </class>	
-    -->
+  
 </hibernate-mapping>

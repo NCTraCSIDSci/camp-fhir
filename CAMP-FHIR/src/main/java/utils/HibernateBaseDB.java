@@ -55,8 +55,9 @@ public class HibernateBaseDB
 
 	        DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();
 	        configuration.configure("hibernate.cfg.xml").addProperties(properties);
-			configuration.addResource("main/java/utils/table.hbm.xml");
+			//configuration.addResource("main/java/utils/table.hbm.xml");
 			
+	        
 	        
 	        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	        .applySettings(configuration.getProperties()).build();
