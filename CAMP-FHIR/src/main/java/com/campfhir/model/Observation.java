@@ -12,7 +12,6 @@ import javax.persistence.MappedSuperclass;
 public class Observation 
 {
 	String OBS_IDENTIFIER;
-	//String OBS_STATUS;
 	String OBS_SUBJECT_REFERENCE;
 	String OBS_CONTEXT_REFERENCE;
 	String OBS_CATEGORY_SYST;
