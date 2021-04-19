@@ -14,7 +14,7 @@
 		<property name="hibernate.connection.password"></property>
 		<property name="show_sql"></property>
 		<property name="hibernate.current_session_context_class">thread</property>
-		<mapping resource="file:///C:/tmp/hbm/model.hbm.xml"></mapping>
+		<mapping resource="file://opt/table.hbm.xml"></mapping>
 	</session-factory>
 	
 </hibernate-configuration>

@@ -39,7 +39,7 @@ public class HibernateBaseDB
 	    	try 
 	    	{
 				//fileInputStream = new FileInputStream("//unch/dfs/home/u168465/config.properties");	
-	    		fileInputStream = new FileInputStream(System.getProperty("CONFIG"));				
+	    		fileInputStream = new FileInputStream(System.getProperty("CONFIG").concat("/config.properties"));				
 				properties.load(fileInputStream);
 			} 
 	    	catch (FileNotFoundException e) 
@@ -55,7 +55,7 @@ public class HibernateBaseDB
 
 	        DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();
 	        configuration.configure("hibernate.cfg.xml").addProperties(properties);
-			//configuration.addResource("main/java/utils/table.hbm.xml");
+			configuration.addResource("file://".concat(System.getProperty("CONFIG").concat("/table.hbm.xml")));
 			
 	        
 	        
