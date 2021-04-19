@@ -43,16 +43,6 @@ public class Observation
 	{
 		OBS_IDENTIFIER = oBS_IDENTIFIER;
 	}
-	
-//	public String getOBS_STATUS()  
-//	{
-//		return OBS_STATUS;
-//	}
-//
-//	public void setOBS_STATUS(String oBS_STATUS) 
-//	{
-//		OBS_STATUS = oBS_STATUS;
-//	}
 
 	public String getOBS_SUBJECT_REFERENCE() 
 	{

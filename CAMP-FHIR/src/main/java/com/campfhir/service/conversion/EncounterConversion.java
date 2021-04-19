@@ -184,7 +184,7 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		if(encounter.getENC_HOSP_DISDISP_CODING_CODE() != null)
 		{
-			p.setSystem("http://hl7.org/fhir/discharge-disposition");
+			p.setSystem(encounter.getENC_HOSP_DISDISP_CODING_SYST());
 			p.setCode(encounter.getENC_HOSP_DISDISP_CODING_CODE());
 		}
 		
