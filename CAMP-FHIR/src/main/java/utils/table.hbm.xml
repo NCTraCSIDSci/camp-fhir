@@ -5,7 +5,7 @@
     
 <hibernate-mapping package="main.java.com.campfhir.model"> 
 
-    <class name="Condition" table="CONDITION">
+    <class name="Condition" table="CONDITION"> 
 	 	<id name="CON_IDENTIFIER" column="CON_IDENTIFIER" />
 		<property name="CON_SUBJECT_REFERENCE" column="CON_SUBJECT_REFERENCE" />
 		<property name="CON_CONTEXT_REFERENCE" column="CON_CONTEXT_REFERENCE" />
