@@ -99,8 +99,6 @@ public class MedicationRequestService
 		{	
 			if ((i % partition) == 0)
 			{
-		    	session.flush();
-		    	session.clear();
 				System.out.println("Write");				
 				writeFile(path, i, bundle);
 				bundle = new Bundle().setType(BundleType.COLLECTION);

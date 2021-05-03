@@ -91,8 +91,6 @@ public class ProcedureService
 	     {	
 			if ((i % partition) == 0)
 			{
-		    	session.flush();
-		    	session.clear();
 		    	writeFile(path, i, bundle);
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}
