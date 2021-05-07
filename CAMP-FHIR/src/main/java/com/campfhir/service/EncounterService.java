@@ -94,6 +94,8 @@ public class EncounterService
 	     {	
 			if ((i % partition) == 0)
 			{
+				session.clear();
+				
 		    	writeFile(path, i, bundle);
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}
@@ -140,7 +142,7 @@ public class EncounterService
 	public static void writeFile(String path, int domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forR4();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 
 		try 
 		{

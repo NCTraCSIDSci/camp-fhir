@@ -133,7 +133,7 @@ public class CAMPFHIR
 	public static void writeFile(String path, String domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forDstu3();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 		
 
 		

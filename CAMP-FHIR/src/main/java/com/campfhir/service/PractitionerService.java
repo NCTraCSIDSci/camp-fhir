@@ -90,8 +90,8 @@ public class PractitionerService
 	     {	
 			if ((i % partition) == 0)
 			{
-		    	session.flush();
-		    	session.clear();
+				session.clear();
+				
 		    	writeFile(path, i, bundle);
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}
@@ -126,7 +126,7 @@ public class PractitionerService
 public static void writeFile(String path, int domain, Bundle bundle)
 {			
 	FhirContext ctx = FhirContext.forDstu3();
-	String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+	String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 	
 
 	

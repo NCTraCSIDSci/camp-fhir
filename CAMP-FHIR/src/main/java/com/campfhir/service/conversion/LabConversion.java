@@ -229,14 +229,15 @@ public class LabConversion
             l.setValue(Double.parseDouble(observation.getOBS_REFRANGE_LOW()));
 			orrc.setLow(l);
         }
+        
 		/******************** OBS_REFRANGE_HIGH *****************************************************************************
 		 * OBS_REFRANGE_HIGH maps to Observation / referenceRange / high
 		 ********************************************************************************************************************/
         if(observation.getOBS_REFRANGE_HIGH() != null)
         {	
         	SimpleQuantity h = new SimpleQuantity();
-        	h.setValue(Double.parseDouble(observation.getOBS_REFRANGE_HIGH()));
-        	orrc.setLow(h);
+        	h.setValue(Double.parseDouble(observation.getOBS_REFRANGE_HIGH().replaceAll(":", ".")));
+        	orrc.setHigh(h);
         }
 		
         List<ObservationReferenceRangeComponent> rr = new ArrayList<ObservationReferenceRangeComponent>();
