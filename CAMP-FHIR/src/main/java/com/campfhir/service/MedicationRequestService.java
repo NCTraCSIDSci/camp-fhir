@@ -110,8 +110,7 @@ public class MedicationRequestService
 			bundle.addEntry()
 		   .setFullUrl("https://www.hl7.org/fhir/medicationrequest.html")
 			   .setResource(new MedicationRequestConversion().MedicationRequests((MedicationRequest) medicationRequests.get(0)));
-			
-			System.out.println(i);
+
 		 }
 	     
 	     writeFile(path, i, bundle);

@@ -102,8 +102,6 @@ public class PractitionerService
 			   .setFullUrl("https://www.hl7.org/fhir/practitioner.html")  			   
 			   .setResource(pc.Practitioners((Practitioner) practitioner.get(0)));
 			
-			
-			System.out.println(i);
 	     }
 	     
 	     writeFile(path, i, bundle);

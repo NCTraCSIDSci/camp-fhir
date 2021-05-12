@@ -144,8 +144,7 @@ public class ObservationService
 	     while ( vitals.next() ) 
 	     {	
 			if ((i % partition) == 0)
-			{
-				System.out.println("Write");				
+			{				
 				writeFile(path, i, bundle);
 		    	session.clear();
 			    bundle = new Bundle().setType(BundleType.COLLECTION);

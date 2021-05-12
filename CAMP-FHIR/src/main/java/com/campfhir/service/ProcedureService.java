@@ -106,7 +106,6 @@ public class ProcedureService
 			
 			bundle.addEntry(b);
 			
-			System.out.println(i);
 	     }
 	     
 	     writeFile("/opt/Procedure/", i, bundle);
