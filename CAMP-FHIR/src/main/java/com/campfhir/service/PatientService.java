@@ -124,7 +124,7 @@ public class PatientService
 	public static void writeFile(String path, int domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forR4();
-		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
+		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
 		
 		try 
 		{

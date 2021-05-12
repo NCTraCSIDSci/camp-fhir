@@ -147,7 +147,6 @@ public class ObservationService
 			{
 				System.out.println("Write");				
 				writeFile(path, i, bundle);
-		    	session.flush();
 		    	session.clear();
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}

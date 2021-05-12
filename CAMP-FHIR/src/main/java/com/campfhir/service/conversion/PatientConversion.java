@@ -2,7 +2,9 @@ package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -57,18 +59,17 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			if(patient.getPNT_BIRTHDATE() != null)
 			{
-//				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
-//				Date date;
-//				try 
-//				{
-////					System.out.println(patient.getPNT_BIRTHDATE());
-////					date = sdf.parse(patient.getPNT_BIRTHDATE());
-////					n.setBirthDate(date);
-//				} 
-//				catch (ParseException e) 
-//				{
-//					e.printStackTrace();
-//				}				
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
+				Date date;
+				try 
+				{
+					date = sdf.parse(patient.getPNT_BIRTHDATE());
+					n.setBirthDate(date);
+				} 
+				catch (ParseException e) 
+				{
+					e.printStackTrace();
+				}				
 			}
 
 			
