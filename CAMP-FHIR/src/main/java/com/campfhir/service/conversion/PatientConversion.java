@@ -15,6 +15,7 @@ import org.hl7.fhir.r4.model.Address;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.DecimalType;
+import org.hl7.fhir.r4.model.Enumerations.AdministrativeGender;
 import org.hl7.fhir.r4.model.Extension;
 import org.xml.sax.SAXException;
 
@@ -45,14 +46,10 @@ public class PatientConversion
 			/******************** PNT_GENDER ************************************************************************************ 
 			 * PNT_GENDER maps to Patient / gender
 			 */
-			try 
-			{
-				//n.setGender(patient.getPNT_GENDER());
-			} 
-			catch (FHIRException e) 
-			{
-				e.printStackTrace();
-			}
+
+				n.setGender(AdministrativeGender.fromCode(patient.getPNT_GENDER()));
+				System.out.println(patient.getPNT_GENDER());
+
 				
 			/******************** PNT_BIRTHDATE *********************************************************************************
 			 * PNT_BIRTHDATE maps to Patient / birthDate 
