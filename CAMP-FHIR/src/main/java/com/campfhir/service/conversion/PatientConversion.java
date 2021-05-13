@@ -47,8 +47,7 @@ public class PatientConversion
 			 * PNT_GENDER maps to Patient / gender
 			 */
 
-				n.setGender(AdministrativeGender.fromCode(patient.getPNT_GENDER()));
-				System.out.println(patient.getPNT_GENDER());
+			n.setGender(AdministrativeGender.fromCode(patient.getPNT_GENDER()));
 
 				
 			/******************** PNT_BIRTHDATE *********************************************************************************
@@ -68,7 +67,6 @@ public class PatientConversion
 					e.printStackTrace();
 				}				
 			}
-
 			
 			if(patient.getPNT_MARITAL_STATUS_CODE() != null)
 			{
