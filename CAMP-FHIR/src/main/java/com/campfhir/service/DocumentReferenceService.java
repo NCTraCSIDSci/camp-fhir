@@ -97,7 +97,7 @@ public class DocumentReferenceService
 	        
 		try 
 		{
-	        String dbURL = "jdbc:jtds:sqlserver://172.27.153.23:1433;databaseName=TRACS_CUSTOM;integratedSecurity=true;";
+	        String dbURL = "jdbc:jtds:sqlserver://<ip_addr>;databaseName=<db_name>;integratedSecurity=true;";
 	         
 	        Class.forName("net.sourceforge.jtds.jdbc.Driver");
 	        
@@ -118,7 +118,7 @@ public class DocumentReferenceService
             			"      ,[DOC_STATUS] " + 
             			"      ,[DOC_CONTENT_TYPE] " + 
             			"      ,[DOC_CONTENT_DATA] " + 
-            			"  FROM [UNCH\\u92311].[CFV_CLARITY_FHIR_DOC_REFERENCE_TESTING]";
+            			"  FROM [CFV_CLARITY_FHIR_DOC_REFERENCE_TESTING]";
 	            	
             	try (Statement stmt = conn.createStatement()) 
             	{
