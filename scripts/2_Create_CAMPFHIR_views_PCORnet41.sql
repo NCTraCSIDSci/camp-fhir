@@ -41,6 +41,7 @@ FROM
 --ENC_DIAGN_CON_REF maps to Encounter / diagnosis / condition / reference
 --ENC_DIAGN_ROLE_CODING_CODE maps to Encounter / diagnosis / role / coding / code
 --ENC_DIAGN_RANK  maps to Encounter / diagnosis / rank
+--ENC_STATUS maps to Encounter / status
 create or replace view PCORNET_ENCOUNTER_2FHIR as (
 select
         enc.ENCOUNTERID as ENC_IDENTIFIER,
@@ -66,7 +67,8 @@ select
         end as ENC_DIAGN_ROLE_CODING_CODE, 
         case
             when dx.DIAGNOSISID is null then null else 1 
-        end as ENC_DIAGN_RANK 
+        end as ENC_DIAGN_RANK,
+	'unknown' as ENC_STATUS --if you have better information available, change this hardcode.
 from 
 	ENCOUNTER enc
 	    left join diagnosis dx on enc.ENCOUNTERID = dx.ENCOUNTERID and dx.pdx = 'P' and dx.DX_SOURCE = 'DI' --only supporting primary discharge dx for now
