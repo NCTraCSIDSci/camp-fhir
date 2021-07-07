@@ -88,6 +88,7 @@ from
 --CON_CATEGORY_CODING_CODE maps to Condition / category / coding / code
 --CON_ASSERT_DATE maps to Condition / assertedDate
 --CON_CLINSTATUS maps to Condition / clinicalStatus
+--CON_VERSTATUS maps to Condition / verificationStatus
 --CON_ABATEDATE maps to Condition / abatementDateTime
 --CON_ONSETDATE maps to Condition / onsetDateTime
 create or replace view PCORNET_CONDITION_2FHIR as (
@@ -108,6 +109,7 @@ select distinct
 	'encounter-diagnosis' as CON_CATEGORY_CODING_CODE,
 	to_char(dx.admit_date, 'YYYY-MM-DD') as CON_ASSERT_DATE,
 	'active' as CON_CLINSTATUS, 
+	'confirmed' as CON_VERSTATUS,
 	null as CON_ABATEDATE, 
 	null as CON_ONSETDATE 
 from
@@ -136,6 +138,7 @@ select distinct
 	'problem-list-item' as CON_CATEGORY_CODING_CODE,
 	to_char(cond.REPORT_DATE, 'YYYY-MM-DD') as CON_ASSERT_DATE,
 	nvl(tcc1.FHIR_OUT_CD,'active') as CON_CLINSTATUS, 
+	'confirmed' as CON_VERSTATUS,
 	to_char(cond.RESOLVE_DATE, 'YYYY-MM-DD') as CON_ABATEDATE, 
 	to_char(cond.ONSET_DATE, 'YYYY-MM-DD') as CON_ONSETDATE 
 from
@@ -439,6 +442,7 @@ from
 
 --MEDICATION REQUEST
 --MED_IDENTIFIER maps to MedicationRequest / identifier
+--MED_STATUS maps to MedicationRequest / status
 --MED_SUBJECT_REFERENCE maps to MedicationRequest / subject / reference
 --MED_CONTEXT_REFERENCE maps to MedicationRequest / context / reference
 --MED_MEDREF_REFERENCE maps to MedicationRequest / medicationReference / reference
@@ -465,6 +469,7 @@ from
 create or replace view PCORNET_MEDREQ_2FHIR as (
 select distinct 
     med.PRESCRIBINGID as MED_IDENTIFIER, 
+    'unknown' as MED_STATUS,
     'Patient/'||med.PATID as MED_SUBJECT_REFERENCE, 
     'Encounter/'||med.ENCOUNTERID as MED_CONTEXT_REFERENCE, 
     'Medication/'||med.RXNORM_CUI as MED_MEDREF_REFERENCE, 
