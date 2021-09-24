@@ -1,4 +1,4 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.hibernate.Query;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -17,15 +16,14 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Condition;
-
-import utils.HibernateBaseDB;
+import main.java.com.campfhir.model.Condition;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20
+* @since   2019-02-08 
 */
 public class ConditionDao implements ConditionDaoInterface<Condition, String> 
 {
@@ -110,11 +108,11 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 	@SuppressWarnings("unchecked")
 	public List<Condition> findByPatientId(String id)
 	{
-		Query query = getCurrentSession().createQuery("FROM Condition WHERE CON_IDENTIFIER = '"+id+"'");
-		
-		List<Condition> condition = (List<Condition>) query.list();
-		
-		return condition;
+//		Query query = getCurrentSession().createQuery("FROM Condition WHERE CON_IDENTIFIER = '"+id+"'");
+//		
+//		List<Condition> condition = (List<Condition>) query.list();
+//		
+		return null;
 	}
 
 	public void delete(Condition entity) 
