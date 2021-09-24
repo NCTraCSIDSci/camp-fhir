@@ -24,6 +24,7 @@ class PatientTest
 	    while ( patients.next() ) 
 	    {	
 	    	p = (Patient) patients.get(0);
+	    	System.out.println(p.getPNT_IDENTIFIER());
 	    }
 		
 		fail("Not yet implemented");
