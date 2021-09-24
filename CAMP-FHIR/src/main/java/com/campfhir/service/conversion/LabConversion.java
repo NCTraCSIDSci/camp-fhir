@@ -1,4 +1,4 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -7,34 +7,35 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
-import org.hl7.fhir.dstu3.model.DateTimeType;
-import org.hl7.fhir.dstu3.model.Observation.ObservationReferenceRangeComponent;
-import org.hl7.fhir.dstu3.model.Observation.ObservationStatus;
-import org.hl7.fhir.dstu3.model.Quantity;
-import org.hl7.fhir.dstu3.model.Quantity.QuantityComparator;
-import org.hl7.fhir.dstu3.model.Reference;
-import org.hl7.fhir.dstu3.model.SimpleQuantity;
-import org.hl7.fhir.dstu3.model.StringType;
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.DateTimeType;
+import org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent;
+import org.hl7.fhir.r4.model.Observation.ObservationStatus;
+import org.hl7.fhir.r4.model.Quantity;
+import org.hl7.fhir.r4.model.Quantity.QuantityComparator;
+import org.hl7.fhir.r4.model.Reference;
+import org.hl7.fhir.r4.model.SimpleQuantity;
+import org.hl7.fhir.r4.model.StringType;
+
+import main.java.com.campfhir.model.Lab;
+
 import org.hl7.fhir.exceptions.FHIRException;
 import org.hl7.fhir.exceptions.FHIRFormatError;
-
-import com.campfhir.model.Lab;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class LabConversion 
 {
-	public org.hl7.fhir.dstu3.model.Observation Labs(Lab observation) throws ParseException, IOException, FHIRException
+	public org.hl7.fhir.r4.model.Observation Labs(Lab observation) throws ParseException, IOException, FHIRException
 	{
         SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");		
 
-		org.hl7.fhir.dstu3.model.Observation o = new org.hl7.fhir.dstu3.model.Observation();
+		org.hl7.fhir.r4.model.Observation o = new org.hl7.fhir.r4.model.Observation();
 		
 		o.setStatus(ObservationStatus.fromCode(observation.getOBS_STATUS()));
 
@@ -82,7 +83,7 @@ public class LabConversion
         if(observation.getOBS_CONTEXT_REFERENCE() != null)
         {
             Reference reference2 = new Reference().setReference(observation.getOBS_CONTEXT_REFERENCE());
-            o.setContext(reference2);
+            o.setEncounter(reference2);
         }
         
 
@@ -229,14 +230,15 @@ public class LabConversion
             l.setValue(Double.parseDouble(observation.getOBS_REFRANGE_LOW()));
 			orrc.setLow(l);
         }
+        
 		/******************** OBS_REFRANGE_HIGH *****************************************************************************
 		 * OBS_REFRANGE_HIGH maps to Observation / referenceRange / high
 		 ********************************************************************************************************************/
         if(observation.getOBS_REFRANGE_HIGH() != null)
         {	
         	SimpleQuantity h = new SimpleQuantity();
-        	h.setValue(Double.parseDouble(observation.getOBS_REFRANGE_HIGH()));
-        	orrc.setLow(h);
+        	h.setValue(Double.parseDouble(observation.getOBS_REFRANGE_HIGH().replaceAll(":", ".")));
+        	orrc.setHigh(h);
         }
 		
         List<ObservationReferenceRangeComponent> rr = new ArrayList<ObservationReferenceRangeComponent>();
@@ -244,6 +246,7 @@ public class LabConversion
         o.setReferenceRange(rr);
 		
         CodeableConcept i = new CodeableConcept();
+        List<CodeableConcept> ccc = new ArrayList<>();
         List<Coding> code = new ArrayList<Coding>();
         Coding cing = new Coding();
 		/******************** OBS_INTERPRETATION ****************************************************************************
@@ -264,7 +267,8 @@ public class LabConversion
         
         code.add(cing);
 		i.setCoding(code);
-        o.setInterpretation(i);
+		ccc.add(i);
+        o.setInterpretation(ccc);
 		
 		return o;
 	}

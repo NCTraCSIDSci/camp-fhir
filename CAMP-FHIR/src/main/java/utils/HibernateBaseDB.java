@@ -1,13 +1,16 @@
-package utils;
+package main.java.utils;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.io.IOUtils;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -23,7 +26,7 @@ import org.xml.sax.SAXException;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class HibernateBaseDB 
 {
@@ -35,7 +38,8 @@ public class HibernateBaseDB
 	    	java.util.Properties properties = new Properties();
 	    	try 
 	    	{
-				fileInputStream = new FileInputStream("/opt/config.properties");
+				//fileInputStream = new FileInputStream("//unch/dfs/home/u168465/config.properties");	
+	    		fileInputStream = new FileInputStream(System.getProperty("CONFIG").concat("/config.properties"));				
 				properties.load(fileInputStream);
 			} 
 	    	catch (FileNotFoundException e) 
@@ -46,23 +50,20 @@ public class HibernateBaseDB
 	    	{
 				e.printStackTrace();
 			}
-	    	
+	  
 	        Configuration configuration = new Configuration();
 
 	        DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();
-
-	        DocumentBuilder docBuilder = dbfac.newDocumentBuilder();
-
-	        Document doc = docBuilder.parse("/opt/table.hbm.xml");
-			configuration.configure("hibernate.cfg.xml").addProperties(properties)
-	        .addDocument(doc);
+	        configuration.configure("hibernate.cfg.xml").addProperties(properties);
+			configuration.addResource("file://".concat(System.getProperty("CONFIG").concat("/table.hbm.xml")));
+			
+	        
 	        
 	        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	        .applySettings(configuration.getProperties()).build();
 
 	        SessionFactory sessionFactory = configuration
 	        .buildSessionFactory(serviceRegistry);
-
 	        return sessionFactory;
 	    }
 	}

@@ -1,4 +1,4 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -7,29 +7,30 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
-import org.hl7.fhir.dstu3.model.DateTimeType;
-import org.hl7.fhir.dstu3.model.Procedure.ProcedurePerformerComponent;
-import org.hl7.fhir.dstu3.model.Procedure.ProcedureStatus;
-import org.hl7.fhir.dstu3.model.Reference;
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.DateTimeType;
+import org.hl7.fhir.r4.model.Procedure.ProcedurePerformerComponent;
+import org.hl7.fhir.r4.model.Procedure.ProcedureStatus;
+import org.hl7.fhir.r4.model.Reference;
+
+import main.java.com.campfhir.model.Procedure;
+
 import org.hl7.fhir.exceptions.FHIRException;
 
-import com.campfhir.model.Procedure;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ProcedureConversion 
 {
-	public org.hl7.fhir.dstu3.model.Procedure Procedures(Procedure procedure) throws ParseException, IOException, FHIRException
+	public org.hl7.fhir.r4.model.Procedure Procedures(Procedure procedure) throws ParseException, IOException, FHIRException
 	{
   
-        org.hl7.fhir.dstu3.model.Procedure c = new org.hl7.fhir.dstu3.model.Procedure();   
+        org.hl7.fhir.r4.model.Procedure c = new org.hl7.fhir.r4.model.Procedure();   
 
 		c.setStatus(ProcedureStatus.fromCode(procedure.getPCD_STATUS()));
        
@@ -50,7 +51,7 @@ public class ProcedureConversion
 		 ********************************************************************************************************************/
         Reference con = new Reference();
         con.setReference(procedure.getPCD_CONTEXT_REFERENCE());
-        c.setContext(con);
+        c.setEncounter(con);
        
        
         CodeableConcept c1 = new CodeableConcept();

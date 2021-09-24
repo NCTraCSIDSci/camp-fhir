@@ -1,4 +1,4 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,15 +14,15 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Procedure;
+import main.java.com.campfhir.model.Procedure;
 
-import utils.HibernateBaseDB;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ProcedureDao implements ProcedureDaoInterface<Procedure, String> 
 {

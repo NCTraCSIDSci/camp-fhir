@@ -1,36 +1,34 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.hl7.fhir.dstu3.model.BaseDateTimeType;
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
-import org.hl7.fhir.dstu3.model.Condition.ConditionClinicalStatus;
-import org.hl7.fhir.dstu3.model.DateTimeType;
-import org.hl7.fhir.dstu3.model.Identifier;
-import org.hl7.fhir.dstu3.model.Reference;
+import org.hl7.fhir.r4.model.BaseDateTimeType;
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.DateTimeType;
+import org.hl7.fhir.r4.model.Reference;
+
+import main.java.com.campfhir.model.Condition;
+
 import org.hl7.fhir.exceptions.FHIRException;
 
-import com.campfhir.model.Condition;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ConditionConversion 
 {
-	public org.hl7.fhir.dstu3.model.Condition Conditions(Condition condition) throws ParseException, IOException
+	public org.hl7.fhir.r4.model.Condition Conditions(Condition condition) throws ParseException, IOException
 	{
-		org.hl7.fhir.dstu3.model.Condition c = new org.hl7.fhir.dstu3.model.Condition();	
-		
+		org.hl7.fhir.r4.model.Condition c = new org.hl7.fhir.r4.model.Condition();	
+	
 		
 		/******************** CON_IDENTIFIER ********************************************************************************
 		 * CON_IDENTIFIER maps to Condition / identifier
@@ -38,8 +36,9 @@ public class ConditionConversion
 		if(condition.getCON_IDENTIFIER() != null)
 		{
 			c.setId(condition.getCON_IDENTIFIER());
-
 		}
+		
+		//c.setVerificationStatus(CodeableConcept.setText(value));
 		
 	
 		/******************** CON_SUBJECT_REFERENCE *************************************************************************
@@ -50,7 +49,7 @@ public class ConditionConversion
 		/******************** CON_CONTEXT_REFERENCE *************************************************************************
 		 * CON_CONTEXT_REFERENCE maps to Condition / context / reference
 		 ********************************************************************************************************************/
-		c.setContext(new Reference().setReference(condition.getCON_CONTEXT_REFERENCE()));
+		c.setEncounter(new Reference().setReference(condition.getCON_CONTEXT_REFERENCE()));
 		
 		/******************** CON_ASSERTER_REFERENCE ************************************************************************
 		 * CON_ASSERTER_REFERENCE maps to Condition / asserter / reference
@@ -96,7 +95,7 @@ public class ConditionConversion
 			/******************** CON_ASSERT_DATE *******************************************************************************
 			 * CON_ASSERT_DATE maps to Condition / assertedDat
 			 ********************************************************************************************************************/
-			c.setAssertedDate(sdf.parse(condition.getCON_ASSERT_DATE()));
+			c.setRecordedDate(sdf.parse(condition.getCON_ASSERT_DATE()));
 		} 
 		catch (ParseException e) 
 		{
@@ -110,7 +109,12 @@ public class ConditionConversion
 		{
 			try 
 			{
-				c.setClinicalStatus(ConditionClinicalStatus.fromCode(condition.getCON_CLINSTATUS()));
+				//c.setClinicalStatus(ConditionClinicalStatus.fromCode(condition.getCON_CLINSTATUS()));
+				CodeableConcept cs = new CodeableConcept();
+				Coding t = new Coding();
+				t.setCode(condition.getCON_CLINSTATUS());
+				cs.addCoding(t);
+				c.setClinicalStatus(cs);
 			} 
 			catch (FHIRException e) 
 			{

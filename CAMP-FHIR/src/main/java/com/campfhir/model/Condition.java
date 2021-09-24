@@ -1,4 +1,4 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import javax.persistence.Entity;
 
@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 
 @Entity
@@ -24,6 +24,7 @@ public class Condition
 	String CON_CLINSTATUS;
 	String CON_ABATEDATE;
 	String CON_ONSETDATE;
+	String CON_VERSTATUS;
 	
 
 	public String getCON_IDENTIFIER() 
@@ -144,6 +145,16 @@ public class Condition
 	public void setCON_ONSETDATE(String cON_ONSETDATE) 
 	{
 		CON_ONSETDATE = cON_ONSETDATE;
+	}
+	
+	public String getCON_VERSTATUS() 
+	{
+		return CON_VERSTATUS;
+	}
+
+	public void setCON_VERSTATUS(String cON_VERSTATUS) 
+	{
+		CON_VERSTATUS = cON_VERSTATUS;
 	}
 
 	@Override

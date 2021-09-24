@@ -1,4 +1,4 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import javax.persistence.Entity;
 
@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 @Entity
 public class MedicationRequest 
@@ -35,7 +35,8 @@ public class MedicationRequest
 	String MED_DOSINSTX_ASNDBOOL;
 	String MED_DOSINSTX_ROUTE;
 	String MED_SUBSTITU_ALLOWED;
-	
+	String MED_STATUS;
+
 	public MedicationRequest() {}	
 
 	public String getMED_IDENTIFIER() 
@@ -274,6 +275,16 @@ public class MedicationRequest
 
 	public void setMED_DOSINSTX_DOSEQUANT_VAL(String mED_DOSINSTX_DOSEQUANT_VAL) {
 		MED_DOSINSTX_DOSEQUANT_VAL = mED_DOSINSTX_DOSEQUANT_VAL;
+	}
+	
+	public String getMED_STATUS() 
+	{
+		return MED_STATUS;
+	}
+
+	public void setMED_STATUS(String mED_STATUS) 
+	{
+		MED_STATUS = mED_STATUS;
 	}
 
 	@Override

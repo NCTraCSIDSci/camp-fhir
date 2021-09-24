@@ -1,4 +1,4 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -7,38 +7,39 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hl7.fhir.dstu3.model.BooleanType;
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
-import org.hl7.fhir.dstu3.model.Dosage;
-import org.hl7.fhir.dstu3.model.Duration;
-import org.hl7.fhir.dstu3.model.Period;
-import org.hl7.fhir.dstu3.model.Quantity;
-import org.hl7.fhir.dstu3.model.Reference;
-import org.hl7.fhir.dstu3.model.SimpleQuantity;
-import org.hl7.fhir.dstu3.model.Type;
-import org.hl7.fhir.dstu3.model.MedicationRequest.MedicationRequestDispenseRequestComponent;
-import org.hl7.fhir.dstu3.model.MedicationRequest.MedicationRequestIntent;
-import org.hl7.fhir.dstu3.model.MedicationRequest.MedicationRequestRequesterComponent;
-import org.hl7.fhir.dstu3.model.MedicationRequest.MedicationRequestSubstitutionComponent;
-import org.hl7.fhir.r4.model.codesystems.*;
-import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.r4.model.BooleanType;
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Dosage;
+import org.hl7.fhir.r4.model.Dosage.DosageDoseAndRateComponent;
+import org.hl7.fhir.r4.model.Encounter.EncounterStatus;
+import org.hl7.fhir.r4.model.Medication.MedicationStatus;
+import org.hl7.fhir.r4.model.Duration;
+import org.hl7.fhir.r4.model.Period;
+import org.hl7.fhir.r4.model.Reference;
+import org.hl7.fhir.r4.model.SimpleQuantity;
+import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestComponent;
+import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntent;
+import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatus;
+import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestSubstitutionComponent;
 
-import com.campfhir.model.Encounter;
-import com.campfhir.model.MedicationRequest;
+import main.java.com.campfhir.model.MedicationRequest;
+
+import org.hl7.fhir.exceptions.FHIRException;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class MedicationRequestConversion 
 {
-	public org.hl7.fhir.dstu3.model.MedicationRequest MedicationRequests(MedicationRequest medication) throws ParseException, FHIRException, IOException
+	public org.hl7.fhir.r4.model.MedicationRequest MedicationRequests(MedicationRequest medication) throws ParseException, FHIRException, IOException
 	{		
-		org.hl7.fhir.dstu3.model.MedicationRequest n = new org.hl7.fhir.dstu3.model.MedicationRequest();		
+		org.hl7.fhir.r4.model.MedicationRequest n = new org.hl7.fhir.r4.model.MedicationRequest();	
+		
+		n.setStatus(MedicationRequestStatus.fromCode(medication.getMED_STATUS()));
 		
 		/******************** MED_IDENTIFIER ********************************************************************************
 		 * MED_IDENTIFIER maps to MedicationRequest / identifier
@@ -88,7 +89,7 @@ public class MedicationRequestConversion
 		  else if(medication.getMED_CONTEXT_REFERENCE() != null)
 		  {		  
 			  Reference creference = new Reference().setReference(medication.getMED_CONTEXT_REFERENCE());
-			  n.setContext(creference);
+			  n.setEncounter(creference);
 		  }
 			
 		
@@ -96,15 +97,19 @@ public class MedicationRequestConversion
 		 * MED_AUTHORED_ON maps to MedicationRequest / authoredOn
 		 ********************************************************************************************************************/
 		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
-		try 
-		{
-			Date date1;
-			date1 = sdf1.parse(medication.getMED_AUTHORED_ON());
-			n.setAuthoredOn(date1);
-		} 
-		catch (ParseException e) 
-		{
-			e.printStackTrace();
+		
+		if(medication.getMED_AUTHORED_ON() != null)
+		{			
+			try 
+			{
+				Date date1;
+				date1 = sdf1.parse(medication.getMED_AUTHORED_ON());
+				n.setAuthoredOn(date1);
+			} 
+			catch (ParseException e) 
+			{
+				e.printStackTrace();
+			}
 		}
 		
 		/******************** MED_DISPREQ_PERIOD_START **********************************************************************
@@ -183,13 +188,13 @@ public class MedicationRequestConversion
 		
         n.setDispenseRequest(dispenseRequest);
 		
+		Reference requester  = new Reference();;
 		/******************** MED_REQ_AGENT_REFERENCE ************************************************************************
 		 * MED_REQ_AGENT_REFERENCE maps to MedicationRequest / agent / reference
 		 ********************************************************************************************************************/
-		MedicationRequestRequesterComponent requester = new MedicationRequestRequesterComponent();			
-		Reference agent = new Reference();		
-		agent.setReference(medication.getMED_REQ_AGENT_REFERENCE());
-		requester.setAgent(agent);			
+	
+		requester.setReference(medication.getMED_REQ_AGENT_REFERENCE());
+
 		n.setRequester(requester);
 		
 		
@@ -208,6 +213,7 @@ public class MedicationRequestConversion
 		}				
 	
 		CodeableConcept cc = new CodeableConcept();
+		List<CodeableConcept> ccc = new ArrayList<>();
 		
 		/******************** MED_CAT_CODING_DISPLAY ************************************************************************
 		 * MED_CAT_CODING_DISPLAY maps to MedicationRequest / category / coding / display
@@ -223,7 +229,8 @@ public class MedicationRequestConversion
 		 * MED_CAT_CODING_CODE maps to MedicationRequest / category / coding / code
 		 ********************************************************************************************************************/
 		.setCode(medication.getMED_CAT_CODING_CODE());
-		n.setCategory(cc);
+		ccc.add(cc);
+		n.setCategory(ccc);
 
 		
 		
@@ -235,17 +242,29 @@ public class MedicationRequestConversion
 		 ********************************************************************************************************************/
 		if(medication.getMED_DOSINSTX_DOSEQUANT_VAL() != null)
 		{
-			dose.setDose(new Quantity()
+			List<DosageDoseAndRateComponent> theDoseAndRate = new ArrayList<>();			
+			DosageDoseAndRateComponent e = new DosageDoseAndRateComponent();
+			
+			e.setDose(new SimpleQuantity()
 					.setValue(Double.parseDouble(medication.getMED_DOSINSTX_DOSEQUANT_VAL())));
 			
-			dosageArray.add(dose);
+			theDoseAndRate.add(e);
+			
+			dose.setDoseAndRate(theDoseAndRate);
 		}
 		
 		/******************** MED_DOSINSTX_DOSEQUANT_UNIT ********************************************************************
 		 * MED_DOSINSTX_DOSEQUANT_UNIT maps to MedicationRequest / dosageInstruction / doseQuantity / unit
-		 ********************************************************************************************************************/	
-		dose.setDose(new Quantity()
+		 ********************************************************************************************************************/
+		List<DosageDoseAndRateComponent> theDoseAndRate = new ArrayList<>();			
+		DosageDoseAndRateComponent e = new DosageDoseAndRateComponent();
+		
+		e.setDose(new SimpleQuantity()
 				.setUnit(medication.getMED_DOSINSTX_DOSEQUANT_UNIT()));
+		
+		theDoseAndRate.add(e);
+		
+		dose.setDoseAndRate(theDoseAndRate);
 		
 		/******************** MED_DOSINSTX_TEXT *****************************************************************************
 		 * MED_DOSINSTX_TEXT maps to MedicationRequest / dosageInstruction / text
@@ -276,7 +295,9 @@ public class MedicationRequestConversion
         if(medication.getMED_SUBSTITU_ALLOWED() != null)
         {
             MedicationRequestSubstitutionComponent mrsc = new MedicationRequestSubstitutionComponent();
-            mrsc.setAllowed(new Boolean(medication.getMED_SUBSTITU_ALLOWED()));
+
+			mrsc.setAllowed(new BooleanType(medication.getMED_SUBSTITU_ALLOWED()));
+
             n.setSubstitution(mrsc);
        
         }

@@ -1,8 +1,10 @@
-package com.campfhir.service;
+package main.java.com.campfhir.service;
 
 import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,18 +14,15 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.hibernate.HibernateException;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.Bundle.BundleType;
 import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
+import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.xml.sax.SAXException;
 
-import com.campfhir.dao.ProcedureDao;
-import com.campfhir.model.Condition;
-import com.campfhir.model.Procedure;
-import com.campfhir.model.Vital;
-import com.campfhir.service.conversion.ConditionConversion;
-import com.campfhir.service.conversion.EncounterConversion;
-import com.campfhir.service.conversion.ProcedureConversion;
+import main.java.com.campfhir.dao.ProcedureDao;
+import main.java.com.campfhir.model.Procedure;
+import main.java.com.campfhir.service.conversion.ProcedureConversion;
 
 import ca.uhn.fhir.context.FhirContext;
 
@@ -31,7 +30,7 @@ import ca.uhn.fhir.context.FhirContext;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ProcedureService 
 {
@@ -82,6 +81,9 @@ public class ProcedureService
 		ScrollableResults procedures = procedureDao.findAll();
 	     int i = 0;
 	     System.out.println("start");
+	     
+	     BundleEntryComponent b = new BundleEntryComponent();
+	     
 	     Bundle bundle = new Bundle().setType(BundleType.COLLECTION);
 	     
 
@@ -89,23 +91,24 @@ public class ProcedureService
 	     {	
 			if ((i % partition) == 0)
 			{
-		    	session.flush();
-		    	session.clear();
+				session.clear();
+				
 		    	writeFile(path, i, bundle);
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}
 			
 			i++;
 			
-			bundle.addEntry()
-			   .setFullUrl("https://www.hl7.org/fhir/procedure.html")  			   
+			b = new BundleEntryComponent();
+			
+			b.setFullUrl("https://www.hl7.org/fhir/procedure.html")  			   
 			   .setResource(pr.Procedures((Procedure) procedures.get(0)));
 			
+			bundle.addEntry(b);
 			
-			System.out.println(i);
 	     }
 	     
-	     writeFile("/opt/Procedure/", i, bundle);
+	     writeFile(path, i, bundle);
 		procedureDao.closeCurrentSession();
 	}
 	
@@ -136,15 +139,14 @@ public class ProcedureService
 	
 	public static void writeFile(String path, int domain, Bundle bundle)
 	{			
-		FhirContext ctx = FhirContext.forDstu3();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		FhirContext ctx = FhirContext.forR4();
+		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 		
 
 		
 		try 
 		{
-		    BufferedWriter writer;
-			writer = new BufferedWriter(new FileWriter(path+"/"+domain+".json"));
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path+"/"+domain+".json", true), StandardCharsets.UTF_8));
 		    writer.write(file);
 		    writer.close();
 		} 

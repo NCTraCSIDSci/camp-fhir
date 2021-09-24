@@ -1,52 +1,29 @@
-package utils;
+package main.java.utils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.hibernate.ScrollableResults;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import org.hl7.fhir.dstu3.model.Bundle;
 import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.r4.model.Bundle;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Condition;
-import com.campfhir.model.Encounter;
-import com.campfhir.model.Lab;
-import com.campfhir.model.MedicationRequest;
-import com.campfhir.model.Patient;
-import com.campfhir.model.Practitioner;
-import com.campfhir.model.Procedure;
-import com.campfhir.model.Vital;
-import com.campfhir.service.ConditionService;
-import com.campfhir.service.EncounterService;
-import com.campfhir.service.MedicationRequestService;
-import com.campfhir.service.ObservationService;
-import com.campfhir.service.PatientService;
-import com.campfhir.service.PractitionerService;
-import com.campfhir.service.ProcedureService;
-import com.campfhir.service.conversion.ConditionConversion;
-import com.campfhir.service.conversion.EncounterConversion;
-import com.campfhir.service.conversion.LabConversion;
-import com.campfhir.service.conversion.MedicationRequestConversion;
-import com.campfhir.service.conversion.PatientAllConversion;
-import com.campfhir.service.conversion.PatientConversion;
-import com.campfhir.service.conversion.PractitionerConversion;
-import com.campfhir.service.conversion.ProcedureConversion;
-import com.campfhir.service.conversion.VitalConversion;
-import com.google.common.collect.Lists;
+import main.java.com.campfhir.service.ConditionService;
+import main.java.com.campfhir.service.DocumentReferenceService;
+import main.java.com.campfhir.service.EncounterService;
+import main.java.com.campfhir.service.MedicationRequestService;
+import main.java.com.campfhir.service.ObservationService;
+import main.java.com.campfhir.service.PatientService;
+import main.java.com.campfhir.service.PractitionerService;
+import main.java.com.campfhir.service.ProcedureService;
+
 
 import ca.uhn.fhir.context.FhirContext;
-import ca.uhn.fhir.model.dstu2.resource.Person;
+//import ca.uhn.fhir.model.dstu2.resource.Person;
 
 /**
 *
@@ -57,11 +34,18 @@ import ca.uhn.fhir.model.dstu2.resource.Person;
 public class CAMPFHIR 
 {
 	public static void main(String[] args) 
-			throws ParseException, FHIRException, IOException, ParserConfigurationException, SAXException, InterruptedException 
+			throws ParseException, 
+			FHIRException, 
+			IOException, 
+			ParserConfigurationException, 
+			SAXException, 
+			InterruptedException, 
+			ClassNotFoundException 
 	{
 		String domain = args[0];		
 		String path = args[1];
 		int partition = Integer.parseInt(args[2]);
+		System.setProperty("CONFIG", args[3]);
 		
 		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 
@@ -71,6 +55,11 @@ public class CAMPFHIR
 		{
 		     new ConditionService().findAll(partition, path);			
 		}
+		
+		else if(domain.equals("DocumentReference"))
+		{			
+		    new DocumentReferenceService().findAll(partition, path);			
+		}	
 		
 		else if(domain.equals("Encounter"))
 		{			
@@ -144,7 +133,7 @@ public class CAMPFHIR
 	public static void writeFile(String path, String domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forDstu3();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 		
 
 		

@@ -1,4 +1,4 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -7,30 +7,31 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
-import org.hl7.fhir.dstu3.model.Period;
-import org.hl7.fhir.dstu3.model.Reference;
-import org.hl7.fhir.dstu3.model.Encounter.DiagnosisComponent;
-import org.hl7.fhir.dstu3.model.Encounter.EncounterHospitalizationComponent;
-import org.hl7.fhir.dstu3.model.Encounter.EncounterParticipantComponent;
-import org.hl7.fhir.dstu3.model.Encounter.EncounterStatus;
-import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Period;
+import org.hl7.fhir.r4.model.Reference;
 
-import com.campfhir.model.Encounter;
+import main.java.com.campfhir.model.Encounter;
+
+import org.hl7.fhir.r4.model.Encounter.DiagnosisComponent;
+import org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent;
+import org.hl7.fhir.r4.model.Encounter.EncounterParticipantComponent;
+import org.hl7.fhir.r4.model.Encounter.EncounterStatus;
+import org.hl7.fhir.exceptions.FHIRException;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 
 public class EncounterConversion 
 {
-	public org.hl7.fhir.dstu3.model.Encounter Encounters(Encounter encounter) throws ParseException, FHIRException, IOException
+	public org.hl7.fhir.r4.model.Encounter Encounters(Encounter encounter) throws ParseException, FHIRException, IOException
 	{		
-		org.hl7.fhir.dstu3.model.Encounter e = new org.hl7.fhir.dstu3.model.Encounter();	
+		org.hl7.fhir.r4.model.Encounter e = new org.hl7.fhir.r4.model.Encounter();	
 		
 		e.setStatus(EncounterStatus.fromCode(encounter.getENC_STATUS()));													
 	
@@ -139,6 +140,7 @@ public class EncounterConversion
 		if(encounter.getENC_DIAGN_ROLE_CODING_CODE() != null)
 		{
 			cd.setCode(encounter.getENC_DIAGN_ROLE_CODING_CODE());
+			cd.setCode(encounter.getENC_DIAGN_ROLE_SYST());
 		}
 		
 
@@ -151,8 +153,7 @@ public class EncounterConversion
 		{
 			cd.setSystem("http://hl7.org/fhir/diagnosis-role");
 			cc.addCoding(cd);
-			dc.setRole(cc);
-			
+			//dc.setRole(cc);			
 			dc.setCondition(ref.setReference(encounter.getENC_DIAGN_CON_REF()));
 		}
 		
@@ -184,7 +185,7 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		if(encounter.getENC_HOSP_DISDISP_CODING_CODE() != null)
 		{
-			p.setSystem("http://hl7.org/fhir/discharge-disposition");
+			p.setSystem(encounter.getENC_HOSP_DISDISP_CODING_SYST());
 			p.setCode(encounter.getENC_HOSP_DISDISP_CODING_CODE());
 		}
 		

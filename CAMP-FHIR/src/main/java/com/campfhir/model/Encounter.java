@@ -1,4 +1,4 @@
-package com.campfhir.model;
+package main.java.com.campfhir.model;
 
 import javax.persistence.Entity;
 
@@ -6,13 +6,13 @@ import javax.persistence.Entity;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 @Entity
 public class Encounter 
 {
 	String ENC_IDENTIFIER;
-	String ENC_STATUS;
+	
 	String ENC_SUBJECT_REFERENCE;
 	String ENC_PARTICIPANT_INDIV_REF;
 	String ENC_CLASS_SYST;
@@ -21,13 +21,16 @@ public class Encounter
 	String ENC_PERIOD_START;
 	String ENC_PERIOD_END;
 	String ENC_HOSP_DISDISP_CODING_CODE;
+	String ENC_HOSP_DISDISP_CODING_SYST;
 	String ENC_HOSP_DISDISP_TEXT;
 	String ENC_HOSP_ADMSRC_CODING_CODE;
 	String ENC_HOSP_ADMSRC_TEXT;
 	String ENC_DIAGN_CON_REF;
+	String ENC_DIAGN_ROLE_SYST;
 	String ENC_DIAGN_ROLE_CODING_CODE;
 	String ENC_DIAGN_RANK;
-	
+	String ENC_STATUS;
+
 	public Encounter() {}
 	
 	public String getENC_IDENTIFIER() 
@@ -38,16 +41,6 @@ public class Encounter
 	public void setENC_IDENTIFIER(String eNC_IDENTIFIER) 
 	{
 		ENC_IDENTIFIER = eNC_IDENTIFIER;
-	}
-	
-	public String getENC_STATUS() 
-	{
-		return ENC_STATUS;
-	}
-
-	public void setENC_STATUS(String eNC_STATUS) 
-	{
-		ENC_STATUS = eNC_STATUS;
 	}
 
 	public String getENC_SUBJECT_REFERENCE() 
@@ -188,6 +181,36 @@ public class Encounter
 	public void setENC_DIAGN_RANK(String eNC_DIAGN_RANK) 
 	{
 		ENC_DIAGN_RANK = eNC_DIAGN_RANK;
+	}
+	
+	public String getENC_HOSP_DISDISP_CODING_SYST() 
+	{
+		return ENC_HOSP_DISDISP_CODING_SYST;
+	}
+
+	public void setENC_HOSP_DISDISP_CODING_SYST(String eNC_HOSP_DISDISP_CODING_SYST) 
+	{
+		ENC_HOSP_DISDISP_CODING_SYST = eNC_HOSP_DISDISP_CODING_SYST;
+	}
+	
+	public String getENC_DIAGN_ROLE_SYST() 
+	{
+		return ENC_DIAGN_ROLE_SYST;
+	}
+
+	public void setENC_DIAGN_ROLE_SYST(String eNC_DIAGN_ROLE_SYST) 
+	{
+		ENC_DIAGN_ROLE_SYST = eNC_DIAGN_ROLE_SYST;
+	}
+	
+	public String getENC_STATUS() 
+	{
+		return ENC_STATUS;
+	}
+
+	public void setENC_STATUS(String eNC_STATUS)
+	{
+		ENC_STATUS = eNC_STATUS;
 	}
 
 	@Override

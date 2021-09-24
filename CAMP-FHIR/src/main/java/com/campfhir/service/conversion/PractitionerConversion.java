@@ -1,28 +1,26 @@
-package com.campfhir.service.conversion;
+package main.java.com.campfhir.service.conversion;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import org.hl7.fhir.r4.model.Enumerations.AdministrativeGender;
+import org.hl7.fhir.r4.model.Identifier;
 
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.Enumerations.AdministrativeGender;
-import org.hl7.fhir.dstu3.model.Identifier;
-
-import com.campfhir.model.Practitioner;
+import main.java.com.campfhir.model.Practitioner;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class PractitionerConversion 
 {
-	public org.hl7.fhir.dstu3.model.Practitioner Practitioners(Practitioner practitioner) throws ParseException, IOException
+	public org.hl7.fhir.r4.model.Practitioner Practitioners(Practitioner practitioner) throws ParseException, IOException
 	{
 
-            org.hl7.fhir.dstu3.model.Practitioner p = new org.hl7.fhir.dstu3.model.Practitioner();   
+            org.hl7.fhir.r4.model.Practitioner p = new org.hl7.fhir.r4.model.Practitioner();   
         
 			/******************** PRACT_IDENTIFIER ******************************************************************************
 			 * PRACT_IDENTIFIER maps to Practitioner / identifier
