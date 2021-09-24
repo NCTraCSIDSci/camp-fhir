@@ -31,7 +31,7 @@ import main.java.com.campfhir.model.Patient;
 */
 public class PatientConversion 
 {
-	public org.hl7.fhir.r4.model.Patient Patients(Patient patient, Map<String, Map<String, String>> latlong) throws ParseException, IOException, ParserConfigurationException, SAXException
+	public org.hl7.fhir.r4.model.Patient Patients(Patient patient) throws ParseException, IOException, ParserConfigurationException, SAXException
 	{
 			org.hl7.fhir.r4.model.Patient n = new org.hl7.fhir.r4.model.Patient(); 
 			
@@ -42,14 +42,14 @@ public class PatientConversion
 			n.setId(patient.getPNT_IDENTIFIER());
 			
 			
-			if(latlong.get(patient.getPNT_IDENTIFIER()) != null)
-			{
-				if(!latlong.get(patient.getPNT_IDENTIFIER()).get("lat").isEmpty())
-				{
-					patient.setPNT_ADDRESS_EXT_LAT_VALUE(latlong.get(patient.getPNT_IDENTIFIER()).get("lat")); 
-					patient.setPNT_ADDRESS_EXT_LONG_VALUE(latlong.get(patient.getPNT_IDENTIFIER()).get("long"));
-				}
-			}
+//			if(latlong.get(patient.getPNT_IDENTIFIER()) != null)
+//			{
+//				if(!latlong.get(patient.getPNT_IDENTIFIER()).get("lat").isEmpty())
+//				{
+//					patient.setPNT_ADDRESS_EXT_LAT_VALUE(latlong.get(patient.getPNT_IDENTIFIER()).get("lat")); 
+//					patient.setPNT_ADDRESS_EXT_LONG_VALUE(latlong.get(patient.getPNT_IDENTIFIER()).get("long"));
+//				}
+//			}
 			
 			/******************** PNT_GENDER ************************************************************************************ 
 			 * PNT_GENDER maps to Patient / gender

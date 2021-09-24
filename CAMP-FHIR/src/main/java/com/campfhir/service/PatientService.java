@@ -105,25 +105,24 @@ public class PatientService
 		Bundle bundle = new Bundle().setType(BundleType.COLLECTION);
 		
 
-	    String file = "C:\\Users\\champioj\\git\\camp-fhir\\CAMP-FHIR\\src\\main\\resources\\geo.txt";
-	    Map<String, Map<String, String>> latlong = new HashMap<>();  
-	    
-	    try(BufferedReader br = new BufferedReader(new FileReader(file))) 
-	    {
-	        String line = "";
-	        
-	        while ((line = br.readLine()) != null) 
-	        {
-	        	String[] v = line.split(",");
-	        	Map<String, String> ll = new HashMap<>(); 
-	        	ll.put("lat", v[2]);
-	        	ll.put("long", v[1]);
-	        	latlong.put(v[0].replace("\"", ""), ll);
-	        	//System.out.println(v[1]);
-	        }
-	    } catch (FileNotFoundException e) {
-	      //Some error logging
-	    }
+//	    Map<String, Map<String, String>> latlong = new HashMap<>();  
+//	    
+//	    try(BufferedReader br = new BufferedReader(new FileReader(file))) 
+//	    {
+//	        String line = "";
+//	        
+//	        while ((line = br.readLine()) != null) 
+//	        {
+//	        	String[] v = line.split(",");
+//	        	Map<String, String> ll = new HashMap<>(); 
+//	        	ll.put("lat", v[2]);
+//	        	ll.put("long", v[1]);
+//	        	latlong.put(v[0].replace("\"", ""), ll);
+//	        	//System.out.println(v[1]);
+//	        }
+//	    } catch (FileNotFoundException e) {
+//	      //Some error logging
+//	    }
 
 
 
@@ -142,7 +141,7 @@ public class PatientService
 			b = new BundleEntryComponent();
 			
 			b.setFullUrl("https://www.hl7.org/fhir/patient.html")
-			.setResource(pc.Patients((Patient) patients.get(0), latlong));  	
+			.setResource(pc.Patients((Patient) patients.get(0)));  	
 			
 			bundle.addEntry(b);
 	     }
