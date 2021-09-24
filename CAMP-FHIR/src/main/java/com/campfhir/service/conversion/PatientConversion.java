@@ -147,7 +147,7 @@ public class PatientConversion
 				n.setExtension(extList);
 			}
 			
-			Map<String, Map<String, String>> t = latlong;
+			//Map<String, Map<String, String>> t = latlong;
 			
 			Address addrResource = n.addAddress();
 			if(patient.getPNT_ADDRESS_EXT_LAT_VALUE() !=null && patient.getPNT_ADDRESS_EXT_LONG_VALUE() != null)
