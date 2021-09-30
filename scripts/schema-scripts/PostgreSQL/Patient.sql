@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_MARITAL_STATUS_CODE" text COLLATE pg_catalog."default",
     "PNT_MULTIPLE_BIRTH_BOOLEAN" text COLLATE pg_catalog."default",
     "PNT_MULTIPLE_BIRTH_INTEGER" text COLLATE pg_catalog."default",
+    "PNT_PHOTO" text COLLATA pg_catalog."default",
     "PNT_RACE" text COLLATE pg_catalog."default",
     "PNT_RACE_DISP" text COLLATE pg_catalog."default",
     "PNT_ETHNICITY" text COLLATE pg_catalog."default",
