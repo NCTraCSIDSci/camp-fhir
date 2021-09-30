@@ -67,6 +67,7 @@
 		<property name="PNT_GENDER" column="PNT_GENDER" />
 		<property name="PNT_BIRTHDATE" column="PNT_BIRTHDATE" />
 		<property name="PNT_DECEASEDBOOLEAN" column="DECEASEDBOOLEAN" />
+		<property name="PNT_DECEASEDDATETIME" column="DECEASEDDATETIME" />
 		<property name="PNT_MARITAL_STATUS_CODE" column="PNT_MARITAL_STATUS_CODE" />
 		<property name="PNT_RACE" column="PNT_RACE" />
 		<property name="PNT_ETHNICITY" column="PNT_ETHNICITY" />
