@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC
-        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.campfhir.model">
-  
-    <class name="Condition" table="DEV_CONDITION_2FHIR">
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="main.java.com.campfhir.model">
+    <class name="Condition" table="PCD_ICEES_2020_CONDITION">
 	 	<id name="CON_IDENTIFIER" column="CON_IDENTIFIER" />
 		<property name="CON_SUBJECT_REFERENCE" column="CON_SUBJECT_REFERENCE" />
 		<property name="CON_CONTEXT_REFERENCE" column="CON_CONTEXT_REFERENCE" />
@@ -19,7 +18,7 @@
 		<property name="CON_ONSETDATE" column="CON_ONSETDATE" />
     </class>
     
-    <class name="Encounter" table="DEV_ENCOUNTER_2FHIR">
+    <class name="Encounter" table="PCD_ICEES_2020_ENCOUNTER">
 	 	<id name="ENC_IDENTIFIER" column="ENC_IDENTIFIER" />
 		<property name="ENC_SUBJECT_REFERENCE" column="ENC_SUBJECT_REFERENCE" />
 		<property name="ENC_PARTICIPANT_INDIV_REF" column="ENC_PARTICIPANT_INDIV_REF" />		
@@ -39,7 +38,7 @@
 		<property name="ENC_DIAGN_RANK" column="ENC_DIAGN_RANK" />
     </class>    
         
-    <class name="Lab" table="DEV_OBSLABS_2FHIR">
+    <class name="Lab" table="ICEES_COVID_OBSLABS_SEPT20">
 	 	<id name="OBS_IDENTIFIER" column="OBS_IDENTIFIER" />
 		<property name="OBS_SUBJECT_REFERENCE" column="OBS_SUBJECT_REFERENCE" />
 		<property name="OBS_CONTEXT_REFERENCE" column="OBS_CONTEXT_REFERENCE" />
@@ -60,20 +59,20 @@
 		<property name="OBS_INTERPRETATION_CODE" column="OBS_INTERPRETATION_CODE" />
 		<property name="OBS_INTERPRETATION_SYST" column="OBS_INTERPRETATION_SYST" />
     </class>    
-    
-    <class name="Patient" table="DEV_PATIENT_2FHIR">
+    <class name="Patient" table="Patient">
 	 	<id name="PNT_IDENTIFIER" column="PNT_IDENTIFIER" />
+	 	<property name="PNT_ACTIVE" column="PNT_ACTIVE" />
+	 	<property name="PNT_TELECOM" column="PNT_TELECOM" />
 		<property name="PNT_GENDER" column="PNT_GENDER" />
 		<property name="PNT_BIRTHDATE" column="PNT_BIRTHDATE" />
 		<property name="PNT_MARITAL_STATUS_CODE" column="PNT_MARITAL_STATUS_CODE" />
-		<property name="PNT_MARITAL_STATUS_SYSTEM" column="PNT_MARITAL_STATUS_SYSTEM" />
 		<property name="PNT_RACE" column="PNT_RACE" />
 		<property name="PNT_ETHNICITY" column="PNT_ETHNICITY" />
 		<property name="PNT_ADDRESS_EXT_LAT_VALUE" column="PNT_ADDRESS_EXT_LAT_VALUE" />
 		<property name="PNT_ADDRESS_EXT_LONG_VALUE" column="PNT_ADDRESS_EXT_LONG_VALUE" />
     </class>
-        
-    <class name="MedicationRequest" table="DEV_MEDREQ_2FHIR">
+    <!--<class name="MedicationRequest" table="PCD_ICEES_2020_MEDREQ">-->
+	<class name="MedicationRequest" table="ICEES_COVID_MEDREQ_MAY21">
 	 	<id name="MED_IDENTIFIER" column="MED_IDENTIFIER" />
 		<property name="MED_SUBJECT_REFERENCE" column="MED_SUBJECT_REFERENCE" />
 		<property name="MED_CONTEXT_REFERENCE" column="MED_CONTEXT_REFERENCE" />
@@ -95,14 +94,17 @@
 		<property name="MED_DOSINSTX_ASNDBOOL" column="MED_DOSINSTX_ASNDBOOL" />
 		<property name="MED_DOSINSTX_ROUTE" column="MED_DOSINSTX_ROUTE" />
 		<property name="MED_SUBSTITU_ALLOWED" column="MED_SUBSTITU_ALLOWED" />
+		<property name="MED_MEDCODCON_CODING_CODE" column="MED_MEDCODCON_CODING_CODE" />
+		<property name="MED_MEDCODCON_CODING_SYS" column="MED_MEDCODCON_CODING_SYS" />
+		<property name="MED_MEDCODCON_CODING_DISPLAY" column="MED_MEDCODCON_CODING_DISPLAY" />
     </class>
     
-    <class name="Practitioner" table="DEV_PRACTITIONER_2FHIR">
+    <class name="Practitioner" table="TRANS2015_PRACTITIONER_2FHIR">
 	 	<id name="PRACT_IDENTIFIER" column="PRACT_IDENTIFIER" />
 		<property name="PRACT_GENDER" column="PRACT_GENDER" />
     </class>
     
-    <class name="Procedure" table="DEV_PROCEDURE_2FHIR">
+    <class name="Procedure" table="PCD_ICEES_2020_PROCEDURE">
 	 	<id name="PCD_IDENTIFIER" column="PCD_IDENTIFIER" />
 		<property name="PCD_SUBJECT_REFERENCE" column="PCD_SUBJECT_REFERENCE" />
 		<property name="PCD_CONTEXT_REFERENCE" column="PCD_CONTEXT_REFERENCE" />
@@ -111,9 +113,8 @@
 		<property name="PCD_PERFORMED_PDT" column="PCD_PERFORMED_PDT" />
 		<property name="PCD_PERF_ACTOR_REF" column="PCD_PERF_ACTOR_REF" />
     </class>
-    
             
-    <class name="Vital" table="DEV_OBSVITALS_2FHIR">
+    <class name="Vital" table="PCD_ICEES_2020_OBSVITALS">
 	 	<id name="OBS_IDENTIFIER" column="OBS_IDENTIFIER" />
 		<property name="OBS_SUBJECT_REFERENCE" column="OBS_SUBJECT_REFERENCE" />
 		<property name="OBS_CONTEXT_REFERENCE" column="OBS_CONTEXT_REFERENCE" />
@@ -133,6 +134,22 @@
 		<property name="OBS_REFRANGE_HIGH" column="OBS_REFRANGE_HIGH" />						
 		<property name="OBS_INTERPRETATION_CODE" column="OBS_INTERPRETATION_CODE" />
 		<property name="OBS_INTERPRETATION_SYST" column="OBS_INTERPRETATION_SYST" />
-    </class>   
-    
+    </class> 
+	
+    <class name="DocumentReference" table="u92311.V_CLARITY_FHIR_DOC_REFERENCE_TESTING">
+		<id name="DOC_ID" column="DOC_ID" />
+		<property name="DOC_SUBJECT_REFERENCE" column="DOC_SUBJECT_REFERENCE" />
+		<property name="DOC_DATE" column="DOC_DATE" />
+		<property name="DOC_START_DATE" column="DOC_START_DATE" />
+		<property name="DOC_END_DATE" column="DOC_END_DATE" />
+		<property name="DOC_TYPE_CODE" column="DOC_TYPE_CODE" />
+		<property name="DOC_TYPE_SYSTEM" column="DOC_TYPE_SYSTEM" />
+		<property name="DOC_TYPE_DISPLAY" column="DOC_TYPE_DISPLAY" />
+		<property name="DOC_TYPE" column="DOC_TYPE" />
+		<property name="DOC_CATEGORY" column="DOC_CATEGORY" />
+		<property name="DOC_STATUS" column="DOC_STATUS" />
+		<property name="DOC_CONTENT_TYPE" column="DOC_CONTENT_TYPE" />
+		<property name="DOC_CONTENT_DATA" column="DOC_CONTENT_DATA" />
+    </class>	
 </hibernate-mapping>
+s
