@@ -62,6 +62,7 @@
     <class name="Patient" table="Patient">
 	 	<id name="PNT_IDENTIFIER" column="PNT_IDENTIFIER" />
 	 	<property name="PNT_ACTIVE" column="PNT_ACTIVE" />
+	 	<property name="PNT_NAME" column="PNT_NAME" />
 	 	<property name="PNT_TELECOM" column="PNT_TELECOM" />
 		<property name="PNT_GENDER" column="PNT_GENDER" />
 		<property name="PNT_BIRTHDATE" column="PNT_BIRTHDATE" />
