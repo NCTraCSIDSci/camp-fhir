@@ -16,6 +16,7 @@ public class Patient  implements java.io.Serializable
 	private static final long serialVersionUID = 1L;
 	
 	String PNT_IDENTIFIER;
+	String PNT_ACTIVE;
 	String PNT_GENDER;
 	String PNT_BIRTHDATE;	
 	String PNT_MARITAL_STATUS_CODE;	
@@ -36,6 +37,14 @@ public class Patient  implements java.io.Serializable
 	public void setPNT_IDENTIFIER(String pNT_IDENTIFIER) 
 	{
 		this.PNT_IDENTIFIER = pNT_IDENTIFIER;
+	}
+	
+	public String getPNT_ACTIVE() {
+		return PNT_ACTIVE;
+	}
+
+	public void setPNT_ACTIVE(String pNT_ACTIVE) {
+		PNT_ACTIVE = pNT_ACTIVE;
 	}
 
 	public String getPNT_GENDER() 
