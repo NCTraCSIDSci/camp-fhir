@@ -17,6 +17,7 @@ public class Patient  implements java.io.Serializable
 	
 	String PNT_IDENTIFIER;
 	String PNT_ACTIVE;
+	String PNT_NAME;
 	String PNT_TELECOM;
 	String PNT_GENDER;
 	String PNT_BIRTHDATE;	
@@ -46,6 +47,14 @@ public class Patient  implements java.io.Serializable
 	
 	public void setPNT_ACTIVE(String pNT_ACTIVE) {
 		this.PNT_ACTIVE = pNT_ACTIVE;
+	}
+	
+	public String getPNT_NAME() {
+		return this.PNT_NAME;
+	}
+
+	public void setPNT_NAME(String pNT_NAME) {
+		this.PNT_NAME = pNT_NAME;
 	}
 
 	public String getPNT_TELECOM() {
