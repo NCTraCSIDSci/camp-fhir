@@ -23,6 +23,7 @@ public class Patient  implements java.io.Serializable
 	String PNT_BIRTHDATE;	
 	String PNT_DECEASEDBOOLEAN;
 	String PNT_DECEASEDDATETIME;
+	String PNT_ADDRESS;
 	String PNT_MARITAL_STATUS_CODE;	
 	String PNT_RACE;
 	String PNT_RACE_DISP;
@@ -100,6 +101,14 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_DECEASEDDATETIME(String pNT_DECEASEDDATETIME) {
 		this.PNT_DECEASEDDATETIME = pNT_DECEASEDDATETIME;
+	}
+	
+	public String getPNT_ADDRESS() {
+		return this.PNT_ADDRESS;
+	}
+
+	public void setPNT_ADDRESS(String pNT_ADDRESS) {
+		this.PNT_ADDRESS = pNT_ADDRESS;
 	}
 	
 	public String getPNT_MARITAL_STATUS_CODE() 

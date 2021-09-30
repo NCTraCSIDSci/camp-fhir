@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_BIRTHDATE" text COLLATE pg_catalog."default",
     "PNT_DECEASEDBOOLEAN" text COLLATE pg_catalog."default",
     "PNT_DECEASEDDATETIME" text COLLATE pg_catalog."default",
+    "PNT_ADDRESS" text COLLATE pg_catalog."default",
     "PNT_MARITAL_STATUS_CODE" text COLLATE pg_catalog."default",
     "PNT_RACE" text COLLATE pg_catalog."default",
     "PNT_RACE_DISP" text COLLATE pg_catalog."default",
