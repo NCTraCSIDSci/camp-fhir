@@ -26,6 +26,7 @@ public class Patient  implements java.io.Serializable
 	String PNT_ADDRESS;
 	String PNT_MARITAL_STATUS_CODE;	
 	String PNT_MULTIPLE_BIRTH_BOOLEAN;
+	String PNT_MULTIPLE_BIRTH_INTEGER;
 	String PNT_RACE;
 	String PNT_RACE_DISP;
 	String PNT_ETHNICITY;
@@ -128,6 +129,14 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_MULTIPLE_BIRTH_BOOLEAN(String pNT_MULTIPLE_BIRTH_BOOLEAN) {
 		this.PNT_MULTIPLE_BIRTH_BOOLEAN = pNT_MULTIPLE_BIRTH_BOOLEAN;
+	}
+	
+	public String getPNT_MULTIPLE_BIRTH_INTEGER() {
+		return this.PNT_MULTIPLE_BIRTH_INTEGER;
+	}
+
+	public void setPNT_MULTIPLE_BIRTH_INTEGER(String pNT_MULTIPLE_BIRTH_INTEGER) {
+		this.PNT_MULTIPLE_BIRTH_INTEGER = pNT_MULTIPLE_BIRTH_INTEGER;
 	}
 
 	public String getPNT_RACE() 
