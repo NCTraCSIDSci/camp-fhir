@@ -40,11 +40,11 @@ public class Patient  implements java.io.Serializable
 	}
 	
 	public String getPNT_ACTIVE() {
-		return PNT_ACTIVE;
+		return this.PNT_ACTIVE;
 	}
 
 	public void setPNT_ACTIVE(String pNT_ACTIVE) {
-		PNT_ACTIVE = pNT_ACTIVE;
+		this.PNT_ACTIVE = pNT_ACTIVE;
 	}
 
 	public String getPNT_GENDER() 
