@@ -5,6 +5,7 @@
 CREATE TABLE IF NOT EXISTS public."Patient"
 (
     "PNT_IDENTIFIER" text COLLATE pg_catalog."default",
+    "PNT_ACTIVE" text COLLATE pg_catalog."default",
     "PNT_GENDER" text COLLATE pg_catalog."default",
     "PNT_BIRTHDATE" text COLLATE pg_catalog."default",
     "PNT_MARITAL_STATUS_CODE" text COLLATE pg_catalog."default",
