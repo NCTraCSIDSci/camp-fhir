@@ -76,6 +76,7 @@
 		<property name="PNT_CONTACT" column="PNT_CONTACT"/>
 		<property name="PNT_CONTACT_RELATIONSHIP" column="PNT_CONTACT_RELATIONSHIP" />
 		<property name="PNT_CONTACT_NAME" column="PNT_CONTACT_NAME"/>
+		<property name="PNT_CONTACT_TELECOM" column="PNT_CONTACT_TELECOM"/>
 		<property name="PNT_RACE" column="PNT_RACE" />
 		<property name="PNT_ETHNICITY" column="PNT_ETHNICITY" />
 		<property name="PNT_ADDRESS_EXT_LAT_VALUE" column="PNT_ADDRESS_EXT_LAT_VALUE" />
