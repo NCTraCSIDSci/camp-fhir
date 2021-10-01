@@ -36,6 +36,16 @@ public class Patient  implements java.io.Serializable
 	String PNT_DECEASEDBOOLEAN;
 	String PNT_DECEASEDDATETIME;
 	String PNT_ADDRESS;
+	String PNT_ADDRESS_USE;
+	String PNT_ADDRESS_TYPE;
+	String PNT_ADDRESS_TEXT;
+	String PNT_ADDRESS_LINE;
+	String PNT_ADDRESS_CITY;
+	String PNT_ADDRESS_DISTRICT;
+	String PNT_ADDRESS_STATE;
+	String PNT_ADDRESS_POSTAL_CODE;
+	String PNT_ADDRESS_COUNTRY;
+	String PNT_ADDRESS_PERIOD;
 	String PNT_MARITAL_STATUS_CODE;	
 	String PNT_MULTIPLE_BIRTH_BOOLEAN;
 	String PNT_MULTIPLE_BIRTH_INTEGER;
@@ -227,6 +237,86 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_ADDRESS(String pNT_ADDRESS) {
 		this.PNT_ADDRESS = pNT_ADDRESS;
+	}
+	
+	public String getPNT_ADDRESS_USE() {
+		return this.PNT_ADDRESS_USE;
+	}
+
+	public void setPNT_ADDRESS_USE(String pNT_ADDRESS_USE) {
+		this.PNT_ADDRESS_USE = pNT_ADDRESS_USE;
+	}
+
+	public String getPNT_ADDRESS_TYPE() {
+		return this.PNT_ADDRESS_TYPE;
+	}
+
+	public void setPNT_ADDRESS_TYPE(String pNT_ADDRESS_TYPE) {
+		this.PNT_ADDRESS_TYPE = pNT_ADDRESS_TYPE;
+	}
+
+	public String getPNT_ADDRESS_TEXT() {
+		return this.PNT_ADDRESS_TEXT;
+	}
+
+	public void setPNT_ADDRESS_TEXT(String pNT_ADDRESS_TEXT) {
+		this.PNT_ADDRESS_TEXT = pNT_ADDRESS_TEXT;
+	}
+
+	public String getPNT_ADDRESS_LINE() {
+		return this.PNT_ADDRESS_LINE;
+	}
+
+	public void setPNT_ADDRESS_LINE(String pNT_ADDRESS_LINE) {
+		this.PNT_ADDRESS_LINE = pNT_ADDRESS_LINE;
+	}
+
+	public String getPNT_ADDRESS_CITY() {
+		return this.PNT_ADDRESS_CITY;
+	}
+
+	public void setPNT_ADDRESS_CITY(String pNT_ADDRESS_CITY) {
+		this.PNT_ADDRESS_CITY = pNT_ADDRESS_CITY;
+	}
+
+	public String getPNT_ADDRESS_DISTRICT() {
+		return this.PNT_ADDRESS_DISTRICT;
+	}
+
+	public void setPNT_ADDRESS_DISTRICT(String pNT_ADDRESS_DISTRICT) {
+		this.PNT_ADDRESS_DISTRICT = pNT_ADDRESS_DISTRICT;
+	}
+
+	public String getPNT_ADDRESS_STATE() {
+		return this.PNT_ADDRESS_STATE;
+	}
+
+	public void setPNT_ADDRESS_STATE(String pNT_ADDRESS_STATE) {
+		this.PNT_ADDRESS_STATE = pNT_ADDRESS_STATE;
+	}
+
+	public String getPNT_ADDRESS_POSTAL_CODE() {
+		return this.PNT_ADDRESS_POSTAL_CODE;
+	}
+
+	public void setPNT_ADDRESS_POSTAL_CODE(String pNT_ADDRESS_POSTAL_CODE) {
+		this.PNT_ADDRESS_POSTAL_CODE = pNT_ADDRESS_POSTAL_CODE;
+	}
+
+	public String getPNT_ADDRESS_COUNTRY() {
+		return this.PNT_ADDRESS_COUNTRY;
+	}
+
+	public void setPNT_ADDRESS_COUNTRY(String pNT_ADDRESS_COUNTRY) {
+		this.PNT_ADDRESS_COUNTRY = pNT_ADDRESS_COUNTRY;
+	}
+
+	public String getPNT_ADDRESS_PERIOD() {
+		return this.PNT_ADDRESS_PERIOD;
+	}
+
+	public void setPNT_ADDRESS_PERIOD(String pNT_ADDRESS_PERIOD) {
+		this.PNT_ADDRESS_PERIOD = pNT_ADDRESS_PERIOD;
 	}
 	
 	public String getPNT_MARITAL_STATUS_CODE() 

@@ -80,7 +80,17 @@
 		<property name="PNT_BIRTHDATE" column="PNT_BIRTHDATE" />
 		<property name="PNT_DECEASEDBOOLEAN" column="DECEASEDBOOLEAN" />
 		<property name="PNT_DECEASEDDATETIME" column="DECEASEDDATETIME" />
-		<property name="PNT_ADDRESS" column="ADDRESS" />
+		<property name="PNT_ADDRESS" column="PNT_ADDRESS" />
+		<property name="PNT_ADDRESS_USE" column="PNT_ADDRESS_USE" />
+		<property name="PNT_ADDRESS_TYPE" column="PNT_ADDRESS_TYPE" />
+		<property name="PNT_ADDRESS_TEXT" column="PNT_ADDRESS_TEXT" />
+		<property name="PNT_ADDRESS_LINE" column="PNT_ADDRESS_LINE" />
+		<property name="PNT_ADDRESS_CITY" column="PNT_ADDRESS_CITY" />
+		<property name="PNT_ADDRESS_DISTRICT" column="PNT_ADDRESS_DISTRICT" />
+		<property name="PNT_ADDRESS_STATE" column="PNT_ADDRESS_STATE" />
+		<property name="PNT_ADDRESS_POTALCODE" column="PNT_ADDRESS_POTALCODE" />
+		<property name="PNT_ADDRESS_COUNTRY" column="PNT_ADDRESS_COUNTRY" />
+		<property name="PNT_ADDRESS_PERIOD" column="PNT_ADDRESS_PERIOD" />
 		<property name="PNT_MARITAL_STATUS_CODE" column="PNT_MARITAL_STATUS_CODE" />
 		<property name="PNT_MULTIPLE_BIRTH_BOOLEAN" column="PNT_MULTIPLE_BIRTH_BOOLEAN"/>
 		<property name="PNT_MULTIPLE_BIRTH_INTEGER" column="PNT_MULTIPLE_BIRTH_INTEGER"/>
