@@ -63,6 +63,13 @@
 	 	<id name="PNT_IDENTIFIER" column="PNT_IDENTIFIER" />
 	 	<property name="PNT_ACTIVE" column="PNT_ACTIVE" />
 	 	<property name="PNT_NAME" column="PNT_NAME" />
+	 	<property name="PNT_NAME_HUMANNAME_USE" column="PNT_NAME_HUMANNAME_USE" />
+	 	<property name="PNT_NAME_HUMANNAME_TEXT" column="PNT_NAME_HUMANNAME_TEXT" />
+	 	<property name="PNT_NAME_HUMANNAME_FAMILY" column="PNT_NAME_HUMANNAME_FAMILY" />
+	 	<property name="PNT_NAME_HUMANNAME_GIVEN" column="PNT_NAME_HUMANNAME_GIVEN" />
+	 	<property name="PNT_NAME_HUMANNAME_PREFIX" column="PNT_NAME_HUMANNAME_PREFIX" />
+	 	<property name="PNT_NAME_HUMANNAME_SUFFIX" column="PNT_NAME_HUMANNAME_SUFFIX" />
+	 	<property name="PNT_NAME_HUMANNAME_PERIOD" column="PNT_NAME_HUMANNAME_PERIOD" />
 	 	<property name="PNT_TELECOM" column="PNT_TELECOM" />
 	 	<property name="PNT_TELECOM_CONTACTPOINT_SYSTEM" column="PNT_TELECOM_CONTACTPOINT_SYSTEM" />
 	 	<property name="PNT_TELECOM_CONTACTPOINT_VALUE" column="PNT_TELECOM_CONTACTPOINT_VALUE"/>
