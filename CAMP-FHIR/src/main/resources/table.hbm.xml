@@ -64,6 +64,11 @@
 	 	<property name="PNT_ACTIVE" column="PNT_ACTIVE" />
 	 	<property name="PNT_NAME" column="PNT_NAME" />
 	 	<property name="PNT_TELECOM" column="PNT_TELECOM" />
+	 	<property name="PNT_TELECOM_CONTACTPOINT_SYSTEM" column="PNT_TELECOM_CONTACTPOINT_SYSTEM" />
+	 	<property name="PNT_TELECOM_CONTACTPOINT_VALUE" column="PNT_TELECOM_CONTACTPOINT_VALUE"/>
+	 	<property name="PNT_TELECOM_CONTACTPOINT_USE" column="PNT_TELECOM_CONTACTPOINT_USE" />
+	 	<property name="PNT_TELECOM_CONTACTPOINT_RANK" column="PNT_TELECOM_CONTACTPOINT_RANK" />
+	 	<property name="PNT_TELECOM_CONTACTPOINT_PERIOD" column="PNT_TELECOM_CONTACTPOINT_PERIOD"/>
 		<property name="PNT_GENDER" column="PNT_GENDER" />
 		<property name="PNT_BIRTHDATE" column="PNT_BIRTHDATE" />
 		<property name="PNT_DECEASEDBOOLEAN" column="DECEASEDBOOLEAN" />
