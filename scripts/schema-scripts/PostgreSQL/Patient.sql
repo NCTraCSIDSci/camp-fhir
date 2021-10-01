@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_CONTACT_NAME" text COLLATA pg_catalog."default",
     "PNT_CONTACT_TELECOM" text COLLATA pg_catalog."default",
     "PNT_CONTACT_ADDRESS" text COLLATA pg_catalog."default",
+    "PNT_CONTACT_GENDER" text COLLATA pg_catalog."default",
     "PNT_RACE" text COLLATE pg_catalog."default",
     "PNT_RACE_DISP" text COLLATE pg_catalog."default",
     "PNT_ETHNICITY" text COLLATE pg_catalog."default",
