@@ -50,6 +50,8 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_CONTACT" text COLLATA pg_catalog."default",
     "PNT_CONTACT_BACKBONE_ELEMENT_MODIFIEREXTENSION" text COLLATA pg_catalog."default",
     "PNT_CONTACT_RELATIONSHIP" text COLLATA pg_catalog."default",
+    "PNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING" text COLLATA pg_catalog."default",
+    "PNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_TEXT" text COLLATA pg_catalog."default",
     "PNT_CONTACT_NAME" text COLLATA pg_catalog."default",
     "PNT_CONTACT_TELECOM" text COLLATA pg_catalog."default",
     "PNT_CONTACT_ADDRESS" text COLLATA pg_catalog."default",
