@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_PHOTO_ATTACHMENT_TITLE" text COLLATA pg_catalog."default",
     "PNT_PHOTO_ATTACHMENT_CREATION" text COLLATA pg_catalog."default",
     "PNT_CONTACT" text COLLATA pg_catalog."default",
+    "PNT_CONTACT_BACKBONE_ELEMENT_MODIFIEREXTENSION" text COLLATA pg_catalog."default",
     "PNT_CONTACT_RELATIONSHIP" text COLLATA pg_catalog."default",
     "PNT_CONTACT_NAME" text COLLATA pg_catalog."default",
     "PNT_CONTACT_TELECOM" text COLLATA pg_catalog."default",
