@@ -34,6 +34,7 @@ public class Patient  implements java.io.Serializable
 	String PNT_CONTACT_TELECOM;
 	String PNT_CONTACT_ADDRESS;
 	String PNT_CONTACT_GENDER;
+	String PNT_CONTACT_ORGANIZATION;
 	String PNT_RACE;
 	String PNT_RACE_DISP;
 	String PNT_ETHNICITY;
@@ -200,6 +201,14 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_CONTACT_GENDER(String pNT_CONTACT_GENDER) {
 		this.PNT_CONTACT_GENDER = pNT_CONTACT_GENDER;
+	}
+	
+	public String getPNT_CONTACT_ORGANIZATION() {
+		return this.PNT_CONTACT_ORGANIZATION;
+	}
+
+	public void setPNT_CONTACT_ORGANIZATION(String pNT_CONTACT_ORGANIZATION) {
+		this.PNT_CONTACT_ORGANIZATION = pNT_CONTACT_ORGANIZATION;
 	}
 	
 	public String getPNT_RACE() 
