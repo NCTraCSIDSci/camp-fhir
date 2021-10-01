@@ -88,7 +88,7 @@
 		<property name="PNT_ADDRESS_CITY" column="PNT_ADDRESS_CITY" />
 		<property name="PNT_ADDRESS_DISTRICT" column="PNT_ADDRESS_DISTRICT" />
 		<property name="PNT_ADDRESS_STATE" column="PNT_ADDRESS_STATE" />
-		<property name="PNT_ADDRESS_POTALCODE" column="PNT_ADDRESS_POTALCODE" />
+		<property name="PNT_ADDRESS_POSTAL_CODE" column="PNT_ADDRESS_POTALCODE" />
 		<property name="PNT_ADDRESS_COUNTRY" column="PNT_ADDRESS_COUNTRY" />
 		<property name="PNT_ADDRESS_PERIOD" column="PNT_ADDRESS_PERIOD" />
 		<property name="PNT_MARITAL_STATUS_CODE" column="PNT_MARITAL_STATUS_CODE" />
