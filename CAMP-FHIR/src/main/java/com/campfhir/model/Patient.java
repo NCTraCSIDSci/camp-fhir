@@ -103,6 +103,7 @@ public class Patient  implements java.io.Serializable
 	String PNT_CONTACT_PERIOD;
 	String PNT_CONTACT_PERIOD_START;
 	String PNT_CONTACT_PERIOD_END;
+	String PNT_COMMUNICATION;
 	String PNT_COMMUNICATION_LANGUAGE;
 	String PNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING;
 	String PNT_COMMUNICATION_LANGUAGE_TEXT;
@@ -825,6 +826,14 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_CONTACT_PERIOD_END(String pNT_CONTACT_PERIOD_END) {
 		this.PNT_CONTACT_PERIOD_END = pNT_CONTACT_PERIOD_END;
+	}
+	
+	public String getPNT_COMMUNICATION() {
+		return this.PNT_COMMUNICATION;
+	}
+
+	public void setPNT_COMMUNICATION(String pNT_COMMUNICATION) {
+		this.PNT_COMMUNICATION = pNT_COMMUNICATION;
 	}
 	
 	public String getPNT_COMMUNICATION_LANGUAGE() {
