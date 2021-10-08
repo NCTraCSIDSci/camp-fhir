@@ -863,7 +863,7 @@ public class Patient  implements java.io.Serializable
 	}
 	
 	public String getPNT_COMMUNICATION_PREFERRED() {
-		return this.PNT_COMMUNICATION_PREFERRED;
+		return this.PNT_COMMUNICATION_PREFERRED; 
 	}
 
 	public void setPNT_COMMUNICATION_PREFERRED(String pNT_COMMUNICATION_PREFERRED) {
