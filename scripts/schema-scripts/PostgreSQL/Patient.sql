@@ -101,6 +101,8 @@ CREATE TABLE IF NOT EXISTS public."Patient"
     "PNT_MANAGING_ORGANIZATION_REFERENCE_TYPE" text COLLATA pg_catalog."default",
     "PNT_MANAGING_ORGANIZATION_REFERENCE_IDENTIFIER" text COLLATA pg_catalog."default",
     "PNT_MANAGING_ORGANIZATION_REFERENCE_DISPLAY" text COLLATA pg_catalog."default",
+    "PNT_LINK" text COLLATA pg_catalog."default",
+    "PNT_LINK_BACKBONE_ELEMENT_MODIFIEREXTENSION" text COLLATA pg_catalog."default",
     "PNT_RACE" text COLLATE pg_catalog."default",
     "PNT_RACE_DISP" text COLLATE pg_catalog."default",
     "PNT_ETHNICITY" text COLLATE pg_catalog."default",
