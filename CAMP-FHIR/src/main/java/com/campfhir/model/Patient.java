@@ -127,6 +127,7 @@ public class Patient  implements java.io.Serializable
 	String PNT_LINK_OTHER_REFERENCE_TYPE;
 	String PNT_LINK_OTHER_REFERENCE_IDENTIFIER;
 	String PNT_LINK_OTHER_REFERENCE_DISPLAY;
+	String PNT_LINK_TYPE;
 	String PNT_RACE;
 	String PNT_RACE_DISP;
 	String PNT_ETHNICITY;
@@ -1039,6 +1040,14 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_LINK_OTHER_REFERENCE_DISPLAY(String pNT_LINK_OTHER_REFERENCE_DISPLAY) {
 		this.PNT_LINK_OTHER_REFERENCE_DISPLAY = pNT_LINK_OTHER_REFERENCE_DISPLAY;
+	}
+	
+	public String getPNT_LINK_TYPE() {
+		return this.PNT_LINK_TYPE;
+	}
+
+	public void setPNT_LINK_TYPE(String pNT_LINK_TYPE) {
+		this.PNT_LINK_TYPE = pNT_LINK_TYPE;
 	}
 	
 	public String getPNT_RACE() 
