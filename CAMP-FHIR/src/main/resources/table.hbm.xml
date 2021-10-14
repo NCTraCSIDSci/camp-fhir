@@ -165,6 +165,7 @@
 		<property name="PNT_LINK_OTHER_REFERENCE_TYPE" column="PNT_LINK_OTHER_REFERENCE_TYPE"/>
 		<property name="PNT_LINK_OTHER_REFERENCE_IDENTIFIER" column="PNT_LINK_OTHER_REFERENCE_IDENTIFIER"/>
 		<property name="PNT_LINK_OTHER_REFERENCE_DISPLAY" column="PNT_LINK_OTHER_REFERENCE_DISPLAY"/>
+		<property name="PNT_LINK_TYPE" column="PNT_LINK_TYPE"/>
 		<property name="PNT_RACE" column="PNT_RACE" />
 		<property name="PNT_ETHNICITY" column="PNT_ETHNICITY" />
 		<property name="PNT_ADDRESS_EXT_LAT_VALUE" column="PNT_ADDRESS_EXT_LAT_VALUE" />
