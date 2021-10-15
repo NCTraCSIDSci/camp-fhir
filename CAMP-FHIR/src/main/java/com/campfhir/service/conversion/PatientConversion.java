@@ -71,8 +71,9 @@ public class PatientConversion
 			/******************** PNT_ACTIVE ******************************************************************************** 
 			 * PNT_ACTIVE maps to Patient / active
 			 ********************************************************************************************************************/
-			
-			n.setActive(Boolean.parseBoolean(patient.getPNT_ACTIVE()));
+			if(patient.getPNT_ACTIVE() != null) {
+				n.setActive(Boolean.parseBoolean(patient.getPNT_ACTIVE()));
+			}
 			
 			/******************** PNT_NAME ******************************************************************************** 
 			 * PNT_NAME maps to Patient / name
@@ -281,7 +282,7 @@ public class PatientConversion
 				Coding relcode = rel.addCoding();
 				relcode.setSystem("urn:oid:2.16.840.1.113883.4.642.3.1130");
 				relcode.setVersion("4.0.1");
-				relcode.setCode(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_CODE()); //TODO: CREATE SEPERATE DBASE FIELDS FOR CODING CODE AND DISPLAY AND USERSELECTED
+				relcode.setCode(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_CODE()); 
 				relcode.setDisplay(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_DISPLAY());
 //				relcode.setUserSelected(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_USERSELECTED());
 				try {
@@ -342,9 +343,11 @@ public class PatientConversion
 			/******************** PNT_COMMUNICATION **************************************************************************************
 			 * PNT_COMMUNICATION maps to Patient / communication 
 			 ********************************************************************************************************************/
-			
+
 			PatientCommunicationComponent patcom = n.addCommunication();
-			
+			if(patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_CODE() != null || patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_DISPLAY() != null
+					|| patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_DISPLAY() != null) {
+
 				/******************** PNT_COMMUNICATION_LANGUAGE **************************************************************************************
 				 * PNT_COMMUNICATION_LANGUAGE maps to Patient / communication / language
 				 ********************************************************************************************************************/
@@ -369,17 +372,19 @@ public class PatientConversion
 				patcomlang.addCoding(patcomcode);
 				patcomlang.setText(patient.getPNT_COMMUNICATION_LANGUAGE_TEXT());
 				patcom.setLanguage(patcomlang);
+			}
 				
 				/******************** PNT_COMMUNICATION_PREFERRED **************************************************************************************
 				 * PNT_COMMUNICATION_PREFERRED maps to Patient / communication / preferred
 				 ********************************************************************************************************************/
-				
+			if(patient.getPNT_COMMUNICATION_PREFERRED() != null ) {
 				try {
 					BooleanType bt = new BooleanType(patient.getPNT_COMMUNICATION_PREFERRED());
 					patcom.setPreferredElement(bt);
 				} catch (DataFormatException booleanerror) {
 					booleanerror.printStackTrace();
 				}
+			}
 			
 			/******************** PNT_GENERAL_PRACTITIONER **************************************************************************************
 			 * PNT_GENERAL_PRACTITIONER maps to Patient / generalPractitioner
