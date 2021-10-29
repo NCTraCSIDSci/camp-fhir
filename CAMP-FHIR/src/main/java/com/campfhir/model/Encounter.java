@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 public class Encounter 
 {
 	String ENC_IDENTIFIER;
-	
+	String ENC_SERVICE_TYPE;
 	String ENC_SUBJECT_REFERENCE;
 	String ENC_PARTICIPANT_INDIV_REF;
 	String ENC_CLASS_SYST;
@@ -42,10 +42,20 @@ public class Encounter
 	{
 		ENC_IDENTIFIER = eNC_IDENTIFIER;
 	}
-
-	public String getENC_SUBJECT_REFERENCE() 
+	
+	public String getENC_IDENTIFIER() 
 	{
-		return ENC_SUBJECT_REFERENCE;
+		return ENC_IDENTIFIER;
+	}
+
+	public void setENC_SERVICE_TYPE(String eNC_SERVICE_TYPE) 
+	{
+		this.ENC_SERVICE_TYPE = eNC_SERVICE_TYPE;
+	}
+
+	public String getENC_SERVICE_TYPE() 
+	{
+		return this.ENC_SERVICE_TYPE;
 	}
 
 	public void setENC_SUBJECT_REFERENCE(String eNC_SUBJECT_REFERENCE) 
