@@ -38,7 +38,6 @@ class PatientTest
 	    {	
 	    	p = (Patient) patients.get(0);
 	    	
-	    	assertEquals(p.getPNT_IDENTIFIER(),"1");
 	    	/*
 	    	 * 
 	    	
