@@ -8,6 +8,12 @@ import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.Options;
 import org.hl7.fhir.exceptions.FHIRException;
 import org.hl7.fhir.r4.model.Bundle;
 import org.xml.sax.SAXException;
@@ -40,114 +46,76 @@ public class CAMPFHIR
 			ParserConfigurationException, 
 			SAXException, 
 			InterruptedException, 
-			ClassNotFoundException 
+			ClassNotFoundException, org.apache.commons.cli.ParseException 
 	{
-		String domain = args[0];		
-		String path = args[1];
-		int partition = Integer.parseInt(args[2]);
-		System.setProperty("CONFIG", args[3]);
+
+        Options options = new Options();
+        Option domain = new Option("d", "domain", true, "Domain");
+        domain.setRequired(true);
+        options.addOption(domain);
+        Option fpath = new Option("f", "folderpath", true, "Folder Path");
+        fpath.setRequired(true);
+        options.addOption(fpath);
+        Option partition = new Option("p", "partition", true, "Partition");
+        partition.setRequired(true);
+        options.addOption(partition);
+        Option configpath = new Option("c", "configpath", true, "Config Path");
+        configpath.setRequired(false);
+        options.addOption(configpath);
+        
+        
+        CommandLine cmd = new DefaultParser().parse(options, args);
+ 
+		int p = Integer.parseInt(cmd.getOptionValue("partition"));
+		System.setProperty("CONFIG", cmd.getOptionValue("c"));
 		
 		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 
 		System.out.println("Processing...");	
 		
-		if(domain.equals("Condition"))
+		if(cmd.getOptionValue("domain").equals("Condition"))
 		{
-		     new ConditionService().findAll(partition, path);			
+		     new ConditionService().findAll(p, cmd.getOptionValue("folderpath"));			
 		}
 		
-		else if(domain.equals("DocumentReference"))
+		else if(cmd.getOptionValue("domain").equals("DocumentReference"))
 		{			
-		    new DocumentReferenceService().findAll(partition, path);			
+		    new DocumentReferenceService().findAll(p, cmd.getOptionValue("folderpath"));			
 		}	
 		
-		else if(domain.equals("Encounter"))
+		else if(cmd.getOptionValue("domain").equals("Encounter"))
 		{			
-		    new EncounterService().findAll(partition, path);			
+		    new EncounterService().findAll(p, cmd.getOptionValue("folderpath"));			
 		}	
 		
-		else if(domain.equals("Observation_Labs"))
+		else if(cmd.getOptionValue("domain").equals("Observation_Labs"))
 		{
-			new ObservationService().findAllLab(partition, path);
+			new ObservationService().findAllLab(p, cmd.getOptionValue("folderpath"));
 		}	
 
-		else if(domain.equals("MedicationRequest"))
+		else if(cmd.getOptionValue("domain").equals("MedicationRequest"))
 		{
-		    new MedicationRequestService().findAll(partition, path);
+		    new MedicationRequestService().findAll(p, cmd.getOptionValue("folderpath"));
 		}	
 		
-		else if(domain.equals("Patient"))
+		else if(cmd.getOptionValue("domain").equals("Patient"))
 		{
-		    new PatientService().findAll(partition, path);
+		    new PatientService().findAll(p, cmd.getOptionValue("folderpath"));
 		}
-		
-		else if(domain.equals("PatientAll"))
+		else if(cmd.getOptionValue("domain").equals("Practitioner"))
 		{
-		    //List<List<Patient>> patients = Lists.partition(new PatientService().patientRecordViewAll(), 1);
-//		    System.out.println("Patients Loaded...");
-//		    List<Encounter> elist = new EncounterService().findAll();
-//		    System.out.println("Encounters Loaded...");
-//		    List<Condition> clist = null;//new ConditionService().findAll();
-//		    System.out.println("Conditions Loaded...");
-//		    List<MedicationRequest> mlist = new MedicationRequestService().findAll();
-//		    System.out.println("Medication Requests Loaded...");
-//		    List<Procedure> plist = new ProcedureService().findAll();
-//		    System.out.println("Procedures Loaded...");
-//		    List<Lab> llist = new ObservationService().findAllLab();
-//		    System.out.println("Labs Loaded...");
-//		    List<Vital> vlist = new ObservationService().findAllVital();
-//		    System.out.println("Vitals Loaded...");
-//		    
-//		    int count = 0;
-//			for (List<Patient> p : patients) 
-//			{
-//				count++;
-//				System.out.println(count);
-//				
-//				Bundle bundle = new PatientAllConversion().Patients(p, 
-//						elist, 
-//						clist, 
-//						mlist, 
-//						plist, 
-//						llist, 
-//						vlist);
-//				writeFile(path, p.get(0).getPNT_IDENTIFIER(), bundle);
-//			}
+			new PractitionerService().findAll(p, cmd.getOptionValue("folderpath"));
 		}
-		else if(domain.equals("Practitioner"))
+		else if(cmd.getOptionValue("domain").equals("Procedure"))
 		{
-			new PractitionerService().findAll(partition, path);
-		}
-		else if(domain.equals("Procedure"))
-		{
-		    new ProcedureService().findAll(partition, path);
+		    new ProcedureService().findAll(p, cmd.getOptionValue("folderpath"));
 		}	
-		else if(domain.equals("Observation_VitalsSmoking"))
+		else if(cmd.getOptionValue("domain").equals("Observation_VitalsSmoking"))
 		{
-		    new ObservationService().findAllVital(partition, path);
+		    new ObservationService().findAllVital(p, cmd.getOptionValue("folderpath"));
 		}
 		
 		System.out.println("Finished...");
-	}
-	    
-	public static void writeFile(String path, String domain, Bundle bundle)
-	{			
-		FhirContext ctx = FhirContext.forDstu3();
-		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
-		
-
-		
-		try 
-		{
-		    BufferedWriter writer;
-			writer = new BufferedWriter(new FileWriter(path+"/"+domain+".json"));
-		    writer.write(file);
-		    writer.close();
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
 	}
 }
 
