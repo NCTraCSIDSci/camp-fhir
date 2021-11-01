@@ -46,7 +46,7 @@ void testHumanName() throws ParseException
 		e.printStackTrace();
 	}
 		   
-	System.out.println(p.getPNT_IDENTIFIER());
+	//System.out.println(p.getPNT_IDENTIFIER());
 	
 
 	//fail("Not yet implemented");
