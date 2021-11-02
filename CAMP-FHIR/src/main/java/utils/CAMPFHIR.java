@@ -1,7 +1,5 @@
 package main.java.utils;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.Level;
@@ -9,13 +7,10 @@ import java.util.logging.Level;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-import org.hl7.fhir.exceptions.FHIRException;
-import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.exceptions.FHIRException; 
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.service.ConditionService;
@@ -27,13 +22,9 @@ import main.java.com.campfhir.service.PatientService;
 import main.java.com.campfhir.service.PractitionerService;
 import main.java.com.campfhir.service.ProcedureService;
 
-
-import ca.uhn.fhir.context.FhirContext;
-//import ca.uhn.fhir.model.dstu2.resource.Person;
-
 /**
 *
-* @author  James Champion
+* @author  James Champion	
 * @version 1.0
 * @since   2019-08-20
 */
@@ -102,14 +93,17 @@ public class CAMPFHIR
 		{
 		    new PatientService().findAll(p, cmd.getOptionValue("folderpath"));
 		}
+		
 		else if(cmd.getOptionValue("domain").equals("Practitioner"))
 		{
 			new PractitionerService().findAll(p, cmd.getOptionValue("folderpath"));
 		}
+		
 		else if(cmd.getOptionValue("domain").equals("Procedure"))
 		{
 		    new ProcedureService().findAll(p, cmd.getOptionValue("folderpath"));
 		}	
+		
 		else if(cmd.getOptionValue("domain").equals("Observation_VitalsSmoking"))
 		{
 		    new ObservationService().findAllVital(p, cmd.getOptionValue("folderpath"));
