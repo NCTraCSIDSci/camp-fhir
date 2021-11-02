@@ -690,14 +690,6 @@ public class Patient  implements java.io.Serializable
 		this.PNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_TEXT = pNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_TEXT;
 	}
 	
-	public String getPNT_CONTACT_NAME() {
-		return this.PNT_CONTACT_NAME;
-	}
-
-	public void setPNT_CONTACT_NAME(String pNT_CONTACT_NAME) {
-		this.PNT_CONTACT_NAME = pNT_CONTACT_NAME;
-	}
-	
 	public String getPNT_CONTACT_NAME_HUMANNAME_USE() {
 		return this.PNT_CONTACT_NAME_HUMANNAME_USE;
 	}
@@ -962,14 +954,6 @@ public class Patient  implements java.io.Serializable
 		this.PNT_CONTACT_PERIOD_END = pNT_CONTACT_PERIOD_END;
 	}
 	
-	public String getPNT_COMMUNICATION() {
-		return this.PNT_COMMUNICATION;
-	}
-
-	public void setPNT_COMMUNICATION(String pNT_COMMUNICATION) {
-		this.PNT_COMMUNICATION = pNT_COMMUNICATION;
-	}
-	
 	public String getPNT_COMMUNICATION_LANGUAGE() {
 		return this.PNT_COMMUNICATION_LANGUAGE;
 	}
@@ -1107,14 +1091,6 @@ public class Patient  implements java.io.Serializable
 
 	public void setPNT_LINK_BACKBONE_ELEMENT_MODIFIEREXTENSION(String pNT_LINK_BACKBONE_ELEMENT_MODIFIEREXTENSION) {
 		this.PNT_LINK_BACKBONE_ELEMENT_MODIFIEREXTENSION = pNT_LINK_BACKBONE_ELEMENT_MODIFIEREXTENSION;
-	}
-
-	public String getPNT_LINK_OTHER_REFERENCE() {
-		return this.PNT_LINK_OTHER_REFERENCE;
-	}
-
-	public void setPNT_LINK_OTHER_REFERENCE(String PNT_LINK_OTHER_REFERENCE) {
-		this.PNT_LINK_OTHER_REFERENCE = PNT_LINK_OTHER_REFERENCE;
 	}
 
 	public String getPNT_LINK_OTHER_REFERENCE_REFERENCE() {
