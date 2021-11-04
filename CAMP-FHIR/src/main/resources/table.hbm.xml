@@ -3,22 +3,98 @@
 "-//Hibernate/Hibernate Mapping DTD//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="main.java.com.campfhir.model">
-    <class name="Condition" table="PCD_ICEES_2020_CONDITION">
-	 	<id name="CON_IDENTIFIER" column="CON_IDENTIFIER" />
-		<property name="CON_SUBJECT_REFERENCE" column="CON_SUBJECT_REFERENCE" />
-		<property name="CON_CONTEXT_REFERENCE" column="CON_CONTEXT_REFERENCE" />
-		<property name="CON_ASSERTER_REFERENCE" column="CON_ASSERTER_REFERENCE" />
-		<property name="CON_CODE_CODING_SYST" column="CON_CODE_CODING_SYST" />
-		<property name="CON_CODE_CODING_CODE" column="CON_CODE_CODING_CODE" />
-		<property name="CON_CATEGORY_CODING_SYST" column="CON_CATEGORY_CODING_SYST" />
-		<property name="CON_CATEGORY_CODING_CODE" column="CON_CATEGORY_CODING_CODE" />
-		<property name="CON_ASSERT_DATE" column="CON_ASSERT_DATE" />
-		<property name="CON_CLINSTATUS" column="CON_CLINSTATUS" />
-		<property name="CON_ABATEDATE" column="CON_ABATEDATE" />
-		<property name="CON_ONSETDATE" column="CON_ONSETDATE" />
+    <class name="Condition" table="Condition">
+	 	<id name="CON_IDENTIFIER_VALUE" column="CON_IDENTIFIER_VALUE" type="text" />
+		<property name="CON_IDENTIFIER_USE" column="CON_IDENTIFIER_USE" type="text" />
+		<property name="CON_IDENTIFIER_TYPE" column="CON_IDENTIFIER_TYPE" type="text" />
+		<property name="CON_IDENTIFIER_SYSTEM" column="CON_IDENTIFIER_SYSTEM" type="text" />
+		<property name="CON_IDENTIFIER_PERIOD" column="CON_IDENTIFIER_PERIOD" type="text" />
+		<property name="CON_IDENTIFIER_ASSIGNER" column="CON_IDENTIFIER_ASSIGNER" type="text" />
+		<property name="CON_CLINICALSTATUS_CODING_CODE" column="CON_CLINICALSTATUS_CODING_CODE" type="text"/>
+	 	<property name="CON_CLINICALSTATUS_CODING_DISPLAY" column="CON_CLINICALSTATUS_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_CLINICALSTATUS_CODING_USERSELECTED" column="CON_CLINICALSTATUS_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_CLINICALSTATUS_TEXT" column="CON_CLINICALSTATUS_TEXT" type="text"/>
+	 	<property name="CON_VERIFICATIONSTATUS_CODING_CODE" column="CON_VERIFICATIONSTATUS_CODING_CODE" type="text"/>
+	 	<property name="CON_VERIFICATIONSTATUS_CODING_DISPLAY" column="CON_VERIFICATIONSTATUS_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_VERIFICATIONSTATUS_CODING_USERSELECTED" column="CON_VERIFICATIONSTATUS_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_VERIFICATIONSTATUS_TEXT" column="CON_VERIFICATIONSTATUS_TEXT" type="text"/>
+	 	<property name="CON_CATEGORY_CODING_CODE" column="CON_CATEGORY_CODING_CODE" type="text"/>
+	 	<property name="CON_CATEGORY_CODING_DISPLAY" column="CON_CATEGORY_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_CATEGORY_CODING_USERSELECTED" column="CON_CATEGORY_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_CATEGORY_TEXT" column="CON_CATEGORY_TEXT" type="text"/>
+	 	<property name="CON_SEVERITY_CODING_CODE" column="CON_SEVERITY_CODING_CODE" type="text"/>
+	 	<property name="CON_SEVERITY_CODING_DISPLAY" column="CON_SEVERITY_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_SEVERITY_CODING_USERSELECTED" column="CON_SEVERITY_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_SEVERITY_TEXT" column="CON_SEVERITY_TEXT" type="text"/>
+	 	<property name="CON_CODE_CODING_CODE" column="CON_CODE_CODING_CODE" type="text"/>
+	 	<property name="CON_CODE_CODING_DISPLAY" column="CON_CODE_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_CODE_CODING_USERSELECTED" column="CON_CODE_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_CODE_TEXT" column="CON_CODE_TEXT" type="text"/>
+	 	<property name="CON_BODYSITE_CODING_CODE" column="CON_BODYSITE_CODING_CODE" type="text"/>
+	 	<property name="CON_BODYSITE_CODING_DISPLAY" column="CON_BODYSITE_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_BODYSITE_CODING_USERSELECTED" column="CON_BODYSITE_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_BODYSITE_TEXT" column="CON_BODYSITE_TEXT" type="text"/>
+	 	<property name="CON_SUBJECT_REFERENCE_REFERENCE" column="CON_SUBJECT_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_SUBJECT_REFERENCE_TYPE" column="CON_SUBJECT_REFERENCE_TYPE" type="text"/>
+		<property name="CON_SUBJECT_REFERENCE_IDENTIFIER" column="CON_SUBJECT_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_SUBJECT_REFERENCE_DISPLAY" column="CON_SUBJECT_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_ENCOUNTER_REFERENCE_REFERENCE" column="CON_ENCOUNTER_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_ENCOUNTER_REFERENCE_TYPE" column="CON_ENCOUNTER_REFERENCE_TYPE" type="text"/>
+		<property name="CON_ENCOUNTER_REFERENCE_IDENTIFIER" column="CON_ENCOUNTER_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_ENCOUNTER_REFERENCE_DISPLAY" column="CON_ENCOUNTER_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_ONSETDATE" column="CON_ONSETDATE" type="text" />
+		<property name="CON_ONSETAGE" column="CON_ONSETAGE" type="text" />
+		<property name="CON_ONSETPERIOD_START" column="CON_ONSETPERIOD_START" type="text" />
+		<property name="CON_ONSETPERIOD_END" column="CON_ONSETPERIOD_END" type="text" />
+		<property name="CON_ONSETRANGE_LOW" column="CON_ONSETRANGE_LOW" type="text" />
+		<property name="CON_ONSETRANGE_HIGH" column="CON_ONSETRANGE_HIGH" type="text" />
+		<property name="CON_ONSETSTRING" column="CON_ONSETSTRING" type="text" />
+		<property name="CON_ABATEMENTDATE" column="CON_ABATEMENTDATE" type="text" />
+		<property name="CON_ABATEMENTAGE" column="CON_ABATEMENTAGE" type="text" />
+		<property name="CON_ABATEMENTPERIOD_START" column="CON_ABATEMENTPERIOD_START" type="text" />
+		<property name="CON_ABATEMENTPERIOD_END" column="CON_ABATEMENTPERIOD_END" type="text" />
+		<property name="CON_ABATEMENTRANGE_LOW" column="CON_ABATEMENTRANGE_LOW" type="text" />
+		<property name="CON_ABATEMENTRANGE_HIGH" column="CON_ABATEMENTRANGE_HIGH" type="text" />
+		<property name="CON_ABATEMENTSTRING" column="CON_ABATEMENTSTRING" type="text" />
+		<property name="CON_RECORDEDDATE" column="CON_RECORDEDDATE" type="text" />
+		<property name="CON_RECORDER_REFERENCE_REFERENCE" column="CON_RECORDER_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_RECORDER_REFERENCE_TYPE" column="CON_RECORDER_REFERENCE_TYPE" type="text"/>
+		<property name="CON_RECORDER_REFERENCE_IDENTIFIER" column="CON_RECORDER_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_RECORDER_REFERENCE_DISPLAY" column="CON_RECORDER_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_ASSERTER_REFERENCE_REFERENCE" column="CON_ASSERTER_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_ASSERTER_REFERENCE_TYPE" column="CON_ASSERTER_REFERENCE_TYPE" type="text"/>
+		<property name="CON_ASSERTER_REFERENCE_IDENTIFIER" column="CON_ASSERTER_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_ASSERTER_REFERENCE_DISPLAY" column="CON_ASSERTER_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_STAGE_SUMMARY_CODING_CODE" column="CON_STAGE_SUMMARY_CODING_CODE" type="text"/>
+	 	<property name="CON_STAGE_SUMMARY_CODING_DISPLAY" column="CON_STAGE_SUMMARY_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_STAGE_SUMMARY_CODING_USERSELECTED" column="CON_STAGE_SUMMARY_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_STAGE_SUMMARY_TEXT" column="CON_STAGE_SUMMARY_TEXT" type="text"/>
+	 	<property name="CON_STAGE_ASSESSMENT_REFERENCE_REFERENCE" column="CON_STAGE_ASSESSMENT_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_STAGE_ASSESSMENT_REFERENCE_TYPE" column="CON_STAGE_ASSESSMENT_REFERENCE_TYPE" type="text"/>
+		<property name="CON_STAGE_ASSESSMENT_REFERENCE_IDENTIFIER" column="CON_STAGE_ASSESSMENT_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_STAGE_ASSESSMENT_REFERENCE_DISPLAY" column="CON_STAGE_ASSESSMENT_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_STAGE_TYPE_CODING_CODE" column="CON_STAGE_TYPE_CODING_CODE" type="text"/>
+	 	<property name="CON_STAGE_TYPE_CODING_DISPLAY" column="CON_STAGE_TYPE_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_STAGE_TYPE_CODING_USERSELECTED" column="CON_STAGE_TYPE_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_STAGE_TYPE_TEXT" column="CON_STAGE_TYPE_TEXT" type="text"/>
+	 	<property name="CON_EVIDENCE_CODE_CODING_CODE" column="CON_EVIDENCE_CODE_CODING_CODE" type="text"/>
+	 	<property name="CON_EVIDENCE_CODE_CODING_DISPLAY" column="CON_EVIDENCE_CODE_CODING_DISPLAY" type="text"/>
+	 	<property name="CON_EVIDENCE_CODE_CODING_USERSELECTED" column="CON_EVIDENCE_CODE_CODING_USERSELECTED" type="text"/>
+	 	<property name="CON_EVIDENCE_CODE_TEXT" column="CON_EVIDENCE_CODE_TEXT" type="text"/>
+	 	<property name="CON_EVIDENCE_DETAIL_REFERENCE_REFERENCE" column="CON_EVIDENCE_DETAIL_REFERENCE_REFERENCE" type="text"/>
+		<property name="CON_EVIDENCE_DETAIL_REFERENCE_TYPE" column="CON_EVIDENCE_DETAIL_REFERENCE_TYPE" type="text"/>
+		<property name="CON_EVIDENCE_DETAIL_REFERENCE_IDENTIFIER" column="CON_EVIDENCE_DETAIL_REFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_EVIDENCE_DETAIL_REFERENCE_DISPLAY" column="CON_EVIDENCE_DETAIL_REFERENCE_DISPLAY" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_REFERENCE" column="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_REFERENCE" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_TYPE" column="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_TYPE" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_IDENTIFIER" column="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_IDENTIFIER" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_DISPLAY" column="CON_NOTE_ANNOTATION_REFERENCE_AUTHORREFERENCE_DISPLAY" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_AUTHORSTRING" column="CON_NOTE_ANNOTATION_AUTHORSTRING" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_TIME" column="CON_NOTE_ANNOTATION_TIME" type="text"/>
+		<property name="CON_NOTE_ANNOTATION_TEXT" column="CON_NOTE_ANNOTATION_TEXT" type="text"/>
     </class>
     
-    <class name="Encounter" table="PCD_ICEES_2020_ENCOUNTER">
+    <class name="Encounter" table="Encounter">
 	 	<id name="ENC_IDENTIFIER" column="ENC_IDENTIFIER" type="text"/>
 	 	<property name="ENC_STATUS" column="ENC_STATUS" type="text"/>
 	 	<property name="ENC_STATUSHISTORY_STATUS_CODE" column="ENC_STATUS_HISTORY_STATUS_CODE" type="text"/>
