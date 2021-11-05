@@ -25,6 +25,7 @@ import org.hl7.fhir.r4.model.Encounter.ClassHistoryComponent;
 import org.hl7.fhir.r4.model.Encounter.DiagnosisComponent;
 import org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent;
 import org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent;
+import org.hl7.fhir.r4.model.Encounter.EncounterLocationStatus;
 import org.hl7.fhir.r4.model.Encounter.EncounterParticipantComponent;
 import org.hl7.fhir.r4.model.Encounter.EncounterStatus;
 import org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory;
@@ -53,13 +54,13 @@ public class EncounterConversion
 		/******************** ENC_IDENTIFIER **************************************************************************************
 		 * ENC_IDENTIFIER maps to Encounter / identifier
 		 ********************************************************************************************************************/
-		e.setIdBase(encounter.getENC_IDENTIFIER());
+		e.setIdBase(encounter.getEncIdentifier());
 		
 		/******************** ENC_STATUS **************************************************************************************
 		 * ENC_STATUS maps to Encounter / status
 		 ********************************************************************************************************************/
 
-		e.setStatus(EncounterStatus.fromCode(encounter.getENC_STATUS()));													
+		e.setStatus(EncounterStatus.fromCode(encounter.getEncStatus()));													
 		
 		/******************** ENC_STATUSHISTORY **************************************************************************************
 		 * ENC_STATUS maps to Encounter / statusHistory
@@ -67,18 +68,18 @@ public class EncounterConversion
 	 	
 		StatusHistoryComponent statusHistory = e.addStatusHistory();
 		
-		statusHistory.setStatus(EncounterStatus.fromCode(encounter.getENC_STATUSHISTORY_STATUS_CODE()));
-		Period statushistoryperiod = createPeriod(encounter.getENC_STATUSHISTORY_PERIOD_START(), encounter.getENC_STATUSHISTORY_PERIOD_END());
+		statusHistory.setStatus(EncounterStatus.fromCode(encounter.getEncStatusHistoryStatusCode()));
+		Period statushistoryperiod = createPeriod(encounter.getEncStatusHistoryPeriodStart(), encounter.getEncStatusHistoryPeriodEnd());
 		statusHistory.setPeriod(statushistoryperiod);
 		
 
 		/******************** ENC_CLASS **************************************************************************************
 		 * ENC_CLASS maps to Encounter / class
 		 ********************************************************************************************************************/
-		if(encounter.getENC_CLASS_CODE() != null)
+		if(encounter.getEncClassCode() != null)
 		{			
 			
-			Coding encclasscode = createCoding("urn:oid:2.16.840.1.113883.1.11.13955", "4.0.1", encounter.getENC_CLASS_CODE(), encounter.getENC_CLASS_DISPLAY(), encounter.getENC_CLASS_USER_SELECTED());
+			Coding encclasscode = createCoding("urn:oid:2.16.840.1.113883.1.11.13955", "4.0.1", encounter.getEncClassCode(), encounter.getEncClassDisplay(), encounter.getEncClassUserSelected());
 			e.setClass_(encclasscode);
 		}
 		
@@ -87,9 +88,9 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		
 		ClassHistoryComponent classhistory = e.addClassHistory();
-		Coding encclasshistory = createCoding("urn:oid:2.16.840.1.113883.1.11.13955", "4.0.1", encounter.getENC_CLASSHISTORY_CLASS_CODING_CODE(), encounter.getENC_CLASSHISTORY_CLASS_CODING_DISPLAY(), encounter.getENC_CLASSHISTORY_CLASS_CODING_USERSELECTED());
+		Coding encclasshistory = createCoding("urn:oid:2.16.840.1.113883.1.11.13955", "4.0.1", encounter.getEncClasshistoryClassCodingCode(), encounter.getEncClasshistoryClassCodingDisplay(), encounter.getEncClasshistoryClassCodingUserselected());
 		classhistory.setClass_(encclasshistory);
-		Period encclasshistoryperiod = createPeriod(encounter.getENC_CLASSHISTORY_PERIOD_START(), encounter.getENC_CLASSHISTORY_PERIOD_END());
+		Period encclasshistoryperiod = createPeriod(encounter.getEncClasshistoryPeriodStart(), encounter.getEncClasshistoryPeriodEnd());
 		classhistory.setPeriod(encclasshistoryperiod);
 		
 		/******************** ENC_TYPE **************************************************************************************
@@ -97,8 +98,8 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		
 		CodeableConcept enctype = new CodeableConcept();
-		enctype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.248", "4.0.1", encounter.getENC_TYPE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_TYPE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_TYPE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enctype.setText(encounter.getENC_TYPE_TEXT());
+		enctype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.248", "4.0.1", encounter.getEncTypeCodeableconceptCodingCode(), encounter.getEncTypeCodeableconceptCodingDisplay(),encounter.getEncTypeCodeableconceptCodingUserselected()));
+		enctype.setText(encounter.getEncTypeText());
 		e.addType(enctype);
 		
 		/******************** ENC_SERVICETYPE **************************************************************************************
@@ -106,8 +107,8 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		
 		CodeableConcept encservicetype = new CodeableConcept();
-		encservicetype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.518", "4.0.1", encounter.getENC_SERVICETYPE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_SERVICETYPE_CODEABLECONCEPT_CODING_DISPLAY(),	encounter.getENC_SERVICETYPE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		encservicetype.setText(encounter.getENC_SERVICETYPE_TEXT());
+		encservicetype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.518", "4.0.1", encounter.getEncServicetypeCodeableconceptCodingCode(), encounter.getEncServicetypeCodeableconceptCodingDisplay(),	encounter.getEncServicetypeCodeableconceptCodingUserselected()));
+		encservicetype.setText(encounter.getEncServicetypeText());
 		e.setServiceType(encservicetype);
 		
 		/******************** ENC_PRIORITY **************************************************************************************
@@ -115,26 +116,26 @@ public class EncounterConversion
 		 ********************************************************************************************************************/
 		
 		CodeableConcept encpriority = new CodeableConcept();
-		encpriority.addCoding(createCoding("http://terminology.hl7.org/ValueSet/v3-ActPriority", "2018-08-12", encounter.getENC_PRIORITY_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_PRIORITY_CODEABLECONCEPT_CODING_DISPLAY(),	encounter.getENC_PRIORITY_CODEABLECONCEPT_CODING_USERSELECTED()));
-		encpriority.setText(encounter.getENC_PRIORITY_TEXT());
+		encpriority.addCoding(createCoding("http://terminology.hl7.org/ValueSet/v3-ActPriority", "2018-08-12", encounter.getEncPriorityCodeableconceptCodingCode(), encounter.getEncPriorityCodeableconceptCodingDisplay(),	encounter.getEncPriorityCodeableconceptCodingUserselected()));
+		encpriority.setText(encounter.getEncPriorityText());
 		e.setPriority(encpriority);
 		
 		/******************** ENC_SUBJECT_REFERENCE *************************************************************************
 		 * ENC_SUBJECT_REFERENCE maps to Encounter / subject / reference
 		 ********************************************************************************************************************/
-		Reference subjectreference = createReference(encounter.getENC_SUBJECT_REFERENCE_REFERENCE(), encounter.getENC_SUBJECT_REFERENCE_TYPE(), encounter.getENC_SUBJECT_REFERENCE_IDENTIFIER(), encounter.getENC_SUBJECT_REFERENCE_DISPLAY());
+		Reference subjectreference = createReference(encounter.getEncSubjectReferenceReference(), encounter.getEncSubjectReferenceType(), encounter.getEncSubjectReferenceIdentifier(), encounter.getEncSubjectReferenceDisplay());
 		e.setSubject(subjectreference);
 		
 		/******************** ENC_EPISODEOFCARE *************************************************************************
 		 * ENC_EPISODEOFCARE maps to Encounter / episodeOfCare
 		 ********************************************************************************************************************/
-		Reference EOCreference = createReference(encounter.getENC_EPISODEOFCARE_REFERENCE_REFERENCE(), encounter.getENC_EPISODEOFCARE_REFERENCE_TYPE(), encounter.getENC_EPISODEOFCARE_REFERENCE_IDENTIFIER(), encounter.getENC_EPISODEOFCARE_REFERENCE_DISPLAY());
+		Reference EOCreference = createReference(encounter.getEncEpisodeofcareReferenceReference(), encounter.getEncEpisodeofcareReferenceType(), encounter.getEncEpisodeofcareReferenceIdentifier(), encounter.getEncEpisodeofcareReferenceDisplay());
 		e.addEpisodeOfCare(EOCreference);
 		
 		/******************** ENC_BASEDON *************************************************************************
 		 * ENC_BASEDON maps to Encounter / basedOn
 		 ********************************************************************************************************************/
-		Reference BasedOnreference = createReference(encounter.getENC_BASEDON_REFERENCE_REFERENCE(), encounter.getENC_BASEDON_REFERENCE_TYPE(), encounter.getENC_BASEDON_REFERENCE_IDENTIFIER(), encounter.getENC_BASEDON_REFERENCE_DISPLAY());
+		Reference BasedOnreference = createReference(encounter.getEncBasedonReferenceReference(), encounter.getEncBasedonReferenceType(), encounter.getEncBasedonReferenceIdentifier(), encounter.getEncBasedonReferenceDisplay());
 		e.addBasedOn(BasedOnreference);
 		
 		/******************** ENC_PARTICIPANT *********************************************************************
@@ -143,32 +144,32 @@ public class EncounterConversion
 		
 		EncounterParticipantComponent encparticipant = e.addParticipant();
 		CodeableConcept encparticipanttype = new CodeableConcept();
-		encparticipanttype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.250", "4.0.1", encounter.getENC_PARTICIPANT_TYPE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_PARTICIPANT_TYPE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_PARTICIPANT_TYPE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		encparticipanttype.setText(encounter.getENC_PARTICIPANT_TYPE_TEXT());
+		encparticipanttype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.250", "4.0.1", encounter.getEncParticipantTypeCodeableconceptCodingCode(), encounter.getEncParticipantTypeCodeableconceptCodingDisplay(),encounter.getEncParticipantTypeCodeableconceptCodingUserselected()));
+		encparticipanttype.setText(encounter.getEncParticipantTypeText());
 		encparticipant.addType(encparticipanttype);
-		encparticipant.setPeriod(createPeriod(encounter.getENC_PARTICIPANT_PERIOD_START(),encounter.getENC_PARTICIPANT_PERIOD_END()));
-		encparticipant.setIndividual(createReference(encounter.getENC_PARTICIPANT_INDIVIDUAL_REFERENCE_REFERENCE(), encounter.getENC_PARTICIPANT_INDIVIDUAL_REFERENCE_TYPE(), encounter.getENC_PARTICIPANT_INDIVIDUAL_REFERENCE_IDENTIFIER(), encounter.getENC_PARTICIPANT_INDIVIDUAL_REFERENCE_DISPLAY()));
+		encparticipant.setPeriod(createPeriod(encounter.getEncParticipantPeriodStart(),encounter.getEncParticipantPeriodEnd()));
+		encparticipant.setIndividual(createReference(encounter.getEncParticipantIndividualReferenceReference(), encounter.getEncParticipantIndividualReferenceType(), encounter.getEncParticipantIndividualReferenceIdentifier(), encounter.getEncParticipantIndividualReferenceDisplay()));
 
 		
 		/******************** ENC_APPOINTMENT *********************************************************************
 		 * ENC_APPOINTMENT maps to Encounter / appointment
 		 ********************************************************************************************************************/
 	
-		e.addAppointment(createReference(encounter.getENC_APPOINTMENT_REFERENCE_REFERENCE(),encounter.getENC_APPOINTMENT_REFERENCE_TYPE(),encounter.getENC_APPOINTMENT_REFERENCE_IDENTIFIER(),encounter.getENC_APPOINTMENT_REFERENCE_DISPLAY()));
+		e.addAppointment(createReference(encounter.getEncAppointmentReferenceReference(),encounter.getEncAppointmentReferenceType(),encounter.getEncAppointmentReferenceIdentifier(),encounter.getEncAppointmentReferenceDisplay()));
 		
 		/******************** ENC_PERIOD *********************************************************************
 		 * ENC_PERIOD maps to Encounter / period
 		 ********************************************************************************************************************/		
 		
-		e.setPeriod(createPeriod(encounter.getENC_PERIOD_START(),encounter.getENC_PERIOD_END()));
+		e.setPeriod(createPeriod(encounter.getEncPeriodStart(),encounter.getEncPeriodEnd()));
 		
 		/******************** ENC_LENGTH *********************************************************************
 		 * ENC_LENGTH maps to Encounter / length
 		 ********************************************************************************************************************/	
 		Duration len = new Duration();
-		DecimalType lenval = new DecimalType(encounter.getENC_LENGTH_VALUE());
+		DecimalType lenval = new DecimalType(encounter.getEncLengthValue());
 		len.setValueElement(lenval);
-		len.setUnit(encounter.getENC_LENGTH_UNIT());
+		len.setUnit(encounter.getEncLengthUnit());
 		e.setLength(len);
 		
 		/******************** ENC_REASONCODE *********************************************************************
@@ -176,14 +177,14 @@ public class EncounterConversion
 		 ********************************************************************************************************************/	
 		
 		CodeableConcept encreasoncode = new CodeableConcept();
-		encreasoncode.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.261", "4.0.1", encounter.getENC_REASONCODE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_REASONCODE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_REASONCODE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		encreasoncode.setText(encounter.getENC_REASONCODE_CODEABLECONCEPT_TEXT());
+		encreasoncode.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.261", "4.0.1", encounter.getEncReasoncodeCodeableconceptCodingCode(), encounter.getEncReasoncodeCodeableconceptCodingDisplay(),encounter.getEncReasoncodeCodeableconceptCodingUserselected()));
+		encreasoncode.setText(encounter.getEncReasoncodeCodeableconceptText());
 		e.addReasonCode(encreasoncode);
 		
 		/******************** ENC_REASONREFERENCE *********************************************************************
 		 * ENC_REASONCODE maps to Encounter / reasonReference
 		 ********************************************************************************************************************/	
-		e.addReasonReference(createReference(encounter.getENC_REASONREFERENCE_REFERENCE_REFERENCE(),encounter.getENC_REASONREFERENCE_REFERENCE_TYPE(),encounter.getENC_REASONREFERENCE_REFERENCE_IDENTIFIER(),encounter.getENC_REASONREFERENCE_REFERENCE_DISPLAY()));
+		e.addReasonReference(createReference(encounter.getEncReasonreferenceReferenceReference(),encounter.getEncReasonreferenceReferenceType(),encounter.getEncReasonreferenceReferenceIdentifier(),encounter.getEncReasonreferenceReferenceDisplay()));
 
 		/******************** ENC_DIAGNOSIS *********************************************************************
 		 * ENC_DIAGNOSIS maps to Encounter / diagnosis
@@ -195,30 +196,30 @@ public class EncounterConversion
 		 *  ENC_DIAGN_CON_REF maps to Encounter / diagnosis / condition / reference
 		 ********************************************************************************************************************/
 		
-		diagnoiscomponent.setCondition(createReference(encounter.getENC_DIAGNOSIS_CONDITION_REFERENCE_REFERENCE(),encounter.getENC_DIAGNOSIS_CONDITION_REFERENCE_TYPE(),encounter.getENC_DIAGNOSIS_CONDITION_REFERENCE_IDENTIFIER(),encounter.getENC_DIAGNOSIS_CONDITION_REFERENCE_DISPLAY()));
+		diagnoiscomponent.setCondition(createReference(encounter.getEncDiagnosisConditionReferenceReference(),encounter.getEncDiagnosisConditionReferenceType(),encounter.getEncDiagnosisConditionReferenceIdentifier(),encounter.getEncDiagnosisConditionReferenceDisplay()));
 		
 		/******************** ENC_DIAGNOSIS_USE *****************************************************************************
 		 *  ENC_DIAGNOSIS_USE maps to Encounter / diagnosis / use 
 		 ********************************************************************************************************************/
 		
 		CodeableConcept encdiagusecode = new CodeableConcept();
-		encdiagusecode.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.49", "4.0.1", encounter.getENC_DIAGNOSIS_USE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_DIAGNOSIS_USE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_DIAGNOSIS_USE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		encdiagusecode.setText(encounter.getENC_DIAGNOSIS_USE_CODEABLECONCEPT_TEXT());
+		encdiagusecode.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.49", "4.0.1", encounter.getEncDiagnosisUseCodeableconceptCodingCode(), encounter.getEncDiagnosisUseCodeableconceptCodingDisplay(),encounter.getEncDiagnosisUseCodeableconceptCodingUserselected()));
+		encdiagusecode.setText(encounter.getEncDiagnosisUseCodeableconceptText());
 		diagnoiscomponent.setUse(encdiagusecode);
 		
 		/******************** ENC_DIAGN_RANK ********************************************************************************
 		 *  ENC_DIAGN_RANK  maps to Encounter / diagnosis / rank
 		 ********************************************************************************************************************/
-		if(encounter.getENC_DIAGNOSIS_RANK() != null)
+		if(encounter.getEncDiagnosisRank() != null)
 		{
-			diagnoiscomponent.setRank(Integer.parseInt(encounter.getENC_DIAGNOSIS_RANK()));
+			diagnoiscomponent.setRank(Integer.parseInt(encounter.getEncDiagnosisRank()));
 		}
 		
 		/******************** ENC_ACCOUNT ********************************************************************************
 		 *  ENC_ACCOUNT  maps to Encounter / account
 		 ********************************************************************************************************************/
 		
-		e.addAccount(createReference(encounter.getENC_ACCOUNT_REFERENCE_REFERENCE(),encounter.getENC_ACCOUNT_REFERENCE_TYPE(),encounter.getENC_ACCOUNT_REFERENCE_IDENTIFIER(),encounter.getENC_ACCOUNT_REFERENCE_DISPLAY()));
+		e.addAccount(createReference(encounter.getEncAccountReferenceReference(),encounter.getEncAccountReferenceType(),encounter.getEncAccountReferenceIdentifier(),encounter.getEncAccountReferenceDisplay()));
 
 		/******************** ENC_HOSPITALIZATION ******************************************************************
 		 * ENC_HOSPITALIZATION maps to Encounter / hospitalization 
@@ -239,36 +240,36 @@ public class EncounterConversion
 		
 		EncounterLocationComponent elc = e.addLocation();
 		
-		elc.setLocation(createReference(encounter.getENC_LOCATION_LOCATION_REFERENCE_REFERENCE(),encounter.getENC_LOCATION_LOCATION_REFERENCE_TYPE(),encounter.getENC_LOCATION_LOCATION_REFERENCE_IDENTIFIER(),encounter.getENC_LOCATION_LOCATION_REFERENCE_DISPLAY()));
+		elc.setLocation(createReference(encounter.getEncLocationLocationReferenceReference(),encounter.getEncLocationLocationReferenceType(),encounter.getEncLocationLocationReferenceIdentifier(),encounter.getEncLocationLocationReferenceDisplay()));
 		
 		EncounterLocationStatusEnumFactory enclocstatusfact = new EncounterLocationStatusEnumFactory();
-		enclocstatuscode.setCode(enclocstatusfact.fromCode(encounter.getENC_LOCATION_STATUS()));
+		//elc.setStatus((EncounterLocationStatus) enclocstatusfact.fromCode(encounter.getEncLocationStatus()));
 		
 		CodeableConcept enclocphystype = new CodeableConcept();
-		enclocphystype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.257", "4.0.1", encounter.getENC_LOCATION_PHYSICALTYPE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_LOCATION_PHYSICALTYPE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_LOCATION_PHYSICALTYPE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enclocphystype.setText(encounter.getENC_LOCATION_PHYSICALTYPE_CODEABLECONCEPT_TEXT());
+		enclocphystype.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.257", "4.0.1", encounter.getEncLocationPhysicaltypeCodeableconceptCodingCode(), encounter.getEncLocationPhysicaltypeCodeableconceptCodingDisplay(),encounter.getEncLocationPhysicaltypeCodeableconceptCodingUserselected()));
+		enclocphystype.setText(encounter.getEncLocationPhysicaltypeCodeableconceptText());
 		elc.setPhysicalType(enclocphystype);
 		
-		Period enclocationperiod = createPeriod(encounter.getENC_LOCATION_PERIOD_START(), encounter.getENC_LOCATION_PERIOD_END());
+		Period enclocationperiod = createPeriod(encounter.getEncLocationPeriodStart(), encounter.getEncLocationPeriodEnd());
 		elc.setPeriod(enclocationperiod);
 		
 		/******************** ENC_SERVICEPROVIDER ******************************************************************
 		 * ENC_SERVICEPROVIDER  maps to Encounter / serviceProvider 
 		 ********************************************************************************************************************/
 		
-		e.addAccount(createReference(encounter.getENC_SERVICEPROVIDER_REFERENCE_REFERENCE(),encounter.getENC_SERVICEPROVIDER_REFERENCE_TYPE(),encounter.getENC_SERVICEPROVIDER_REFERENCE_IDENTIFIER(),encounter.getENC_SERVICEPROVIDER_REFERENCE_DISPLAY()));
+		e.addAccount(createReference(encounter.getEncServiceproviderReferenceReference(),encounter.getEncServiceproviderReferenceType(),encounter.getEncServiceproviderReferenceIdentifier(),encounter.getEncServiceproviderReferenceDisplay()));
 
 		/******************** ENC_PARTOF ******************************************************************
 		 * ENC_PARTOF  maps to Encounter / partOf 
 		 ********************************************************************************************************************/
 		
-		e.addAccount(createReference(encounter.getENC_PARTOF_REFERENCE_REFERENCE(),encounter.getENC_PARTOF_REFERENCE_TYPE(),encounter.getENC_PARTOF_REFERENCE_IDENTIFIER(),encounter.getENC_PARTOF_REFERENCE_DISPLAY()));	
+		e.addAccount(createReference(encounter.getEncPartofReferenceReference(),encounter.getEncPartofReferenceType(),encounter.getEncPartofReferenceIdentifier(),encounter.getEncPartofReferenceDisplay()));	
 		
 		return e;
 	}
 	
 
-	public static  EncounterHospitalizationComponent setDischargeDisp(Encounter encounter) throws FHIRException
+	public static  EncounterHospitalizationComponent setDischargeDisp(Encounter encounter) throws FHIRException, ParseException
 	{
 		EncounterHospitalizationComponent ehc = new EncounterHospitalizationComponent();
 		Identifier preAdmissionIdentifier = new Identifier();
@@ -277,41 +278,41 @@ public class EncounterConversion
 		 * ENC_HOSP_DISDISP_CODING_CODE maps to Encounter / hospitalization 
 		 ********************************************************************************************************************/
 		
-		ehc.setPreAdmissionIdentifier(preAdmissionIdentifier.setValue(encounter.getENC_HOSPITALIZATION_PREADMISSIONIDENTIFIER()));
+		ehc.setPreAdmissionIdentifier(preAdmissionIdentifier.setValue(encounter.getEncHspPreadmissionidentifier()));
 		
-		ehc.setOrigin(createReference(encounter.getENC_HOSPITALIZATION_ORIGIN_REFERENCE_REFERENCE(),encounter.getENC_HOSPITALIZATION_ORIGIN_REFERENCE_TYPE(),encounter.getENC_HOSPITALIZATION_ORIGIN_REFERENCE_IDENTIFIER(),encounter.getENC_HOSPITALIZATION_ORIGIN_REFERENCE_DISPLAY()));
+		ehc.setOrigin(createReference(encounter.getEncHspOriginReferenceReference(),encounter.getEncHspOriginReferenceType(),encounter.getEncHspOriginReferenceIdentifier(),encounter.getEncHspOriginReferenceDisplay()));
 
 		CodeableConcept enchospadmitsrc = new CodeableConcept();
-		enchospadmitsrc.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.257", "4.0.1", encounter.getENC_HOSPITALIZATION_ADMITSOURCE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_ADMITSOURCE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_ADMITSOURCE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospadmitsrc.setText(encounter.getENC_HOSPITALIZATION_ADMITSOURCE_CODEABLECONCEPT_TEXT());
+		enchospadmitsrc.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.257", "4.0.1", encounter.getEncHspAdmitsourceCodeableconceptCodingCode(), encounter.getEncHspAdmitsourceCodeableconceptCodingDisplay(),encounter.getEncHspAdmitsourceCodeableconceptCodingUserselected()));
+		enchospadmitsrc.setText(encounter.getEncHspAdmitsourceCodeableconceptText());
 		ehc.setAdmitSource(enchospadmitsrc);
 		
 		
 		CodeableConcept enchospreadmin = new CodeableConcept();
-		enchospreadmin.addCoding(createCoding("http://terminology.hl7.org/ValueSet/v2-0092", "v2.0092", encounter.getENC_HOSPITALIZATION_READMISSION_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_READMISSION_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_READMISSION_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospreadmin.setText(encounter.getENC_HOSPITALIZATION_READMISSION_CODEABLECONCEPT_TEXT());
+		enchospreadmin.addCoding(createCoding("http://terminology.hl7.org/ValueSet/v2-0092", "v2.0092", encounter.getEncHspReadmissionCodeableconceptCodingCode(), encounter.getEncHspReadmissionCodeableconceptCodingDisplay(),encounter.getEncHspReadmissionCodeableconceptCodingUserselected()));
+		enchospreadmin.setText(encounter.getEncHspReadmissionCodeableconceptText());
 		ehc.setReAdmission(enchospreadmin);
 		
 		CodeableConcept enchospdietpref = new CodeableConcept();
-		enchospdietpref.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.255", "4.0.1", encounter.getENC_HOSPITALIZATION_DIETPREFERENCE_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_DIETPREFERENCE_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_DIETPREFERENCE_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospdietpref.setText(encounter.getENC_HOSPITALIZATION_DIETPREFERENCE_CODEABLECONCEPT_TEXT());
+		enchospdietpref.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.255", "4.0.1", encounter.getEncHspDietpreferenceCodeableconceptCodingCode(), encounter.getEncHspDietpreferenceCodeableconceptCodingDisplay(),encounter.getEncHspDietpreferenceCodeableconceptCodingUserselected()));
+		enchospdietpref.setText(encounter.getEncHspDietpreferenceCodeableconceptText());
 		ehc.addDietPreference(enchospdietpref);
 		
 		CodeableConcept enchospspeccourt = new CodeableConcept();
-		enchospspeccourt.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.252", "4.0.1", encounter.getENC_HOSPITALIZATION_SPECIALCOURTESY_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_SPECIALCOURTESY_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_SPECIALCOURTESY_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospspeccourt.setText(encounter.getENC_HOSPITALIZATION_SPECIALCOURTESY_CODEABLECONCEPT_TEXT());
+		enchospspeccourt.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.252", "4.0.1", encounter.getEncHspSpecialcourtesyCodeableconceptCodingCode(), encounter.getEncHspSpecialcourtesyCodeableconceptCodingDisplay(),encounter.getEncHspSpecialcourtesyCodeableconceptCodingUserselected()));
+		enchospspeccourt.setText(encounter.getEncHspSpecialcourtesyCodeableconceptText());
 		ehc.addSpecialCourtesy(enchospspeccourt);
 		
 		CodeableConcept enchospspecarrangement = new CodeableConcept();
-		enchospspecarrangement.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.253", "4.0.1", encounter.getENC_HOSPITALIZATION_SPECIALARRANGEMENT_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_SPECIALARRANGEMENT_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_SPECIALARRANGEMENT_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospspecarrangement.setText(encounter.getENC_HOSPITALIZATION_SPECIALARRANGEMENT_CODEABLECONCEPT_TEXT());
+		enchospspecarrangement.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.253", "4.0.1", encounter.getEncHspSpecialarrangementCodeableconceptCodingCode(), encounter.getEncHspSpecialarrangementCodeableconceptCodingDisplay(),encounter.getEncHspSpecialarrangementCodeableconceptCodingUserselected()));
+		enchospspecarrangement.setText(encounter.getEncHspSpecialarrangementCodeableconceptText());
 		ehc.addSpecialArrangement(enchospspecarrangement);
 		
-		ehc.setDestination(createReference(encounter.getENC_HOSPITALIZATION_DESTINATION_REFERENCE_REFERENCE(),encounter.getENC_HOSPITALIZATION_DESTINATION_REFERENCE_TYPE(),encounter.getENC_HOSPITALIZATION_DESTINATION_REFERENCE_IDENTIFIER(),encounter.getENC_HOSPITALIZATION_DESTINATION_REFERENCE_DISPLAY()));
+		ehc.setDestination(createReference(encounter.getEncHspDestinationReferenceReference(),encounter.getEncHspDestinationReferenceType(),encounter.getEncHspDestinationReferenceIdentifier(),encounter.getEncHspDestinationReferenceDisplay()));
 		
 		CodeableConcept enchospdischdisp = new CodeableConcept();
-		enchospdischdisp.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.259", "4.0.1", encounter.getENC_HOSPITALIZATION_DISCHARGEDISPOSITION_CODEABLECONCEPT_CODING_CODE(), encounter.getENC_HOSPITALIZATION_DISCHARGEDISPOSITION_CODEABLECONCEPT_CODING_DISPLAY(),encounter.getENC_HOSPITALIZATION_DISCHARGEDISPOSITION_CODEABLECONCEPT_CODING_USERSELECTED()));
-		enchospdischdisp.setText(encounter.getENC_HOSPITALIZATION_DISCHARGEDISPOSITION_CODEABLECONCEPT_TEXT());
+		enchospdischdisp.addCoding(createCoding("urn:oid:2.16.840.1.113883.4.642.3.259", "4.0.1", encounter.getEncHspDischargedispositionCodeableconceptCodingCode(), encounter.getEncHspDischargedispositionCodeableconceptCodingDisplay(),encounter.getEncHspDischargedispositionCodeableconceptCodingUserselected()));
+		enchospdischdisp.setText(encounter.getEncHspDischargedispositionCodeableconceptText());
 		ehc.setDischargeDisposition(enchospdischdisp);
 		
 		return ehc;	

@@ -65,21 +65,21 @@ public class PatientConversion
 			/******************** PNT_IDENTIFIER ******************************************************************************** 
 			 * PNT_IDENTIFIER maps to Patient / identifier
 			 ********************************************************************************************************************/
-			n.setId(patient.getPNT_IDENTIFIER());
+			n.setId(patient.getPntIdentifier());
 
 			
 			/******************** PNT_ACTIVE ******************************************************************************** 
 			 * PNT_ACTIVE maps to Patient / active
 			 ********************************************************************************************************************/
-			if(patient.getPNT_ACTIVE() != null) {
-				n.setActive(Boolean.parseBoolean(patient.getPNT_ACTIVE()));
+			if(patient.getPntActive() != null) {
+				n.setActive(Boolean.parseBoolean(patient.getPntActive()));
 			}
 			
 			/******************** PNT_NAME ******************************************************************************** 
 			 * PNT_NAME maps to Patient / name
 			 ********************************************************************************************************************/
-			HumanName hn = createName(patient.getPNT_NAME_HUMANNAME_USE(), patient.getPNT_NAME_HUMANNAME_TEXT(), patient.getPNT_NAME_HUMANNAME_FAMILY(), patient.getPNT_NAME_HUMANNAME_GIVEN(), 
-					patient.getPNT_NAME_HUMANNAME_PREFIX(), patient.getPNT_NAME_HUMANNAME_SUFFIX(), patient.getPNT_NAME_HUMANNAME_PERIOD_START(), patient.getPNT_NAME_HUMANNAME_PERIOD_END());
+			HumanName hn = createName(patient.getPntNameHumannameUse(), patient.getPntNameHumannameText(), patient.getPntNameHumannameFamily(), patient.getPntNameHumannameGiven(), 
+					patient.getPntNameHumannamePrefix(), patient.getPntNameHumannameSuffix(), patient.getPntNameHumannamePeriodStart(), patient.getPntNameHumannamePeriodEnd());
 			n.addName(hn);
 
 //			if(latlong.get(patient.getPNT_IDENTIFIER()) != null)
@@ -96,19 +96,19 @@ public class PatientConversion
 			 * PNT_GENDER maps to Patient / gender
 			 */
 
-			n.setGender(AdministrativeGender.fromCode(patient.getPNT_GENDER()));
+			n.setGender(AdministrativeGender.fromCode(patient.getPntGender()));
 
 				
 			/******************** PNT_BIRTHDATE *********************************************************************************
 			 * PNT_BIRTHDATE maps to Patient / birthDate 
 			 ********************************************************************************************************************/
-			if(patient.getPNT_BIRTHDATE() != null)
+			if(patient.getPntBirthdate() != null)
 			{
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 				Date date;
 				try 
 				{
-					date = sdf.parse(patient.getPNT_BIRTHDATE());
+					date = sdf.parse(patient.getPntBirthdate());
 					n.setBirthDate(date);
 				} 
 				catch (ParseException e) 
@@ -122,18 +122,18 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			
 			try {
-				BooleanType bt = new BooleanType(patient.getPNT_DECEASEDBOOLEAN());
+				BooleanType bt = new BooleanType(patient.getPntDeceasedboolean());
 				n.setDeceased(bt);
 			} catch (DataFormatException booleanerror) {
 				booleanerror.printStackTrace();
 
 			}
-			if(patient.getPNT_DECEASEDDATETIME() != null) {	
+			if(patient.getPntDeceaseddatetime() != null) {	
 				SimpleDateFormat dspdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 				Date deceaseddate;
 				try 
 				{
-					deceaseddate = dspdf.parse(patient.getPNT_DECEASEDDATETIME());
+					deceaseddate = dspdf.parse(patient.getPntDeceaseddatetime());
 					DateTimeType dtt = new  DateTimeType(deceaseddate);
 					n.setDeceased(dtt);
 				} 
@@ -147,13 +147,13 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			
 			Address address = n.addAddress();
-			address =  createAddress( patient.getPNT_ADDRESS_USE(), patient.getPNT_ADDRESS_TYPE(), patient.getPNT_ADDRESS_TEXT(), patient.getPNT_ADDRESS_LINE(), 
-					patient.getPNT_ADDRESS_CITY(), patient.getPNT_ADDRESS_DISTRICT(), patient.getPNT_ADDRESS_STATE(), patient.getPNT_ADDRESS_POSTAL_CODE(), patient.getPNT_ADDRESS_COUNTRY(),
-					patient.getPNT_ADDRESS_PERIOD_START(), patient.getPNT_ADDRESS_PERIOD_END());
+			address =  createAddress( patient.getPntAddressUse(), patient.getPntAddressType(), patient.getPntAddressText(), patient.getPntAddressLine(), 
+					patient.getPntAddressCity(), patient.getPntAddressDistrict(), patient.getPntAddressState(), patient.getPntAddressPotalcode(), patient.getPntAddressCountry(),
+					patient.getPntAddressPeriodStart(), patient.getPntAddressPeriodEnd());
 			
 			
 
-			if(patient.getPNT_MARITAL_STATUS_CODE() != null)
+			if(patient.getPntMaritalStatusCode() != null)
 			{
 				CodeableConcept ms = new CodeableConcept();
 				
@@ -163,7 +163,7 @@ public class PatientConversion
 				 * PNT_MARITAL_STATUS_CODE  maps to Patient / maritalStatus / coding / code
 				 ********************************************************************************************************************/
 	
-				c.setCode(patient.getPNT_MARITAL_STATUS_CODE());
+				c.setCode(patient.getPntMaritalStatusCode());
 				
 				
 				/******************** PNT_MARITAL_STATUS_SYSTEM *********************************************************************
@@ -184,14 +184,14 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			
 			try {
-				IntegerType it = new IntegerType(patient.getPNT_MULTIPLE_BIRTH_INTEGER());
+				IntegerType it = new IntegerType(patient.getPntMultipleBirthInteger());
 				n.setMultipleBirth(it);
 			} catch (DataFormatException integererror) {
 				integererror.printStackTrace();
 
 			}
 			try {
-				BooleanType bt = new BooleanType(patient.getPNT_MULTIPLE_BIRTH_BOOLEAN());
+				BooleanType bt = new BooleanType(patient.getPntMultipleBirthBoolean());
 				n.setMultipleBirth(bt);
 			} catch (DataFormatException booleanerror) {
 				booleanerror.printStackTrace();
@@ -201,50 +201,50 @@ public class PatientConversion
 			/******************** PNT_PHOTO **************************************************************************************
 			 * PNT_PHOTO maps to Patient / photo
 			 ********************************************************************************************************************/
-			if(patient.getPNT_PHOTO_ATTACHMENT_CONTENT_TYPE() != null) {
+			if(patient.getPntPhotoAttachmentContentType() != null) {
 				Attachment photo = n.addPhoto();
 				
 				/******************** PNT_PHOTO_ATTACHMENT_CONTENT_TYPE **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_CONTENT_TYPE maps to Patient / photo  / contentType
 				 ********************************************************************************************************************/
 				
-				photo.setContentType(patient.getPNT_PHOTO_ATTACHMENT_CONTENT_TYPE());
+				photo.setContentType(patient.getPntPhotoAttachmentContentType());
 				
 				/******************** PNT_PHOTO_ATTACHMENT_LANGUAGE **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_LANGUAGE maps to Patient / photo  / language
 				 ********************************************************************************************************************/
 				
-				photo.setLanguage(patient.getPNT_PHOTO_ATTACHMENT_LANGUAGE());
+				photo.setLanguage(patient.getPntPhotoAttachmentLanguage());
 				
 				/******************** PNT_PHOTO_ATTACHMENT_DATA **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_DATA maps to Patient / photo  / data
 				 ********************************************************************************************************************/
-				Base64BinaryType base64photodata = new Base64BinaryType(patient.getPNT_PHOTO_ATTACHMENT_DATA());
+				Base64BinaryType base64photodata = new Base64BinaryType(patient.getPntPhotoAttachmentData());
 				photo.setDataElement(base64photodata);
 				
 				/******************** PNT_PHOTO_ATTACHMENT_URL **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_URL maps to Patient / photo  / url
 				 ********************************************************************************************************************/
-				UrlType ut  = new UrlType(patient.getPNT_PHOTO_ATTACHMENT_URL());
+				UrlType ut  = new UrlType(patient.getPntPhotoAttachmentUrl());
 				photo.setUrlElement(ut);
 				
 				/******************** PNT_PHOTO_ATTACHMENT_SIZE **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_SIZE maps to Patient / photo  / size
 				 ********************************************************************************************************************/
-				UnsignedIntType unsignedint = new UnsignedIntType(patient.getPNT_PHOTO_ATTACHMENT_SIZE());
+				UnsignedIntType unsignedint = new UnsignedIntType(patient.getPntPhotoAttachmentSize());
 				photo.setSizeElement(unsignedint);
 				
 				/******************** PNT_PHOTO_ATTACHMENT_HASH **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_HASH maps to Patient / photo  / hash
 				 ********************************************************************************************************************/
-				Base64BinaryType base64hashdata = new Base64BinaryType(patient.getPNT_PHOTO_ATTACHMENT_HASH());
+				Base64BinaryType base64hashdata = new Base64BinaryType(patient.getPntPhotoAttachmentHash());
 				photo.setHashElement(base64hashdata);
 				
 				/******************** PNT_PHOTO_ATTACHMENT_TITLE **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_TITLE maps to Patient / photo  / title
 				 ********************************************************************************************************************/
 				
-				photo.setContentType(patient.getPNT_PHOTO_ATTACHMENT_TITLE());
+				photo.setContentType(patient.getPntPhotoAttachmentTitle());
 				
 				/******************** PNT_PHOTO_ATTACHMENT_CREATION **************************************************************************************
 				 * PNT_PHOTO_ATTACHMENT_CREATION  maps to Patient / photo  / creation
@@ -255,8 +255,8 @@ public class PatientConversion
 				{
 					SimpleDateFormat photosdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 	
-					if(patient.getPNT_PHOTO_ATTACHMENT_CREATION() != null)  {
-						photoddate = photosdf.parse(patient.getPNT_PHOTO_ATTACHMENT_CREATION());
+					if(patient.getPntPhotoAttachmentCreation() != null)  {
+						photoddate = photosdf.parse(patient.getPntPhotoAttachmentCreation());
 					}
 					
 				} 
@@ -270,7 +270,7 @@ public class PatientConversion
 			/******************** PNT_CONTACT **************************************************************************************
 			 * PNT_CONTACT maps to Patient / contact
 			 ********************************************************************************************************************/
-			if(patient.getPNT_CONTACT_NAME() != null | patient.getPNT_CONTACT_TELECOM() != null | patient.getPNT_CONTACT_ADDRESS() != null | patient.getPNT_CONTACT_ORGANIZATION() != null ) {
+			if(patient.getPntContactNameHumannameText() != null | patient.getPntContactTelecomContactpointValue() != null | patient.getPntContactAddressLine() != null | patient.getPntContactOrganizationReferenceDisplay() != null ) {
 				ContactComponent contact = n.addContact();
 				
 				/******************** PNT_CONTACT_RELATIONSHIP **************************************************************************************
@@ -282,32 +282,32 @@ public class PatientConversion
 				Coding relcode = rel.addCoding();
 				relcode.setSystem("urn:oid:2.16.840.1.113883.4.642.3.1130");
 				relcode.setVersion("4.0.1");
-				relcode.setCode(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_CODE()); 
-				relcode.setDisplay(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_DISPLAY());
+				relcode.setCode(patient.getPntContactRelationshipCodeableconceptCodingCode()); 
+				relcode.setDisplay(patient.getPntContactRelationshipCodeableconceptCodingDisplay());
 //				relcode.setUserSelected(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_USERSELECTED());
 				try {
-					BooleanType bt = new BooleanType(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_CODING_USERSELECTED());
+					BooleanType bt = new BooleanType(patient.getPntContactRelationshipCodeableconceptCodingUserselected());
 					relcode.setUserSelectedElement(bt);
 				} catch (DataFormatException booleanerror) {
 					booleanerror.printStackTrace();
 
 				}
-				rel.setText(patient.getPNT_CONTACT_RELATIONSHIP_CODEABLECONCEPT_TEXT());
+				rel.setText(patient.getPntContactRelationshipCodeableconceptText());
 				
 				/******************** PNT_CONTACT_NAME **************************************************************************************
 				 * PNT_CONTACT_NAME  maps to Patient / contact /name
 				 ********************************************************************************************************************/
-				HumanName contactname = createName(patient.getPNT_CONTACT_NAME_HUMANNAME_USE(), patient.getPNT_CONTACT_NAME_HUMANNAME_TEXT(), patient.getPNT_CONTACT_NAME_HUMANNAME_FAMILY(),
-						patient.getPNT_CONTACT_NAME_HUMANNAME_GIVEN(), patient.getPNT_CONTACT_NAME_HUMANNAME_PREFIX(), patient.getPNT_CONTACT_NAME_HUMANNAME_SUFFIX(),
-						patient.getPNT_CONTACT_NAME_HUMANNAME_PERIOD_START(), patient.getPNT_CONTACT_NAME_HUMANNAME_PERIOD_END());
+				HumanName contactname = createName(patient.getPntContactNameHumannameUse(), patient.getPntContactNameHumannameText(), patient.getPntContactNameHumannameFamily(),
+						patient.getPntContactNameHumannameGiven(), patient.getPntContactNameHumannamePrefix(), patient.getPntContactNameHumannameSuffix(),
+						patient.getPntContactNameHumannamePeriodStart(), patient.getPntContactNameHumannamePeriodEnd());
 				contact.setName(contactname);
 
 				/******************** PNT_CONTACT_TELECOM******************************************************************************** 
 				 * PNT_CONTACT_ADDRESS maps to Patient / contact / telecom 
 				 ********************************************************************************************************************/
 				ContactPoint contactpt = contact.addTelecom();
-				contactpt = createTelecom(patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_SYSTEM(), patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_VALUE(), patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_USE(),
-						patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_RANK(), patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_PERIOD_START(), patient.getPNT_CONTACT_TELECOM_CONTACTPOINT_PERIOD_END());
+				contactpt = createTelecom(patient.getPntContactTelecomContactpointSystem(), patient.getPntContactTelecomContactpointValue(), patient.getPntContactTelecomContactpointUse(),
+						patient.getPntContactTelecomContactpointRank(), patient.getPntContactTelecomContactpointPeriodStart(), patient.getPntContactTelecomContactpointPeriodEnd());
 				
 				
 				/******************** PNT_CONTACT_ADDRESS******************************************************************************** 
@@ -315,9 +315,9 @@ public class PatientConversion
 				 ********************************************************************************************************************/
 				
 				Address contactaddress = new Address();
-				contactaddress =  createAddress( patient.getPNT_CONTACT_ADDRESS_USE(), patient.getPNT_CONTACT_ADDRESS_TYPE(), patient.getPNT_CONTACT_ADDRESS_TEXT(), patient.getPNT_CONTACT_ADDRESS_LINE(), 
-						patient.getPNT_CONTACT_ADDRESS_CITY(), patient.getPNT_CONTACT_ADDRESS_DISTRICT(), patient.getPNT_CONTACT_ADDRESS_STATE(), patient.getPNT_CONTACT_ADDRESS_POSTAL_CODE(),
-						patient.getPNT_CONTACT_ADDRESS_COUNTRY(),patient.getPNT_CONTACT_ADDRESS_PERIOD_START(), patient.getPNT_CONTACT_ADDRESS_PERIOD_END());
+				contactaddress =  createAddress( patient.getPntContactAddressUse(), patient.getPntContactAddressType(), patient.getPntContactAddressText(), patient.getPntContactAddressLine(), 
+						patient.getPntContactAddressCity(), patient.getPntContactAddressDistrict(), patient.getPntContactAddressState(), patient.getPntContactAddressPotalcode(),
+						patient.getPntContactAddressCountry(),patient.getPntContactAddressPeriodStart(), patient.getPntContactAddressPeriodEnd());
 				contact.setAddress(contactaddress);
 
 				
@@ -325,18 +325,18 @@ public class PatientConversion
 				 * PNT_CONTACT_GENDER maps to Patient / contact / gender
 				 */
 
-				contact.setGender(AdministrativeGender.fromCode(patient.getPNT_CONTACT_GENDER()));
+				contact.setGender(AdministrativeGender.fromCode(patient.getPntContactGender()));
 
 				/******************** PNT_CONTACT_ORGANIZATION ************************************************************************************ 
 				 * PNT_CONTACT_ORGANIZATION maps to Patient / contact / gender / organization
 				 */
-				Reference reference = createReference(patient.getPNT_CONTACT_ORGANIZATION_REFERENCE_REFERENCE(), patient.getPNT_CONTACT_ORGANIZATION_REFERENCE_TYPE(),
-						patient.getPNT_CONTACT_ORGANIZATION_REFERENCE_IDENTIFIER(),patient.getPNT_CONTACT_ORGANIZATION_REFERENCE_DISPLAY());
+				Reference reference = createReference(patient.getPntContactOrganizationReferenceReference(), patient.getPntContactOrganizationReferenceType(),
+						patient.getPntContactOrganizationReferenceIdentifier(),patient.getPntContactOrganizationReferenceDisplay());
 				contact.setOrganization(reference);
 				/******************** PNT_CONTACT_PERIOD ************************************************************************************ 
 				 * PNT_CONTACT_ORGANIZATION maps to Patient / contact / gender / organization
 				 */				
-				contact.setPeriod(createPeriod(patient.getPNT_CONTACT_PERIOD_START(), patient.getPNT_CONTACT_PERIOD_END()));
+				contact.setPeriod(createPeriod(patient.getPntContactPeriodStart(), patient.getPntContactPeriodEnd()));
 				
 			}
 			
@@ -345,8 +345,7 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 
 			PatientCommunicationComponent patcom = n.addCommunication();
-			if(patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_CODE() != null || patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_DISPLAY() != null
-					|| patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_DISPLAY() != null) {
+			if(patient.getPntCommunicationLanguageCodeableconceptCodingCode() != null || patient.getPntCommunicationLanguageCodeableconceptCodingDisplay() != null) {
 
 				/******************** PNT_COMMUNICATION_LANGUAGE **************************************************************************************
 				 * PNT_COMMUNICATION_LANGUAGE maps to Patient / communication / language
@@ -359,27 +358,27 @@ public class PatientConversion
 				patcomcode.setSystem("urn:oid:2.16.840.1.113883.4.642.3.20");
 				patcomcode.setVersion("4.0.1");
 				
-				patcomcode.setCode(patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_CODE());
-				patcomcode.setDisplay(patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_DISPLAY());
+				patcomcode.setCode(patient.getPntCommunicationLanguageCodeableconceptCodingCode());
+				patcomcode.setDisplay(patient.getPntCommunicationLanguageCodeableconceptCodingDisplay());
 				//patcomcode.setUserSelected(false);
 				try {
-					BooleanType bt = new BooleanType(patient.getPNT_COMMUNICATION_LANGUAGE_CODEABLECONCEPT_CODING_USERSELECTED());
+					BooleanType bt = new BooleanType(patient.getPntCommunicationLanguageCodeableconceptCodingUserselected());
 					patcomcode.setUserSelectedElement(bt);
 				} catch (DataFormatException booleanerror) {
 					booleanerror.printStackTrace();
 
 				}
 				patcomlang.addCoding(patcomcode);
-				patcomlang.setText(patient.getPNT_COMMUNICATION_LANGUAGE_TEXT());
+				patcomlang.setText(patient.getPntCommunicationLanguageText());
 				patcom.setLanguage(patcomlang);
 			}
 				
 				/******************** PNT_COMMUNICATION_PREFERRED **************************************************************************************
 				 * PNT_COMMUNICATION_PREFERRED maps to Patient / communication / preferred
 				 ********************************************************************************************************************/
-			if(patient.getPNT_COMMUNICATION_PREFERRED() != null ) {
+			if(patient.getPntCommunicationPreferred() != null ) {
 				try {
-					BooleanType bt = new BooleanType(patient.getPNT_COMMUNICATION_PREFERRED());
+					BooleanType bt = new BooleanType(patient.getPntCommunicationPreferred());
 					patcom.setPreferredElement(bt);
 				} catch (DataFormatException booleanerror) {
 					booleanerror.printStackTrace();
@@ -391,8 +390,8 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 				
 			Reference generalPractioner = n.addGeneralPractitioner();
-			generalPractioner = createReference( patient.getPNT_GENERAL_PRACTICTIONER_REFERENCE_REFERENCE(), patient.getPNT_GENERAL_PRACTICTIONER_REFERENCE_TYPE()
-					, patient.getPNT_GENERAL_PRACTICTIONER_REFERENCE_IDENTIFIER(), patient.getPNT_GENERAL_PRACTICTIONER_REFERENCE_DISPLAY());
+			generalPractioner = createReference( patient.getPntGeneralPractictionerReferenceReference(), patient.getPntGeneralPractictionerReferenceType()
+					, patient.getPntGeneralPractictionerReferenceIdentifier(), patient.getPntGeneralPractictionerReferenceDisplay());
 			
 			
 			
@@ -401,26 +400,26 @@ public class PatientConversion
 			 ********************************************************************************************************************/
 			
 			PatientLinkComponent link = n.addLink();
-			Reference otherReference = createReference( patient.getPNT_LINK_OTHER_REFERENCE_REFERENCE(), patient.getPNT_LINK_OTHER_REFERENCE_TYPE(), patient.getPNT_LINK_OTHER_REFERENCE_IDENTIFIER(),
-					patient.getPNT_LINK_OTHER_REFERENCE_DISPLAY());
+			Reference otherReference = createReference( patient.getPntLinkOtherReferenceReference(), patient.getPntLinkOtherReferenceType(), patient.getPntLinkOtherReferenceIdentifier(),
+					patient.getPntLinkOtherReferenceDisplay());
 			link.setOther(otherReference);
 			LinkTypeEnumFactory linktypefactory = new LinkTypeEnumFactory(); 
-			link.setType(linktypefactory.fromCode(patient.getPNT_LINK_TYPE()));
+			link.setType(linktypefactory.fromCode(patient.getPntLinkType()));
 			
 			/******************** PNT_RACE **************************************************************************************
 			 * PNT_RACE maps to Patient / extension / race / coding / code
 			 ********************************************************************************************************************/
 			List<Extension> extList = new ArrayList<>();
-			if(patient.getPNT_RACE() != null)
+			if(patient.getPntRaceCode() != null)
 			{
 				
 				Extension t2 = new Extension();
 				t2.setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race");
 				
 				Coding race = new Coding();
-				race.setCode(patient.getPNT_RACE());
+				race.setCode(patient.getPntRaceCode());
 				race.setSystem("urn:oid:2.16.840.1.113883.6.238");
-				race.setDisplay(patient.getPNT_RACE_DISP());
+				race.setDisplay(patient.getPntRaceDisplay());
 				t2.addExtension("ombCategory", race);
 				
 				extList.add(t2);
@@ -431,23 +430,23 @@ public class PatientConversion
 			 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
 			 ********************************************************************************************************************/
 			
-			if(patient.getPNT_ETHNICITY() != null)
+			if(patient.getPntEthnicityCode() != null)
 			{
 				Extension t3 = new Extension();			
 				
 				t3.setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity");
 				
 				Coding ethnicity = new Coding();
-				ethnicity.setCode(patient.getPNT_ETHNICITY());
+				ethnicity.setCode(patient.getPntEthnicityCode());
 				ethnicity.setSystem("urn:oid:2.16.840.1.113883.6.238");
-				ethnicity.setDisplay(patient.getPNT_ETHNICITY_DISP());			
+				ethnicity.setDisplay(patient.getPntEthnicityDisplay());			
 				
 				t3.addExtension("ombCategory", ethnicity);
 				
 				extList.add(t3);
 			}
 			
-			if(patient.getPNT_ETHNICITY() != null || patient.getPNT_RACE() != null)
+			if(patient.getPntEthnicityCode() != null || patient.getPntRaceCode() != null)
 			{
 				n.setExtension(extList);
 			}
@@ -455,18 +454,18 @@ public class PatientConversion
 			//Map<String, Map<String, String>> t = latlong;
 			
 			Address addrResource = n.addAddress();
-			if(patient.getPNT_ADDRESS_EXT_LAT_VALUE() !=null && patient.getPNT_ADDRESS_EXT_LONG_VALUE() != null)
+			if(patient.getPntAddressExtLatValue() !=null && patient.getPntAddressExtLongValue() != null)
 			{
 				Extension geolocation = addrResource.addExtension();
 				/******************** PNT_ADDRESS_EXT_LAT_VALUE ****************************************************************
 				 * PNT_ADDRESS_EXT_LAT_VALUE maps to Patient / address / extension / latitude / value
 				 ***************************************************************************************************************/
-			    geolocation.addExtension("Latitude", new DecimalType(patient.getPNT_ADDRESS_EXT_LAT_VALUE()));
+			    geolocation.addExtension("Latitude", new DecimalType(patient.getPntAddressExtLatValue()));
 			    
 				/******************** PNT_ADDRESS_EXT_LONG_VALUE ***************************************************************
 				 * PNT_ADDRESS_EXT_LONG_VALUE maps to Patient / address / extension / longitude / value
 				 ***************************************************************************************************************/
-			    geolocation.addExtension("Longitude", new DecimalType(patient.getPNT_ADDRESS_EXT_LONG_VALUE()));
+			    geolocation.addExtension("Longitude", new DecimalType(patient.getPntAddressExtLongValue()));
 			}
 
 		  return n;
