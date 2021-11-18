@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Messagedefinition" optimistic-lock="none" table="messagedefinition">
+        <id name="messageDefinitionUrl" type="string">
+            <column length="512" name="MessageDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="mssgDfntnDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MessageDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MessageDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MessageDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionReplaces" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MessageDefinition_replaces">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MessageDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="MessageDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="MessageDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MessageDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="MessageDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="MessageDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="MessageDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="MessageDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="MessageDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionBase" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MessageDefinition_base">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionParent" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MessageDefinition_parent">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionEventUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="MessageDefinition_eventUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionCategory" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MessageDefinition_category">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MessageDefinition_focus_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MessageDefinition_focus_profile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusMin" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="MessageDefinition_focus_min">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusMax" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MessageDefinition_focus_max">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionResponseRequired" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MessageDefinition_responseRequired">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnLlwdRspnsMssge" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MssgDfntn_llwdRspns_mssge">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnLlwdRspnsSttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="MssgDfntn_llwdRspns_sttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionGraph" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MessageDefinition_graph">
+                <comment>canonical</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

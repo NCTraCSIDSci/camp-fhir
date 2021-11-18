@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Activitydefinition" optimistic-lock="none" table="activitydefinition">
+        <id name="activityDefinitionUrl" type="string">
+            <column length="512" name="ActivityDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="actvtDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ActivityDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ActivityDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_sbjctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_sbjctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_sbjctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_sbjctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_sbjctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSbjctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActvtDfntn_sbjctRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ActivityDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ActivityDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ActivityDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ActivityDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ActivityDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionUsage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActivityDefinition_usage">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ActivityDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ActivityDefinition_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ActivityDefinition_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTpcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_tpc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ActivityDefinition_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ActivityDefinition_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ActivityDefinition_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ActivityDefinition_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="ActivityDefinition_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionLibrary" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ActivityDefinition_library">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ActivityDefinition_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ActivityDefinition_profile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ActivityDefinition_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ActivityDefinition_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionDoNotPerform" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ActivityDefinition_doNotPerform">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_tmngTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_tmngTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_tmngTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_tmngTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_tmngTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionTimingDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ActivityDefinition_timingDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionTimingAge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="ActivityDefinition_timingAge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_tmngPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_tmngPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_tmngPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_tmngPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_tmngPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_tmngRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_tmngRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_tmngRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_tmngRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnTmngRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_tmngRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionTimingDuration" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="ActivityDefinition_timingDuration">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionLocation" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActivityDefinition_location">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionParticipant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ActivityDefinition_participant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrtcpntRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_prtcpnt_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActvtDfntn_prdctRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_prdctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_prdctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_prdctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_prdctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnPrdctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_prdctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionQuantity" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="ActivityDefinition_quantity">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionDosage" type="string">
+            <meta attribute="resource-type">Dosage</meta>
+            <column length="65535" name="ActivityDefinition_dosage">
+                <comment>Dosage</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBdStCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ActvtDfntn_bdSt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBdStCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ActvtDfntn_bdSt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBdStCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ActvtDfntn_bdSt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBdStCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ActvtDfntn_bdSt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBdStCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ActvtDfntn_bdSt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnSpcmnRqrmnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActvtDfntn_spcmnRqrmnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBsrvtnRqrmnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActvtDfntn_bsrvtnRqrmnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnBsrvtnRsltRqrmnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ActvtDfntn_bsrvtnRsltRqrmnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionTransform" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ActivityDefinition_transform">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="activityDefinitionDynamicValue" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ActivityDefinition_dynamicValue">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDnmcVlPth" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ActvtDfntn_dnmcVl_pth">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="actvtDfntnDnmcVlXprssn" type="string">
+            <meta attribute="resource-type">Expression</meta>
+            <column length="65535" name="ActvtDfntn_dnmcVl_xprssn">
+                <comment>Expression</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

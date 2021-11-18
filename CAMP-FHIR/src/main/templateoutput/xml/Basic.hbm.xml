@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Basic" optimistic-lock="none" table="basic">
+        <id name="bscDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Bsc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="bscDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_use_code</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_s_cde">
+                <comment>Basic_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Basic_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Basic_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Basic_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Basic_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Basic_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Prd_strt">
+                <comment>Basic_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Prd_nd">
+                <comment>Basic_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Basic_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Basic_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Basic_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Basic_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_value_string</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_vl_strng">
+                <comment>Basic_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="bscDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Basic_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Bsc_dntfr_dntfr_sstm_ri">
+                <comment>Basic_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="bscCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Bsc_cd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="bscSbjctRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Bsc_sbjct_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="basicSubjectReferenceTypeUri" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Basic_subject_Reference_type_uri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="basicCreated" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Basic_created">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="bscThrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Bsc_thr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="basicAuthorReferenceTypeUri" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Basic_author_Reference_type_uri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

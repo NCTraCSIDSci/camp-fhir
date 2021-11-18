@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Codesystem" optimistic-lock="none" table="codesystem">
+        <id name="codeSystemUrl" type="string">
+            <column length="512" name="CodeSystem_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="cdSstmDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="cdSstmDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="CdSstm_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="codeSystemVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CodeSystem_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="codeSystemDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CodeSystem_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="codeSystemPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="CodeSystem_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="codeSystemDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CodeSystem_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="codeSystemUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="CodeSystem_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cdSstmJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="CdSstm_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="codeSystemPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CodeSystem_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="codeSystemCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CodeSystem_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="codeSystemCaseSensitive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CodeSystem_caseSensitive">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="codeSystemValueSet" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CodeSystem_valueSet">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="codeSystemHierarchyMeaning" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_hierarchyMeaning">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemCompositional" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CodeSystem_compositional">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="codeSystemVersionNeeded" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CodeSystem_versionNeeded">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="codeSystemContent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_content">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemSupplements" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CodeSystem_supplements">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="codeSystemCount" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="CodeSystem_count">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="codeSystemFilterCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_filter_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemFilterDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_filter_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemFilterOperator" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_filter_operator">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemFilterValue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_filter_value">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemPropertyCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_property_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemPropertyUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="CodeSystem_property_uri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="codeSystemPropertyDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_property_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemPropertyType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_property_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemConceptCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_concept_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="codeSystemConceptDisplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_concept_display">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemConceptDefinition" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CodeSystem_concept_definition">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnLngge" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_lngge">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnSCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_s_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnSCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_s_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnSCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_s_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnSCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_s_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnSCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_s_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptDsgntnVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CdSstm_cncpt_dsgntn_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="codeSystemConceptPropertyCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CodeSystem_concept_property_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCdngCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCdng_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCdngCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCdng_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCdngCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCdng_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCdngCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCdng_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlCdngCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlCdng_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cdSstmCncptPrprtVlDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="CdSstm_cncpt_prprt_vlDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="codeSystemConceptConcept" type="string">
+            <meta attribute="resource-type">see concept</meta>
+            <column length="65535" name="CodeSystem_concept_concept">
+                <comment>see concept</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

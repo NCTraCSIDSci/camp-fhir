@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Testscript" optimistic-lock="none" table="testscript">
+        <id name="testScriptUrl" type="string">
+            <column length="512" name="TestScript_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="tstScrptDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="TstScrpt_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="testScriptIdentifierCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="TestScript_identifier_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="tstScrptDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="TstScrpt_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstScrptDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="TstScrpt_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstScrptDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="TstScrpt_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="testScriptVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TestScript_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="testScriptExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TestScript_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="testScriptDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="TestScript_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="testScriptPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="TestScript_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="testScriptDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TestScript_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="testScriptUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="TestScript_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="tstScrptJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="TstScrpt_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="tstScrptJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="TstScrpt_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="tstScrptJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="TstScrpt_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstScrptJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="TstScrpt_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstScrptJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="TstScrpt_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="testScriptPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TestScript_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="testScriptCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TestScript_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="testScriptOrigin" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_origin">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptOriginIndex" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TestScript_origin_index">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptRgnPrflCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="TstScrpt_rgn_prfl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="tstScrptRgnPrflCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="TstScrpt_rgn_prfl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="tstScrptRgnPrflCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="TstScrpt_rgn_prfl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstScrptRgnPrflCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="TstScrpt_rgn_prfl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstScrptRgnPrflCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="TstScrpt_rgn_prfl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="testScriptDestination" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_destination">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptDestinationIndex" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TestScript_destination_index">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptDstntnPrflCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="TstScrpt_dstntn_prfl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="tstScrptDstntnPrflCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="TstScrpt_dstntn_prfl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="tstScrptDstntnPrflCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="TstScrpt_dstntn_prfl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstScrptDstntnPrflCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="TstScrpt_dstntn_prfl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstScrptDstntnPrflCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="TstScrpt_dstntn_prfl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="testScriptMetadata" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_metadata">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptMetadataLink" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_metadata_link">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptMetadataLinkUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="TestScript_metadata_link_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtLnkDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_mtdt_lnk_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptMetadataCapability" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_metadata_capability">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltRqrd" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_rqrd">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltVldtd" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_vldtd">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltRgn" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_rgn">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltDstntn" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_dstntn">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltLnk" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_lnk">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="tstScrptMtdtCpbltCpblts" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="TstScrpt_mtdt_cpblt_cpblts">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="testScriptFixture" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_fixture">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptFixtureAutocreate" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TestScript_fixture_autocreate">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="testScriptFixtureAutodelete" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TestScript_fixture_autodelete">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="testScriptFixtureResource" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="TestScript_fixture_resource">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="testScriptProfile" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="TestScript_profile">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="testScriptVariable" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_variable">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableDefaultValue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_defaultValue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableExpression" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_expression">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableHeaderField" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_headerField">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableHint" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_hint">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariablePath" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_variable_path">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptVariableSourceId" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TestScript_variable_sourceId">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="testScriptSetup" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_setup">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptSetupAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_setup_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptSetupActionOperation" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_setup_action_operation">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRsrce" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rsrce">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnLbl" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_lbl">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnCcpt" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_ccpt">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnCntntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_cntntTpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnDstntn" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_dstntn">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnNcdRqstrl" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_ncdRqstrl">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnMthd" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_mthd">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRgn" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rgn">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnPrms" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_prms">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRqstHdr" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rqstHdr">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRqstHdrFld" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rqstHdr_fld">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRqstHdrVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rqstHdr_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRqstd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rqstd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRspnsd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rspnsd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnSrcd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_srcd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnTrgtd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_trgtd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnPrtnRl" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_prtn_rl">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptSetupActionAssert" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_setup_action_assert">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtLbl" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_lbl">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtDrctn" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_drctn">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtCmprTsrcd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_cmprTSrcd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtCmprTsrcxprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_cmprTSrcxprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtCmprTsrcPth" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_cmprTSrcPth">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtCntntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_cntntTpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtXprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_xprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtHdrFld" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_hdrFld">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtMnmmd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_mnmmd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtNvgtnLnks" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_nvgtnLnks">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtPrtr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_prtr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtPth" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_pth">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtRqstMthd" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_rqstMthd">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtRqstRl" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_rqstRL">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtRsrce" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_rsrce">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtRspnse" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_rspnse">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtRspnsCde" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_rspnsCde">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtSrcd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_srcd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtVldtPrfld" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_vldtPrfld">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="tstScrptStpCtnSsrtWrnngnly" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TstScrpt_stp_ctn_ssrt_wrnngnly">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="testScriptTest" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_test">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptTestName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_test_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptTestDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestScript_test_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testScriptTestAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_test_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptTestActionOperation" type="string">
+            <meta attribute="resource-type">see operation</meta>
+            <column length="65535" name="TestScript_test_action_operation">
+                <comment>see operation</comment>
+            </column>
+        </property>
+        <property name="testScriptTestActionAssert" type="string">
+            <meta attribute="resource-type">see assert</meta>
+            <column length="65535" name="TestScript_test_action_assert">
+                <comment>see assert</comment>
+            </column>
+        </property>
+        <property name="testScriptTeardown" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_teardown">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testScriptTeardownAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestScript_teardown_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstScrptTrdwnCtnPrtn" type="string">
+            <meta attribute="resource-type">see operation</meta>
+            <column length="65535" name="TstScrpt_trdwn_ctn_prtn">
+                <comment>see operation</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

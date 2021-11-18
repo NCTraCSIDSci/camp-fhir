@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Effectevidencesynthesis" optimistic-lock="none" table="effectevidencesynthesis">
+        <id name="effectEvidenceSynthesisUrl" type="string">
+            <column length="512" name="EffectEvidenceSynthesis_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="effctvdncSnthssDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssDscrptn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EffctvdncSnthss_dscrptn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssPprvlDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EffctvdncSnthss_pprvlDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssLstRvwDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EffctvdncSnthss_lstRvwDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssTpcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_tpc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRltdrtfct" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="EffctvdncSnthss_rltdrtfct">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSnthssTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_snthssTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSnthssTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_snthssTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSnthssTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_snthssTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSnthssTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_snthssTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSnthssTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_snthssTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssStdTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_stdTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssStdTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_stdTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssStdTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_stdTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssStdTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_stdTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssStdTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_stdTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisPopulation" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_population">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisExposure" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_exposure">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssXpsrltrntve" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EffctvdncSnthss_xpsrltrntve">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisOutcome" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_outcome">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisSampleSize" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_sampleSize">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSmplSzDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffctvdncSnthss_smplSz_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSmplSzNmbrfStds" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="EffctvdncSnthss_smplSz_nmbrfStds">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssSmplSzNmbrfPrtcpnts" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="EffctvdncSnthss_smplSz_nmbrfPrtcpnts">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsre" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsre">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrXpsrStte" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_xpsrStte">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrVrntSttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_vrntStt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrVrntSttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_vrntStt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrVrntSttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_vrntStt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrVrntSttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_vrntStt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrVrntSttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_vrntStt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssRsltsBxpsrRskvdncSnthss" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EffctvdncSnthss_rsltsBxpsr_rskvdncSnthss">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmte" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmte">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVrntSttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vrntStt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVrntSttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vrntStt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVrntSttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vrntStt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVrntSttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vrntStt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVrntSttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vrntStt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtVlue" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_vlue">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtNtfMsrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_ntfMsr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtNtfMsrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_ntfMsr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtNtfMsrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_ntfMsr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtNtfMsrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_ntfMsr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtNtfMsrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_ntfMsr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmte" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmte">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtLvl" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_lvl">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtFrm" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_frm">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssFfctstmtPrcsnstmtTo" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="EffctvdncSnthss_ffctstmt_prcsnstmt_to">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="effectEvidenceSynthesisCertainty" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffectEvidenceSynthesis_certainty">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntRtngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_rtng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntRtngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_rtng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntRtngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_rtng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntRtngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_rtng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntRtngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_rtng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnnt" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntRtngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntRtngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntRtngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntRtngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntRtngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="effctvdncSnthssCrtntCrtntSbcmpnntNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EffctvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

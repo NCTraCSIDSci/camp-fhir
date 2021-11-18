@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Visionprescription" optimistic-lock="none" table="visionprescription">
+        <id name="vsnPrscrptnDntfrCdngCde" type="string">
+            <column length="512" name="VsnPrscrptn_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="vsnPrscrptnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="VsnPrscrptn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="VsnPrscrptn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="VsnPrscrptn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="VsnPrscrptn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VisionPrescription_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="VisionPrescription_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionPnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="VisionPrescription_pnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="VisionPrescription_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionDateWritten" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="VisionPrescription_dateWritten">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="visionPrescriptionPrescriber" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="VisionPrescription_prescriber">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctn" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prdct_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrdctCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prdct_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrdctCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prdct_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrdctCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prdct_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrdctCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prdct_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnEye" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_eye">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnSphre" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_sphre">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnClndr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_clndr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnXs" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_xs">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrsm" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prsm">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrsmMnt" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prsm_mnt">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPrsmBse" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_prsm_bse">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnDd" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_dd">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnPwr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_pwr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnBckCrve" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_bckCrve">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnDmtr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_dmtr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnDrtn" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_drtn">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnClr" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_clr">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnBrnd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_brnd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="vsnPrscrptnLnsSpcfctnNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="VsnPrscrptn_lnsSpcfctn_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

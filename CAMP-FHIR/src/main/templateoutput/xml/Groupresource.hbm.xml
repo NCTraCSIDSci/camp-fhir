@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Groupresource" optimistic-lock="none" table="groupresource">
+        <id name="groupIdentifierCodingCode" type="string">
+            <column length="512" name="Group_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="grpDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="512" name="Grp_dntfr_Cdng_srSlctd"/>
+        </property>
+        <property name="groupIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="512" name="Group_identifier_Coding_display"/>
+        </property>
+        <property name="groupIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="512" name="Group_identifier_Coding_version"/>
+        </property>
+        <property name="groupIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="512" name="Group_identifier_Coding_system"/>
+        </property>
+        <property name="groupActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_active"/>
+        </property>
+        <property name="groupType" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_type"/>
+        </property>
+        <property name="groupActual" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_actual"/>
+        </property>
+        <property name="groupCodeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_code_Coding_userSelected"/>
+        </property>
+        <property name="groupCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_code_Coding_code"/>
+        </property>
+        <property name="groupCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_code_Coding_display"/>
+        </property>
+        <property name="groupCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_code_Coding_version"/>
+        </property>
+        <property name="groupCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_code_Coding_system"/>
+        </property>
+        <property name="groupName" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_name"/>
+        </property>
+        <property name="groupQuantity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_quantity"/>
+        </property>
+        <property name="groupManagingEntity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_managingEntity"/>
+        </property>
+        <property name="groupChrctr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr"/>
+        </property>
+        <property name="grpChrctrCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_cd_Cdng_srSlctd"/>
+        </property>
+        <property name="groupChrctrCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_code_Coding_code"/>
+        </property>
+        <property name="groupChrctrCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_code_Coding_display"/>
+        </property>
+        <property name="groupChrctrCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_code_Coding_version"/>
+        </property>
+        <property name="groupChrctrCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_code_Coding_system"/>
+        </property>
+        <property name="grpChrctrVlcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlcdblcpt_Cdng_srSlctd"/>
+        </property>
+        <property name="grpChrctrVlcdblcptCdngCde" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlcdblcpt_Cdng_cde"/>
+        </property>
+        <property name="grpChrctrVlcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlcdblcpt_Cdng_dsplay"/>
+        </property>
+        <property name="grpChrctrVlcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlcdblcpt_Cdng_vrsn"/>
+        </property>
+        <property name="grpChrctrVlcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlcdblcpt_Cdng_sstm"/>
+        </property>
+        <property name="groupChrctrValueBoolean" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_valueBoolean"/>
+        </property>
+        <property name="grpChrctrVlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlQntt_Cdng_srSlctd"/>
+        </property>
+        <property name="grpChrctrVlQnttCdngCde" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlQntt_Cdng_cde"/>
+        </property>
+        <property name="grpChrctrVlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlQntt_Cdng_dsplay"/>
+        </property>
+        <property name="grpChrctrVlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlQntt_Cdng_vrsn"/>
+        </property>
+        <property name="grpChrctrVlQnttCdngSstm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlQntt_Cdng_sstm"/>
+        </property>
+        <property name="grpChrctrVlRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlRng_Cdng_srSlctd"/>
+        </property>
+        <property name="grpChrctrVlRngCdngCde" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlRng_Cdng_cde"/>
+        </property>
+        <property name="grpChrctrVlRngCdngDsplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlRng_Cdng_dsplay"/>
+        </property>
+        <property name="grpChrctrVlRngCdngVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlRng_Cdng_vrsn"/>
+        </property>
+        <property name="grpChrctrVlRngCdngSstm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_vlRng_Cdng_sstm"/>
+        </property>
+        <property name="groupChrctrValueReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_valueReference"/>
+        </property>
+        <property name="groupChrctrExclude" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_exclude"/>
+        </property>
+        <property name="grpChrctrPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_chrctr_prd_Cdng_srSlctd"/>
+        </property>
+        <property name="groupChrctrPeriodCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_period_Coding_code"/>
+        </property>
+        <property name="groupChrctrPeriodCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_period_Coding_display"/>
+        </property>
+        <property name="groupChrctrPeriodCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_period_Coding_version"/>
+        </property>
+        <property name="groupChrctrPeriodCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_chrctr_period_Coding_system"/>
+        </property>
+        <property name="groupMember" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member"/>
+        </property>
+        <property name="groupMemberEntity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_entity"/>
+        </property>
+        <property name="grpMmbrPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_mmbr_prd_Cdng_srSlctd"/>
+        </property>
+        <property name="groupMemberPeriodCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_period_Coding_code"/>
+        </property>
+        <property name="groupMemberPeriodCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_period_Coding_display"/>
+        </property>
+        <property name="groupMemberPeriodCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_period_Coding_version"/>
+        </property>
+        <property name="groupMemberPeriodCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_period_Coding_system"/>
+        </property>
+        <property name="groupMemberInactive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Group_member_inactive"/>
+        </property>
+    </class>
+</hibernate-mapping>

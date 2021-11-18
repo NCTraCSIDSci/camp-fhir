@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Guidanceresponse" optimistic-lock="none" table="guidanceresponse">
+        <id name="gdncRspnsRqstdntfrCdngCde" type="string">
+            <column length="512" name="GdncRspns_rqstdntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="gdncRspnsRqstdntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="GdncRspns_rqstdntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRqstdntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="GdncRspns_rqstdntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRqstdntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="GdncRspns_rqstdntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRqstdntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="GdncRspns_rqstdntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="GdncRspns_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="GdncRspns_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="GdncRspns_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="GdncRspns_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="GdncRspns_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseModuleUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="GuidanceResponse_moduleUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseModuleCanonical" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="GuidanceResponse_moduleCanonical">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsMdlcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="GdncRspns_mdlcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsMdlcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="GdncRspns_mdlcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsMdlcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="GdncRspns_mdlcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsMdlcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="GdncRspns_mdlcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsMdlcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="GdncRspns_mdlcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GuidanceResponse_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsCcrrncDtTme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="GdncRspns_ccrrncDtTme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="guidanceResponsePerformer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_performer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="GdncRspns_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="GdncRspns_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="GdncRspns_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="GdncRspns_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="GdncRspns_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseReasonReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_reasonReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="GdncRspns_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="GuidanceResponse_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="GdncRspns_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="GdncRspns_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="gdncRspnsNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="GdncRspns_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseEvaluationMessage" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_evaluationMessage">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseOutputParameters" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_outputParameters">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseResult" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="GuidanceResponse_result">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="guidanceResponseDataRequirement" type="string">
+            <meta attribute="resource-type">DataRequirement</meta>
+            <column length="65535" name="GuidanceResponse_dataRequirement">
+                <comment>DataRequirement</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

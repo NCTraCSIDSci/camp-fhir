@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Requestgroup" optimistic-lock="none" table="requestgroup">
+        <id name="rqstGrpDntfrCdngCde" type="string">
+            <column length="512" name="RqstGrp_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="rqstGrpDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="RqstGrp_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="RqstGrp_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="RqstGrp_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="RqstGrp_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupInstantiatesCanonical" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="RequestGroup_instantiatesCanonical">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="requestGroupInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="RequestGroup_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="requestGroupBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="requestGroupReplaces" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_replaces">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rqstGrpGrpdntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpGrpdntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpGrpdntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpGrpdntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpGrpdntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RequestGroup_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="requestGroupIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RequestGroup_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="requestGroupPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RequestGroup_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="requestGroupCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RequestGroup_code_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="requestGroupCodeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RequestGroup_code_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="requestGroupCodeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RequestGroup_code_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="requestGroupCodeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RequestGroup_code_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="requestGroupEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="requestGroupAuthoredOn" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="RequestGroup_authoredOn">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="requestGroupAuthor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_author">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rqstGrpRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupReasonReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_reasonReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rqstGrpNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="requestGroupNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RequestGroup_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="requestGroupNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RequestGroup_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="requestGroupNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RequestGroup_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="requestGroupNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RequestGroup_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RequestGroup_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionPrefix" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RequestGroup_action_prefix">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RequestGroup_action_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RequestGroup_action_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTextEquivalent" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RequestGroup_action_textEquivalent">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RequestGroup_action_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionDocumentation" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="RequestGroup_action_documentation">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionCondition" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RequestGroup_action_condition">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionConditionKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RequestGroup_action_condition_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCndtnXprssn" type="string">
+            <meta attribute="resource-type">Expression</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn">
+                <comment>Expression</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionRelatedAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RequestGroup_action_relatedAction">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnCtnd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ctnd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnRltnshp" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_rltnshp">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstDrtn" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstDrtn">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRltdctnFfstRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTimingDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="RequestGroup_action_timingDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTimingAge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="RequestGroup_action_timingAge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTimingDuration" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="RequestGroup_action_timingDuration">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionParticipant" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_action_participant">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnGrpngBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_grpngBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnSlctnBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_slctnBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRqrdBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_rqrdBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnPrchckBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_prchckBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCrdnltBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RqstGrp_ctn_crdnltBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionResource" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RequestGroup_action_resource">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionAction" type="string">
+            <meta attribute="resource-type">see action</meta>
+            <column length="65535" name="RequestGroup_action_action">
+                <comment>see action</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

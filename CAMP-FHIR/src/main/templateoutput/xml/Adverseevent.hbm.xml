@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Adverseevent" optimistic-lock="none" table="adverseevent">
+        <id name="advrsvntDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Advrsvnt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="advrsvntDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_use_code</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_s_cde">
+                <comment>AdverseEvent_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>AdverseEvent_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_CdblCncpt_txt">
+                <comment>AdverseEvent_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Prd_strt">
+                <comment>AdverseEvent_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Prd_nd">
+                <comment>AdverseEvent_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>AdverseEvent_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Rfrnc_tpe">
+                <comment>AdverseEvent_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>AdverseEvent_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>AdverseEvent_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_value_string</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_vl_strng">
+                <comment>AdverseEvent_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">AdverseEvent_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Advrsvnt_dntfr_dntfr_sstm_ri">
+                <comment>AdverseEvent_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="adverseEventActuality" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="AdverseEvent_actuality">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntCtgrCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_ctgr_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntVntCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_vnt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_sbjct_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntNcntrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_ncntr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="adverseEventDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="AdverseEvent_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="adverseEventDetected" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="AdverseEvent_detected">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="adverseEventRecordedDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="AdverseEvent_recordedDate">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRsltngCndtnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_rsltngCndtn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntLctnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_lctn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntSrsnssCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_srsnss_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntSvrtCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_svrt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntTcmCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_tcm_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRcrdrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_rcrdr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntCntrbtrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_cntrbtr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttNstncRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_nstnc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltSsssmntCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_ssssmnt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltPrdctRltdnss" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_prdctRltdnss">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltThrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_thr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="advrsvntSspctnttCsltMthdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Advrsvnt_sspctntt_cslt_mthd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntSbjctMdclHstrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_sbjctMdclHstr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntRfrncDcmntRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_rfrncDcmnt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="advrsvntStdRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Advrsvnt_std_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Testreport" optimistic-lock="none" table="testreport">
+        <id name="testReportIdentifierCodingCode" type="string">
+            <column length="512" name="TestReport_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="tstRprtDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="TstRprt_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="tstRprtDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="TstRprt_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="tstRprtDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="TstRprt_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="tstRprtDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="TstRprt_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="testReportName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestReport_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TestReport_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="testReportTestScript" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="TestReport_testScript">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="testReportResult" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TestReport_result">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="testReportScore" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="TestReport_score">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="testReportTester" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestReport_tester">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportIssued" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="TestReport_issued">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="testReportParticipant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_participant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportParticipantType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TestReport_participant_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="testReportParticipantUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="TestReport_participant_uri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="testReportParticipantDisplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestReport_participant_display">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportSetup" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_setup">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportSetupAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_setup_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportSetupActionOperation" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_setup_action_operation">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnPrtnRslt" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_rslt">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnPrtnMssge" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_mssge">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnPrtnDtl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_dtl">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="testReportSetupActionAssert" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_setup_action_assert">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnSsrtRslt" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_rslt">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnSsrtMssge" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_mssge">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="tstRprtStpCtnSsrtDtl" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_dtl">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportTest" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_test">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportTestName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestReport_test_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportTestDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TestReport_test_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="testReportTestAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_test_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportTestActionOperation" type="string">
+            <meta attribute="resource-type">see operation</meta>
+            <column length="65535" name="TestReport_test_action_operation">
+                <comment>see operation</comment>
+            </column>
+        </property>
+        <property name="testReportTestActionAssert" type="string">
+            <meta attribute="resource-type">see assert</meta>
+            <column length="65535" name="TestReport_test_action_assert">
+                <comment>see assert</comment>
+            </column>
+        </property>
+        <property name="testReportTeardown" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_teardown">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="testReportTeardownAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="TestReport_teardown_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="tstRprtTrdwnCtnPrtn" type="string">
+            <meta attribute="resource-type">see operation</meta>
+            <column length="65535" name="TstRprt_trdwn_ctn_prtn">
+                <comment>see operation</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

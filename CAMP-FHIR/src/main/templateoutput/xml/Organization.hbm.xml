@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Organization" optimistic-lock="none" table="organization">
+        <id name="orgnztnDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="orgnztnDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_use_code</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_s_cde">
+                <comment>Organization_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Organization_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Prd_strt">
+                <comment>Organization_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Prd_nd">
+                <comment>Organization_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Organization_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Organization_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Organization_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Organization_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_value_string</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_vl_strng">
+                <comment>Organization_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Organization_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_sstm_ri">
+                <comment>Organization_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="organizationActive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Organization_active">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="orgnztnTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Orgnztn_tp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="organizationName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Organization_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="organizationAlias" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Organization_alias">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntSstmCde" type="string">
+            <meta attribute="resource-type">ContactPoint_system_code</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_sstm_cde">
+                <comment>ContactPoint_system_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntSCde" type="string">
+            <meta attribute="resource-type">ContactPoint_use_code</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_s_cde">
+                <comment>ContactPoint_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_start</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_Prd_strt">
+                <comment>ContactPoint_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_end</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_Prd_nd">
+                <comment>ContactPoint_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntRnkPstvnt" type="string">
+            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_rnk_pstvnt">
+                <comment>ContactPoint_rank_positiveInt</comment>
+            </column>
+        </property>
+        <property name="orgnztnTlcmCntctPntVlStrng" type="string">
+            <meta attribute="resource-type">ContactPoint_value_string</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_vl_strng">
+                <comment>ContactPoint_value_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssSCde" type="string">
+            <meta attribute="resource-type">Address_use_code</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_s_cde">
+                <comment>Address_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssTpCde" type="string">
+            <meta attribute="resource-type">Address_type_code</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_tp_cde">
+                <comment>Address_type_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssPrdStrt" type="string">
+            <meta attribute="resource-type">Address_Period_start</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_Prd_strt">
+                <comment>Address_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssPrdNd" type="string">
+            <meta attribute="resource-type">Address_Period_end</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_Prd_nd">
+                <comment>Address_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssTxtStrng" type="string">
+            <meta attribute="resource-type">Address_text_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_txt_strng">
+                <comment>Address_text_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssLnStrng" type="string">
+            <meta attribute="resource-type">Address_line_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_ln_strng">
+                <comment>Address_line_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssCtStrng" type="string">
+            <meta attribute="resource-type">Address_city_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_ct_strng">
+                <comment>Address_city_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssDstrctStrng" type="string">
+            <meta attribute="resource-type">Address_district_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_dstrct_strng">
+                <comment>Address_district_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssSttStrng" type="string">
+            <meta attribute="resource-type">Address_state_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_stt_strng">
+                <comment>Address_state_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssPstlCdStrng" type="string">
+            <meta attribute="resource-type">Address_postalCode_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_pstlCd_strng">
+                <comment>Address_postalCode_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnDdrssDdrssCntrStrng" type="string">
+            <meta attribute="resource-type">Address_country_string</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_cntr_strng">
+                <comment>Address_country_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnPrtfRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Orgnztn_prtf_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctPrpsCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmSCde" type="string">
+            <meta attribute="resource-type">HumanName_use_code</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_s_cde">
+                <comment>HumanName_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmPrdStrt" type="string">
+            <meta attribute="resource-type">HumanName_Period_start</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_Prd_strt">
+                <comment>HumanName_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmPrdNd" type="string">
+            <meta attribute="resource-type">HumanName_Period_end</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_Prd_nd">
+                <comment>HumanName_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmTxtStrng" type="string">
+            <meta attribute="resource-type">HumanName_text_string</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_txt_strng">
+                <comment>HumanName_text_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmFmlStrng" type="string">
+            <meta attribute="resource-type">HumanName_family_string</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_fml_strng">
+                <comment>HumanName_family_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmGvnStrng" type="string">
+            <meta attribute="resource-type">HumanName_given_string</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_gvn_strng">
+                <comment>HumanName_given_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmPrfxStrng" type="string">
+            <meta attribute="resource-type">HumanName_prefix_string</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_prfx_strng">
+                <comment>HumanName_prefix_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctNmHmnNmSffxStrng" type="string">
+            <meta attribute="resource-type">HumanName_suffix_string</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_sffx_strng">
+                <comment>HumanName_suffix_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntSstmCde" type="string">
+            <meta attribute="resource-type">ContactPoint_system_code</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_sstm_cde">
+                <comment>ContactPoint_system_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntSCde" type="string">
+            <meta attribute="resource-type">ContactPoint_use_code</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_s_cde">
+                <comment>ContactPoint_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_start</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_Prd_strt">
+                <comment>ContactPoint_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_end</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_Prd_nd">
+                <comment>ContactPoint_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntRnkPstvnt" type="string">
+            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_rnk_pstvnt">
+                <comment>ContactPoint_rank_positiveInt</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctTlcmCntctPntVlStrng" type="string">
+            <meta attribute="resource-type">ContactPoint_value_string</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_vl_strng">
+                <comment>ContactPoint_value_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssSCde" type="string">
+            <meta attribute="resource-type">Address_use_code</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_s_cde">
+                <comment>Address_use_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssTpCde" type="string">
+            <meta attribute="resource-type">Address_type_code</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_tp_cde">
+                <comment>Address_type_code</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssPrdStrt" type="string">
+            <meta attribute="resource-type">Address_Period_start</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_Prd_strt">
+                <comment>Address_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssPrdNd" type="string">
+            <meta attribute="resource-type">Address_Period_end</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_Prd_nd">
+                <comment>Address_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssTxtStrng" type="string">
+            <meta attribute="resource-type">Address_text_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_txt_strng">
+                <comment>Address_text_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssLnStrng" type="string">
+            <meta attribute="resource-type">Address_line_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_ln_strng">
+                <comment>Address_line_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssCtStrng" type="string">
+            <meta attribute="resource-type">Address_city_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_ct_strng">
+                <comment>Address_city_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssDstrctStrng" type="string">
+            <meta attribute="resource-type">Address_district_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_dstrct_strng">
+                <comment>Address_district_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssSttStrng" type="string">
+            <meta attribute="resource-type">Address_state_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_stt_strng">
+                <comment>Address_state_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssPstlCdStrng" type="string">
+            <meta attribute="resource-type">Address_postalCode_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_pstlCd_strng">
+                <comment>Address_postalCode_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnCntctDdrssDdrssCntrStrng" type="string">
+            <meta attribute="resource-type">Address_country_string</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_cntr_strng">
+                <comment>Address_country_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="orgnztnNdpntRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

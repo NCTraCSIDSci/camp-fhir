@@ -1,0 +1,2218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Contract" optimistic-lock="none" table="contract">
+        <id name="contractIdentifierCodingCode" type="string">
+            <column length="512" name="Contract_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="cntrctDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Cntrct_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Contract_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Contract_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Contract_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Contract_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="contractVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Contract_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cntrctLglSttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_lglStt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractLegalStateCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_legalState_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractLegalStateCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_legalState_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractLegalStateCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_legalState_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractLegalStateCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_legalState_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractInstantiatesCanonical" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_instantiatesCanonical">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Contract_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDrvtvCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_cntntDrvtv_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDrvtvCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_cntntDrvtv_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDrvtvCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_cntntDrvtv_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDrvtvCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_cntntDrvtv_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDrvtvCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_cntntDrvtv_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractIssued" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Contract_issued">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctPplsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_ppls_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractAppliesCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_applies_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractAppliesCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_applies_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractAppliesCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_applies_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractAppliesCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_applies_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctXprtnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_xprtnTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctXprtnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_xprtnTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctXprtnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_xprtnTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctXprtnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_xprtnTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctXprtnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_xprtnTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractAuthority" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_authority">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractDomain" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_domain">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractSite" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_site">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractAlias" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_alias">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractAuthor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_author">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractScopeCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Contract_scope_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractScopeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_scope_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractScopeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_scope_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractScopeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_scope_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractScopeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_scope_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTpccdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_tpccdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractTopiccdblcptCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_topiccdblcpt_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTpccdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_tpccdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTpccdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_tpccdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTpccdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_tpccdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTopicReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_topicReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Contract_type_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctSbTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_sbTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractSubTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_subType_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractSubTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_subType_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractSubTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_subType_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractSubTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_subType_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractContentDefinition" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_contentDefinition">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnSbTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_sbTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnSbTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_sbTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnSbTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_sbTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnSbTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_sbTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnSbTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_sbTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnPblshr" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_pblshr">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnPblctnDte" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_pblctnDte">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnPblctnStts" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_pblctnStts">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cntrctCntntDfntnCprght" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Cntrct_cntntDfntn_cprght">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="contractTerm" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermIssued" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Contract_term_issued">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmPplsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ppls_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractTermAppliesCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_term_applies_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmPplsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ppls_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmPplsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ppls_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmPplsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ppls_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpccdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_tpccdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpccdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_tpccdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpccdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_tpccdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpccdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_tpccdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpccdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_tpccdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermTopicReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_topicReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractTermTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_term_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="contractTermTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Contract_term_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="contractTermTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Contract_term_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractTermTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_term_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSbTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sbTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractTermSubTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_term_subType_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSbTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sbTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSbTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sbTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSbTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sbTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermSecurityLabel" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_securityLabel">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="contractTermSecurityLabelNumber" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Contract_term_securityLabel_number">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblClssfctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_clssfctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblClssfctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_clssfctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblClssfctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_clssfctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblClssfctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_clssfctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblClssfctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_clssfctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCntrlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_cntrl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCntrlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_cntrl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCntrlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_cntrl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCntrlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_cntrl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmScrtLblCntrlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_scrtLbl_cntrl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermOffer" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_offer">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermOfferParty" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_offer_party">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrPrtRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_prt_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermOfferTopic" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_offer_topic">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnMdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsnMd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnMdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsnMd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnMdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsnMd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnMdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsnMd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrDcsnMdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_dcsnMd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermOfferAnswer" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_offer_answer">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlCdngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlCdng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlCdngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlCdng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlCdngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlCdng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlCdngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlCdng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlCdngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlCdng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrNswrVlRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_ffr_nswr_vlRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractTermOfferText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_offer_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermOfferLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_offer_linkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmFfrScrtLblNmbr" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Cntrct_trm_ffr_scrtLblNmbr">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="contractTermAsset" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_asset">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_scp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_scp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_scp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_scp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_scp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetTypeReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_asset_typeReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSbtpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_sbtp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSbtpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_sbtp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSbtpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_sbtp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSbtpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_sbtp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSbtpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_sbtp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstRltnshpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_rltnshp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstRltnshpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_rltnshp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstRltnshpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_rltnshp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstRltnshpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_rltnshp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstRltnshpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_rltnshp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetContext" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_asset_context">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_rfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstCntxtCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_cntxt_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetContextText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_asset_context_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetCondition" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_asset_condition">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_prdTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_prdTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_prdTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_prdTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_prdTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_prd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_sPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_sPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_sPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_sPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstSPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_sPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_asset_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_asset_linkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetAnswer" type="string">
+            <meta attribute="resource-type">see answer</meta>
+            <column length="65535" name="Contract_term_asset_answer">
+                <comment>see answer</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstScrtLblNmbr" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Cntrct_trm_sst_scrtLblNmbr">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="contractTermAssetValuedItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_asset_valuedItem">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNttRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nttRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmFfctvTme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ffctvTme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmQntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_qntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtPrcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ntPrc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtPrcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ntPrc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtPrcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ntPrc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtPrcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ntPrc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtPrcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_ntPrc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmFctr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_fctr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmPnts" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_pnts">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmPmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_pmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmPmntDte" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_pmntDte">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmRspnsble" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_rspnsble">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmRcpnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_rcpnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmLnkd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_lnkd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmSstVldtmScrtLblNmbr" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Cntrct_trm_sst_vldtm_scrtLblNmbr">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="contractTermAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="contractTermActionDoNotPerform" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Contract_term_action_doNotPerform">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermActionSubject" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_term_action_subject">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSbjctRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_sbjct_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ntnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ntnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ntnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ntnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ntnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermActionLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_action_linkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSttsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_stts_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSttsCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_stts_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSttsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_stts_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSttsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_stts_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnSttsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_stts_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermActionContext" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_action_context">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractTermActionContextLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_action_contextLinkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnCcrrncTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_ccrrncTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermActionRequester" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_action_requester">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRqstrLnkd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rqstrLnkd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrRl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrRl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrRl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrRl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrRl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractTermActionPerformer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_term_action_performer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnPrfrmrLnkd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Cntrct_trm_ctn_prfrmrLnkd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnRsnRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Cntrct_trm_ctn_rsnRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractTermActionReason" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_action_reason">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="contractTermActionReasonLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Contract_term_action_reasonLinkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_trm_ctn_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_trm_ctn_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_trm_ctn_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_trm_ctn_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_trm_ctn_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cntrctTrmCtnScrtLblNmbr" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Cntrct_trm_ctn_scrtLblNmbr">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="contractTermGroup" type="string">
+            <meta attribute="resource-type">see term</meta>
+            <column length="65535" name="Contract_term_group">
+                <comment>see term</comment>
+            </column>
+        </property>
+        <property name="contractSupportingInfo" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_supportingInfo">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractRelevantHistory" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_relevantHistory">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractSigner" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_signer">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_sgnr_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="contractSignerTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Contract_signer_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_sgnr_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_sgnr_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="contractSignerTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Contract_signer_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractSignerParty" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_signer_party">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrSgntrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_sgnr_sgntr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrSgntrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_sgnr_sgntr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrSgntrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_sgnr_sgntr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrSgntrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_sgnr_sgntr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctSgnrSgntrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_sgnr_sgntr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractFriendly" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_friendly">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctFrndlCntntttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_frndl_cntntttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctFrndlCntntttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_frndl_cntntttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctFrndlCntntttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_frndl_cntntttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctFrndlCntntttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_frndl_cntntttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctFrndlCntntttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_frndl_cntntttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractFriendlyContentReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_friendly_contentReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractLegal" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_legal">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctLglCntntttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_lgl_cntntttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctLglCntntttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_lgl_cntntttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctLglCntntttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_lgl_cntntttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctLglCntntttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_lgl_cntntttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctLglCntntttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_lgl_cntntttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractLegalContentReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_legal_contentReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="contractRule" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Contract_rule">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cntrctRlCntntttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_rl_cntntttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctRlCntntttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_rl_cntntttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctRlCntntttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_rl_cntntttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctRlCntntttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_rl_cntntttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctRlCntntttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_rl_cntntttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractRuleContentReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_rule_contentReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cntrctLgllBndngttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cntrct_lgllBndngttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cntrctLgllBndngttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cntrct_lgllBndngttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cntrctLgllBndngttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cntrct_lgllBndngttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cntrctLgllBndngttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cntrct_lgllBndngttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cntrctLgllBndngttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cntrct_lgllBndngttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="contractLegallyBindingReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Contract_legallyBindingReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

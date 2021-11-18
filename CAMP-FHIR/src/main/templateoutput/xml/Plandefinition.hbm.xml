@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Plandefinition" optimistic-lock="none" table="plandefinition">
+        <id name="planDefinitionUrl" type="string">
+            <column length="512" name="PlanDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="plnDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="plnDfntnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlanDefinition_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlanDefinition_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlanDefinition_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlanDefinition_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlanDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="planDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="PlanDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="plnDfntnSbjctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_sbjctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnSbjctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_sbjctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnSbjctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_sbjctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnSbjctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_sbjctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnSbjctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_sbjctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionSubjectReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PlanDefinition_subjectReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="planDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="PlanDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="planDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="PlanDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="planDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="PlanDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="planDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="PlanDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="plnDfntnJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="PlanDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="planDefinitionUsage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_usage">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="PlanDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="planDefinitionApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="PlanDefinition_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="planDefinitionLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="PlanDefinition_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="plnDfntnFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTopicCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlanDefinition_topic_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="planDefinitionTopicCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlanDefinition_topic_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="PlanDefinition_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="planDefinitionEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="PlanDefinition_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="planDefinitionReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="PlanDefinition_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="planDefinitionEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="PlanDefinition_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="planDefinitionRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="PlanDefinition_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="planDefinitionLibrary" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="PlanDefinition_library">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="planDefinitionGoal" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_goal">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDscrptnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_dscrptn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDscrptnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_dscrptn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDscrptnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_dscrptn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDscrptnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_dscrptn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDscrptnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_dscrptn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlPrrtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_prrt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlPrrtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_prrt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlPrrtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_prrt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlPrrtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_prrt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlPrrtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_prrt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlStrtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_strt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlStrtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_strt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlStrtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_strt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlStrtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_strt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlStrtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_strt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDdrsssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_ddrsss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDdrsssCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_ddrsss_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDdrsssCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_ddrsss_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDdrsssCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_ddrsss_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlDdrsssCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_ddrsss_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionGoalDocumentation" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="PlanDefinition_goal_documentation">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="planDefinitionGoalTarget" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_goal_target">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtMsrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_msr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtMsrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_msr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtMsrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_msr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtMsrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_msr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtMsrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_msr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnGlTrgtDtlcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_gl_trgt_dtlcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionGoalTargetDue" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="PlanDefinition_goal_target_due">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="planDefinitionAction" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_action">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionPrefix" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_action_prefix">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_action_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlanDefinition_action_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTxtqvlnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlnDfntn_ctn_txtqvlnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlanDefinition_action_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_rsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_rsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_rsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_rsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_rsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnDcmnttn" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="PlnDfntn_ctn_dcmnttn">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionGoalId" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="PlanDefinition_action_goalId">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSbjctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PlnDfntn_ctn_sbjctRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionTrigger" type="string">
+            <meta attribute="resource-type">TriggerDefinition</meta>
+            <column length="65535" name="PlanDefinition_action_trigger">
+                <comment>TriggerDefinition</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionCondition" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_action_condition">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCndtnKnd" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_cndtn_knd">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCndtnXprssn" type="string">
+            <meta attribute="resource-type">Expression</meta>
+            <column length="65535" name="PlnDfntn_ctn_cndtn_xprssn">
+                <comment>Expression</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionInput" type="string">
+            <meta attribute="resource-type">DataRequirement</meta>
+            <column length="65535" name="PlanDefinition_action_input">
+                <comment>DataRequirement</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionOutput" type="string">
+            <meta attribute="resource-type">DataRequirement</meta>
+            <column length="65535" name="PlanDefinition_action_output">
+                <comment>DataRequirement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctn" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnCtnd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ctnd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnRltnshp" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_rltnshp">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstDrtn" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstDrtn">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRltdctnFfstRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_rltdctn_ffstRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionTimingAge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="PlanDefinition_action_timingAge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngDrtn" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngDrtn">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTmngTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_tmngTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionParticipant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_action_participant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrtcpntRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_prtcpnt_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PlnDfntn_ctn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PlnDfntn_ctn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PlnDfntn_ctn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PlnDfntn_ctn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PlnDfntn_ctn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnGrpngBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_grpngBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnSlctnBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_slctnBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnRqrdBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_rqrdBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnPrchckBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_prchckBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnCrdnltBhvr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PlnDfntn_ctn_crdnltBhvr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnDfntnCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="PlnDfntn_ctn_dfntnCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnDfntnri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="PlnDfntn_ctn_dfntnri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionTransform" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="PlanDefinition_action_transform">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionDynamicValue" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PlanDefinition_action_dynamicValue">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnDnmcVlPth" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PlnDfntn_ctn_dnmcVl_pth">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="plnDfntnCtnDnmcVlXprssn" type="string">
+            <meta attribute="resource-type">Expression</meta>
+            <column length="65535" name="PlnDfntn_ctn_dnmcVl_xprssn">
+                <comment>Expression</comment>
+            </column>
+        </property>
+        <property name="planDefinitionActionAction" type="string">
+            <meta attribute="resource-type">see action</meta>
+            <column length="65535" name="PlanDefinition_action_action">
+                <comment>see action</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

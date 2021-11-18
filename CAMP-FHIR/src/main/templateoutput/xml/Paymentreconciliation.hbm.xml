@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Paymentreconciliation" optimistic-lock="none" table="paymentreconciliation">
+        <id name="pmntRcncltnDntfrCdngCde" type="string">
+            <column length="512" name="PmntRcncltn_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="pmntRcncltnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="PmntRcncltn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="PmntRcncltn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="PmntRcncltn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="PmntRcncltn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PaymentReconciliation_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_prd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="PaymentReconciliation_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntssr" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PmntRcncltn_pmntssr">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationRequest" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentReconciliation_request">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationRequestor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentReconciliation_requestor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationOutcome" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PaymentReconciliation_outcome">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationDisposition" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PaymentReconciliation_disposition">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationPaymentDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="PaymentReconciliation_paymentDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntdntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntdntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntdntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntdntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPmntdntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationDetail" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PaymentReconciliation_detail">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPrdcssrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPrdcssrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPrdcssrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPrdcssrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPrdcssrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRqst" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rqst">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlSbmttr" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PmntRcncltn_dtl_sbmttr">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRspnse" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rspnse">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationDetailDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="PaymentReconciliation_detail_date">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRspnsble" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rspnsble">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationDetailPayee" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentReconciliation_detail_payee">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="paymentReconciliationProcessNote" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="PaymentReconciliation_processNote">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrcssNtTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PmntRcncltn_prcssNt_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrcssNtTxt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="PmntRcncltn_prcssNt_txt">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

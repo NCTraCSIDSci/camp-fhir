@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Evidence" optimistic-lock="none" table="evidence">
+        <id name="evidenceUrl" type="string">
+            <column length="512" name="Evidence_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="evdncDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Evdnc_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceIdentifierCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Evidence_identifier_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evidenceIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Evidence_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evidenceIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Evidence_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evidenceIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Evidence_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceShortTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_shortTitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Evidence_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="evidenceDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Evidence_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="evidencePublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Evidence_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Evidence_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Evidence_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="evidenceNoteCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Evidence_note_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Evidence_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evidenceNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Evidence_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evidenceNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Evidence_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evidenceNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Evidence_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="Evidence_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Evdnc_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceJurisdictionCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Evidence_jurisdiction_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Evdnc_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Evdnc_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Evdnc_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Evidence_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="evidenceApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Evidence_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="evidenceLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Evidence_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Evidence_topic_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Evidence_topic_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Evidence_topic_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Evidence_topic_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Evidence_topic_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Evidence_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Evidence_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Evidence_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Evidence_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="Evidence_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="evidenceExposureBackground" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Evidence_exposureBackground">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="evidenceExposureVariant" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Evidence_exposureVariant">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="evidenceOutcome" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Evidence_outcome">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

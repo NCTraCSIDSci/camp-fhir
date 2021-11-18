@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Molecularsequence" optimistic-lock="none" table="molecularsequence">
+        <id name="mlclrSqncDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="mlclrSqncDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_use_code</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_s_cde">
+                <comment>MolecularSequence_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>MolecularSequence_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Period_start</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Prd_strt">
+                <comment>MolecularSequence_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Period_end</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Prd_nd">
+                <comment>MolecularSequence_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>MolecularSequence_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>MolecularSequence_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>MolecularSequence_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>MolecularSequence_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_value_string</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_vl_strng">
+                <comment>MolecularSequence_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_system_uri</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_sstm_ri">
+                <comment>MolecularSequence_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MolecularSequence_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceCoordinateSystem" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_coordinateSystem">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncSpcmnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncDvcRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPrfrmrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQnttQnttCmprtrCde" type="string">
+            <meta attribute="resource-type">Quantity_comparator_code</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_cmprtr_cde">
+                <comment>Quantity_comparator_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQnttQnttCdCde" type="string">
+            <meta attribute="resource-type">Quantity_code_code</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_cd_cde">
+                <comment>Quantity_code_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQnttQnttVlDcml" type="string">
+            <meta attribute="resource-type">Quantity_value_decimal</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_vl_dcml">
+                <comment>Quantity_value_decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQnttQnttNtStrng" type="string">
+            <meta attribute="resource-type">Quantity_unit_string</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_nt_strng">
+                <comment>Quantity_unit_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQnttQnttSstmRi" type="string">
+            <meta attribute="resource-type">Quantity_system_uri</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_sstm_ri">
+                <comment>Quantity_system_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqChrmsmCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqGnmBld" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_gnmBld">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRnttn" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rnttn">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqRfrncSqStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqStrnd" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_strnd">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqWndwStrt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_wndwStrt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRfrncSqWndwnd" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_wndwnd">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceVariantStart" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_variant_start">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceVariantEnd" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_variant_end">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntBsrvdllle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_bsrvdllle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntRfrncllle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_rfrncllle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceVariantCigar" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MolecularSequence_variant_cigar">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncVrntVrntPntrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceObservedSeq" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MolecularSequence_observedSeq">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MolecularSequence_quality_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltStndrdSqncCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityStart" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_quality_start">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityEnd" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_quality_end">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltScrQnttCmprtrCde" type="string">
+            <meta attribute="resource-type">Quantity_comparator_code</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cmprtr_cde">
+                <comment>Quantity_comparator_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltScrQnttCdCde" type="string">
+            <meta attribute="resource-type">Quantity_code_code</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cd_cde">
+                <comment>Quantity_code_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltScrQnttVlDcml" type="string">
+            <meta attribute="resource-type">Quantity_value_decimal</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_vl_dcml">
+                <comment>Quantity_value_decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltScrQnttNtStrng" type="string">
+            <meta attribute="resource-type">Quantity_unit_string</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_nt_strng">
+                <comment>Quantity_unit_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltScrQnttSstmRi" type="string">
+            <meta attribute="resource-type">Quantity_system_uri</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_sstm_ri">
+                <comment>Quantity_system_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltMthdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityTruthTp" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_truthTP">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityQueryTp" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_queryTP">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityTruthFn" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_truthFN">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityQueryFp" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_queryFP">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityGtFp" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_gtFP">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltPrcsn" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MlclrSqnc_qlt_prcsn">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityRecall" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_recall">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceQualityFScore" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MolecularSequence_quality_fScore">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcScre" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_scre">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcNmTp" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmTP">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcNmFp" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmFP">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcNmFn" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmFN">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcPrcsn" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_prcsn">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcSnstvty" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_snstvty">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncQltRcFMsre" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_fMsre">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceReadCoverage" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MolecularSequence_readCoverage">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceRepositoryType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MolecularSequence_repository_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceRepositoryUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="MolecularSequence_repository_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="molecularSequenceRepositoryName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MolecularSequence_repository_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRpstrDtstd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_dtstd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRpstrVrntstd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_vrntstd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncRpstrRdstd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_rdstd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncPntrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntXct" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_xct">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntLngth" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_lngth">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntTrStrt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_strt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntTrNd" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_nd">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntNnrStrt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_strt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="mlclrSqncStrctrVrntNnrNd" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_nd">
+                <comment>integer</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

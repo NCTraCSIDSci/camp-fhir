@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Claimresponse" optimistic-lock="none" table="claimresponse">
+        <id name="clmRspnsDntfrCdngCde" type="string">
+            <column length="512" name="ClmRspns_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="clmRspnsDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="ClmRspns_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="ClmRspns_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="ClmRspns_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="ClmRspns_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ClaimResponse_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="claimResponseTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClaimResponse_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="claimResponseTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClaimResponse_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="claimResponseTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClaimResponse_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="claimResponseTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClaimResponse_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsSbTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_sbTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="claimResponseSubTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClaimResponse_subType_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsSbTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_sbTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsSbTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_sbTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsSbTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_sbTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseUse" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ClaimResponse_use">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="claimResponsePnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_pnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ClaimResponse_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="claimResponseInsurer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_insurer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseRequestor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_requestor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseRequest" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_request">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseOutcome" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ClaimResponse_outcome">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="claimResponseDisposition" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ClaimResponse_disposition">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="claimResponsePreAuthRef" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ClaimResponse_preAuthRef">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrthPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_prthPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrthPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_prthPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrthPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_prthPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrthPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_prthPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrthPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_prthPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_item">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="claimResponseItemItemSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_item_itemSequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseItemNoteNumber" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_item_noteNumber">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseItemAdjudication" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_item_adjudication">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_rsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_rsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_rsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_rsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_rsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDjdctnVlue" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="ClmRspns_tm_djdctn_vlue">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="claimResponseItemDetail" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_item_detail">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlDtlSqnce" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_dtlSqnce">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlNtNmbr" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_ntNmbr">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlDjdctn" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_djdctn">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlSbDtl" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_sbDtl">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlSbDtlSbDtlSqnce" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_sbDtl_sbDtlSqnce">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlSbDtlNtNmbr" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_sbDtl_ntNmbr">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTmDtlSbDtlDjdctn" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClmRspns_tm_dtl_sbDtl_djdctn">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_addItem">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemItemSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_addItem_itemSequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSqnce" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtlSqnce">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbdtlSqnce" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbdtlSqnce">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemProvider" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_addItem_provider">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrdctrSrvcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_prdctrSrvc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrdctrSrvcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_prdctrSrvc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrdctrSrvcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_prdctrSrvc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrdctrSrvcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_prdctrSrvc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrdctrSrvcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_prdctrSrvc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_mdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_mdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_mdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_mdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_mdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrgrmCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_prgrmCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrgrmCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_prgrmCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrgrmCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_prgrmCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrgrmCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_prgrmCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmPrgrmCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_prgrmCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemServicedDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ClaimResponse_addItem_servicedDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSrvcdPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_srvcdPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSrvcdPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_srvcdPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSrvcdPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_srvcdPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSrvcdPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_srvcdPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSrvcdPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_srvcdPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctncdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctncdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctncdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctncdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctncdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctncdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctncdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctncdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctncdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctncdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnddrssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnddrss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnddrssCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnddrss_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnddrssCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnddrss_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnddrssCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnddrss_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnddrssCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnddrss_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmLctnRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClmRspns_ddtm_lctnRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemQuantity" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="ClaimResponse_addItem_quantity">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtPrcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_ntPrc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtPrcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_ntPrc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtPrcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_ntPrc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtPrcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_ntPrc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtPrcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_ntPrc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemFactor" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="ClaimResponse_addItem_factor">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmBdStCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_bdSt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmBdStCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_bdSt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmBdStCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_bdSt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmBdStCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_bdSt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmBdStCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_bdSt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbStCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbSt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbStCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbSt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbStCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbSt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbStCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbSt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmSbStCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_sbSt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemNoteNumber" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_addItem_noteNumber">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemAdjudication" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClaimResponse_addItem_adjudication">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="claimResponseAddItemDetail" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_addItem_detail">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlPrdctrSrvcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_prdctrSrvc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlPrdctrSrvcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_prdctrSrvc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlPrdctrSrvcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_prdctrSrvc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlPrdctrSrvcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_prdctrSrvc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlPrdctrSrvcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_prdctrSrvc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_mdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_mdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_mdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_mdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_mdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlQntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_qntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtPrcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntPrc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtPrcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntPrc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtPrcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntPrc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtPrcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntPrc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtPrcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntPrc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlFctr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_fctr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlNtNmbr" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_ntNmbr">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlDjdctn" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_djdctn">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtl" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlPrdctrSrvcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_prdctrSrvc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlPrdctrSrvcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_prdctrSrvc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlPrdctrSrvcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_prdctrSrvc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlPrdctrSrvcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_prdctrSrvc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlPrdctrSrvcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_prdctrSrvc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_mdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_mdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_mdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_mdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_mdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlQntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_qntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtPrcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntPrc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtPrcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntPrc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtPrcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntPrc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtPrcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntPrc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtPrcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntPrc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlFctr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_fctr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlNtNmbr" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_ntNmbr">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsDdtmDtlSbDtlDjdctn" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClmRspns_ddtm_dtl_sbDtl_djdctn">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="claimResponseAdjudication" type="string">
+            <meta attribute="resource-type">see adjudication</meta>
+            <column length="65535" name="ClaimResponse_adjudication">
+                <comment>see adjudication</comment>
+            </column>
+        </property>
+        <property name="claimResponseTotal" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_total">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ttl_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ttl_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ttl_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ttl_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ttl_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_ttl_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_ttl_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_ttl_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_ttl_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsTtlMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_ttl_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponsePayment" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_payment">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pmnt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pmnt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pmnt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pmnt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pmnt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmntRsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmntRsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmntRsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmntRsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDjstmntRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pmnt_djstmntRsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponsePaymentDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ClaimResponse_payment_date">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pmnt_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pmnt_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pmnt_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pmnt_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pmnt_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_pmnt_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_pmnt_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_pmnt_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_pmnt_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPmntDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_pmnt_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFndsRsrvCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_fndsRsrv_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFndsRsrvCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_fndsRsrv_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFndsRsrvCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_fndsRsrv_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFndsRsrvCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_fndsRsrv_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFndsRsrvCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_fndsRsrv_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFrmCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_frmCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="claimResponseFormCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClaimResponse_formCode_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFrmCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_frmCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFrmCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_frmCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFrmCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_frmCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="clmRspnsFrmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_frm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="claimResponseFormCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClaimResponse_form_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="claimResponseFormCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClaimResponse_form_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="claimResponseFormCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClaimResponse_form_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="claimResponseFormCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClaimResponse_form_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseProcessNote" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_processNote">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="claimResponseProcessNoteNumber" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_processNote_number">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseProcessNoteType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ClaimResponse_processNote_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="claimResponseProcessNoteText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ClaimResponse_processNote_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrcssNtLnggCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_prcssNt_lngg_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrcssNtLnggCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_prcssNt_lngg_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrcssNtLnggCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_prcssNt_lngg_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrcssNtLnggCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_prcssNt_lngg_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsPrcssNtLnggCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_prcssNt_lngg_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="claimResponseCommunicationRequest" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_communicationRequest">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseInsurance" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_insurance">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="claimResponseInsuranceSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_insurance_sequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseInsuranceFocal" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ClaimResponse_insurance_focal">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="claimResponseInsuranceCoverage" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClaimResponse_insurance_coverage">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="clmRspnsNsrncBsnssrrngmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ClmRspns_nsrnc_bsnssrrngmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="clmRspnsNsrncClmRspnse" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ClmRspns_nsrnc_clmRspnse">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="claimResponseError" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ClaimResponse_error">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="claimResponseErrorItemSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_error_itemSequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="claimResponseErrorDetailSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClaimResponse_error_detailSequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrSbDtlSqnce" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="ClmRspns_rrr_sbDtlSqnce">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ClmRspns_rrr_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ClmRspns_rrr_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ClmRspns_rrr_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ClmRspns_rrr_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="clmRspnsRrrCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ClmRspns_rrr_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

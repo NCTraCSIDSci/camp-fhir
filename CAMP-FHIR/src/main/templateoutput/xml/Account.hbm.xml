@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Account" optimistic-lock="none" table="account">
+        <id name="accountIdentifierCodingCode" type="string">
+            <column length="512" name="Account_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="accntDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Accnt_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="accountIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Account_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="accountIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Account_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="accountIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Account_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="accountStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Account_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="accountTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Account_type_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="accountTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Account_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="accountTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Account_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="accountTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Account_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="accountTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Account_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="accountName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Account_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="accountSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Account_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="accntSrvcPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Accnt_srvcPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="accountServicePeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Account_servicePeriod_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="accntSrvcPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Accnt_srvcPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="accntSrvcPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Accnt_srvcPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="accntSrvcPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Accnt_srvcPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="accountCoverage" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Account_coverage">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="accountCoverageCoverage" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Account_coverage_coverage">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="accountCoveragePriority" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="Account_coverage_priority">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="accountOwner" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Account_owner">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="accountDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Account_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="accountGuarantor" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Account_guarantor">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="accountGuarantorParty" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Account_guarantor_party">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="accountGuarantorOnHold" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Account_guarantor_onHold">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="accntGrntrPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Accnt_grntr_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="accntGrntrPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Accnt_grntr_prd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="accntGrntrPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Accnt_grntr_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="accntGrntrPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Accnt_grntr_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="accntGrntrPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Accnt_grntr_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="accountPartOf" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Account_partOf">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

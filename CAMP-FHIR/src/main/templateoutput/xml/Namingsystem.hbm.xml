@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Namingsystem" optimistic-lock="none" table="namingsystem">
+        <id name="namingSystemName" type="string">
+            <column length="512" name="NamingSystem_name"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="namingSystemStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="NamingSystem_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="namingSystemKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="NamingSystem_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="namingSystemDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="NamingSystem_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="namingSystemPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="NamingSystem_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="namingSystemContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="NamingSystem_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="namingSystemResponsible" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="NamingSystem_responsible">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="nmngSstmTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="NmngSstm_tp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="namingSystemDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="NamingSystem_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="namingSystemUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="NamingSystem_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="namingSystemUsage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="NamingSystem_usage">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="NamingSystem_uniqueId_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdValue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="NamingSystem_uniqueId_value">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdPreferred" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="NamingSystem_uniqueId_preferred">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdComment" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="NamingSystem_uniqueId_comment">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="NmngSstm_nqd_prd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="NmngSstm_nqd_prd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

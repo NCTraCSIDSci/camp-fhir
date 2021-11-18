@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Searchparameter" optimistic-lock="none" table="searchparameter">
+        <id name="searchParameterUrl" type="string">
+            <column length="512" name="SearchParameter_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="searchParameterVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="searchParameterName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="searchParameterDerivedFrom" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="SearchParameter_derivedFrom">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="searchParameterStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="SearchParameter_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="searchParameterDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="SearchParameter_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="searchParameterPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="searchParameterContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="SearchParameter_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="searchParameterDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="SearchParameter_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="searchParameterUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="SearchParameter_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="searchParameterPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="SearchParameter_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="searchParameterCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterBase" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_base">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterExpression" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_expression">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="searchParameterXpath" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_xpath">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="searchParameterXpathUsage" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_xpathUsage">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterTarget" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_target">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterMultipleOr" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="SearchParameter_multipleOr">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="searchParameterMultipleAnd" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="SearchParameter_multipleAnd">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="searchParameterComparator" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_comparator">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterModifier" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SearchParameter_modifier">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="searchParameterChain" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SearchParameter_chain">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrCmpnntDfntn" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="SrchPrmtr_cmpnnt_dfntn">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrCmpnntXprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SrchPrmtr_cmpnnt_xprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

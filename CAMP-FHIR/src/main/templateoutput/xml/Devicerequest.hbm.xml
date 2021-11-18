@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Devicerequest" optimistic-lock="none" table="devicerequest">
+        <id name="dvcRqstDntfrCdngCde" type="string">
+            <column length="512" name="DvcRqst_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="dvcRqstDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="DvcRqst_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="DvcRqst_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="DvcRqst_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="DvcRqst_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstNstnttsCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="DvcRqst_nstnttsCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="deviceRequestInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="DeviceRequest_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="deviceRequestBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceRequestPriorRequest" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_priorRequest">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcRqstGrpdntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_grpdntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstGrpdntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_grpdntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstGrpdntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_grpdntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstGrpdntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_grpdntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstGrpdntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_grpdntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="DeviceRequest_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="deviceRequestIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="DeviceRequest_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="deviceRequestPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="DeviceRequest_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="deviceRequestCodeReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_codeReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCdcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_cdcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCdcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_cdcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCdcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_cdcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCdcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_cdcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCdcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_cdcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestParameter" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceRequest_parameter">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_prmtr_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_prmtr_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_prmtr_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_prmtr_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_prmtr_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrmtrVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="DvcRqst_prmtr_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="deviceRequestSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceRequestEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceRequestOccurrenceDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="DeviceRequest_occurrenceDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_ccrrncPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_ccrrncPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_ccrrncPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_ccrrncPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_ccrrncPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_ccrrncTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_ccrrncTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_ccrrncTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_ccrrncTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstCcrrncTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_ccrrncTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestAuthoredOn" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="DeviceRequest_authoredOn">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="deviceRequestRequester" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_requester">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrfrmrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_prfrmrTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrfrmrTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_prfrmrTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrfrmrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_prfrmrTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrfrmrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_prfrmrTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstPrfrmrTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_prfrmrTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestPerformer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_performer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcRqstRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcRqstRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcRqst_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcRqstRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcRqst_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcRqstRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcRqst_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcRqstRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcRqst_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestReasonReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_reasonReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceRequestInsurance" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_insurance">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceRequestSupportingInfo" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_supportingInfo">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcRqstNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcRqst_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="deviceRequestNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DeviceRequest_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="deviceRequestNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DeviceRequest_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="deviceRequestNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DeviceRequest_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="deviceRequestNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DeviceRequest_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceRequestRelevantHistory" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceRequest_relevantHistory">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

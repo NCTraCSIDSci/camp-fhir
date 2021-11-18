@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Capabilitystatement" optimistic-lock="none" table="capabilitystatement">
+        <id name="capabilityStatementUrl" type="string">
+            <column length="512" name="CapabilityStatement_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="capabilityStatementVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CapabilityStatement_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CapabilityStatement_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CapabilityStatement_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CapabilityStatement_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CapabilityStatement_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CapabilityStatement_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="CapabilityStatement_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CapabilityStatement_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="CapabilityStatement_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CapabilityStatement_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CapabilityStatement_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementInstantiates" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CapabilityStatement_instantiates">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementImports" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CapabilityStatement_imports">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementSoftwareName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CapabilityStatement_software_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntSftwrVrsn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_sftwr_vrsn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntSftwrRlsDte" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CpbltSttmnt_sftwr_rlsDte">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnRl" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_rl">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnCstdnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementFhirVersion" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_fhirVersion">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementFormat" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_format">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementPatchFormat" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_patchFormat">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMplmnttnGde" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttnGde">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementRestMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_rest_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtCrs" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_crs">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtSrvcCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstScrtDscrptn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_dscrptn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcPrfle" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prfle">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSpprtdPrfle" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_spprtdPrfle">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcNtrctnCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcNtrctnDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcVrsnng" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_vrsnng">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcRdHstry" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_rdHstry">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcPdtCrte" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_pdtCrte">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcCndtnlCrte" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlCrte">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcCndtnlRd" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlRd">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcCndtnlpdte" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlpdte">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcCndtnlDlte" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlDlte">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcRfrncPlcy" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_rfrncPlcy">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchnclde" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchnclde">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchRvnclde" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchRvnclde">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchPrmNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchPrmDfntn" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dfntn">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchPrmTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcSrchPrmDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcPrtnNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcPrtnDfntn" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dfntn">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstRsrcPrtnDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstNtrctnCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_rst_ntrctn_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstNtrctnDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_rst_ntrctn_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstSrchPrm" type="string">
+            <meta attribute="resource-type">see searchParam</meta>
+            <column length="65535" name="CpbltSttmnt_rst_srchPrm">
+                <comment>see searchParam</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementRestOperation" type="string">
+            <meta attribute="resource-type">see operation</meta>
+            <column length="65535" name="CapabilityStatement_rest_operation">
+                <comment>see operation</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntRstCmprtmnt" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_rst_cmprtmnt">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntDdrss" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_ddrss">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngRlblCche" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_rlblCche">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngSpprtdMssgMde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_mde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngSpprtdMssgDfntn" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_dfntn">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="capabilityStatementDocumentMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CapabilityStatement_document_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntDcmntDcmnttn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CpbltSttmnt_dcmnt_dcmnttn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntDcmntPrfle" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CpbltSttmnt_dcmnt_prfle">
+                <comment>canonical</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,1990 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Observation" optimistic-lock="none" table="observation">
+        <id name="obsrvtnDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Obsrvtn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="obsrvtnDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_use_code</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_s_cde">
+                <comment>Observation_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Observation_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Observation_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Observation_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Observation_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Observation_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Prd_strt">
+                <comment>Observation_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Prd_nd">
+                <comment>Observation_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Observation_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Observation_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Observation_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Observation_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_value_string</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_vl_strng">
+                <comment>Observation_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Observation_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Obsrvtn_dntfr_dntfr_sstm_ri">
+                <comment>Observation_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBsdnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_bsdn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrtfRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_prtf_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="observationStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Observation_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCtgrCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_ctgr_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_cd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSbjctRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_sbjct_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFcsRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_fcs_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNcntrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_ncntr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="observationEffectiveDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Observation_effectiveDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="Obsrvtn_ffctvPrd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="Obsrvtn_ffctvPrd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptDrtnntCde" type="string">
+            <meta attribute="resource-type">Timing_repeat_durationUnit_code</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_drtnnt_cde">
+                <comment>Timing_repeat_durationUnit_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptPrdntCde" type="string">
+            <meta attribute="resource-type">Timing_repeat_periodUnit_code</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_prdnt_cde">
+                <comment>Timing_repeat_periodUnit_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptDfWkCde" type="string">
+            <meta attribute="resource-type">Timing_repeat_dayOfWeek_code</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_dfWk_cde">
+                <comment>Timing_repeat_dayOfWeek_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptWhnCde" type="string">
+            <meta attribute="resource-type">Timing_repeat_when_code</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_whn_cde">
+                <comment>Timing_repeat_when_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_cd_CdblCncpt_Cdng_sstm">
+                <comment>Timing_code_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_cd_CdblCncpt_Cdng_vrsn">
+                <comment>Timing_code_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_cd_CdblCncpt_Cdng_cde">
+                <comment>Timing_code_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_cd_CdblCncpt_Cdng_dsplay">
+                <comment>Timing_code_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>Timing_code_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Timing_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_CdblCncpt_txt">
+                <comment>Timing_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngVntDtTme" type="string">
+            <meta attribute="resource-type">Timing_event_dateTime</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_vnt_dtTme">
+                <comment>Timing_event_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptDrtnDcml" type="string">
+            <meta attribute="resource-type">Timing_repeat_duration_decimal</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_drtn_dcml">
+                <comment>Timing_repeat_duration_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptDrtnMxDcml" type="string">
+            <meta attribute="resource-type">Timing_repeat_durationMax_decimal</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_drtnMx_dcml">
+                <comment>Timing_repeat_durationMax_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptPrdDcml" type="string">
+            <meta attribute="resource-type">Timing_repeat_period_decimal</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_prd_dcml">
+                <comment>Timing_repeat_period_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptPrdMxDcml" type="string">
+            <meta attribute="resource-type">Timing_repeat_periodMax_decimal</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_prdMx_dcml">
+                <comment>Timing_repeat_periodMax_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptBndsDrtnDrtn" type="string">
+            <meta attribute="resource-type">Timing_repeat_boundsDuration_Duration</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_bndsDrtn_Drtn">
+                <comment>Timing_repeat_boundsDuration_Duration</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptLmnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_Element</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_lmnt">
+                <comment>Timing_repeat_Element</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngPrdStrt" type="string">
+            <meta attribute="resource-type">Timing_Period_start</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_Prd_strt">
+                <comment>Timing_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngPrdNd" type="string">
+            <meta attribute="resource-type">Timing_Period_end</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_Prd_nd">
+                <comment>Timing_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptCntPstvnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_count_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_cnt_pstvnt">
+                <comment>Timing_repeat_count_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptCntMxPstvnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_countMax_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_cntMx_pstvnt">
+                <comment>Timing_repeat_countMax_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptFrqncPstvnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_frequency_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_frqnc_pstvnt">
+                <comment>Timing_repeat_frequency_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptFrqncMxPstvnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_frequencyMax_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_frqncMx_pstvnt">
+                <comment>Timing_repeat_frequencyMax_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRngLw" type="string">
+            <meta attribute="resource-type">Timing_Range_low</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_Rng_lw">
+                <comment>Timing_Range_low</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRngHgh" type="string">
+            <meta attribute="resource-type">Timing_Range_high</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_Rng_hgh">
+                <comment>Timing_Range_high</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptTmfDTme" type="string">
+            <meta attribute="resource-type">Timing_repeat_timeOfDay_time</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_tmfD_tme">
+                <comment>Timing_repeat_timeOfDay_time</comment>
+            </column>
+        </property>
+        <property name="obsrvtnFfctvTmngTmngRptFfstNsgndnt" type="string">
+            <meta attribute="resource-type">Timing_repeat_offset_unsignedInt</meta>
+            <column length="65535" name="Obsrvtn_ffctvTmng_Tmng_rpt_ffst_nsgndnt">
+                <comment>Timing_repeat_offset_unsignedInt</comment>
+            </column>
+        </property>
+        <property name="observationEffectiveInstant" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Observation_effectiveInstant">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="observationIssued" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Observation_issued">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnPrfrmrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_prfrmr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlQnttQnttCmprtrCde" type="string">
+            <meta attribute="resource-type">Quantity_comparator_code</meta>
+            <column length="65535" name="Obsrvtn_vlQntt_Qntt_cmprtr_cde">
+                <comment>Quantity_comparator_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlQnttQnttCdCde" type="string">
+            <meta attribute="resource-type">Quantity_code_code</meta>
+            <column length="65535" name="Obsrvtn_vlQntt_Qntt_cd_cde">
+                <comment>Quantity_code_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlQnttQnttVlDcml" type="string">
+            <meta attribute="resource-type">Quantity_value_decimal</meta>
+            <column length="65535" name="Obsrvtn_vlQntt_Qntt_vl_dcml">
+                <comment>Quantity_value_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlQnttQnttNtStrng" type="string">
+            <meta attribute="resource-type">Quantity_unit_string</meta>
+            <column length="65535" name="Obsrvtn_vlQntt_Qntt_nt_strng">
+                <comment>Quantity_unit_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlQnttQnttSstmRi" type="string">
+            <meta attribute="resource-type">Quantity_system_uri</meta>
+            <column length="65535" name="Obsrvtn_vlQntt_Qntt_sstm_ri">
+                <comment>Quantity_system_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlcdblcptCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_vlcdblcpt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="observationValueString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Observation_valueString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="observationValueBoolean" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Observation_valueBoolean">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="observationValueInteger" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Observation_valueInteger">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRngRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_vlRng_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRngRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_vlRng_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRtRtQnttVlue" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_value</meta>
+            <column length="65535" name="Obsrvtn_vlRt_Rt_Qntt_vlue">
+                <comment>Ratio_Quantity_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRtRtQnttCmprtr" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_comparator</meta>
+            <column length="65535" name="Obsrvtn_vlRt_Rt_Qntt_cmprtr">
+                <comment>Ratio_Quantity_comparator</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRtRtQnttNt" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_unit</meta>
+            <column length="65535" name="Obsrvtn_vlRt_Rt_Qntt_nt">
+                <comment>Ratio_Quantity_unit</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRtRtQnttSstm" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_system</meta>
+            <column length="65535" name="Obsrvtn_vlRt_Rt_Qntt_sstm">
+                <comment>Ratio_Quantity_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlRtRtQnttCde" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_code</meta>
+            <column length="65535" name="Obsrvtn_vlRt_Rt_Qntt_cde">
+                <comment>Ratio_Quantity_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtPrdDcml" type="string">
+            <meta attribute="resource-type">SampledData_period_decimal</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_prd_dcml">
+                <comment>SampledData_period_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtFctrDcml" type="string">
+            <meta attribute="resource-type">SampledData_factor_decimal</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_fctr_dcml">
+                <comment>SampledData_factor_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtLwrLmtDcml" type="string">
+            <meta attribute="resource-type">SampledData_lowerLimit_decimal</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_lwrLmt_dcml">
+                <comment>SampledData_lowerLimit_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtPprLmtDcml" type="string">
+            <meta attribute="resource-type">SampledData_upperLimit_decimal</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_pprLmt_dcml">
+                <comment>SampledData_upperLimit_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtDmnsnsPstvnt" type="string">
+            <meta attribute="resource-type">SampledData_dimensions_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_dmnsns_pstvnt">
+                <comment>SampledData_dimensions_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtRgnSmplQntty" type="string">
+            <meta attribute="resource-type">SampledData_origin_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_rgn_SmplQntty">
+                <comment>SampledData_origin_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlSmplddtSmpldDtDtStrng" type="string">
+            <meta attribute="resource-type">SampledData_data_string</meta>
+            <column length="65535" name="Obsrvtn_vlSmplddt_SmpldDt_dt_strng">
+                <comment>SampledData_data_string</comment>
+            </column>
+        </property>
+        <property name="observationValueTime" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Observation_valueTime">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="observationValueDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Observation_valueDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="Obsrvtn_vlPrd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnVlPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="Obsrvtn_vlPrd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDtbsntRsnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_dtbsntRsn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtrprttnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_ntrprttn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnTmDtTme" type="string">
+            <meta attribute="resource-type">Annotation_time_dateTime</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_tm_dtTme">
+                <comment>Annotation_time_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnTxtMrkdwn" type="string">
+            <meta attribute="resource-type">Annotation_text_markdown</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_txt_mrkdwn">
+                <comment>Annotation_text_markdown</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Annotation_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_Rfrnc_rfrnce">
+                <comment>Annotation_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnRfrncTpe" type="string">
+            <meta attribute="resource-type">Annotation_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_Rfrnc_tpe">
+                <comment>Annotation_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnRfrncDntfr" type="string">
+            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_Rfrnc_dntfr">
+                <comment>Annotation_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnRfrncDsplay" type="string">
+            <meta attribute="resource-type">Annotation_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_Rfrnc_dsplay">
+                <comment>Annotation_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnNtNnttnThrStrngStrng" type="string">
+            <meta attribute="resource-type">Annotation_authorString_string</meta>
+            <column length="65535" name="Obsrvtn_nt_nnttn_thrStrng_strng">
+                <comment>Annotation_authorString_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnBdStCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_bdSt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnMthdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_mthd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnSpcmnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_spcmn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDvcRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_dvc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="observationReferenceRangeLow" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Observation_referenceRange_low">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="observationReferenceRangeHigh" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Observation_referenceRange_high">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_tp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngPplsTCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_pplsT_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngGRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_g_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnRfrncRngGRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_rfrncRng_g_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="observationReferenceRangeText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Observation_referenceRange_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnHsMmbrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_hsMmbr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDrvdFrmRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Obsrvtn_drvdFrm_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_cd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlQnttQnttCmprtrCde" type="string">
+            <meta attribute="resource-type">Quantity_comparator_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlQntt_Qntt_cmprtr_cde">
+                <comment>Quantity_comparator_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlQnttQnttCdCde" type="string">
+            <meta attribute="resource-type">Quantity_code_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlQntt_Qntt_cd_cde">
+                <comment>Quantity_code_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlQnttQnttVlDcml" type="string">
+            <meta attribute="resource-type">Quantity_value_decimal</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlQntt_Qntt_vl_dcml">
+                <comment>Quantity_value_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlQnttQnttNtStrng" type="string">
+            <meta attribute="resource-type">Quantity_unit_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlQntt_Qntt_nt_strng">
+                <comment>Quantity_unit_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlQnttQnttSstmRi" type="string">
+            <meta attribute="resource-type">Quantity_system_uri</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlQntt_Qntt_sstm_ri">
+                <comment>Quantity_system_uri</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlcdblcptCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlcdblcpt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="observationComponentValueString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Observation_component_valueString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="observationComponentValueBoolean" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Observation_component_valueBoolean">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="observationComponentValueInteger" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Observation_component_valueInteger">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRngRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRng_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRngRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRng_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRtRtQnttVlue" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_value</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRt_Rt_Qntt_vlue">
+                <comment>Ratio_Quantity_value</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRtRtQnttCmprtr" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_comparator</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRt_Rt_Qntt_cmprtr">
+                <comment>Ratio_Quantity_comparator</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRtRtQnttNt" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_unit</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRt_Rt_Qntt_nt">
+                <comment>Ratio_Quantity_unit</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRtRtQnttSstm" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_system</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRt_Rt_Qntt_sstm">
+                <comment>Ratio_Quantity_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlRtRtQnttCde" type="string">
+            <meta attribute="resource-type">Ratio_Quantity_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlRt_Rt_Qntt_cde">
+                <comment>Ratio_Quantity_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtPrdDcml" type="string">
+            <meta attribute="resource-type">SampledData_period_decimal</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_prd_dcml">
+                <comment>SampledData_period_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtFctrDcml" type="string">
+            <meta attribute="resource-type">SampledData_factor_decimal</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_fctr_dcml">
+                <comment>SampledData_factor_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtLwrLmtDcml" type="string">
+            <meta attribute="resource-type">SampledData_lowerLimit_decimal</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_lwrLmt_dcml">
+                <comment>SampledData_lowerLimit_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtPprLmtDcml" type="string">
+            <meta attribute="resource-type">SampledData_upperLimit_decimal</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_pprLmt_dcml">
+                <comment>SampledData_upperLimit_decimal</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtDmnsnsPstvnt" type="string">
+            <meta attribute="resource-type">SampledData_dimensions_positiveInt</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_dmnsns_pstvnt">
+                <comment>SampledData_dimensions_positiveInt</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtRgnSmplQntty" type="string">
+            <meta attribute="resource-type">SampledData_origin_SimpleQuantity</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_rgn_SmplQntty">
+                <comment>SampledData_origin_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlSmplddtSmpldDtDtStrng" type="string">
+            <meta attribute="resource-type">SampledData_data_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlSmplddt_SmpldDt_dt_strng">
+                <comment>SampledData_data_string</comment>
+            </column>
+        </property>
+        <property name="observationComponentValueTime" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Observation_component_valueTime">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlPrd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntVlPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_vlPrd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntDtbsntRsnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_dtbsntRsn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntNtrprttnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_ntrprttn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="obsrvtnCmpnntRfrncRnge" type="string">
+            <meta attribute="resource-type">see referenceRange</meta>
+            <column length="65535" name="Obsrvtn_cmpnnt_rfrncRnge">
+                <comment>see referenceRange</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

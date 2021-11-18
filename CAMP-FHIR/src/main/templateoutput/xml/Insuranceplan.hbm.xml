@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Insuranceplan" optimistic-lock="none" table="insuranceplan">
+        <id name="insrncPlnDntfrCdngCde" type="string">
+            <column length="512" name="InsrncPln_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="insrncPlnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="InsrncPln_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="InsrncPln_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="InsrncPln_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="InsrncPln_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="InsurancePlan_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insurancePlanTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsurancePlan_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insurancePlanTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsurancePlan_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insurancePlanTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsurancePlan_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insurancePlanTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsurancePlan_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="InsurancePlan_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="insurancePlanAlias" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="InsurancePlan_alias">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsurancePlan_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsurancePlan_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanOwnedBy" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_ownedBy">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanAdministeredBy" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_administeredBy">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanCoverageArea" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_coverageArea">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanContact" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_contact">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctPrpsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctPrpsCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctPrpsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctPrpsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctPrpsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctNmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctNmCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctNmCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctNmCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctNmCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctTlcmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctTlcmCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctTlcmCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctTlcmCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctTlcmCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctDdrssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctDdrssCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctDdrssCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctDdrssCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCntctDdrssCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanEndpoint" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_endpoint">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanNetwork" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_network">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanCoverage" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_coverage">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanCoverageNetwork" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_coverage_network">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanCoverageBenefit" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_coverage_benefit">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftRqrmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_rqrmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmt" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtVlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtVlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtVlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtVlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtVlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnCvrgBnftLmtCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPlan" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_plan">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPlanCoverageArea" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_plan_coverageArea">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPlanNetwork" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="InsurancePlan_plan_network">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPlanGeneralCost" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_plan_generalCost">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstGrpSze" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_grpSze">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCstCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCstCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCstCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCstCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCstCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnGnrlCstCmmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cmmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="insurancePlanPlanSpecificCost" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsurancePlan_plan_specificCost">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnft" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCst" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Communicationrequest" optimistic-lock="none" table="communicationrequest">
+        <id name="cmmnctnRqstDntfrCdngCde" type="string">
+            <column length="512" name="CmmnctnRqst_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="cmmnctnRqstDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="CmmnctnRqst_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="CmmnctnRqst_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="CmmnctnRqst_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="CmmnctnRqst_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="communicationRequestBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestReplaces" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_replaces">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstGrpdntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_grpdntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstGrpdntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_grpdntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstGrpdntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_grpdntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstGrpdntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_grpdntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstGrpdntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_grpdntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="communicationRequestStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CommunicationRequest_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstSttsRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_sttsRsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstSttsRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_sttsRsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstSttsRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_sttsRsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstSttsRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_sttsRsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstSttsRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_sttsRsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="communicationRequestPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CommunicationRequest_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="communicationRequestDoNotPerform" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CommunicationRequest_doNotPerform">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstMdmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_mdm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstMdmCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_mdm_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstMdmCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_mdm_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstMdmCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_mdm_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstMdmCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_mdm_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="communicationRequestSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestAbout" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_about">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestPayload" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="CommunicationRequest_payload">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstPldCntntRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CmmnctnRqst_pld_cntntRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstCcrrncPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_ccrrncPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="communicationRequestAuthoredOn" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CommunicationRequest_authoredOn">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="communicationRequestRequester" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_requester">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestRecipient" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_recipient">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="communicationRequestSender" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CommunicationRequest_sender">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstRsnRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CmmnctnRqst_rsnRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CmmnctnRqst_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CmmnctnRqst_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CmmnctnRqst_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CmmnctnRqst_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cmmnctnRqstNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CmmnctnRqst_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

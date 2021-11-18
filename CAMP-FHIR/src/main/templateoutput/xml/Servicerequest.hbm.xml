@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Servicerequest" optimistic-lock="none" table="servicerequest">
+        <id name="srvcRqstDntfrCdngCde" type="string">
+            <column length="512" name="SrvcRqst_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="srvcRqstDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="SrvcRqst_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="SrvcRqst_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="SrvcRqst_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="SrvcRqst_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNstnttsCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="SrvcRqst_nstnttsCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="serviceRequestInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ServiceRequest_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="serviceRequestBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestReplaces" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_replaces">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRqstnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_rqstn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRqstnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_rqstn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRqstnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_rqstn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRqstnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_rqstn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRqstnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_rqstn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ServiceRequest_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="serviceRequestIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ServiceRequest_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCtgrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_ctgr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestPriority" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ServiceRequest_priority">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="serviceRequestDoNotPerform" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ServiceRequest_doNotPerform">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="serviceRequestCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ServiceRequest_code_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="serviceRequestCodeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ServiceRequest_code_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="serviceRequestCodeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ServiceRequest_code_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="serviceRequestCodeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ServiceRequest_code_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRdrDtlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRdrDtlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRdrDtlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRdrDtlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRdrDtlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstQnttRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestOccurrenceDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ServiceRequest_occurrenceDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstCcrrncTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestAsNeededBoolean" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ServiceRequest_asNeededBoolean">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestAuthoredOn" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ServiceRequest_authoredOn">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="serviceRequestRequester" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_requester">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestPerformer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_performer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestLocationReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_locationReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestReasonReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_reasonReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestInsurance" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_insurance">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestSupportingInfo" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_supportingInfo">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="serviceRequestSpecimen" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_specimen">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_bdSt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SrvcRqst_bdSt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SrvcRqst_bdSt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SrvcRqst_bdSt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SrvcRqst_bdSt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SrvcRqst_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="serviceRequestNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ServiceRequest_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="serviceRequestNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ServiceRequest_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="serviceRequestNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ServiceRequest_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="serviceRequestNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ServiceRequest_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="serviceRequestPntInstruction" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ServiceRequest_pntInstruction">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="serviceRequestRelevantHistory" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ServiceRequest_relevantHistory">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

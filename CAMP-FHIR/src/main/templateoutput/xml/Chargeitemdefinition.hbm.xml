@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Chargeitemdefinition" optimistic-lock="none" table="chargeitemdefinition">
+        <id name="chargeItemDefinitionUrl" type="string">
+            <column length="512" name="ChargeItemDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="chrgtmDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChargeItemDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChargeItemDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnDrvdFrmri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ChrgtmDfntn_drvdFrmri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionPartOf" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ChargeItemDefinition_partOf">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionReplaces" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ChargeItemDefinition_replaces">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ChargeItemDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ChargeItemDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ChargeItemDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChargeItemDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ChargeItemDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ChargeItemDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ChargeItemDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ChargeItemDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ChargeItemDefinition_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnLstRvwDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ChrgtmDfntn_lstRvwDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionInstance" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ChargeItemDefinition_instance">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionApplicability" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ChargeItemDefinition_applicability">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltLngge" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_lngge">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltXprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_xprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionPropertyGroup" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ChargeItemDefinition_propertyGroup">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPplcblty" type="string">
+            <meta attribute="resource-type">see applicability</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_pplcblty">
+                <comment>see applicability</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnnt" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntFctr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_fctr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

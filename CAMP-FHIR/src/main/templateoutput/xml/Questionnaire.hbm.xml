@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Questionnaire" optimistic-lock="none" table="questionnaire">
+        <id name="questionnaireUrl" type="string">
+            <column length="512" name="Questionnaire_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="qstnnrDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="questionnaireVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireDerivedFrom" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="Questionnaire_derivedFrom">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="questionnaireStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Questionnaire_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="questionnaireExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Questionnaire_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="questionnaireSubjectType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Questionnaire_subjectType">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="questionnaireDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Questionnaire_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="questionnairePublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="Questionnaire_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="questionnaireDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Questionnaire_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="questionnaireUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="Questionnaire_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="qstnnrJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="questionnairePurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Questionnaire_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="questionnaireCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Questionnaire_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="questionnaireApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Questionnaire_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="questionnaireLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Questionnaire_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="qstnnrFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="questionnaireCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Questionnaire_code_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="questionnaireCodeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Questionnaire_code_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="questionnaireCodeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Questionnaire_code_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="questionnaireCodeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Questionnaire_code_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="questionnaireItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Questionnaire_item">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemLinkId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_item_linkId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemDefinition" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Questionnaire_item_definition">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemPrefix" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_item_prefix">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemText" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Questionnaire_item_text">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Questionnaire_item_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemEnableWhen" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Questionnaire_item_enableWhen">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnQstn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_qstn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnPrtr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_prtr">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrCdngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrCdngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrCdngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrCdngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrCdngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNblWhnNswrRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemEnableBehavior" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Questionnaire_item_enableBehavior">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemRequired" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Questionnaire_item_required">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemRepeats" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Questionnaire_item_repeats">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemReadOnly" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Questionnaire_item_readOnly">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemMaxLength" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Questionnaire_item_maxLength">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemAnswerValueSet" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="Questionnaire_item_answerValueSet">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemAnswerOption" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Questionnaire_item_answerOption">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlCdngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlCdngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlCdngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlCdngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlCdngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnVlRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnNtlSlctd" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_ntlSlctd">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemInitial" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Questionnaire_item_initial">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemItem" type="string">
+            <meta attribute="resource-type">see item</meta>
+            <column length="65535" name="Questionnaire_item_item">
+                <comment>see item</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

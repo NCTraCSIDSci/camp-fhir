@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Paymentnotice" optimistic-lock="none" table="paymentnotice">
+        <id name="pmntNtcDntfrCdngCde" type="string">
+            <column length="512" name="PmntNtc_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="pmntNtcDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="PmntNtc_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntNtcDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="PmntNtc_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntNtcDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="PmntNtc_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntNtcDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="PmntNtc_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="PaymentNotice_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeRequest" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_request">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeResponse" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_response">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="PaymentNotice_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeProvider" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_provider">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentNoticePayment" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_payment">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentNoticePaymentDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="PaymentNotice_paymentDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="paymentNoticePayee" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_payee">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeRecipient" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="PaymentNotice_recipient">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="pmntNtcMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntNtc_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeAmountCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PaymentNotice_amount_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntNtcMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntNtc_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntNtcMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntNtc_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="paymentNoticeAmountCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PaymentNotice_amount_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="pmntNtcPmntSttsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="PmntNtc_pmntStts_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="pmntNtcPmntSttsCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="PmntNtc_pmntStts_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="pmntNtcPmntSttsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="PmntNtc_pmntStts_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="pmntNtcPmntSttsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="PmntNtc_pmntStts_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="pmntNtcPmntSttsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="PmntNtc_pmntStts_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

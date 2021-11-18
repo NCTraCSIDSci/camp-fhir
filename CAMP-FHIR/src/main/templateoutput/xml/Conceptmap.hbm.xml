@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Conceptmap" optimistic-lock="none" table="conceptmap">
+        <id name="conceptMapUrl" type="string">
+            <column length="512" name="ConceptMap_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="cncptMpDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="cncptMpDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="CncptMp_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="conceptMapVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ConceptMap_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="conceptMapExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ConceptMap_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="conceptMapDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ConceptMap_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="conceptMapPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ConceptMap_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="conceptMapDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ConceptMap_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="conceptMapUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ConceptMap_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cncptMpJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="CncptMp_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="conceptMapPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ConceptMap_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="conceptMapCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ConceptMap_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="conceptMapSourceUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ConceptMap_sourceUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="conceptMapSourceCanonical" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ConceptMap_sourceCanonical">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="conceptMapTargetUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ConceptMap_targetUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="conceptMapTargetCanonical" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ConceptMap_targetCanonical">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupSource" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ConceptMap_group_source">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupSourceVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_group_sourceVersion">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupTarget" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ConceptMap_group_target">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupTargetVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_group_targetVersion">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupElementCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ConceptMap_group_element_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupElementDisplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_group_element_display">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtDsplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_dsplay">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtQvlnce" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_qvlnce">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtCmmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_cmmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtDpndsnPrprty" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_dpndsn_prprty">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtDpndsnSstm" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_dpndsn_sstm">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtDpndsnVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_dpndsn_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtDpndsnDsplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_dpndsn_dsplay">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cncptMpGrpLmntTrgtPrdct" type="string">
+            <meta attribute="resource-type">see dependsOn</meta>
+            <column length="65535" name="CncptMp_grp_lmnt_trgt_prdct">
+                <comment>see dependsOn</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupUnmappedMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ConceptMap_group_unmapped_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupUnmappedCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ConceptMap_group_unmapped_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupUnmappedDisplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ConceptMap_group_unmapped_display">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="conceptMapGroupUnmappedUrl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ConceptMap_group_unmapped_url">
+                <comment>canonical</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

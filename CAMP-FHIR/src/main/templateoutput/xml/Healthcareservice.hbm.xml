@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Healthcareservice" optimistic-lock="none" table="healthcareservice">
+        <id name="hlthcrSrvcDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="hlthcrSrvcDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_use_code</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_s_cde">
+                <comment>HealthcareService_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>HealthcareService_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>HealthcareService_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Period_start</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Prd_strt">
+                <comment>HealthcareService_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Period_end</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Prd_nd">
+                <comment>HealthcareService_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>HealthcareService_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>HealthcareService_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>HealthcareService_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>HealthcareService_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_value_string</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_vl_strng">
+                <comment>HealthcareService_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">HealthcareService_identifierIdentifier_system_uri</meta>
+            <column length="512" name="HlthcrSrvc_dntfr_dntfr_sstm_ri">
+                <comment>HealthcareService_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="healthcareServiceActive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="HealthcareService_active">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrvddBRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="HlthcrSrvc_prvddB_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCtgrCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_ctgr_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_tp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSpcltCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_spclt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLctnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="HlthcrSrvc_lctn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="healthcareServiceName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="HealthcareService_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="healthcareServiceComment" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="HealthcareService_comment">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="healthcareServiceExtraDetails" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="HealthcareService_extraDetails">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntDtBs64bnry" type="string">
+            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_dt_bs64Bnry">
+                <comment>Attachment_data_base64Binary</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntHshBs64bnry" type="string">
+            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_hsh_bs64Bnry">
+                <comment>Attachment_hash_base64Binary</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntCntntTpCde" type="string">
+            <meta attribute="resource-type">Attachment_contentType_code</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_cntntTp_cde">
+                <comment>Attachment_contentType_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntLnggCde" type="string">
+            <meta attribute="resource-type">Attachment_language_code</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_lngg_cde">
+                <comment>Attachment_language_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntCrtnDtTme" type="string">
+            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_crtn_dtTme">
+                <comment>Attachment_creation_dateTime</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntTtlStrng" type="string">
+            <meta attribute="resource-type">Attachment_title_string</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_ttl_strng">
+                <comment>Attachment_title_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntSzNsgndnt" type="string">
+            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_sz_nsgndnt">
+                <comment>Attachment_size_unsignedInt</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPhtTtchmntRlRl" type="string">
+            <meta attribute="resource-type">Attachment_url_url</meta>
+            <column length="65535" name="HlthcrSrvc_pht_ttchmnt_rl_rl">
+                <comment>Attachment_url_url</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntSstmCde" type="string">
+            <meta attribute="resource-type">ContactPoint_system_code</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_sstm_cde">
+                <comment>ContactPoint_system_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntSCde" type="string">
+            <meta attribute="resource-type">ContactPoint_use_code</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_s_cde">
+                <comment>ContactPoint_use_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_start</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_Prd_strt">
+                <comment>ContactPoint_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_end</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_Prd_nd">
+                <comment>ContactPoint_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntRnkPstvnt" type="string">
+            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_rnk_pstvnt">
+                <comment>ContactPoint_rank_positiveInt</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcTlcmCntctPntVlStrng" type="string">
+            <meta attribute="resource-type">ContactPoint_value_string</meta>
+            <column length="65535" name="HlthcrSrvc_tlcm_CntctPnt_vl_strng">
+                <comment>ContactPoint_value_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCvrgrRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="HlthcrSrvc_cvrgr_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcSrvcPrvsnCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_srvcPrvsnCd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcLgbltCmmnt" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="HlthcrSrvc_lgblt_cmmnt">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPrgrmCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_prgrm_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcChrctrCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_chrctr_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcCmmnctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_cmmnctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcRfrrlMthdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="HlthcrSrvc_rfrrlMthd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcPpntmntRqrd" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="HlthcrSrvc_ppntmntRqrd">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcVlblTmDsfWk" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="HlthcrSrvc_vlblTm_dsfWk">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcVlblTmLlDay" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="HlthcrSrvc_vlblTm_llDay">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcVlblTmVlblStrtTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="HlthcrSrvc_vlblTm_vlblStrtTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcVlblTmVlblndTme" type="string">
+            <meta attribute="resource-type">time</meta>
+            <column length="65535" name="HlthcrSrvc_vlblTm_vlblndTme">
+                <comment>time</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNtvlblDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="HlthcrSrvc_ntvlbl_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNtvlblDrngPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="HlthcrSrvc_ntvlbl_drng_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNtvlblDrngPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="HlthcrSrvc_ntvlbl_drng_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcVlbltxcptns" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="HlthcrSrvc_vlbltxcptns">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="hlthcrSrvcNdpntRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="HlthcrSrvc_ndpnt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

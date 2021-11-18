@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Devicedefinition" optimistic-lock="none" table="devicedefinition">
+        <id name="dvcDfntnDntfrCdngCde" type="string">
+            <column length="512" name="DvcDfntn_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="dvcDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="DvcDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="DvcDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="DvcDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="DvcDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDDvcdntfr" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDDvcdntfrDvcdntfr" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_dvcdntfr">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDDvcdntfrSsr" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_ssr">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnDDvcdntfrJrsdctn" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_jrsdctn">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMnfctrrStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DvcDfntn_mnfctrrStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMnfctrrRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DvcDfntn_mnfctrrRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionDeviceName" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceDefinition_deviceName">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionDeviceNameName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DeviceDefinition_deviceName_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionDeviceNameType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="DeviceDefinition_deviceName_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionModelNumber" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DeviceDefinition_modelNumber">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DeviceDefinition_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionSpecialization" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceDefinition_specialization">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSpclztnSstmTpe" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DvcDfntn_spclztn_sstmTpe">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSpclztnVrsn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DvcDfntn_spclztn_vrsn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="DeviceDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSftCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_sft_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSftCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_sft_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSftCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_sft_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSftCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_sft_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnSftCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_sft_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionShelfLifeStorage" type="string">
+            <meta attribute="resource-type">ProductShelfLife</meta>
+            <column length="65535" name="DeviceDefinition_shelfLifeStorage">
+                <comment>ProductShelfLife</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionPhysicalchrctrs" type="string">
+            <meta attribute="resource-type">ProdCharacteristic</meta>
+            <column length="65535" name="DeviceDefinition_physicalchrctrs">
+                <comment>ProdCharacteristic</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnLnggCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnLnggCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnLnggCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnLnggCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnLnggCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionCapability" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceDefinition_capability">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltDscrptnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltDscrptnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltDscrptnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltDscrptnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCpbltDscrptnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionProperty" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceDefinition_property">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrprtVlCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionOwner" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceDefinition_owner">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCntctCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_cntct_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCntctCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_cntct_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCntctCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_cntct_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCntctCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_cntct_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnCntctCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_cntct_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="DeviceDefinition_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionOnlineInformation" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="DeviceDefinition_onlineInformation">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DeviceDefinition_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_qntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_qntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_qntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_qntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_qntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionParentDevice" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="DeviceDefinition_parentDevice">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="deviceDefinitionMaterial" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="DeviceDefinition_material">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlLtrnte" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="DvcDfntn_mtrl_ltrnte">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlLlrgncndctr" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="DvcDfntn_mtrl_llrgncndctr">
+                <comment>boolean</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Medicinalproductinteraction" optimistic-lock="none" table="medicinalproductinteraction">
+        <id name="mpinteractionSubject" type="string">
+            <column length="512" name="MPInteraction_subject"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="mpinteractionDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="MPInteraction_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="mpinteractionInteractant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MPInteraction_interactant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNtrctntTmcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="mpntrctnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MPntrctn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mpinteractionTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MPInteraction_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="mpinteractionTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MPInteraction_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="mpinteractionTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MPInteraction_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="mpinteractionTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MPInteraction_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="mpntrctnFfctCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MPntrctn_ffct_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mpinteractionEffectCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MPInteraction_effect_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="mpntrctnFfctCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MPntrctn_ffct_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="mpntrctnFfctCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MPntrctn_ffct_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="mpinteractionEffectCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MPInteraction_effect_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNcdncCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MPntrctn_ncdnc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNcdncCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MPntrctn_ncdnc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNcdncCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MPntrctn_ncdnc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNcdncCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MPntrctn_ncdnc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="mpntrctnNcdncCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MPntrctn_ncdnc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MPntrctn_mngmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MPntrctn_mngmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MPntrctn_mngmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MPntrctn_mngmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MPntrctn_mngmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

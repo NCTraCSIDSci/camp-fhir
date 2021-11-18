@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Immunizationevaluation" optimistic-lock="none" table="immunizationevaluation">
+        <id name="immvltnDntfrCdngCde" type="string">
+            <column length="512" name="Immvltn_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="immvltnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Immvltn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="immvltnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Immvltn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="immvltnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Immvltn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="immvltnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Immvltn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="immEvaluationStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImmEvaluation_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="immEvaluationPnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ImmEvaluation_pnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="immEvaluationDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ImmEvaluation_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="immEvaluationAuthority" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ImmEvaluation_authority">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="immvltnTrgtDssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Immvltn_trgtDss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="immvltnTrgtDssCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Immvltn_trgtDss_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="immvltnTrgtDssCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Immvltn_trgtDss_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="immvltnTrgtDssCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Immvltn_trgtDss_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="immvltnTrgtDssCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Immvltn_trgtDss_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="immEvaluationImmEvent" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ImmEvaluation_immEvent">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Immvltn_dsStts_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Immvltn_dsStts_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Immvltn_dsStts_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Immvltn_dsStts_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Immvltn_dsStts_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Immvltn_dsSttsRsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Immvltn_dsSttsRsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Immvltn_dsSttsRsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Immvltn_dsSttsRsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="immvltnDsSttsRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Immvltn_dsSttsRsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="immEvaluationDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImmEvaluation_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="immEvaluationSeries" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImmEvaluation_series">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="immvltnDsNmbrPstvnt" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="Immvltn_dsNmbrPstvnt">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="immEvaluationDoseNumberString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImmEvaluation_doseNumberString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="immvltnSrsDssPstvnt" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="Immvltn_srsDssPstvnt">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="immEvaluationSeriesDosesString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImmEvaluation_seriesDosesString">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

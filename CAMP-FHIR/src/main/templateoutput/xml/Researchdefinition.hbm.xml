@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Researchdefinition" optimistic-lock="none" table="researchdefinition">
+        <id name="researchDefinitionUrl" type="string">
+            <column length="512" name="ResearchDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="rsrchDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchDfntn_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionShortTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_shortTitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ResearchDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ResearchDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchDfntn_sbjctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchDfntn_sbjctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchDfntn_sbjctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchDfntn_sbjctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchDfntn_sbjctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnSbjctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RsrchDfntn_sbjctRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ResearchDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ResearchDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionComment" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_comment">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ResearchDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchDfntn_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchDfntn_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchDfntn_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchDfntn_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchDfntn_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ResearchDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionUsage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchDefinition_usage">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ResearchDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ResearchDefinition_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ResearchDefinition_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchDfntn_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchDfntn_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchDfntn_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchDfntn_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchDfntn_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchDfntn_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnTpcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchDfntn_tpc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchDfntn_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchDfntn_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchDfntn_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchDefinition_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchDefinition_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchDefinition_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchDefinition_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="ResearchDefinition_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionLibrary" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ResearchDefinition_library">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionPopulation" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchDefinition_population">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionExposure" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchDefinition_exposure">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rsrchDfntnXpsrltrntve" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RsrchDfntn_xpsrltrntve">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchDefinitionOutcome" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchDefinition_outcome">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

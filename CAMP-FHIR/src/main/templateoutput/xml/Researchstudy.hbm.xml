@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Researchstudy" optimistic-lock="none" table="researchstudy">
+        <id name="rsrchStdDntfrCdngCde" type="string">
+            <column length="512" name="RsrchStd_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="rsrchStdDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="RsrchStd_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchStdDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="RsrchStd_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="RsrchStd_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="RsrchStd_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudyTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchStudy_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchStudyProtocol" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchStudy_protocol">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchStudyPartOf" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchStudy_partOf">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchStudyStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ResearchStudy_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrmrPrpsTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_prmrPrpsTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrmrPrpsTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchStd_prmrPrpsTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrmrPrpsTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_prmrPrpsTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrmrPrpsTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_prmrPrpsTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrmrPrpsTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_prmrPrpsTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPhsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_phs_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyPhaseCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_phase_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="researchStudyPhaseCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ResearchStudy_phase_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="researchStudyPhaseCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ResearchStudy_phase_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="researchStudyPhaseCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ResearchStudy_phase_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyCategoryCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_category_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCtgrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_ctgr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCtgrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_ctgr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCtgrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_ctgr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdFcsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_fcs_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyFocusCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_focus_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="researchStudyFocusCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ResearchStudy_focus_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="researchStudyFocusCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ResearchStudy_focus_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="researchStudyFocusCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ResearchStudy_focus_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCndtnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_cndtn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCndtnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchStd_cndtn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCndtnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_cndtn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCndtnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_cndtn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdCndtnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_cndtn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudyContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ResearchStudy_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="researchStudyRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="ResearchStudy_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="rsrchStdKwrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_kwrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyKeywordCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_keyword_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdKwrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_kwrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdKwrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_kwrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdKwrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_kwrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdLctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_lctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyLocationCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_location_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdLctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_lctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdLctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_lctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdLctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_lctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudyDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ResearchStudy_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="researchStudyEnrollment" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchStudy_enrollment">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="researchStudyPeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ResearchStudy_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudySponsor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchStudy_sponsor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rsrchStdPrncplnvstgtr" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RsrchStd_prncplnvstgtr">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchStudySite" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchStudy_site">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRsnStppdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_rsnStppd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRsnStppdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchStd_rsnStppd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRsnStppdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_rsnStppd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRsnStppdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_rsnStppd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRsnStppdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_rsnStppd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rsrchStdNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="researchStudyNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="ResearchStudy_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="researchStudyNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="ResearchStudy_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="researchStudyNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="ResearchStudy_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudyArm" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ResearchStudy_arm">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="researchStudyArmName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchStudy_arm_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRmTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_rm_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchStudyArmTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchStudy_arm_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRmTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_rm_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRmTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_rm_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdRmTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_rm_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchStudyArmDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchStudy_arm_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchStudyObjective" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="ResearchStudy_objective">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="researchStudyObjectiveName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchStudy_objective_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="rsrchStdBjctvTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchStd_bjctv_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchStdBjctvTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RsrchStd_bjctv_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchStdBjctvTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchStd_bjctv_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchStdBjctvTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchStd_bjctv_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchStdBjctvTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchStd_bjctv_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

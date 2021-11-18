@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Supplydelivery" optimistic-lock="none" table="supplydelivery">
+        <id name="spplDlvrDntfrCdngCde" type="string">
+            <column length="512" name="SpplDlvr_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="spplDlvrDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="SpplDlvr_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="spplDlvrDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="SpplDlvr_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="spplDlvrDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="SpplDlvr_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="spplDlvrDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="SpplDlvr_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryPartOf" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_partOf">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="SupplyDelivery_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryPnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_pnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="spplDlvrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SpplDlvr_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SupplyDelivery_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SupplyDelivery_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SupplyDelivery_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SupplyDelivery_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="supplyDeliverySuppliedItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="SupplyDelivery_suppliedItem">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmQntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_qntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="spplDlvrSppldtmTmRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SpplDlvr_sppldtm_tmRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryOccurrenceDatetime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="SupplyDelivery_occurrenceDatetime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SpplDlvr_ccrrncPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SpplDlvr_ccrrncPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SpplDlvr_ccrrncPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SpplDlvr_ccrrncPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SpplDlvr_ccrrncPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SpplDlvr_ccrrncTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SpplDlvr_ccrrncTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SpplDlvr_ccrrncTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SpplDlvr_ccrrncTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="spplDlvrCcrrncTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SpplDlvr_ccrrncTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="supplyDeliverySupplier" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_supplier">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryDestination" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_destination">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="supplyDeliveryReceiver" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="SupplyDelivery_receiver">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

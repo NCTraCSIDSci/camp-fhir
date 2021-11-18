@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Enrollmentrequest" optimistic-lock="none" table="enrollmentrequest">
+        <id name="enrllmntRqstDntfrCdngCde" type="string">
+            <column length="512" name="EnrllmntRqst_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="enrllmntRqstDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EnrollmentRequest_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="EnrollmentRequest_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestInsurer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EnrollmentRequest_insurer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestProvider" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EnrollmentRequest_provider">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestCandidate" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EnrollmentRequest_candidate">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestCoverage" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EnrollmentRequest_coverage">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

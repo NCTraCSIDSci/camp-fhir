@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Measurereport" optimistic-lock="none" table="measurereport">
+        <id name="msrRprtDntfrCdngCde" type="string">
+            <column length="512" name="MsrRprt_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="msrRprtDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="MsrRprt_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="MsrRprt_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="MsrRprt_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="MsrRprt_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="measureReportStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MeasureReport_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="measureReportType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="MeasureReport_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="measureReportMeasure" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="MeasureReport_measure">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="measureReportSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MeasureReport_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="measureReportDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="MeasureReport_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="measureReportReporter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MeasureReport_reporter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="msrRprtPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="measureReportPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MeasureReport_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="measureReportPeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MeasureReport_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtMprvmntNttnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_mprvmntNttn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtMprvmntNttnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_mprvmntNttn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtMprvmntNttnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_mprvmntNttn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtMprvmntNttnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_mprvmntNttn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtMprvmntNttnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_mprvmntNttn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="measureReportGroup" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MeasureReport_group">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="measureReportGroupPopulation" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MeasureReport_group_population">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnCnt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_cnt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpPpltnSbjctRslts" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MsrRprt_grp_ppltn_sbjctRslts">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpMsrScrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_msrScr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpMsrScrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_msrScr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpMsrScrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_msrScr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpMsrScrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_msrScr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpMsrScrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_msrScr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="measureReportGroupStratifier" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MeasureReport_group_stratifier">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtm" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmVlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_vl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmVlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_vl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmVlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_vl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmVlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_vl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmVlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_vl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnnt" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntVlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_vl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntVlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_vl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntVlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_vl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntVlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_vl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmCmpnntVlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_cmpnnt_vl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltn" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnCnt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_cnt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmPpltnSbjctRslts" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_ppltn_sbjctRslts">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmMsrScrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_msrScr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmMsrScrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_msrScr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmMsrScrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_msrScr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmMsrScrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_msrScr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="msrRprtGrpStrtfrStrtmMsrScrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="MsrRprt_grp_strtfr_strtm_msrScr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="measureReportEvaluatedResource" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="MeasureReport_evaluatedResource">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Operationoutcome" optimistic-lock="none" table="operationoutcome">
+        <id name="operationOutcomeIssueSeverity" type="string">
+            <column length="512" name="OperationOutcome_issue_severity"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="operationOutcomeIssueCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationOutcome_issue_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsDtlsCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="operationOutcomeIssueDiagnostics" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationOutcome_issue_diagnostics">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationOutcomeIssueLocation" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationOutcome_issue_location">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationOutcomeIssueExpression" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationOutcome_issue_expression">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

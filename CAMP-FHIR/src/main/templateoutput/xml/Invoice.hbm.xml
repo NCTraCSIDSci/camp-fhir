@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Invoice" optimistic-lock="none" table="invoice">
+        <id name="invoiceIdentifierCodingCode" type="string">
+            <column length="512" name="Invoice_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="invcDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Invc_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invoiceIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Invoice_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invoiceIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Invoice_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invoiceIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Invoice_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoiceStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Invoice_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="invoiceCancelledReason" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Invoice_cancelledReason">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="invoiceTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invoice_type_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invoiceTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invoice_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invoiceTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invoice_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invoiceTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invoice_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invoiceTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invoice_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoiceSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invoice_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invoiceRecipient" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invoice_recipient">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invoiceDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="Invoice_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="invoiceParticipant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Invoice_participant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="invcPrtcpntRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invcPrtcpntRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invcPrtcpntRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invcPrtcpntRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invcPrtcpntRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoiceParticipantActor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invoice_participant_actor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invoiceIssuer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invoice_issuer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invoiceAccount" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invoice_account">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invoiceLineItem" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Invoice_lineItem">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="invoiceLineItemSequence" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="Invoice_lineItem_sequence">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Invc_lntm_chrgtmRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invcLntmChrgtmcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoiceLineItemPriceComponent" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Invoice_lineItem_priceComponent">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_tpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntFctr" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_fctr">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntMntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntMntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntMntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntMntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invcLntmPrcCmpnntMntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalPriceComponent" type="string">
+            <meta attribute="resource-type">see priceComponent</meta>
+            <column length="65535" name="Invoice_totalPriceComponent">
+                <comment>see priceComponent</comment>
+            </column>
+        </property>
+        <property name="invcTtlNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_ttlNt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalNetCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invoice_totalNet_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalNetCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invoice_totalNet_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalNetCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invoice_totalNet_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalNetCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invoice_totalNet_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invcTtlGrssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invc_ttlGrss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalGrossCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invoice_totalGross_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalGrossCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invoice_totalGross_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalGrossCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invoice_totalGross_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invoiceTotalGrossCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invoice_totalGross_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="invoicePaymentTerms" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="Invoice_paymentTerms">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="invoiceNoteCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Invoice_note_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="invoiceNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Invoice_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="invoiceNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Invoice_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="invoiceNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Invoice_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="invoiceNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Invoice_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

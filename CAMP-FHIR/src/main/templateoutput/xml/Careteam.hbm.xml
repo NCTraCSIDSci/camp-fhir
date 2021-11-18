@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Careteam" optimistic-lock="none" table="careteam">
+        <id name="careTeamIdentifierCodingCode" type="string">
+            <column length="512" name="CareTeam_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="crTmDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="CrTm_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="CareTeam_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="CareTeam_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="CareTeam_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CareTeam_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="crTmCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamCategoryCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CareTeam_category_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="careTeamCategoryCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CareTeam_category_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CareTeam_category_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamCategoryCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CareTeam_category_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CareTeam_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="careTeamSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="careTeamEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crTmPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CareTeam_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="careTeamPeriodCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CareTeam_period_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamPeriodCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CareTeam_period_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamPeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CareTeam_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamParticipant" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="CareTeam_participant">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntRlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntRlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntRlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntRlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntRlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamParticipantMember" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_participant_member">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="careTeamParticipantOnBehalfOf" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_participant_onBehalfOf">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crTmPrtcpntPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crTmRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamReasonCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CareTeam_reasonCode_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="careTeamReasonCodeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CareTeam_reasonCode_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamReasonCodeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CareTeam_reasonCode_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamReasonCodeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CareTeam_reasonCode_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamReasonReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_reasonReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="careTeamManagingOrganization" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CareTeam_managingOrganization">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crTmTlcmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrTm_tlcm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamTelecomCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CareTeam_telecom_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="careTeamTelecomCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CareTeam_telecom_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamTelecomCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CareTeam_telecom_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamTelecomCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CareTeam_telecom_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CareTeam_note_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CareTeam_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CareTeam_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CareTeam_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CareTeam_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

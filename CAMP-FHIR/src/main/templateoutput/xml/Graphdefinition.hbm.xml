@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Graphdefinition" optimistic-lock="none" table="graphdefinition">
+        <id name="graphDefinitionUrl" type="string">
+            <column length="512" name="GraphDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="graphDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GraphDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="GraphDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="GraphDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="GraphDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="GraphDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="GraphDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="grphDfntnJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="GrphDfntn_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="GraphDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionStart" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GraphDefinition_start">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="GraphDefinition_profile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkPath" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_link_path">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkSliceName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_link_sliceName">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkMin" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="GraphDefinition_link_min">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkMax" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_link_max">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_link_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkTargetType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GraphDefinition_link_target_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkTargetParams" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GraphDefinition_link_target_params">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtPrfle" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_prfle">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtCmprtmntSe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_cmprtmnt_se">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtCmprtmntCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_cmprtmnt_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtCmprtmntRle" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_cmprtmnt_rle">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtCmprtmntXprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_cmprtmnt_xprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="grphDfntnLnkTrgtCmprtmntDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="GrphDfntn_lnk_trgt_cmprtmnt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="graphDefinitionLinkTargetLink" type="string">
+            <meta attribute="resource-type">see link</meta>
+            <column length="65535" name="GraphDefinition_link_target_link">
+                <comment>see link</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Structuredefinition" optimistic-lock="none" table="structuredefinition">
+        <id name="structureDefinitionUrl" type="string">
+            <column length="512" name="StructureDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="strctrDfntnDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="StructureDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="StructureDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="StructureDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="StructureDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionFhirVersion" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureDefinition_fhirVersion">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngDntty" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrDfntn_mppng_dntty">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionMappingUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="StructureDefinition_mapping_uri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionMappingName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureDefinition_mapping_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngCmmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrDfntn_mppng_cmmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureDefinition_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionAbstract" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="StructureDefinition_abstract">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionContextType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureDefinition_context_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCntxtXprssn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrDfntn_cntxt_xprssn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCntxtnvrnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrDfntn_cntxtnvrnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionType" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="StructureDefinition_type">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionBaseDefinition" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="StructureDefinition_baseDefinition">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionDerivation" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureDefinition_derivation">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnSnpshtLmnt" type="string">
+            <meta attribute="resource-type">ElementDefinition</meta>
+            <column length="65535" name="StrctrDfntn_snpsht_lmnt">
+                <comment>ElementDefinition</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDffrntlLmnt" type="string">
+            <meta attribute="resource-type">ElementDefinition</meta>
+            <column length="65535" name="StrctrDfntn_dffrntl_lmnt">
+                <comment>ElementDefinition</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

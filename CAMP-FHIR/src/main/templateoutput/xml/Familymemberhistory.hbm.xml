@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Familymemberhistory" optimistic-lock="none" table="familymemberhistory">
+        <id name="fmlMmbrHstrDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="fmlMmbrHstrDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_use_code</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_s_cde">
+                <comment>FamilyMemberHistory_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>FamilyMemberHistory_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_CdblCncpt_txt">
+                <comment>FamilyMemberHistory_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Period_start</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Prd_strt">
+                <comment>FamilyMemberHistory_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Period_end</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Prd_nd">
+                <comment>FamilyMemberHistory_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>FamilyMemberHistory_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Rfrnc_tpe">
+                <comment>FamilyMemberHistory_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>FamilyMemberHistory_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>FamilyMemberHistory_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_value_string</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_vl_strng">
+                <comment>FamilyMemberHistory_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">FamilyMemberHistory_identifierIdentifier_system_uri</meta>
+            <column length="512" name="FmlMmbrHstr_dntfr_dntfr_sstm_ri">
+                <comment>FamilyMemberHistory_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNstnttsCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="FmlMmbrHstr_nstnttsCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNstnttsri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="FmlMmbrHstr_nstnttsri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="FamilyMemberHistory_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDtbsntRsnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_dtbsntRsn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrPntRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="FmlMmbrHstr_pnt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="FamilyMemberHistory_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="FamilyMemberHistory_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRltnshpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_rltnshp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrSxCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_sx_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrBrnPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_brnPrd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrBrnPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_brnPrd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryBornDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="FamilyMemberHistory_bornDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryBornString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="FamilyMemberHistory_bornString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryAgeAge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="FamilyMemberHistory_ageAge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrGRngRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_gRng_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrGRngRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_gRng_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryAgeString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="FamilyMemberHistory_ageString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryEstimatedAge" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="FamilyMemberHistory_estimatedAge">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDcsdBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="FmlMmbrHstr_dcsdBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryDeceasedAge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="FamilyMemberHistory_deceasedAge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDcsdRngRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_dcsdRng_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrDcsdRngRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_dcsdRng_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryDeceasedDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="FamilyMemberHistory_deceasedDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="familyMemberHistoryDeceasedString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="FamilyMemberHistory_deceasedString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnCd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrRsnRfrncRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="FmlMmbrHstr_rsnRfrnc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnTmDtTme" type="string">
+            <meta attribute="resource-type">Annotation_time_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_tm_dtTme">
+                <comment>Annotation_time_dateTime</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnTxtMrkdwn" type="string">
+            <meta attribute="resource-type">Annotation_text_markdown</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_txt_mrkdwn">
+                <comment>Annotation_text_markdown</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Annotation_Reference_reference</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_Rfrnc_rfrnce">
+                <comment>Annotation_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnRfrncTpe" type="string">
+            <meta attribute="resource-type">Annotation_Reference_type</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_Rfrnc_tpe">
+                <comment>Annotation_Reference_type</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnRfrncDntfr" type="string">
+            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_Rfrnc_dntfr">
+                <comment>Annotation_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnRfrncDsplay" type="string">
+            <meta attribute="resource-type">Annotation_Reference_display</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_Rfrnc_dsplay">
+                <comment>Annotation_Reference_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrNtNnttnThrStrngStrng" type="string">
+            <meta attribute="resource-type">Annotation_authorString_string</meta>
+            <column length="65535" name="FmlMmbrHstr_nt_nnttn_thrStrng_strng">
+                <comment>Annotation_authorString_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCdCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cd_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnTcmCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_tcm_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnCntrbtdTdth" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_cntrbtdTDth">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstge" type="string">
+            <meta attribute="resource-type">Age</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstge">
+                <comment>Age</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstRngRngLwSmplQntty" type="string">
+            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstRng_Rng_lw_SmplQntty">
+                <comment>Range_low_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstRngRngHghSmplQntty" type="string">
+            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstRng_Rng_hgh_SmplQntty">
+                <comment>Range_high_SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstPrdPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstPrd_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstPrdPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstPrd_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNstStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nstStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnTmDtTme" type="string">
+            <meta attribute="resource-type">Annotation_time_dateTime</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_tm_dtTme">
+                <comment>Annotation_time_dateTime</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnTxtMrkdwn" type="string">
+            <meta attribute="resource-type">Annotation_text_markdown</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_txt_mrkdwn">
+                <comment>Annotation_text_markdown</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Annotation_Reference_reference</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_Rfrnc_rfrnce">
+                <comment>Annotation_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnRfrncTpe" type="string">
+            <meta attribute="resource-type">Annotation_Reference_type</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_Rfrnc_tpe">
+                <comment>Annotation_Reference_type</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnRfrncDntfr" type="string">
+            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_Rfrnc_dntfr">
+                <comment>Annotation_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnRfrncDsplay" type="string">
+            <meta attribute="resource-type">Annotation_Reference_display</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_Rfrnc_dsplay">
+                <comment>Annotation_Reference_display</comment>
+            </column>
+        </property>
+        <property name="fmlMmbrHstrCndtnNtNnttnThrStrngStrng" type="string">
+            <meta attribute="resource-type">Annotation_authorString_string</meta>
+            <column length="65535" name="FmlMmbrHstr_cndtn_nt_nnttn_thrStrng_strng">
+                <comment>Annotation_authorString_string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

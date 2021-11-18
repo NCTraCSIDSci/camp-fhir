@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Implementationguide" optimistic-lock="none" table="implementationguide">
+        <id name="implementationGuideUrl" type="string">
+            <column length="512" name="ImplementationGuide_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="implementationGuideVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplementationGuide_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implementationGuideExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ImplementationGuide_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="implementationGuideDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ImplementationGuide_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="implementationGuidePublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ImplementationGuide_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="implementationGuideDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ImplementationGuide_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="implementationGuideUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ImplementationGuide_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ImplementationGuide_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="implementationGuidePackageId" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="ImplementationGuide_packageId">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="implementationGuideLicense" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplementationGuide_license">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implementationGuideFhirVersion" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplementationGuide_fhirVersion">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implementationGuideDependsOnUri" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ImplementationGuide_dependsOn_uri">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDpndsnPckgd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="ImplmnttnGd_dpndsn_pckgd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDpndsnVrsn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dpndsn_vrsn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideGlobalType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplementationGuide_global_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implementationGuideGlobalProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ImplementationGuide_global_profile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnGrpngNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_grpng_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnGrpngDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_grpng_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcFhrVrsn" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_fhrVrsn">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcXmplBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcXmplCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnRsrcGrpngd" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_grpngd">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmrl" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmrl">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgTtle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_ttle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgGnrtn" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_gnrtn">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPgPge" type="string">
+            <meta attribute="resource-type">see page</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_pge">
+                <comment>see page</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPrmtrCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnPrmtrVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnTmpltCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnTmpltSrce" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_srce">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdDfntnTmpltScpe" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_scpe">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRndrng" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rndrng">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcXmplBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcXmplCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstRsrcRltvPth" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rltvPth">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstPgNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstPgTtle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_ttle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implmnttnGdMnfstPgNchr" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_nchr">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideManifestImage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_manifest_image">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="implementationGuideManifestOther" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ImplementationGuide_manifest_other">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

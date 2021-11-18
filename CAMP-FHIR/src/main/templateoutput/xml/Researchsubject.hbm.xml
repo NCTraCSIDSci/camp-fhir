@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Researchsubject" optimistic-lock="none" table="researchsubject">
+        <id name="rsrchSbjctDntfrCdngCde" type="string">
+            <column length="512" name="RsrchSbjct_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="rsrchSbjctDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="RsrchSbjct_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="RsrchSbjct_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="RsrchSbjct_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="RsrchSbjct_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchSubjectStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ResearchSubject_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RsrchSbjct_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="researchSubjectPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="ResearchSubject_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RsrchSbjct_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RsrchSbjct_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RsrchSbjct_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="researchSubjectStudy" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchSubject_study">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchSubjectIndividual" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchSubject_individual">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="researchSubjectAssignedArm" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchSubject_assignedArm">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchSubjectActualArm" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ResearchSubject_actualArm">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="researchSubjectConsent" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="ResearchSubject_consent">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Structuremap" optimistic-lock="none" table="structuremap">
+        <id name="structureMapUrl" type="string">
+            <column length="512" name="StructureMap_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="strctrMpDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="strctrMpDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="structureMapVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureMap_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="structureMapExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="StructureMap_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="structureMapDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="StructureMap_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="structureMapPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="StructureMap_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="structureMapDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureMap_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="structureMapUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="StructureMap_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="strctrMpJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="structureMapPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureMap_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="structureMapCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="StructureMap_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="structureMapStructureUrl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="StructureMap_structure_url">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="structureMapStructureMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureMap_structure_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="structureMapStructureAlias" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_structure_alias">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpStrctrDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_strctr_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapImport" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="StructureMap_import">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupName" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StructureMap_group_name">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupExtends" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StructureMap_group_extends">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupTypeMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureMap_group_typeMode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupDocumentation" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_group_documentation">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupInputName" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StructureMap_group_input_name">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupInputType" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_group_input_type">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupInputMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StructureMap_group_input_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpNptDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_npt_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupRuleName" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StructureMap_group_rule_name">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcCntxt" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_cntxt">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupRuleSourceMin" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="StructureMap_group_rule_source_min">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupRuleSourceMax" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StructureMap_group_rule_source_max">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcTpe" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_tpe">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLstMde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lstMde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcVrble" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_vrble">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcCndtn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_cndtn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcChck" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_chck">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLgMssge" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lgMssge">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtCntxt" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxt">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtCntxtTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxtTpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtVrble" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_vrble">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLstMde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lstMde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLstRld" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lstRld">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtTrnsfrm" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_trnsfrm">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVld" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vld">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupRuleRule" type="string">
+            <meta attribute="resource-type">see rule</meta>
+            <column length="65535" name="StructureMap_group_rule_rule">
+                <comment>see rule</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDpndntNme" type="string">
+            <meta attribute="resource-type">id</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dpndnt_nme">
+                <comment>id</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDpndntVrble" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dpndnt_vrble">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

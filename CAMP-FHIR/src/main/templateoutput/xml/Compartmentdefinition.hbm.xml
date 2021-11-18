@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Compartmentdefinition" optimistic-lock="none" table="compartmentdefinition">
+        <id name="compartmentDefinitionUrl" type="string">
+            <column length="512" name="CompartmentDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="compartmentDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CompartmentDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CompartmentDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CompartmentDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CompartmentDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CompartmentDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CompartmentDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="CompartmentDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CompartmentDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="CompartmentDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="CompartmentDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CompartmentDefinition_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionSearch" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CompartmentDefinition_search">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcPrm" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_prm">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Schedule" optimistic-lock="none" table="schedule">
+        <id name="schdlDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="schdlDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_use_code</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_s_cde">
+                <comment>Schedule_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Schedule_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Prd_strt">
+                <comment>Schedule_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Prd_nd">
+                <comment>Schedule_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Schedule_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Schedule_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Schedule_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Schedule_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_value_string</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_vl_strng">
+                <comment>Schedule_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="schdlDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Schedule_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_sstm_ri">
+                <comment>Schedule_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="scheduleActive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Schedule_active">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcCtgrCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="schdlSrvcTpCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Schdl_srvcTp_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="schdlSpcltCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="Schdl_spclt_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="schdlCtrRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Schdl_ctr_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="scheduleActorReferenceTypeUri" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Schedule_actor_Reference_type_uri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="schdlPlnnngHrznPrdStrtDtTme" type="string">
+            <meta attribute="resource-type">Period_start_dateTime</meta>
+            <column length="65535" name="Schdl_plnnngHrzn_Prd_strt_dtTme">
+                <comment>Period_start_dateTime</comment>
+            </column>
+        </property>
+        <property name="schdlPlnnngHrznPrdNdDtTme" type="string">
+            <meta attribute="resource-type">Period_end_dateTime</meta>
+            <column length="65535" name="Schdl_plnnngHrzn_Prd_nd_dtTme">
+                <comment>Period_end_dateTime</comment>
+            </column>
+        </property>
+        <property name="scheduleComment" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Schedule_comment">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

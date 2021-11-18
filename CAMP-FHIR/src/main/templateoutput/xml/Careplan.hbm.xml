@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Careplan" optimistic-lock="none" table="careplan">
+        <id name="carePlanIdentifierCodingCode" type="string">
+            <column length="512" name="CarePlan_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="crPlnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="CrPln_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="carePlanIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="CarePlan_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="carePlanIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="CarePlan_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="carePlanIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="CarePlan_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="carePlanInstantiatesCanonical" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CarePlan_instantiatesCanonical">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="carePlanInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="CarePlan_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="carePlanBasedOn" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_basedOn">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanReplaces" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_replaces">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanPartOf" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_partOf">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CarePlan_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="carePlanIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CarePlan_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtgrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctgr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="carePlanCategoryCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CarePlan_category_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="carePlanCategoryCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CarePlan_category_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="carePlanCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CarePlan_category_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="carePlanCategoryCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CarePlan_category_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="carePlanTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CarePlan_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="carePlanDescription" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CarePlan_description">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="carePlanSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crPlnPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="carePlanPeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CarePlan_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="carePlanPeriodCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CarePlan_period_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="carePlanPeriodCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CarePlan_period_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="carePlanPeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CarePlan_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="carePlanCreated" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="CarePlan_created">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="carePlanAuthor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_author">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanContributor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_contributor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanCareTeam" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_careTeam">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanAddresses" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_addresses">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanSupportingInfo" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_supportingInfo">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanGoal" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_goal">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanActivity" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="CarePlan_activity">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtTcmCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_tcmCdblCncpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtTcmCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_tcmCdblCncpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtTcmCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_tcmCdblCncpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtTcmCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_tcmCdblCncpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtTcmCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_tcmCdblCncpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityOutcomeReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_activity_outcomeReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtPrgrssCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_prgrss_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtPrgrssCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_prgrss_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtPrgrssCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_prgrss_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtPrgrssCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_prgrss_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtPrgrssCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_prgrss_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_activity_reference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetail" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="CarePlan_activity_detail">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CarePlan_activity_detail_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlNstnttsCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_nstnttsCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlNstnttsri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_nstnttsri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_cd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_cd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_cd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_cd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_cd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnCdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnCd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnCdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnCd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnCdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnCd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnCdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnCd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlRsnRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_rsnRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailGoal" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_activity_detail_goal">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="CarePlan_activity_detail_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSttsRsnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_sttsRsn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSttsRsnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_sttsRsn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSttsRsnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_sttsRsn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSttsRsnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_sttsRsn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSttsRsnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_sttsRsn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlDNtPrfrm" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_dNtPrfrm">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlSchdldStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_schdldStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailLocation" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_activity_detail_location">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailPerformer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CarePlan_activity_detail_performer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlPrdctRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_prdctRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlDlmnt" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_dlmnt">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="carePlanActivityDetailQuantity" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="CarePlan_activity_detail_quantity">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="crPlnCtvtDtlDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="CrPln_ctvt_dtl_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="carePlanNoteCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="CarePlan_note_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="carePlanNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="CarePlan_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="carePlanNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="CarePlan_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="carePlanNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="CarePlan_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="carePlanNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="CarePlan_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

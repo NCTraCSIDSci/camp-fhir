@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Coverage" optimistic-lock="none" table="coverage">
+        <id name="coverageIdentifierCodingCode" type="string">
+            <column length="512" name="Coverage_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="cvrgDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Cvrg_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="coverageIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Coverage_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="coverageIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Coverage_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="coverageIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Coverage_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="coverageStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Coverage_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="coverageTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Coverage_type_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="coverageTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Coverage_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="coverageTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Coverage_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="coverageTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Coverage_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="coverageTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Coverage_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="coveragePolicyHolder" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Coverage_policyHolder">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="coverageSubscriber" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Coverage_subscriber">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="coverageSubscriberId" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Coverage_subscriberId">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="coverageBeneficiary" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Coverage_beneficiary">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="coverageDependent" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Coverage_dependent">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="cvrgRltnshpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_rltnshp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="coverageRelationshipCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Coverage_relationship_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cvrgRltnshpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cvrg_rltnshp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cvrgRltnshpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cvrg_rltnshp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cvrgRltnshpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cvrg_rltnshp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cvrgPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="coveragePeriodCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Coverage_period_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="coveragePeriodCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Coverage_period_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="coveragePeriodCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Coverage_period_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="coveragePeriodCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Coverage_period_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="coveragePayor" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Coverage_payor">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="coverageClass" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Coverage_class">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cvrgClssTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_clss_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="coverageClassTypeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Coverage_class_type_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="coverageClassTypeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Coverage_class_type_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="coverageClassTypeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Coverage_class_type_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="coverageClassTypeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Coverage_class_type_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="coverageClassValue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Coverage_class_value">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="coverageClassName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Coverage_class_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="coverageOrder" type="string">
+            <meta attribute="resource-type">positiveInt</meta>
+            <column length="65535" name="Coverage_order">
+                <comment>positiveInt</comment>
+            </column>
+        </property>
+        <property name="coverageNetwork" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Coverage_network">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="coverageCostToBeneficiary" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Coverage_costToBeneficiary">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlSmplqntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlSmplqntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlMnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlMn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlMnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlMn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlMnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlMn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlMnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlMn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrVlMnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_vlMn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptn" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_prd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_prd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_prd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_prd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="cvrgCstTbnfcrXcptnPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Cvrg_cstTBnfcr_xcptn_prd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="coverageSubrogation" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Coverage_subrogation">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="coverageContract" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Coverage_contract">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

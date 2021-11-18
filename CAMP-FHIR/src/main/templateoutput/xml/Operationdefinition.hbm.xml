@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Operationdefinition" optimistic-lock="none" table="operationdefinition">
+        <id name="operationDefinitionUrl" type="string">
+            <column length="512" name="OperationDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="operationDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="OperationDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="OperationDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="OperationDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="OperationDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="OperationDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="OprtnDfntn_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="OperationDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionAffectsState" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="OperationDefinition_affectsState">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionComment" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="OperationDefinition_comment">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionBase" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="OperationDefinition_base">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionResource" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_resource">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionSystem" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="OperationDefinition_system">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionType" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="OperationDefinition_type">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionInstance" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="OperationDefinition_instance">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionInputProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="OperationDefinition_inputProfile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionOutputProfile" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="OperationDefinition_outputProfile">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterName" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_parameter_name">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterUse" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_parameter_use">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterMin" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="OperationDefinition_parameter_min">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterMax" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OperationDefinition_parameter_max">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OperationDefinition_parameter_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrTrgtPrfle" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_trgtPrfle">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrSrchTpe" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_srchTpe">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrBndngStr" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_bndng_str">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrBndngVlSt" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_bndng_vlSt">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrRfrncdFrmSrce" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_rfrncdFrm_srce">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnPrmtrRfrncdFrmSrcd" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OprtnDfntn_prmtr_rfrncdFrm_srcd">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="operationDefinitionParameterPart" type="string">
+            <meta attribute="resource-type">see parameter</meta>
+            <column length="65535" name="OperationDefinition_parameter_part">
+                <comment>see parameter</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnVrldPrmtrNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OprtnDfntn_vrld_prmtrNme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="oprtnDfntnVrldCmmnt" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="OprtnDfntn_vrld_cmmnt">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

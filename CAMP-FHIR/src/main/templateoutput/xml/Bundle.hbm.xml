@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Bundle" optimistic-lock="none" table="bundle">
+        <id name="bndlDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="bndlDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_use_code</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_s_cde">
+                <comment>Bundle_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Bundle_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Prd_strt">
+                <comment>Bundle_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Prd_nd">
+                <comment>Bundle_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Bundle_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Bundle_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Bundle_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Bundle_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_value_string</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_vl_strng">
+                <comment>Bundle_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="bndlDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Bundle_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_sstm_ri">
+                <comment>Bundle_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="bundleType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Bundle_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="bundleTimestamp" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Bundle_timestamp">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="bundleTotal" type="string">
+            <meta attribute="resource-type">unsignedInt</meta>
+            <column length="65535" name="Bundle_total">
+                <comment>unsignedInt</comment>
+            </column>
+        </property>
+        <property name="bundleLinkRelation" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_link_relation">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bundleLinkUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Bundle_link_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="bundleEntryLink" type="string">
+            <meta attribute="resource-type">see link</meta>
+            <column length="65535" name="Bundle_entry_link">
+                <comment>see link</comment>
+            </column>
+        </property>
+        <property name="bundleEntryFullUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Bundle_entry_fullUrl">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResource" type="string">
+            <meta attribute="resource-type">Resource</meta>
+            <column length="65535" name="Bundle_entry_resource">
+                <comment>Resource</comment>
+            </column>
+        </property>
+        <property name="bundleEntrySearchMode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Bundle_entry_search_mode">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="bundleEntrySearchScore" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="Bundle_entry_search_score">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="bundleEntryRequestMethod" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Bundle_entry_request_method">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="bundleEntryRequestUrl" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Bundle_entry_request_url">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="bundleEntryRequestIfNoneMatch" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_entry_request_ifNoneMatch">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bndlNtrRqstFMdfdSnce" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Bndl_ntr_rqst_fMdfdSnce">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="bundleEntryRequestIfMatch" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_entry_request_ifMatch">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bundleEntryRequestIfNoneExist" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_entry_request_ifNoneExist">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResponseStatus" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_entry_response_status">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResponseLocation" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="Bundle_entry_response_location">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResponseEtag" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Bundle_entry_response_etag">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResponseLastModified" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Bundle_entry_response_lastModified">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="bundleEntryResponseOutcome" type="string">
+            <meta attribute="resource-type">Resource</meta>
+            <column length="65535" name="Bundle_entry_response_outcome">
+                <comment>Resource</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrDtBs64bnry" type="string">
+            <meta attribute="resource-type">Signature_data_base64Binary</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_dt_bs64Bnry">
+                <comment>Signature_data_base64Binary</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrTrgtFrmtCde" type="string">
+            <meta attribute="resource-type">Signature_targetFormat_code</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_trgtFrmt_cde">
+                <comment>Signature_targetFormat_code</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrSgFrmtCde" type="string">
+            <meta attribute="resource-type">Signature_sigFormat_code</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_sgFrmt_cde">
+                <comment>Signature_sigFormat_code</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrCdngSstm" type="string">
+            <meta attribute="resource-type">Signature_Coding_system</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_sstm">
+                <comment>Signature_Coding_system</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrCdngVrsn" type="string">
+            <meta attribute="resource-type">Signature_Coding_version</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_vrsn">
+                <comment>Signature_Coding_version</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrCdngCde" type="string">
+            <meta attribute="resource-type">Signature_Coding_code</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_cde">
+                <comment>Signature_Coding_code</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrCdngDsplay" type="string">
+            <meta attribute="resource-type">Signature_Coding_display</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_dsplay">
+                <comment>Signature_Coding_display</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_srSlctd">
+                <comment>Signature_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrWhnNstnt" type="string">
+            <meta attribute="resource-type">Signature_when_instant</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_whn_nstnt">
+                <comment>Signature_when_instant</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Signature_Reference_reference</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_rfrnce">
+                <comment>Signature_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrRfrncTpe" type="string">
+            <meta attribute="resource-type">Signature_Reference_type</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_tpe">
+                <comment>Signature_Reference_type</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Signature_Reference_identifier</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_dntfr">
+                <comment>Signature_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="bndlSgntrSgntrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Signature_Reference_display</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_dsplay">
+                <comment>Signature_Reference_display</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

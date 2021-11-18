@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Evidencevariable" optimistic-lock="none" table="evidencevariable">
+        <id name="evidenceVariableUrl" type="string">
+            <column length="512" name="EvidenceVariable_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="evdncVrblDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableShortTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_shortTitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EvidenceVariable_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="EvidenceVariable_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="evidenceVariablePublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvidenceVariable_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EvidenceVariable_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EvidenceVariable_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="evdncVrblNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvidenceVariable_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="EvidenceVariable_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="evdncVrblJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EvidenceVariable_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EvidenceVariable_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EvidenceVariable_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="evdncVrblFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evdncVrblTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableTopicCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvidenceVariable_topic_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EvidenceVariable_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EvidenceVariable_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EvidenceVariable_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EvidenceVariable_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="EvidenceVariable_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EvidenceVariable_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableChrctr" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="EvidenceVariable_chrctr">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntnRfrnce" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntnRfrnce">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntnCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntnCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntncdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntncdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntncdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntncdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntncdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntncdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntncdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntncdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntncdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntncdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntnxprssn" type="string">
+            <meta attribute="resource-type">Expression</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntnxprssn">
+                <comment>Expression</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntnDtrqrmnt" type="string">
+            <meta attribute="resource-type">DataRequirement</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntnDtrqrmnt">
+                <comment>DataRequirement</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrDfntnTrggrdfntn" type="string">
+            <meta attribute="resource-type">TriggerDefinition</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_dfntnTrggrdfntn">
+                <comment>TriggerDefinition</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrSgCntxt" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_sgCntxt">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="evidenceVariableChrctrExclude" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="EvidenceVariable_chrctr_exclude">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvDrtn" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvDrtn">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvTmngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvTmng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvTmngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvTmng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvTmngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvTmng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvTmngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvTmng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrPrtcpntffctvTmngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_prtcpntffctvTmng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrTmFrmStrt" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_tmFrmStrt">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="evdncVrblChrctrGrpMsre" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EvdncVrbl_chrctr_grpMsre">
+                <comment>code</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

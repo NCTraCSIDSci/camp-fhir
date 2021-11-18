@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Eventdefinition" optimistic-lock="none" table="eventdefinition">
+        <id name="eventDefinitionUrl" type="string">
+            <column length="512" name="EventDefinition_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="evntDfntnDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvntDfntn_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evntDfntnDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvntDfntn_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evntDfntnDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvntDfntn_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evntDfntnDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvntDfntn_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evntDfntnDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvntDfntn_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionSubtitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_subtitle">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="EventDefinition_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="EventDefinition_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="evntDfntnSbjctcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvntDfntn_sbjctcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evntDfntnSbjctcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvntDfntn_sbjctcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evntDfntnSbjctcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvntDfntn_sbjctcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evntDfntnSbjctcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvntDfntn_sbjctcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evntDfntnSbjctcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvntDfntn_sbjctcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionSubjectReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="EventDefinition_subjectReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="EventDefinition_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EventDefinition_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EventDefinition_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="EventDefinition_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="evntDfntnJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvntDfntn_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evntDfntnJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvntDfntn_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evntDfntnJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvntDfntn_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evntDfntnJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvntDfntn_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evntDfntnJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvntDfntn_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EventDefinition_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionUsage" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="EventDefinition_usage">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="EventDefinition_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EventDefinition_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionLastReviewDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="EventDefinition_lastReviewDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="evntDfntnFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvntDfntn_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="evntDfntnFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EvntDfntn_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evntDfntnFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvntDfntn_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evntDfntnFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvntDfntn_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evntDfntnFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvntDfntn_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="evntDfntnTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="EvntDfntn_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionTopicCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="EventDefinition_topic_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="evntDfntnTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="EvntDfntn_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="evntDfntnTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="EvntDfntn_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="evntDfntnTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="EvntDfntn_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EventDefinition_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EventDefinition_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EventDefinition_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="EventDefinition_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionRelatedArtifact" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="EventDefinition_relatedArtifact">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="eventDefinitionTrigger" type="string">
+            <meta attribute="resource-type">TriggerDefinition</meta>
+            <column length="65535" name="EventDefinition_trigger">
+                <comment>TriggerDefinition</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

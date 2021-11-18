@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Valueset" optimistic-lock="none" table="valueset">
+        <id name="valueSetUrl" type="string">
+            <column length="512" name="ValueSet_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="vlStDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Identifier_use_code</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_s_cde">
+                <comment>Identifier_use_code</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
+                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Identifier_Period_start</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Prd_strt">
+                <comment>Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Identifier_Period_end</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Prd_nd">
+                <comment>Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Identifier_Reference_reference</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Identifier_Reference_type</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Identifier_Reference_display</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Identifier_value_string</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_vl_strng">
+                <comment>Identifier_value_string</comment>
+            </column>
+        </property>
+        <property name="vlStDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Identifier_system_uri</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_sstm_ri">
+                <comment>Identifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="valueSetVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ValueSet_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="valueSetExperimental" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ValueSet_experimental">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="valueSetDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ValueSet_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="valueSetPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="ValueSet_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="valueSetDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ValueSet_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="valueSetUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="ValueSet_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="vlStJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="valueSetImmutable" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ValueSet_immutable">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="valueSetPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ValueSet_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="valueSetCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="ValueSet_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeLockedDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="ValueSet_compose_lockedDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeInactive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="ValueSet_compose_inactive">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeIncludeSystem" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ValueSet_compose_include_system">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeIncludeVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_compose_include_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsplay">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnLngge" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_lngge">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnSCdngSrSlctdBln" type="string">
+            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_srSlctd_bln">
+                <comment>Coding_userSelected_boolean</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnSCdngCdCde" type="string">
+            <meta attribute="resource-type">Coding_code_code</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_cd_cde">
+                <comment>Coding_code_code</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnSCdngVrsnStrng" type="string">
+            <meta attribute="resource-type">Coding_version_string</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_vrsn_strng">
+                <comment>Coding_version_string</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnSCdngDsplStrng" type="string">
+            <meta attribute="resource-type">Coding_display_string</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_dspl_strng">
+                <comment>Coding_display_string</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnSCdngSstmRi" type="string">
+            <meta attribute="resource-type">Coding_system_uri</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_sstm_ri">
+                <comment>Coding_system_uri</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldCncptDsgntnVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldFltrPrprty" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VlSt_cmps_ncld_fltr_prprty">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeIncludeFilterOp" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ValueSet_compose_include_filter_op">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldFltrVlue" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_cmps_ncld_fltr_vlue">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeIncludeValueSet" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="ValueSet_compose_include_valueSet">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeExclude" type="string">
+            <meta attribute="resource-type">see include</meta>
+            <column length="65535" name="ValueSet_compose_exclude">
+                <comment>see include</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionIdentifier" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ValueSet_expansion_identifier">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionTimestamp" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="ValueSet_expansion_timestamp">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionTotal" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="ValueSet_expansion_total">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionOffset" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="ValueSet_expansion_offset">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionParameterName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="ValueSet_expansion_parameter_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlStrng" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlStrng">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlBln" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlBln">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlntgr" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlntgr">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlDcml" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlDcml">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlCde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlDttme" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlDttme">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionContainsSystem" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="ValueSet_expansion_contains_system">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsBstrct" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_bstrct">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsNctve" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_nctve">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsVrsn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_vrsn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionContainsCode" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="ValueSet_expansion_contains_code">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsDsplay" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_dsplay">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsDsgntn" type="string">
+            <meta attribute="resource-type">see designation</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_dsgntn">
+                <comment>see designation</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsCntns" type="string">
+            <meta attribute="resource-type">see contains</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_cntns">
+                <comment>see contains</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

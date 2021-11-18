@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Substancenucleicacid" optimistic-lock="none" table="substancenucleicacid">
+        <id name="sbstncNclccdSqncTpCdngCde" type="string">
+            <column length="512" name="SbstncNclccd_sqncTp_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="sbstncNclccdSqncTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSqncTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSqncTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSqncTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdNmbrfSbnts" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="SbstncNclccd_nmbrfSbnts">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdRfHbrdstn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_rfHbrdstn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdLgNcltdTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdLgNcltdTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdLgNcltdTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdLgNcltdTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdLgNcltdTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="substanceNucleicAcidSubunit" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="SubstanceNucleicAcid_subunit">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSbnt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sbnt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqnce" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqnce">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLngth" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lngth">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqncttchmntCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqncttchmntCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqncttchmntCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqncttchmntCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSqncttchmntCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntFvPrmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntFvPrmCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntFvPrmCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntFvPrmCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntFvPrmCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntThrPrmCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntThrPrmCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntThrPrmCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntThrPrmCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntThrPrmCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkge" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkge">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgCnnctvty" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_cnnctvty">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgRsdSte" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_rsdSte">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="substanceNucleicAcidSubunitSugar" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="SubstanceNucleicAcid_subunit_sugar">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrRsdSte" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_rsdSte">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

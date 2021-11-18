@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Person" optimistic-lock="none" table="person">
+        <id name="prsnDntfrDntfrTpCdblCncptCdngCde" type="string">
+            <column length="512" name="Prsn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="prsnDntfrDntfrSCde" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_use_code</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_s_cde">
+                <comment>Person_identifierIdentifier_use_code</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrTpCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
+                <comment>Person_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
+                <comment>Person_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
+                <comment>Person_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
+                <comment>Person_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_CodeableConcept_text</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Person_identifierIdentifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Period_start</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Prd_strt">
+                <comment>Person_identifierIdentifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Period_end</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Prd_nd">
+                <comment>Person_identifierIdentifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Reference_reference</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Person_identifierIdentifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Reference_type</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Person_identifierIdentifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Reference_identifier</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Person_identifierIdentifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_Reference_display</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Person_identifierIdentifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrVlStrng" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_value_string</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_vl_strng">
+                <comment>Person_identifierIdentifier_value_string</comment>
+            </column>
+        </property>
+        <property name="prsnDntfrDntfrSstmRi" type="string">
+            <meta attribute="resource-type">Person_identifierIdentifier_system_uri</meta>
+            <column length="512" name="Prsn_dntfr_dntfr_sstm_ri">
+                <comment>Person_identifierIdentifier_system_uri</comment>
+            </column>
+        </property>
+        <property name="personNameHumanNameUseCode" type="string">
+            <meta attribute="resource-type">HumanName_use_code</meta>
+            <column length="65535" name="Person_name_HumanName_use_code">
+                <comment>HumanName_use_code</comment>
+            </column>
+        </property>
+        <property name="personNameHumanNamePeriodStart" type="string">
+            <meta attribute="resource-type">HumanName_Period_start</meta>
+            <column length="65535" name="Person_name_HumanName_Period_start">
+                <comment>HumanName_Period_start</comment>
+            </column>
+        </property>
+        <property name="personNameHumanNamePeriodEnd" type="string">
+            <meta attribute="resource-type">HumanName_Period_end</meta>
+            <column length="65535" name="Person_name_HumanName_Period_end">
+                <comment>HumanName_Period_end</comment>
+            </column>
+        </property>
+        <property name="personNameHumanNameTextString" type="string">
+            <meta attribute="resource-type">HumanName_text_string</meta>
+            <column length="65535" name="Person_name_HumanName_text_string">
+                <comment>HumanName_text_string</comment>
+            </column>
+        </property>
+        <property name="prsnNmHmnNmFmlStrng" type="string">
+            <meta attribute="resource-type">HumanName_family_string</meta>
+            <column length="65535" name="Prsn_nm_HmnNm_fml_strng">
+                <comment>HumanName_family_string</comment>
+            </column>
+        </property>
+        <property name="personNameHumanNameGivenString" type="string">
+            <meta attribute="resource-type">HumanName_given_string</meta>
+            <column length="65535" name="Person_name_HumanName_given_string">
+                <comment>HumanName_given_string</comment>
+            </column>
+        </property>
+        <property name="prsnNmHmnNmPrfxStrng" type="string">
+            <meta attribute="resource-type">HumanName_prefix_string</meta>
+            <column length="65535" name="Prsn_nm_HmnNm_prfx_strng">
+                <comment>HumanName_prefix_string</comment>
+            </column>
+        </property>
+        <property name="prsnNmHmnNmSffxStrng" type="string">
+            <meta attribute="resource-type">HumanName_suffix_string</meta>
+            <column length="65535" name="Prsn_nm_HmnNm_sffx_strng">
+                <comment>HumanName_suffix_string</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntSstmCde" type="string">
+            <meta attribute="resource-type">ContactPoint_system_code</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_sstm_cde">
+                <comment>ContactPoint_system_code</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntSCde" type="string">
+            <meta attribute="resource-type">ContactPoint_use_code</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_s_cde">
+                <comment>ContactPoint_use_code</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_start</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_Prd_strt">
+                <comment>ContactPoint_Period_start</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_end</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_Prd_nd">
+                <comment>ContactPoint_Period_end</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntRnkPstvnt" type="string">
+            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_rnk_pstvnt">
+                <comment>ContactPoint_rank_positiveInt</comment>
+            </column>
+        </property>
+        <property name="prsnTlcmCntctPntVlStrng" type="string">
+            <meta attribute="resource-type">ContactPoint_value_string</meta>
+            <column length="65535" name="Prsn_tlcm_CntctPnt_vl_strng">
+                <comment>ContactPoint_value_string</comment>
+            </column>
+        </property>
+        <property name="personGender" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Person_gender">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="personBirthDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Person_birthDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressUseCode" type="string">
+            <meta attribute="resource-type">Address_use_code</meta>
+            <column length="65535" name="Person_address_Address_use_code">
+                <comment>Address_use_code</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressTypeCode" type="string">
+            <meta attribute="resource-type">Address_type_code</meta>
+            <column length="65535" name="Person_address_Address_type_code">
+                <comment>Address_type_code</comment>
+            </column>
+        </property>
+        <property name="prsnDdrssDdrssPrdStrt" type="string">
+            <meta attribute="resource-type">Address_Period_start</meta>
+            <column length="65535" name="Prsn_ddrss_ddrss_Prd_strt">
+                <comment>Address_Period_start</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressPeriodEnd" type="string">
+            <meta attribute="resource-type">Address_Period_end</meta>
+            <column length="65535" name="Person_address_Address_Period_end">
+                <comment>Address_Period_end</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressTextString" type="string">
+            <meta attribute="resource-type">Address_text_string</meta>
+            <column length="65535" name="Person_address_Address_text_string">
+                <comment>Address_text_string</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressLineString" type="string">
+            <meta attribute="resource-type">Address_line_string</meta>
+            <column length="65535" name="Person_address_Address_line_string">
+                <comment>Address_line_string</comment>
+            </column>
+        </property>
+        <property name="personAddressAddressCityString" type="string">
+            <meta attribute="resource-type">Address_city_string</meta>
+            <column length="65535" name="Person_address_Address_city_string">
+                <comment>Address_city_string</comment>
+            </column>
+        </property>
+        <property name="prsnDdrssDdrssDstrctStrng" type="string">
+            <meta attribute="resource-type">Address_district_string</meta>
+            <column length="65535" name="Prsn_ddrss_ddrss_dstrct_strng">
+                <comment>Address_district_string</comment>
+            </column>
+        </property>
+        <property name="prsnDdrssDdrssSttStrng" type="string">
+            <meta attribute="resource-type">Address_state_string</meta>
+            <column length="65535" name="Prsn_ddrss_ddrss_stt_strng">
+                <comment>Address_state_string</comment>
+            </column>
+        </property>
+        <property name="prsnDdrssDdrssPstlCdStrng" type="string">
+            <meta attribute="resource-type">Address_postalCode_string</meta>
+            <column length="65535" name="Prsn_ddrss_ddrss_pstlCd_strng">
+                <comment>Address_postalCode_string</comment>
+            </column>
+        </property>
+        <property name="prsnDdrssDdrssCntrStrng" type="string">
+            <meta attribute="resource-type">Address_country_string</meta>
+            <column length="65535" name="Prsn_ddrss_ddrss_cntr_strng">
+                <comment>Address_country_string</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntDtBs64bnry" type="string">
+            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_dt_bs64Bnry">
+                <comment>Attachment_data_base64Binary</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntHshBs64bnry" type="string">
+            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_hsh_bs64Bnry">
+                <comment>Attachment_hash_base64Binary</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntCntntTpCde" type="string">
+            <meta attribute="resource-type">Attachment_contentType_code</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_cntntTp_cde">
+                <comment>Attachment_contentType_code</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntLnggCde" type="string">
+            <meta attribute="resource-type">Attachment_language_code</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_lngg_cde">
+                <comment>Attachment_language_code</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntCrtnDtTme" type="string">
+            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_crtn_dtTme">
+                <comment>Attachment_creation_dateTime</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntTtlStrng" type="string">
+            <meta attribute="resource-type">Attachment_title_string</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_ttl_strng">
+                <comment>Attachment_title_string</comment>
+            </column>
+        </property>
+        <property name="prsnPhtTtchmntSzNsgndnt" type="string">
+            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
+            <column length="65535" name="Prsn_pht_ttchmnt_sz_nsgndnt">
+                <comment>Attachment_size_unsignedInt</comment>
+            </column>
+        </property>
+        <property name="personPhotoAttachmentUrlUrl" type="string">
+            <meta attribute="resource-type">Attachment_url_url</meta>
+            <column length="65535" name="Person_photo_Attachment_url_url">
+                <comment>Attachment_url_url</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="prsnMngngrgnztnRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Prsn_mngngrgnztn_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="personActive" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Person_active">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrCdblCncptCdng" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
+                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrCdblCncptTxt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
+                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrPrdStrt" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Prd_strt">
+                <comment>Reference_identifier_Identifier_Period_start</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrPrdNd" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Prd_nd">
+                <comment>Reference_identifier_Identifier_Period_end</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
+                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrRfrncTpe" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
+                <comment>Reference_identifier_Identifier_Reference_type</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrRfrncDntfr" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
+                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrDntfrRfrncDsplay" type="string">
+            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
+                <comment>Reference_identifier_Identifier_Reference_display</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrSe" type="string">
+            <meta attribute="resource-type">Reference_Identifier_use</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_se">
+                <comment>Reference_Identifier_use</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">Reference_Identifier_system</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_sstm">
+                <comment>Reference_Identifier_system</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDntfrVlue" type="string">
+            <meta attribute="resource-type">Reference_Identifier_value</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dntfr_vlue">
+                <comment>Reference_Identifier_value</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncRfrncStrng" type="string">
+            <meta attribute="resource-type">Reference_reference_string</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_rfrnc_strng">
+                <comment>Reference_reference_string</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncDsplStrng" type="string">
+            <meta attribute="resource-type">Reference_display_string</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_dspl_strng">
+                <comment>Reference_display_string</comment>
+            </column>
+        </property>
+        <property name="prsnLnkTrgtRfrncTpRi" type="string">
+            <meta attribute="resource-type">Reference_type_uri</meta>
+            <column length="65535" name="Prsn_lnk_trgt_Rfrnc_tp_ri">
+                <comment>Reference_type_uri</comment>
+            </column>
+        </property>
+        <property name="personLinkAssurance" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Person_link_assurance">
+                <comment>code</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

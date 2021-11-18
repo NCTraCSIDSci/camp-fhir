@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Riskevidencesynthesis" optimistic-lock="none" table="riskevidencesynthesis">
+        <id name="riskEvidenceSynthesisUrl" type="string">
+            <column length="512" name="RiskEvidenceSynthesis_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="rskvdncSnthssDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssDntfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_dntfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisDescription" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_description">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssJrsdctnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_jrsdctn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssJrsdctnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_jrsdctn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssJrsdctnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_jrsdctn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssJrsdctnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_jrsdctn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssJrsdctnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_jrsdctn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisApprovalDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_approvalDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssLstRvwDte" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="RskvdncSnthss_lstRvwDte">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssFfctvPrdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_ffctvPrd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssFfctvPrdCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_ffctvPrd_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssFfctvPrdCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_ffctvPrd_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssFfctvPrdCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_ffctvPrd_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssFfctvPrdCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_ffctvPrd_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssTpcCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_tpc_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssTpcCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_tpc_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssTpcCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_tpc_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssTpcCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_tpc_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssTpcCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_tpc_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisAuthor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_author">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisEditor" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_editor">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisReviewer" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_reviewer">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisEndorser" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_endorser">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRltdrtfct" type="string">
+            <meta attribute="resource-type">RelatedArtifact</meta>
+            <column length="65535" name="RskvdncSnthss_rltdrtfct">
+                <comment>RelatedArtifact</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSnthssTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_snthssTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSnthssTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_snthssTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSnthssTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_snthssTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSnthssTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_snthssTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSnthssTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_snthssTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssStdTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_stdTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssStdTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_stdTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssStdTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_stdTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssStdTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_stdTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssStdTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_stdTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisPopulation" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_population">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisExposure" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_exposure">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisOutcome" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_outcome">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisSampleSize" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_sampleSize">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSmplSzDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RskvdncSnthss_smplSz_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSmplSzNmbrfStds" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="RskvdncSnthss_smplSz_nmbrfStds">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssSmplSzNmbrfPrtcpnts" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="RskvdncSnthss_smplSz_nmbrfPrtcpnts">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisRiskEstimate" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_riskEstimate">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtVlue" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_vlue">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNtfMsrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_ntfMsr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNtfMsrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_ntfMsr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNtfMsrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_ntfMsr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNtfMsrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_ntfMsr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNtfMsrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_ntfMsr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtDnmntrCnt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_dnmntrCnt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtNmrtrCnt" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_nmrtrCnt">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmte" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmte">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtLvl" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_lvl">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtFrm" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_frm">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssRskstmtPrcsnstmtTo" type="string">
+            <meta attribute="resource-type">decimal</meta>
+            <column length="65535" name="RskvdncSnthss_rskstmt_prcsnstmt_to">
+                <comment>decimal</comment>
+            </column>
+        </property>
+        <property name="riskEvidenceSynthesisCertainty" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RiskEvidenceSynthesis_certainty">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntRtngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_rtng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntRtngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_rtng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntRtngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_rtng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntRtngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_rtng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntRtngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_rtng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnnt" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntRtngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntRtngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntRtngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntRtngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntRtngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_rtng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntNtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntNtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntNtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="rskvdncSnthssCrtntCrtntSbcmpnntNtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="RskvdncSnthss_crtnt_crtntSbcmpnnt_nt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

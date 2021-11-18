@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Goal" optimistic-lock="none" table="goal">
+        <id name="goalIdentifierCodingCode" type="string">
+            <column length="512" name="Goal_identifier_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="glDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Gl_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalIdentifierCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Goal_identifier_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalIdentifierCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Goal_identifier_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalIdentifierCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Goal_identifier_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalLifecycleStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Goal_lifecycleStatus">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="glChvmntSttsCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_chvmntStts_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalAchievementStatusCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_achievementStatus_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="glChvmntSttsCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Gl_chvmntStts_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="glChvmntSttsCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Gl_chvmntStts_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="glChvmntSttsCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Gl_chvmntStts_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalCategoryCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Goal_category_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalCategoryCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_category_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalCategoryCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_category_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_category_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalCategoryCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_category_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalPriorityCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Goal_priority_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalPriorityCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_priority_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalPriorityCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_priority_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalPriorityCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_priority_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalPriorityCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_priority_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="glDscrptnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_dscrptn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalDescriptionCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_description_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalDescriptionCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_description_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalDescriptionCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_description_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalDescriptionCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_description_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalSubject" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Goal_subject">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="goalStartDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Goal_startDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="glStrtcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_strtcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalStartcdblcptCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_startcdblcpt_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalStartcdblcptCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_startcdblcpt_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalStartcdblcptCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_startcdblcpt_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalStartcdblcptCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_startcdblcpt_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalTarget" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Goal_target">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="glTrgtMsrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_trgt_msr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalTargetMeasureCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_target_measure_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalTargetMeasureCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_target_measure_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalTargetMeasureCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_target_measure_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalTargetMeasureCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_target_measure_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlQnttCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlQnttCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlQnttCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlQnttCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlQnttCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRngCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_trgt_dtlRng_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRngCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Gl_trgt_dtlRng_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRngCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Gl_trgt_dtlRng_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRngCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Gl_trgt_dtlRng_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRngCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Gl_trgt_dtlRng_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlcdblcptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlcdblcptCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlcdblcptCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlcdblcptCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlcdblcptCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalTargetDetailString" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Goal_target_detailString">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="goalTargetDetailBoolean" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="Goal_target_detailBoolean">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="goalTargetDetailInteger" type="string">
+            <meta attribute="resource-type">integer</meta>
+            <column length="65535" name="Goal_target_detailInteger">
+                <comment>integer</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="glTrgtDtlRtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalTargetDueDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Goal_target_dueDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="goalTargetDueDuration" type="string">
+            <meta attribute="resource-type">Duration</meta>
+            <column length="65535" name="Goal_target_dueDuration">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="goalStatusDate" type="string">
+            <meta attribute="resource-type">date</meta>
+            <column length="65535" name="Goal_statusDate">
+                <comment>date</comment>
+            </column>
+        </property>
+        <property name="goalStatusReason" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Goal_statusReason">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="goalExpressedBy" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Goal_expressedBy">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="goalAddresses" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Goal_addresses">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="goalNoteCodingUserSelected" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Goal_note_Coding_userSelected">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="glTcmCdCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Gl_tcmCd_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Goal_outcomeCode_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Goal_outcomeCode_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Goal_outcomeCode_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Goal_outcomeCode_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeReference" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="Goal_outcomeReference">
+                <comment>Reference</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

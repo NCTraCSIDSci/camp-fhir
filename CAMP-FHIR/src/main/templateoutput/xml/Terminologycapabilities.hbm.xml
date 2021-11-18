@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Terminologycapabilities" optimistic-lock="none" table="terminologycapabilities">
+        <id name="terminologyCapabilitiesUrl" type="string">
+            <column length="512" name="TerminologyCapabilities_url"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="terminologyCapabilitiesVersion" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TerminologyCapabilities_version">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesName" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TerminologyCapabilities_name">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesTitle" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TerminologyCapabilities_title">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TerminologyCapabilities_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXprmntl" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_xprmntl">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesDate" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="TerminologyCapabilities_date">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesPublisher" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TerminologyCapabilities_publisher">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesContact" type="string">
+            <meta attribute="resource-type">ContactDetail</meta>
+            <column length="65535" name="TerminologyCapabilities_contact">
+                <comment>ContactDetail</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsDscrptn" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TrmnlgCpblts_dscrptn">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesUseContext" type="string">
+            <meta attribute="resource-type">UsageContext</meta>
+            <column length="65535" name="TerminologyCapabilities_useContext">
+                <comment>UsageContext</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngSstm" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_sstm">
+                <comment>CodeableConcept_Coding_system</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngVrsn" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_vrsn">
+                <comment>CodeableConcept_Coding_version</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngCde" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_cde">
+                <comment>CodeableConcept_Coding_code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngDsplay" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_dsplay">
+                <comment>CodeableConcept_Coding_display</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngSrSlctd" type="string">
+            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_srSlctd">
+                <comment>CodeableConcept_Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsJrsdctnCdblCncptTxtStrng" type="string">
+            <meta attribute="resource-type">CodeableConcept_text_string</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_txt_strng">
+                <comment>CodeableConcept_text_string</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesPurpose" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TerminologyCapabilities_purpose">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesCopyright" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TerminologyCapabilities_copyright">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesKind" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TerminologyCapabilities_kind">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsSftwrNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TrmnlgCpblts_sftwr_nme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsSftwrVrsn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TrmnlgCpblts_sftwr_vrsn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsMplmnttnDscrptn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TrmnlgCpblts_mplmnttn_dscrptn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsMplmnttnRl" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="TrmnlgCpblts_mplmnttn_rl">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesLockedDate" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TerminologyCapabilities_lockedDate">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmRi" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_ri">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnCde" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cde">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnSDflt" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_sDflt">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnCmpstnl" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cmpstnl">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnLngge" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_lngge">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnFltrCde" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_cde">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnFltrP" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_p">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnPrprty" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_prprty">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmSbsmptn" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_sbsmptn">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnHrrchcl" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_hrrchcl">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPgng" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_pgng">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnNcmplte" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_ncmplte">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPrmtrNme" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_nme">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPrmtrDcmnttn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_dcmnttn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnTxtFltr" type="string">
+            <meta attribute="resource-type">markdown</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_txtFltr">
+                <comment>markdown</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesCodeSearch" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="TerminologyCapabilities_codeSearch">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsVldtCdTrnsltns" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_vldtCd_trnsltns">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsTrnsltnNdsMp" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_trnsltn_ndsMp">
+                <comment>boolean</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsClsrTrnsltn" type="string">
+            <meta attribute="resource-type">boolean</meta>
+            <column length="65535" name="TrmnlgCpblts_clsr_trnsltn">
+                <comment>boolean</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

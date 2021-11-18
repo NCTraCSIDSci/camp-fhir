@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Subscription" optimistic-lock="none" table="subscription">
+        <id name="subscriptionStatus" type="string">
+            <column length="512" name="Subscription_status"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="sbscrptnCntctCntctPntSstmCde" type="string">
+            <meta attribute="resource-type">ContactPoint_system_code</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_sstm_cde">
+                <comment>ContactPoint_system_code</comment>
+            </column>
+        </property>
+        <property name="sbscrptnCntctCntctPntSCde" type="string">
+            <meta attribute="resource-type">ContactPoint_use_code</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_s_cde">
+                <comment>ContactPoint_use_code</comment>
+            </column>
+        </property>
+        <property name="sbscrptnCntctCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_start</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_Prd_strt">
+                <comment>ContactPoint_Period_start</comment>
+            </column>
+        </property>
+        <property name="sbscrptnCntctCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">ContactPoint_Period_end</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_Prd_nd">
+                <comment>ContactPoint_Period_end</comment>
+            </column>
+        </property>
+        <property name="sbscrptnCntctCntctPntRnkPstvnt" type="string">
+            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_rnk_pstvnt">
+                <comment>ContactPoint_rank_positiveInt</comment>
+            </column>
+        </property>
+        <property name="sbscrptnCntctCntctPntVlStrng" type="string">
+            <meta attribute="resource-type">ContactPoint_value_string</meta>
+            <column length="65535" name="Sbscrptn_cntct_CntctPnt_vl_strng">
+                <comment>ContactPoint_value_string</comment>
+            </column>
+        </property>
+        <property name="subscriptionEnd" type="string">
+            <meta attribute="resource-type">instant</meta>
+            <column length="65535" name="Subscription_end">
+                <comment>instant</comment>
+            </column>
+        </property>
+        <property name="subscriptionReason" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Subscription_reason">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="subscriptionCriteria" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Subscription_criteria">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="subscriptionError" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Subscription_error">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="subscriptionChannelType" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Subscription_channel_type">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="subscriptionChannelEndpoint" type="string">
+            <meta attribute="resource-type">url</meta>
+            <column length="65535" name="Subscription_channel_endpoint">
+                <comment>url</comment>
+            </column>
+        </property>
+        <property name="subscriptionChannelPayload" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="Subscription_channel_payload">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="subscriptionChannelHeader" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Subscription_channel_header">
+                <comment>string</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

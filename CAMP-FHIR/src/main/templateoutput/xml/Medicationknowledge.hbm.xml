@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 17, 2021, 8:30:15 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Medicationknowledge" optimistic-lock="none" table="medicationknowledge">
+        <id name="medKnowledgeCodeCodingCode" type="string">
+            <column length="512" name="MedKnowledge_code_Coding_code"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="mdKnwldgCdCdngSrSlctd" type="string">
+            <column length="512" name="MdKnwldg_cd_Cdng_srSlctd"/>
+        </property>
+        <property name="medKnowledgeCodeCodingDisplay" type="string">
+            <column length="512" name="MedKnowledge_code_Coding_display"/>
+        </property>
+        <property name="medKnowledgeCodeCodingVersion" type="string">
+            <column length="512" name="MedKnowledge_code_Coding_version"/>
+        </property>
+        <property name="medKnowledgeCodeCodingSystem" type="string">
+            <column length="512" name="MedKnowledge_code_Coding_system"/>
+        </property>
+        <property name="medKnowledgeStatus" type="string">
+            <column length="65535" name="MedKnowledge_status"/>
+        </property>
+        <property name="medKnowledgeManufacturer" type="string">
+            <column length="65535" name="MedKnowledge_manufacturer"/>
+        </property>
+        <property name="mdKnwldgDsFrmCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_dsFrm_Cdng_srSlctd"/>
+        </property>
+        <property name="medKnowledgeDoseFormCodingCode" type="string">
+            <column length="65535" name="MedKnowledge_doseForm_Coding_code"/>
+        </property>
+        <property name="mdKnwldgDsFrmCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_dsFrm_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDsFrmCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_dsFrm_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDsFrmCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_dsFrm_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeAmount" type="string">
+            <column length="65535" name="MedKnowledge_amount"/>
+        </property>
+        <property name="medKnowledgeSynonym" type="string">
+            <column length="65535" name="MedKnowledge_synonym"/>
+        </property>
+        <property name="medKnowledgeRelatedMedKnowledge" type="string">
+            <column length="65535" name="MedKnowledge_relatedMedKnowledge"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgRltdMdKnwldgRfrnce" type="string">
+            <column length="65535" name="MdKnwldg_rltdMdKnwldg_rfrnce"/>
+        </property>
+        <property name="medKnowledgeAssociatedMed" type="string">
+            <column length="65535" name="MedKnowledge_associatedMed"/>
+        </property>
+        <property name="mdKnwldgPrdctTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_prdctTp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgPrdctTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_prdctTp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgPrdctTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_prdctTp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgPrdctTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_prdctTp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgPrdctTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_prdctTp_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeMonograph" type="string">
+            <column length="65535" name="MedKnowledge_monograph"/>
+        </property>
+        <property name="mdKnwldgMngrphTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_mngrph_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgMngrphTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_mngrph_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgMngrphTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_mngrph_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgMngrphTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_mngrph_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgMngrphTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_mngrph_tp_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeMonographSource" type="string">
+            <column length="65535" name="MedKnowledge_monograph_source"/>
+        </property>
+        <property name="medKnowledgeIngredient" type="string">
+            <column length="65535" name="MedKnowledge_ingredient"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmcdblcptCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmcdblcpt_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmcdblcptCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmcdblcpt_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmcdblcptCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmcdblcpt_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmcdblcptCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmcdblcpt_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmcdblcptCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmcdblcpt_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgNgrdntTmRfrnce" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_tmRfrnce"/>
+        </property>
+        <property name="medKnowledgeIngredientIsActive" type="string">
+            <column length="65535" name="MedKnowledge_ingredient_isActive"/>
+        </property>
+        <property name="mdKnwldgNgrdntStrCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_str_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgNgrdntStrCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_str_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgNgrdntStrCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_str_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgNgrdntStrCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_str_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgNgrdntStrCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_ngrdnt_str_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgPrprtnnstrctn" type="string">
+            <column length="65535" name="MdKnwldg_prprtnnstrctn"/>
+        </property>
+        <property name="mdKnwldgNtnddRtCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_ntnddRt_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgNtnddRtCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_ntnddRt_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgNtnddRtCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_ntnddRt_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgNtnddRtCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_ntnddRt_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgNtnddRtCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_ntnddRt_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeCost" type="string">
+            <column length="65535" name="MedKnowledge_cost"/>
+        </property>
+        <property name="mdKnwldgCstTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_cst_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="medKnowledgeCostTypeCodingCode" type="string">
+            <column length="65535" name="MedKnowledge_cost_type_Coding_code"/>
+        </property>
+        <property name="mdKnwldgCstTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_cst_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgCstTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_cst_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgCstTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_cst_tp_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeCostSource" type="string">
+            <column length="65535" name="MedKnowledge_cost_source"/>
+        </property>
+        <property name="mdKnwldgCstCstCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_cst_cst_Cdng_srSlctd"/>
+        </property>
+        <property name="medKnowledgeCostCostCodingCode" type="string">
+            <column length="65535" name="MedKnowledge_cost_cost_Coding_code"/>
+        </property>
+        <property name="mdKnwldgCstCstCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_cst_cst_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgCstCstCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_cst_cst_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgCstCstCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_cst_cst_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgeMonitoringProgram" type="string">
+            <column length="65535" name="MedKnowledge_monitoringProgram"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgMntrngPrgrmNme" type="string">
+            <column length="65535" name="MdKnwldg_mntrngPrgrm_nme"/>
+        </property>
+        <property name="medKnowledgeAdminGuidelines" type="string">
+            <column length="65535" name="MedKnowledge_adminGuidelines"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsge" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsge"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsDsgDsge" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_dsg_dsge"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctncdblcptCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctncdblcpt_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctncdblcptCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctncdblcpt_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctncdblcptCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctncdblcpt_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctncdblcptCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctncdblcpt_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctncdblcptCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctncdblcpt_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsNdctnRfrnce" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_ndctnRfrnce"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrs" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrcdblcptCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrcdblcpt_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrcdblcptCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrcdblcpt_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrcdblcptCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrcdblcpt_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrcdblcptCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrcdblcpt_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrcdblcptCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrcdblcpt_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsChrctrSmplqntty" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_chrctrSmplqntty"/>
+        </property>
+        <property name="mdKnwldgDmnGdlnsPntchrctrsVlue" type="string">
+            <column length="65535" name="MdKnwldg_dmnGdlns_pntchrctrs_vlue"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctn" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnClssfctnCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_clssfctn_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnClssfctnCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_clssfctn_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnClssfctnCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_clssfctn_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnClssfctnCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_clssfctn_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgMdcnClssfctnClssfctnCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_mdcnClssfctn_clssfctn_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgePackaging" type="string">
+            <column length="65535" name="MedKnowledge_packaging"/>
+        </property>
+        <property name="mdKnwldgPckgngTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_pckgng_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgPckgngTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_pckgng_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgPckgngTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_pckgng_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgPckgngTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_pckgng_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgPckgngTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_pckgng_tp_Cdng_sstm"/>
+        </property>
+        <property name="medKnowledgePackagingQuantity" type="string">
+            <column length="65535" name="MedKnowledge_packaging_quantity"/>
+        </property>
+        <property name="medKnowledgeDrugchrctr" type="string">
+            <column length="65535" name="MedKnowledge_drugchrctr"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlcdblcptCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlcdblcpt_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlcdblcptCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlcdblcpt_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlcdblcptCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlcdblcpt_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlcdblcptCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlcdblcpt_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlcdblcptCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlcdblcpt_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlStrng" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlStrng"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlSmplqntty" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlSmplqntty"/>
+        </property>
+        <property name="mdKnwldgDrgchrctrVlBs64bnry" type="string">
+            <column length="65535" name="MdKnwldg_drgchrctr_vlBs64bnry"/>
+        </property>
+        <property name="medKnowledgeContraindication" type="string">
+            <column length="65535" name="MedKnowledge_contraindication"/>
+        </property>
+        <property name="medKnowledgeRegulatory" type="string">
+            <column length="65535" name="MedKnowledge_regulatory"/>
+        </property>
+        <property name="mdKnwldgRgltrRgltrthrty" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_rgltrthrty"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttn" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnTpCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_tp_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnTpCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_tp_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnTpCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_tp_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnTpCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_tp_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnTpCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_tp_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgRgltrSbstttnLlwd" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_sbstttn_llwd"/>
+        </property>
+        <property name="medKnowledgeRegulatorySchedule" type="string">
+            <column length="65535" name="MedKnowledge_regulatory_schedule"/>
+        </property>
+        <property name="mdKnwldgRgltrSchdlSchdlCdngSrSlctd" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_schdl_schdl_Cdng_srSlctd"/>
+        </property>
+        <property name="mdKnwldgRgltrSchdlSchdlCdngCde" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_schdl_schdl_Cdng_cde"/>
+        </property>
+        <property name="mdKnwldgRgltrSchdlSchdlCdngDsplay" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_schdl_schdl_Cdng_dsplay"/>
+        </property>
+        <property name="mdKnwldgRgltrSchdlSchdlCdngVrsn" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_schdl_schdl_Cdng_vrsn"/>
+        </property>
+        <property name="mdKnwldgRgltrSchdlSchdlCdngSstm" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_schdl_schdl_Cdng_sstm"/>
+        </property>
+        <property name="mdKnwldgRgltrMxDspnse" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_mxDspnse"/>
+        </property>
+        <property name="mdKnwldgRgltrMxDspnsQntty" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_mxDspns_qntty"/>
+        </property>
+        <property name="mdKnwldgRgltrMxDspnsPrd" type="string">
+            <column length="65535" name="MdKnwldg_rgltr_mxDspns_prd"/>
+        </property>
+        <property name="medKnowledgeKinetics" type="string">
+            <column length="65535" name="MedKnowledge_kinetics"/>
+        </property>
+        <property name="mdKnwldgKntcsRndrCrve" type="string">
+            <column length="65535" name="MdKnwldg_kntcs_rndrCrve"/>
+        </property>
+        <property name="medKnowledgeKineticsLethalDose50" type="string">
+            <column length="65535" name="MedKnowledge_kinetics_lethalDose50"/>
+        </property>
+        <property name="mdKnwldgKntcsHlfLfPrd" type="string">
+            <column length="65535" name="MdKnwldg_kntcs_hlfLfPrd"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Nutritionorder" optimistic-lock="none" table="nutritionorder">
+        <id name="ntrtnrdrDntfrCdngCde" type="string">
+            <column length="512" name="Ntrtnrdr_dntfr_Cdng_cde"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="ntrtnrdrDntfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNstnttsCnncl" type="string">
+            <meta attribute="resource-type">canonical</meta>
+            <column length="65535" name="Ntrtnrdr_nstnttsCnncl">
+                <comment>canonical</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderInstantiatesUri" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="NutritionOrder_instantiatesUri">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderInstantiates" type="string">
+            <meta attribute="resource-type">uri</meta>
+            <column length="65535" name="NutritionOrder_instantiates">
+                <comment>uri</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderStatus" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="NutritionOrder_status">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderIntent" type="string">
+            <meta attribute="resource-type">code</meta>
+            <column length="65535" name="NutritionOrder_intent">
+                <comment>code</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderPnt" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="NutritionOrder_pnt">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderEncounter" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="NutritionOrder_encounter">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderDateTime" type="string">
+            <meta attribute="resource-type">dateTime</meta>
+            <column length="65535" name="NutritionOrder_dateTime">
+                <comment>dateTime</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderOrderer" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="NutritionOrder_orderer">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderAllergyIntolerance" type="string">
+            <meta attribute="resource-type">Reference</meta>
+            <column length="65535" name="NutritionOrder_allergyIntolerance">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrFdPrfrncMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrFdPrfrncMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrFdPrfrncMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrFdPrfrncMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrFdPrfrncMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrXcldFdMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrXcldFdMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrXcldFdMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrXcldFdMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrXcldFdMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderOralDiet" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="NutritionOrder_oralDiet">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtSchdlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtSchdlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtSchdlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtSchdlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtSchdlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderOralDietNutrient" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="NutritionOrder_oralDiet_nutrient">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNtrntMnt" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mnt">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderOralDietTexture" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="NutritionOrder_oralDiet_texture">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrMdfrCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrMdfrCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrMdfrCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrMdfrCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrMdfrCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrFdTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrFdTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrFdTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrFdTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtTxtrFdTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrRlDtNstrctn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_nstrctn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderSupplement" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="NutritionOrder_supplement">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntPrdctNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_prdctNme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntSchdlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntSchdlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntSchdlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntSchdlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntSchdlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderSupplementQuantity" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="NutritionOrder_supplement_quantity">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntNstrctn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_nstrctn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderEnteralFormula" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="NutritionOrder_enteralFormula">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlPrdctNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlPrdctNme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvPrdctNme" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvPrdctNme">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlClrcDnsty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_clrcDnsty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmn" type="string">
+            <meta attribute="resource-type">BackboneElement</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn">
+                <comment>BackboneElement</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnQntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_qntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtSmplqntty" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtSmplqntty">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngCde" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_cde">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngVrsn" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_vrsn">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngDsplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_dsplay">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngSstm" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_sstm">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlMxVlmTdlvr" type="string">
+            <meta attribute="resource-type">SimpleQuantity</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_mxVlmTDlvr">
+                <comment>SimpleQuantity</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnnstrctn" type="string">
+            <meta attribute="resource-type">string</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmnnstrctn">
+                <comment>string</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtCdngSrSlctd" type="string">
+            <meta attribute="resource-type">Coding_userSelected</meta>
+            <column length="65535" name="Ntrtnrdr_nt_Cdng_srSlctd">
+                <comment>Coding_userSelected</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderNoteCodingCode" type="string">
+            <meta attribute="resource-type">Coding_code</meta>
+            <column length="65535" name="NutritionOrder_note_Coding_code">
+                <comment>Coding_code</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderNoteCodingVersion" type="string">
+            <meta attribute="resource-type">Coding_version</meta>
+            <column length="65535" name="NutritionOrder_note_Coding_version">
+                <comment>Coding_version</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderNoteCodingDisplay" type="string">
+            <meta attribute="resource-type">Coding_display</meta>
+            <column length="65535" name="NutritionOrder_note_Coding_display">
+                <comment>Coding_display</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderNoteCodingSystem" type="string">
+            <meta attribute="resource-type">Coding_system</meta>
+            <column length="65535" name="NutritionOrder_note_Coding_system">
+                <comment>Coding_system</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
