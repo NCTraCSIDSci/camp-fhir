@@ -1,5 +1,8 @@
 var http = require('http');  
 var fs = require('fs');
+
+const valuesFromHTML = 'place holder';
+
 function onRequest (request, response) {
     response.writeHead(200, {  
         'Content-Type': 'text/html'  
@@ -12,6 +15,7 @@ function onRequest (request, response) {
         } else {
             //write the HTML file or render it
             response.write(data);
+            
         }
         response.end();
     })

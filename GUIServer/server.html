@@ -32,24 +32,57 @@
                 <option value="">Frontbase</option>
                 <option value="">Fiirebir</option>
             </select>
+            <p></p>
+
     </div>
    
     <div>
         <label>Database Connection URL</label>
-        <textarea id="textareaoutputfolder" rows="1"></textarea>
+        <textarea id="textareaDBConnectionURL" rows="1"></textarea>
+        <button type="button" onclick="myFunction()">Save</button>
+        <p id="demoDBConnectionURL"></p>
+
     </div>
     <div>
         <label>Database Username</label>
-        <textarea id="textUSERNAME" rows="1"></textarea>   
+        <textarea id="textareaUsername" rows="1"></textarea>  
+        <button type="button" onclick="myFunctionUsername()">Save</button> 
+        <p id="demoUsername"></p>
+
     </div>
     <div>
         <label>Database Password</label>
-        <textarea id="textDATABASEPASSWORD" rows="1"></textarea>   
+        <textarea id="textareaDBPassword" rows="1"></textarea>  
+        <button type="button" onclick="myFunctionDBPassword()">Save</button>
+        <p id="demoDBPassword"></p>
+
     </div>
     <div>
         <label>FHIR Resource (R4)</label>
-        <textarea id="textresearch" rows="1"></textarea>   
+        <textarea id="textareaResource" rows="1"></textarea>   
+        <button type="button" onclick="myFunctionFHIRResource()">Save</button>
+        <p id="demoFHIRResource"></p>
+
     </div>
+
+    <script>
+        function myFunction() {
+            var TextAreaOutPutFolder = document.getElementById("textareaDBConnectionURL").value;
+            document.getElementById("demoDBConnectionURL").innerHTML = TextAreaOutPutFolder;
+        }
+        function myFunctionUsername() {
+            var TextAreaOutPutFolder = document.getElementById("textareaUsername").value;
+            document.getElementById("demoUsername").innerHTML = TextAreaOutPutFolder;
+        }
+        function myFunctionDBPassword() {
+            var TextAreaOutPutFolder = document.getElementById("textareaDBPassword").value;
+            document.getElementById("demoDBPassword").innerHTML = TextAreaOutPutFolder;
+        }
+        function myFunctionFHIRResource() {
+            var TextAreaOutPutFolder = document.getElementById("textareaResource").value;
+            document.getElementById("demoFHIRResource").innerHTML = TextAreaOutPutFolder;
+        }
+    </script>
 </body>  
   
 </html>  
