@@ -1,0 +1,17 @@
+{
+	"name"          : "app-client",
+	"main"          : "index.js",
+	"author"        : "Roland Poulter",
+	"version"       : "0.1.0",
+	"keywords"      : [],
+	"homepage"      : "https://github.com/rolandpoulter/app-client",
+	"repository"    : {"type": "git", "url": "git://github.com/rolandpoulter/app-client.git"},
+	"description"   : "",
+	"contributors"  : [],
+	"dependencies"  : {
+		"cornerstone"  : "x",
+		"optimist"  : "x",
+		"connect"   : "x",
+		"modulator"     : "x"
+	}
+}

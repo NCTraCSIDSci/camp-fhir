@@ -1,7 +1,27 @@
 var http = require('http');  
 var fs = require('fs');
 
-const valuesFromHTML = 'place holder';
+const express = require('express')
+const app = express()
+
+//read the server values and write the files to a file
+app.use(
+    express.urlencoded({
+      extended: true
+    })
+  )
+  
+  app.use(express.json())
+  
+  app.post('/8000', (req, res) => {
+    console.log(req.body)
+    fs.writeFile('text.txt', req.body, err => {
+        if (err) {
+         console.error(err)
+         return
+        } 
+    })
+  })
 
 function onRequest (request, response) {
     response.writeHead(200, {  
@@ -21,3 +41,5 @@ function onRequest (request, response) {
     })
 }
 http.createServer(onRequest).listen(8000);
+
+

@@ -1,0 +1,3 @@
+[submodule "node-app-template"]
+	path = node-app-template
+	url = git://github.com/rolandpoulter/node-app-template.git

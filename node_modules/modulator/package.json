@@ -1,0 +1,14 @@
+{
+	"name"            : "modulator",
+	"main"            : "lib/Modulator.js",
+	"author"          : "Roland Poulter",
+	"version"         : "0.1.0",
+	"keywords"        : ["make", "build", "modules", "browser", "require", "module", "exports", "unobtrusive"],
+	"homepage"        : "https://github.com/rolandpoulter/node_modulator",
+	"repository"      : {"type": "git", "url": "git://github.com/rolandpoulter/node_modulator"},
+	"description"     : "Easy build tool for running node modules in a non-CommonJS environment.",
+	"contributors"    : [],
+	"dependencies"    : {
+		"uglify-js"   : "x"
+	}
+}

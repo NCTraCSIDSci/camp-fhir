@@ -1,0 +1,9 @@
+body {
+	font-family: arial;
+}
+.failed {
+	color: red;
+}
+.passed {
+	color: green;
+}

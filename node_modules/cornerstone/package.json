@@ -1,0 +1,31 @@
+{
+  "author": {
+    "name": "Roland Poulter"
+  },
+  "bugs": {
+    "url": "https://github.com/rolandpoulter/cornerstone/issues"
+  },
+  "contributors": [],
+  "dependencies": {},
+  "description": "Cross platform JavaScript utilities, event emitter and class constructor.",
+  "devDependencies": {
+    "modulator": "x",
+    "quiz": "x"
+  },
+  "directories": {},
+  "homepage": "https://github.com/rolandpoulter/cornerstone",
+  "keywords": [],
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "rolandpoulter",
+      "email": "rolandpoulter@gmail.com"
+    }
+  ],
+  "name": "cornerstone",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rolandpoulter/cornerstone.git"
+  },
+  "version": "0.1.1"
+}

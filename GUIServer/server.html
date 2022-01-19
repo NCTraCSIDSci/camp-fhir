@@ -2,91 +2,100 @@
 <head>  
    <TITLE>CAMP FHIR</TITLE>
 </head>  
-  
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <body>  
     <h1> Welcome to CAMP FHIR</h1>  
-    <div>
-        <label>Dialects of SQL</label>
-            <select name="SQLDialects" id="SQLDialects">
-                <option value="" selected="selected">Select Dialect</option>
-                <option value="">Oracle (any version) </option>
-                <option value="">Oracle9i</option>
-                <option value="">Oracle10g</option>
-                <option value="">MySQL</option>
-                <option value="">MySQL with InnoDB</option>
-                <option value="">MySQL with MyISAM</option>
-                <option value="">DB2</option>
-                <option value="">DB2 AS/400</option>
-                <option value="">DB2 OS390</option>
-                <option value="">Microsoft SQL Server</option>
-                <option value="">Sybase</option>
-                <option value="">PostgreSQL</option>
-                <option value="">SAP DB</option>
-                <option value="">Informix</option>
-                <option value=""> HypersonicSQL</option>
-                <option value="">Ingres</option>
-                <option value="">Progress</option>
-                <option value="">Mckoi SQL</option>
-                <option value="">Interbase</option>
-                <option value="">Pointbase</option>
-                <option value="">Frontbase</option>
-                <option value="">Fiirebir</option>
-            </select>
-            <button type="button" onclick="myFunctionSQLDialects()">Save</button>
-            <p id="demoSQLDialects"></p>
-    </div>
-   
-    <div>
-        <label>Database Connection URL</label>
-        <textarea id="textareaDBConnectionURL" rows="1"></textarea>
-        <button type="button" onclick="myFunction()">Save</button>
-        <p id="demoDBConnectionURL"></p>
+    <form>
+        <div>    
+            <label>Dialects of SQL</label>
+                <select name="SQLDialects" id="SQLDialects">
+                    <option value="" selected="selected">Select Dialect</option>
+                    <option value="">Oracle (any version) </option>
+                    <option value="">Oracle9i</option>
+                    <option value="">Oracle10g</option>
+                    <option value="">MySQL</option>
+                    <option value="">MySQL with InnoDB</option>
+                    <option value="">MySQL with MyISAM</option>
+                    <option value="">DB2</option>
+                    <option value="">DB2 AS/400</option>
+                    <option value="">DB2 OS390</option>
+                    <option value="">Microsoft SQL Server</option>
+                    <option value="">Sybase</option>
+                    <option value="">PostgreSQL</option>
+                    <option value="">SAP DB</option>
+                    <option value="">Informix</option>
+                    <option value=""> HypersonicSQL</option>
+                    <option value="">Ingres</option>
+                    <option value="">Progress</option>
+                    <option value="">Mckoi SQL</option>
+                    <option value="">Interbase</option>
+                    <option value="">Pointbase</option>
+                    <option value="">Frontbase</option>
+                    <option value="">Fiirebir</option>
+                </select>
+                <p id="demoSQLDialects"></p>
+        </div>
+    
+        <div>
+            <label>Database Connection URL</label>
+            <textarea id="textareaDBConnectionURL" rows="1"></textarea>
+            <p id="demoDBConnectionURL"></p>
 
-    </div>
-    <div>
-        <label>Database Username</label>
-        <textarea id="textareaUsername" rows="1"></textarea>  
-        <button type="button" onclick="myFunctionUsername()">Save</button> 
-        <p id="demoUsername"></p>
+        </div>
+        <div>
+            <label>Database Username</label>
+            <textarea id="textareaUsername" rows="1"></textarea>  
+            <p id="demoUsername"></p>
 
-    </div>
-    <div>
-        <label>Database Password</label>
-        <textarea id="textareaDBPassword" rows="1"></textarea>  
-        <button type="button" onclick="myFunctionDBPassword()">Save</button>
-        <p id="demoDBPassword"></p>
+        </div>
+        <div>
+            <label>Database Password</label>
+            <textarea id="textareaDBPassword" rows="1"></textarea>  
+            <p id="demoDBPassword"></p>
 
-    </div>
-    <div>
-        <label>FHIR Resource (R4)</label>
-        <textarea id="textareaResource" rows="1"></textarea>   
+        </div>
+        <div>
+            <label>FHIR Resource (R4)</label>
+            <textarea id="textareaResource" rows="1"></textarea>   
+            <p id="demoFHIRResource"></p>
+
+        </div>
+
         <button type="button" onclick="myFunctionFHIRResource()">Save</button>
-        <p id="demoFHIRResource"></p>
 
-    </div>
 
-    <script>
-        function myFunctionSQLDialects() {
-            var SQLDialect = document.getElementById("SQLDialects").value;
-            document.getElementById("demoSQLDialects").innerHTML = SQLDialect;
-        }
-        function myFunction() {
-            var DBConnectionURL = document.getElementById("textareaDBConnectionURL").value;
-            document.getElementById("demoDBConnectionURL").innerHTML = DBConnectionURL;
-        }
-        function myFunctionUsername() {
-            var username = document.getElementById("textareaUsername").value;
-            document.getElementById("demoUsername").innerHTML = username;
-        }
-        function myFunctionDBPassword() {
-            var password = document.getElementById("textareaDBPassword").value;
-            document.getElementById("demoDBPassword").innerHTML = password;
-        }
-        function myFunctionFHIRResource() {
+        <script>
             var FHIRResource = document.getElementById("textareaResource").value;
-            document.getElementById("demoFHIRResource").innerHTML = FHIRResource;
-        }
-    </script>
+          
+            $.ajax({
+                url: '/8000',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({"viewedProfiles": FHIRResource}),
+                success: function(response){ console.log( "we made it" ); }
+            });
+            function myFunctionSQLDialects() {
+                var SQLDialect = document.getElementById("SQLDialects").value;
+                document.getElementById("demoSQLDialects").innerHTML = SQLDialect;
+            }
+            function myFunction() {
+                var DBConnectionURL = document.getElementById("textareaDBConnectionURL").value;
+                document.getElementById("demoDBConnectionURL").innerHTML = DBConnectionURL;
+            }
+            function myFunctionUsername() {
+                var username = document.getElementById("textareaUsername").value;
+                document.getElementById("demoUsername").innerHTML = username;
+            }
+            function myFunctionDBPassword() {
+                var password = document.getElementById("textareaDBPassword").value;
+                document.getElementById("demoDBPassword").innerHTML = password;
+            }
+            function myFunctionFHIRResource() {
+                var FHIRResource = document.getElementById("textareaResource").value;
+                document.getElementById("demoFHIRResource").innerHTML = FHIRResource;
+            }
+        </script>
+    </form>
 </body>  
   
 </html>  
