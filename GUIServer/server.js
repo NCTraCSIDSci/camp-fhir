@@ -51,7 +51,7 @@ var fs = require('fs');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/server.html');
 });
 
 app.post('/', urlencodedParser, (req, res) => {
